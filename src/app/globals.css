@@ -1,26 +1,163 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+/* Hide Google Translate top bar */
+.goog-te-banner-frame, .skiptranslate iframe { display:none !important; }
+/* Hide default dropdown UI completely */
+.goog-te-gadget,
+.goog-te-combo,
+.goog-te-gadget-simple,
+.goog-te-gadget-icon,
+.goog-logo-link {
+  display: none !important;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Hide Google tooltip */
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Remove Google highlight background */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Prevent layout breaking */
+.skiptranslate {
+  display: none !important;
+}
+
+
+/* ===== Industrial Marquee Animation ===== */
+
+.marquee-track {
+  animation: marquee 25s linear infinite;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  top: 0px !important;
 }
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+/* //truckkk */
+.truck {
+  background: url("/images/1.png") no-repeat;
+  background-size: contain;
+  width: 524px;
+  height: 170px;
+  position: absolute;
+  top: -135%;
+  z-index: 10;
+  animation: myfirst 20s linear infinite;
+}
+
+@keyframes myfirst {
+  0% { transform: translateX(-600px); }
+  100% { transform: translateX(120vw); }
+}
+
+
+
+
+
+ .marquee-wrapper {
+          overflow: hidden;
+          position: relative;
+          background: #ffffff;
+          border-top: 1px solid #e5e5e5;
+          border-bottom: 1px solid #e5e5e5;
+          height: clamp(48px, 10vh, 110px);
+        }
+
+        .marquee-wrapper::before,
+        .marquee-wrapper::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 80px;
+          z-index: 2;
+          pointer-events: none;
+        }
+        .marquee-wrapper::before {
+          left: 0;
+          background: linear-gradient(to right, #ffffff, transparent);
+        }
+        .marquee-wrapper::after {
+          right: 0;
+          background: linear-gradient(to left, #ffffff, transparent);
+        }
+
+        .marquee-track {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          width: max-content;
+          animation: scroll-left 40s linear infinite;
+          will-change: transform;
+        }
+
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes scroll-left {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        .marquee-item {
+          font-family: 'Bebas Neue', sans-serif;
+          letter-spacing: 0.07em;
+          color: #111111;
+          line-height: 1;
+          white-space: nowrap;
+          font-size: clamp(30px, 7vh, 68px);
+          padding: 0 0.55em;
+          display: flex;
+          align-items: center;
+          gap: 0.55em;
+        }
+
+        .marquee-dot {
+          display: inline-block;
+          width: 0.18em;
+          height: 0.18em;
+          border-radius: 50%;
+          background: #aaaaaa;
+          flex-shrink: 0;
+        }
+
+
+
+
+
+
+
+.footer{
+    
+    background-image: url("./../lib/images/footer.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
