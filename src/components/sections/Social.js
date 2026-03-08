@@ -1,4 +1,4 @@
-"use client";
+
 import { FaWhatsapp } from "react-icons/fa";
 export default function Social() {
   return (

@@ -5,14 +5,19 @@ import Header from "@/components/Header";
 import { Poppins } from "next/font/google";
 import "@/lib/styles/truck.css"
 
+import { Manrope } from "next/font/google";
 
-
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-poppins",
-  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
+
+// const poppins = Poppins({
+//   weight: ["400", "500", "600", "700"],
+//   subsets: ["latin"],
+//   variable: "--font-poppins",
+//   display: "swap",
+// });
 
 
 export default function RootLayout({ children }) {
@@ -21,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
 
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins} font-body bg-stone-50 text-stone-900 antialiased`}>
+      <body className={`${manrope.className} font-body bg-stone-50 text-stone-900 antialiased`}>
         <Script
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
           strategy="afterInteractive"

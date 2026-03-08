@@ -18,7 +18,7 @@ export const SITE = {
   mapUrl: "https://goo.gl/maps/SjG9QUfT6J1qD8L69",
   whatsapp: {
     base: "https://wa.me/919814556375",
-    quote: "https://wa.me/919814556375?text=Welcome+To+Avon+Express+Packers+%26+Movers+-+Are+You+A+Bank+Employee%3F+%28Please+Type+%3A+Yes+or+No%29",
+    quote: "https://wa.me/919814556375",
     track: "https://api.whatsapp.com/send/?phone=919814556375&text=Track+My+Consignment+%28Please+Send+Your+Consignment+Number%29",
     pay: "https://api.whatsapp.com/send/?phone=%2B919814556375&text=I+Want+To+Pay+Online%21",
     bill: "https://api.whatsapp.com/send/?phone=%2B919814556375&text=Bill+For+Claim%21",
@@ -159,10 +159,11 @@ export const CLIENTS = [
 
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "About us", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Reviews", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Blog", href: "#testimonials" },
+  { label: "FAQ", href: "#cfontact" },
+  { label: "Contact us", href: "#contact" },
 ];
 
 export const FOOTER_QUICK = [

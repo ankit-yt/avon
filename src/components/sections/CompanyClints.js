@@ -17,13 +17,18 @@ export default function CompanyClints() {
   const doubled = [...clients, ...clients];
 
   return (
-    <section className="bg-white  border-y border-neutral-100  overflow-hidden">
-   
-        <div className="max-w-7xl mx-auto">
+    <section className="bg-white  py-10 border-y border-neutral-100  overflow-hidden">
 
-          <h1 className="text-7xl mb-10 mx-auto w-full flex justify-center  font-bold tracking-widest text-red-600 uppercase mb-3">
-            OUR VALUABLE CLIENTS
-          </h1>
+      <div className="max-w-7xl mx-auto">
+
+        <div className="flex flex-col w-full justify-center items-center gap-8  border-b border-slate-100 pb-12">
+
+          <h3 className="text-5xl md:text-7xl font-black text-red-600 tracking-wide  leading-[0.95]">
+   OUR VALUEABLE CLIENTS
+</h3>
+
+        </div>
+
 
         <div className="marquee-track  flex items-center  py-4">
           {doubled.map((client, i) => (
@@ -43,8 +48,8 @@ export default function CompanyClints() {
         </div>
       </div>
 
-    
-     
+
+
     </section>
   );
 }

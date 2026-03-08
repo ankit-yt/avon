@@ -1,6 +1,6 @@
 import React from 'react'
 
-function RevealInit() {
+function Reviews() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function RevealInit() {
   )
 }
 
-export default RevealInit
+export default Reviews

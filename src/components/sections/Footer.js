@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from "@/../public/images/logo.png"
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -9,7 +11,7 @@ const quickLinks = [
   { label: "Bill For Claim", href: "/bill-claim" },
   { label: "Video Call Survey", href: "/video-survey" },
   { label: "Booking Process", href: "/booking" },
-  { label: "Cost Calculator", href: "/cost-calculator" },
+  { label: "Get Your City", href: "/cost-calculator" },
 ];
 
 const services = [
@@ -108,17 +110,11 @@ export default function Footer() {
 
         {/* Brand column */}
         <div className="flex flex-col z-20 gap-6">
-          <div>
-            <p className="text-white font-black text-2xl tracking-tight leading-none">
-              A.E.P.M<span className="text-amber-400">®</span>
-            </p>
-            <p className="text-[11px] tracking-[0.2em] uppercase text-netural-200 mt-1">
-              Avon Express Packers & Movers
-            </p>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-amber-400/70 mt-0.5">
-              Anytime · Anywhere
-            </p>
-          </div>
+          <Link href="#home" className="shrink-0 group" aria-label="Home">
+            <div className="relative w-40 transition-transform duration-500 group-hover:scale-105">
+              <Image src={logo} alt="Avon Express Logo" priority />
+            </div>
+          </Link>
 
           <p className=" text-netural-200 leading-relaxed">
             Indias most trusted moving company. We handle your belongings with care, delivering them safely — anywhere across the country.
@@ -228,8 +224,8 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <a href="mailto:avonexpresspackersandmovers@gmail.com" className=" text-neutral-400 hover:text-white transition-colors break-all">
-                avonexpresspackersandmovers@gmail.com
+              <a href="mailto:info@avonexpresspackersandmovers.com" className=" text-neutral-400 hover:text-white transition-colors break-all">
+                info@avonexpresspackersandmovers.com
               </a>
             </div>
 

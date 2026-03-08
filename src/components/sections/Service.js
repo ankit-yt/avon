@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HiOutlineShieldCheck, HiOutlineTruck } from "react-icons/hi";
 
 const services = [
   {
@@ -42,20 +43,22 @@ const services = [
 
 export default function Service() {
   return (
-    <section className="bg-white py-20 px-4 md:px-10 lg:px-20">
+    <section className="bg-white py-10 px-4 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
-        <div className="text-center mb-14">
-          <p className="text-[11px] font-bold tracking-[0.28em] uppercase text-orange-500 mb-3">
-            What We Offer
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-neutral-950">
-            Our <span className="text-orange-500">Services</span>
-          </h2>
-          <div className="mt-4 mx-auto w-10 h-0.5 bg-orange-400 rounded-full" />
-          <p className="mt-5 text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
-            From household goods to heavy vehicles — we offer end-to-end relocation solutions across India.
+        {/* --- Minimal Header --- */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-100 pb-10">
+          <div className="space-y-2">
+            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600">
+              Our Expertise
+            </h2>
+            <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">
+              OUR <span className="text-slate-300">SERVICES.</span>
+            </h3>
+          </div>
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-4">
+             <span className="flex items-center gap-1"><HiOutlineShieldCheck className="text-orange-500"/> Insured</span>
+             <span className="flex items-center gap-1"><HiOutlineTruck className="text-orange-500"/> Tracked</span>
           </p>
         </div>
 
@@ -69,7 +72,9 @@ export default function Service() {
               {/* Image */}
               <div className="relative overflow-hidden aspect-[16/9]">
              
-                <img
+                <Image
+                width={100}
+                height={100}
                   src={s.img}
                   alt={s.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -77,10 +82,7 @@ export default function Service() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                {/* Index */}
-                <span className="absolute top-3 right-3 text-[10px] font-black tracking-widest text-white/60 tabular-nums">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+              
 
                 {/* Orange tag */}
                 <div className="absolute bottom-3 left-3 bg-orange-500 text-white text-[9px] font-black tracking-[0.18em] uppercase px-2.5 py-1 rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">

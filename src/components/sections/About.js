@@ -1,79 +1,100 @@
+
 import { SITE, STATS } from '@/lib/data'
+import Image from 'next/image'
 import React from 'react'
+import camel from "@/../public/images/camel.jpg"
+import { HiOutlineBadgeCheck, HiOutlineArrowRight } from "react-icons/hi";
 
 function About() {
   return (
     <section
-      id="home"
-      aria-label="Hero"
-      className="h-screen bg-stone-50 overflow-hidden relative"
+      id="about"
+      className="relative  bg-white flex items-center overflow-hidden p-10 lg:py-20"
     >
-      {/* Diagonal background shape */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        aria-hidden="true"
-      >
-        <div className="absolute right-0 top-0 w-[55%] h-full bg-stone-100/60 hidden lg:block"
-          style={{ clipPath: "polygon(8% 0, 100% 0, 100% 100%, 0% 100%)" }}
-        />
-      </div>
-
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-14 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-0 items-center min-h-[calc(100vh-108px)]">
-
-          {/* Left content */}
-          <div className="py-16 lg:py-24">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-7">
-              <span className="bg-accent text-white font-mono text-[9px] tracking-[0.15em] uppercase px-3 py-[5px] clip-chamfer-sm">
-                IBA Approved
-              </span>
-              <span className="tag">Est. Since 1990s</span>
+      <div className="max-w-[1440px] mx-auto w-full px-6 lg:px-14">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          
+          {/* LEFT SIDE: Visual Powerhouse (5 Columns) */}
+          <div className="lg:col-span-5 relative group">
+            {/* Artistic Frame */}
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-2xl shadow-slate-200">
+              <Image 
+                src={camel} 
+                alt="Professional Moving Service"
+                className="object-cover w-full h-full scale-105 group-hover:scale-100 transition-transform duration-700"
+                priority
+              />
+              {/* Overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-60" />
             </div>
 
-            {/* Headline */}
-            <h1 className="font-display text-[clamp(64px,9vw,120px)] leading-[0.92] tracking-[0.01em] uppercase mb-8">
-              Move
-              <em className="not-italic text-accent block">Without</em>
-              Worry.
+            {/* Next-Gen Floating Badge */}
+            <div className="absolute -bottom-6 -right-6 bg-white/80 backdrop-blur-xl border border-white p-6 rounded-2xl shadow-xl hidden md:block max-w-[200px]">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-white text-xl">
+                  <HiOutlineBadgeCheck />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 leading-tight">IBA <br/>Approved</span>
+              </div>
+              <p className="text-[11px] font-bold text-slate-800 leading-relaxed">
+                Certified reliability for all household & office relocations.
+              </p>
+            </div>
+            
+            {/* Background Accent Decor */}
+            <div className="absolute -z-10 -top-10 -left-10 w-40 h-40 bg-orange-50 rounded-full blur-3xl opacity-60" />
+          </div>
+
+          {/* RIGHT SIDE: SaaS-Level Content (7 Columns) */}
+          <div className="lg:col-span-7 flex flex-col justify-center lg:pl-10">
+            {/* Eyebrow Segment */}
+            <div className="flex items-center gap-4 mb-8">
+              <span className="h-[1px] w-12 bg-orange-600" />
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600">
+                Established Since 1990
+              </span>
+            </div>
+
+            {/* Headline with SaaS-style split weight */}
+            <h1 className="text-6xl md:text-[84px] font-black text-slate-900 leading-[0.95] tracking-tighter mb-10">
+              OUR JOURNEY <br />
+              <span className="text-slate-300">AND </span> 
+              HISTORY.
             </h1>
 
-            <p className="text-[16px] leading-[1.7] text-stone-400 max-w-[400px] mb-10 font-light">
-              India&apos;s trusted packers &amp; movers. We handle your household goods,
-              vehicles, and offices with precision — so you don&apos;t have to worry about a thing.
-            </p>
+            {/* Body Text: High Legibility */}
+            <div className="max-w-xl space-y-6 mb-12">
+              <p className="text-lg text-slate-500 font-medium leading-relaxed">
+                As India’s premier logistics partner, we don’t just move boxes; we relocate lives. 
+                Our precision-engineered process ensures your household goods, luxury vehicles, 
+                and corporate assets reach their destination with zero compromise.
+              </p>
+            </div>
 
-            {/* CTAs */}
-            <div className="flex gap-4 flex-wrap">
+            {/* CTA Interaction Block */}
+            <div className="flex flex-wrap items-center gap-6 mb-16">
               <a
                 href={SITE.whatsapp.quote}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-white font-mono text-[11px] tracking-[0.1em] uppercase px-8 py-4 clip-chamfer hover:bg-accent-dark transition-colors"
-                aria-label="Get a free quote"
+                className="px-10 py-5 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-orange-600 hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-slate-200 flex items-center gap-3"
               >
-                Free Quote
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                Get Free Quote <HiOutlineArrowRight className="text-lg" />
               </a>
               <a
                 href={`tel:${SITE.phone}`}
-                className="inline-flex items-center gap-2 border border-stone-900 text-stone-900 font-mono text-[11px] tracking-[0.1em] uppercase px-8 py-4 hover:bg-stone-900 hover:text-stone-50 transition-colors"
-                aria-label="Call us"
+                className="px-10 py-5 bg-white text-slate-900 text-[11px] font-black uppercase tracking-[0.2em] rounded-full border border-slate-200 hover:bg-slate-50 transition-all"
               >
-                Call Now
+                Talk to Expert
               </a>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-4 gap-6 mt-14 pt-8 border-t border-stone-200">
+            {/* Stats Grid: Minimalist & Bold */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-slate-100">
               {STATS.map(({ num, label }) => (
-                <div key={label}>
-                  <div className="font-display text-[32px] text-stone-900 leading-none">
+                <div key={label} className="group">
+                  <div className="text-4xl font-black text-slate-900 mb-1 group-hover:text-orange-600 transition-colors">
                     {num}
                   </div>
-                  <div className="font-mono text-[9px] tracking-[0.12em] uppercase text-stone-400 mt-1">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
                     {label}
                   </div>
                 </div>
@@ -81,8 +102,6 @@ function About() {
             </div>
           </div>
 
-        
-         
         </div>
       </div>
     </section>

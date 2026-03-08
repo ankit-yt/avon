@@ -1,24 +1,22 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/data";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Image from "next/image";
+import logo from "@/../public/images/logo.png";
+import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn , FaYoutube , FaTwitter } from "react-icons/fa";
+import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const closeMobile = () => {
-    setMenuOpen(false);
-    document.body.style.overflow = "";
-  };
 
   const toggleMenu = () => {
     const next = !menuOpen;
@@ -26,142 +24,159 @@ export default function Header() {
     document.body.style.overflow = next ? "hidden" : "";
   };
 
+  const closeMobile = () => {
+    setMenuOpen(false);
+    document.body.style.overflow = "";
+  };
+
   return (
     <>
-  <header
-    role="banner"
-    className={`sticky top-0 z-50 h-20 bg-[#111827]/95 backdrop-blur-xl border-b border-[#1F2933] transition-all duration-300 ${
-      scrolled ? "shadow-[0_12px_40px_rgba(0,0,0,0.4)]" : ""
-    }`}
-  >
-    <div className="max-w-7xl mx-auto px-6 lg:px-14 h-full flex items-center justify-between">
-
-      {/* ===== Logo ===== */}
-      <Link
-        href="#home"
-        className="flex items-center gap-3 group"
-        aria-label="Avon Express Home"
-      >
-        <div className="w-11 h-11 bg-[#F97316] flex items-center justify-center rounded-md shadow-md transition-all duration-300 group-hover:bg-[#EA580C] group-hover:shadow-lg">
-          <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
-            <path d="M1 17l5-9h12l5 9H1zm6-9V5h10v3M7 17v3h10v-3" />
-          </svg>
+      {/* ===== TOP UTILITY BAR (Next-Gen Space Filler) ===== */}
+      <div className="hidden lg:block bg-slate-900 text-white py-2 border-b border-slate-800">
+        <div className="px-10 mx-auto flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.15em]">
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-2 text-slate-400">
+              <HiOutlineLocationMarker className="text-orange-500 text-sm" />
+              <span>Any where,any time</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-400">
+              <HiOutlineMail className="text-orange-500 text-sm" />
+              <span>info@avonexpresspackersandmovers.com</span>
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
+              <a href="#" className="hover:text-orange-500 transition-colors"><FaFacebookF /></a>
+              <a href="#" className="hover:text-orange-500 transition-colors"><FaTwitter /></a>
+              <a href="#" className="hover:text-orange-500 transition-colors"><FaInstagram /></a>
+              <a href="#" className="hover:text-orange-500 transition-colors"><FaYoutube /></a>
+              <a href="#" className="hover:text-orange-500 transition-colors"><FaLinkedinIn /></a>
+            </div>
+            <span className="text-orange-500">24/7 Support Available</span>
+          </div>
         </div>
-
-        <div className="flex flex-col leading-tight">
-          <span className="font-display text-[22px] tracking-wide text-white">
-            AVON EXPRESS
-          </span>
-          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-gray-400">
-            Packers & Movers
-          </span>
-        </div>
-      </Link>
-
-      {/* ===== Desktop Nav ===== */}
-      <nav className="hidden lg:flex items-center gap-10" aria-label="Main navigation">
-        {NAV_LINKS.map(({ label, href }) => (
-          <a
-            key={href}
-            href={href}
-            className="font-mono text-[12px] tracking-[0.18em] uppercase text-gray-400 hover:text-white relative group transition-all duration-300"
-          >
-            {label}
-            <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-[#F97316] group-hover:w-full transition-all duration-300" />
-          </a>
-        ))}
-      </nav>
-
-      {/* ===== Right Section ===== */}
-      <div className="flex items-center gap-5">
-<div
-  id="google_translate_element"
-  className="hidden lg:block text-sm font-mono text-gray-300 [&>div]:!bg-transparent [&_select]:bg-[#1F2933] [&_select]:text-white [&_select]:border [&_select]:border-[#374151] [&_select]:px-3 [&_select]:py-2 [&_select]:rounded-md [&_select]:outline-none"
-></div>
-
-<LanguageSwitcher />
-        {/* Phone */}
-        <a
-          href={`tel:${SITE.phone}`}
-          className="hidden lg:block font-mono text-[13px] font-semibold text-white tracking-wide hover:text-[#F97316] transition-colors"
-        >
-          {SITE.phoneDisplay}
-        </a>
-        
-
-        {/* CTA Button */}
-        <a
-          href={SITE.whatsapp.quote}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden sm:flex items-center gap-2 bg-[#F97316] text-white font-mono text-[12px] tracking-[0.18em] uppercase px-7 py-3 rounded-md shadow-lg hover:bg-[#EA580C] hover:shadow-xl transition-all duration-300"
-        >
-          Get a Quote
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            className="w-4 h-4"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-
-        {/* Hamburger */}
-        <button
-          onClick={toggleMenu}
-          aria-label="Toggle mobile menu"
-          aria-expanded={menuOpen}
-          className="lg:hidden flex flex-col gap-1.5 p-2"
-        >
-          <span
-            className={`w-6 h-[2px] bg-white transition-transform duration-300 ${
-              menuOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-          />
-          <span
-            className={`w-6 h-[2px] bg-white transition-opacity duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`w-6 h-[2px] bg-white transition-transform duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          />
-        </button>
       </div>
-    </div>
-  </header>
 
-  {/* ================= MOBILE MENU ================= */}
-  <nav
-    className={`fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-[#111827] border-t border-[#1F2933] flex flex-col p-10 gap-10 transition-all duration-300 lg:hidden ${
-      menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-    }`}
-  >
-    {NAV_LINKS.map(({ label, href }) => (
-      <a
-        key={href}
-        href={href}
-        onClick={closeMobile}
-        className="font-display text-4xl tracking-wide text-white border-b border-[#1F2933] pb-4 hover:text-[#F97316] transition-colors"
+      <header
+        role="banner"
+        className={`sticky top-0 left-0 w-full z-50 transition-all duration-500 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur-md py-2 shadow-xl shadow-slate-200/50"
+            : "bg-white py-4"
+        }`}
       >
-        {label}
-      </a>
-    ))}
+        <div className="px-10 mx-auto flex items-center justify-between gap-8">
+          
+          {/* Logo Area */}
+          <Link href="#home" className="shrink-0 group" aria-label="Home">
+            <div className="relative w-40 transition-transform duration-500 group-hover:scale-105">
+              <Image src={logo} alt="Avon Express Logo" priority />
+            </div>
+          </Link>
 
-    <a
-      href={SITE.whatsapp.quote}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={closeMobile}
-      className="mt-6 flex items-center justify-center gap-2 bg-[#F97316] text-white font-mono text-[13px] tracking-[0.2em] uppercase px-6 py-4 rounded-md shadow-lg hover:bg-[#EA580C] transition-all duration-300"
-    >
-      Get Free Quote
-    </a>
-  </nav>
-</>
+          {/* Primary Navigation - Centered to fill space */}
+          <nav className="hidden lg:flex items-center justify-center grow gap-1">
+            {NAV_LINKS.map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="relative px-5 py-3 group flex items-center gap-1"
+              >
+                <span className="text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-900 transition-all duration-300">
+                  {label}
+                </span>
+                {/* Underline Animation */}
+                <span className="absolute bottom-2 left-5 right-5 h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+              </a>
+            ))}
+          </nav>
+
+          {/* Action Cluster - Packed for no empty space */}
+          <div className="flex items-center gap-15">
+            
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
+
+            {/* Pulsing WhatsApp Contact */}
+            <a
+              href="https://wa.me/919814556375"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden xl:flex items-center gap-3 bg-green-50 px-4 py-2 rounded-lg border border-green-100 hover:bg-green-100 transition-all group"
+            >
+              <div className="relative flex">
+                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                 <FaWhatsapp className="relative text-green-600 text-xl" />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="text-[9px] font-black text-green-700 uppercase tracking-tighter">Live Chat</span>
+                <span className="text-xs font-bold text-slate-900">98145-56375</span>
+              </div>
+            </a>
+
+
+            <a
+              href={SITE.whatsapp.quote}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-orange-600 transition-all duration-500 shadow-lg shadow-slate-200"
+            >
+              Get a Quote
+            </a>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors"
+              aria-label="Menu"
+            >
+              <div className="flex flex-col gap-1.5 w-6">
+                <div className={`h-0.5 bg-slate-900 transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                <div className={`h-0.5 bg-slate-900 transition-all ${menuOpen ? "opacity-0" : ""}`} />
+                <div className={`h-0.5 bg-slate-900 transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              </div>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* ===== FULL SCREEN OVERLAY MENU ===== */}
+      <div
+        className={`fixed inset-0 z-100 bg-slate-900 transition-all duration-700 ease-in-out lg:hidden ${
+          menuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
+      >
+        <div className="flex flex-col h-full p-10 pt-32">
+          <button onClick={closeMobile} className="absolute top-10 right-10 text-white text-4xl">×</button>
+          
+          <nav className="flex flex-col gap-8">
+            {NAV_LINKS.map(({ label, href }, i) => (
+              <a
+                key={href}
+                href={href}
+                onClick={closeMobile}
+                className="text-4xl font-black text-white hover:text-orange-500 transition-all transform hover:translate-x-4"
+                style={{ transitionDelay: `${i * 50}ms` }}
+              >
+                {label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="mt-auto grid grid-cols-2 gap-4 pb-10">
+             <div className="flex flex-col gap-2">
+                <span className="text-slate-500 uppercase text-[10px] font-bold tracking-widest">Office</span>
+                <p className="text-white text-sm">Baddowal, Ludhiana</p>
+             </div>
+             <div className="flex flex-col gap-2 text-right">
+                <span className="text-slate-500 uppercase text-[10px] font-bold tracking-widest">Email</span>
+                <p className="text-white text-sm">info@avonexpress.com</p>
+             </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

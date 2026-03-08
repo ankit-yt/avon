@@ -2,7 +2,7 @@
 import { SITE } from "@/lib/data";
 
 const items = [
-  `📦 Standard Rates Available`,
+  ` Standard Rates Available`,
   `IBA Approved Packers & Movers`,
   `Call ${SITE.phoneDisplay}`,
   `365 × 24 Service Available`,
@@ -13,9 +13,9 @@ export default function AnnouncementBar() {
   return (
     <div
       aria-label="Site announcements"
-      className="bg-[#111827] text-gray-200 h-10 w-full overflow-hidden flex items-center border-b border-[#1F2933]"
+      className="bg-white text-black h-10 w-full overflow-hidden flex items-center border-b-[1px] border-[#1f293327]"
     >
-      <div className="marquee-track flex whitespace-nowrap text-[12px] font-mono tracking-[0.2em] uppercase">
+      <div className="marquee-track flex whitespace-nowrap text-md font-mono tracking-[0.2em] uppercase">
         
         {/* First Set */}
         {items.map((item, i) => (
