@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import awardPhoto from "@/../public/images/Home/Award.png"; // Ensure this path is correct
+import awardPhoto from "/images/Home/Award.png"; // Ensure this path is correct
 import { HiOutlineLightBulb, HiOutlineShieldCheck, HiOutlineGlobe } from "react-icons/hi";
 
 function Award() {

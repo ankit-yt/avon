@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { HiOutlineBadgeCheck, HiOutlineBan } from "react-icons/hi";
-import usPhoto from "@/../public/images/Home/VS1.png"; 
-import othersPhoto from "@/../public/images/Home/VS2.png";
+import usPhoto from "/images/Home/VS1.png"; 
+import othersPhoto from "/images/Home/VS2.png";
 
 
 function Versus() {

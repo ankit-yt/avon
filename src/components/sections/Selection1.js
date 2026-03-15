@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { HiOutlineBadgeCheck, HiOutlineGlobe, HiOutlineUsers, HiOutlineCheckCircle, HiOutlineScale, HiOutlineSparkles, HiOutlineTruck, HiOutlineClock, HiOutlineSupport, HiOutlineThumbUp, HiOutlineMap, HiOutlineShieldCheck } from "react-icons/hi";
-import camel from "@/../public/images/Home/History.png"
+import camel from "/images/Home/History.png"
 
 // Next-Gen 12 Micro-Benefits
 const badges = [

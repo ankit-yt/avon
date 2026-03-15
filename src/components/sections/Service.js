@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineShieldCheck, HiOutlineTruck } from "react-icons/hi";
-import HouseholdGoodsShiftingServices from "@/../public/Images/Services/Household Goods Shifting Services.png";
-import OfficeShiftingServices from "@/../public/Images/Services/Office Shifting Services.png";
-import CarTransportServices from "@/../public/Images/Services/Car Transport Services.png";
-import BikeTransportServices from "@/../public/Images/Services/Bike Transport Services.png";
-import ActivaTransportServices from "@/../public/Images/Services/Activa Transport Services.png";
-import TruckAndTempoHireServices from "@/../public/Images/Services/Truck and Tempo Hire Services.png";
+import HouseholdGoodsShiftingServices from "/Images/Services/Household Goods Shifting Services.png";
+import OfficeShiftingServices from "/Images/Services/Office Shifting Services.png";
+import CarTransportServices from "/Images/Services/Car Transport Services.png";
+import BikeTransportServices from "/Images/Services/Bike Transport Services.png";
+import ActivaTransportServices from "/Images/Services/Activa Transport Services.png";
+import TruckAndTempoHireServices from "/Images/Services/Truck and Tempo Hire Services.png";
 import ScrollTopButton from "../ScrollTopBtn";
 
 const services = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HiOutlineExternalLink } from "react-icons/hi";
-import mediaImage from "@/../public/images/Home/News.png"
+import mediaImage from "/images/Home/News.png"
 import Image from 'next/image';
 
 const NEWS_ITEMS = [
