@@ -8,13 +8,13 @@ import {
   HiOutlineInboxIn,
 } from "react-icons/hi";
 
-import DiscussAndQuotation from "@/../public/images/Work/Discuss and Quotation.png";
-import PremiumPacking from "@/../public/images/Work/Premium Packing.png";
-import SafeLoading from "@/../public/images/Work/Safe Loading.png";
-import SecureTransportation from "@/../public/images/Work/Secure Transportation.png";
-import PrecisionUnloading from "@/../public/images/Work/Precision Unloading.png";
-import UnpackingAndSetup from "@/../public/images/Work/Unpacking and Setup.png";
-import HappyClient from "@/../public/images/Work/Happy Client.png";
+import DiscussAndQuotation from "/images/Work/Discuss and Quotation.png";
+import PremiumPacking from "/images/Work/Premium Packing.png";
+import SafeLoading from "/images/Work/Safe Loading.png";
+import SecureTransportation from "/images/Work/Secure Transportation.png";
+import PrecisionUnloading from "/images/Work/Precision Unloading.png";
+import UnpackingAndSetup from "/images/Work/Unpacking and Setup.png";
+import HappyClient from "/images/Work/Happy Client.png";
 
 import StepsTabs from "./StepsTabs";
 const DETAIL_TEXT = "avon express packers and movers";
