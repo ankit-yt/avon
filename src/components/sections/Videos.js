@@ -53,7 +53,7 @@ function Videos() {
             <div key={index} className="col-span-2  row-span-2 h-90 relative group overflow-hidden rounded-[24px] bg-slate-900 shadow-sm cursor-pointer">
             {/* Background Image/Thumbnail */}
             <img 
-              src="https://images.unsplash.com/photo-1535016120720-40c746a6580c?w=1200&q=80" 
+              src="https:/images.unsplash.com/photo-1535016120720-40c746a6580c?w=1200&q=80" 
               alt="Main Feature"
               className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1s] ease-out opacity-70 group-hover:opacity-50"
             />
@@ -90,7 +90,7 @@ function Videos() {
             >
               {/* Portrait Thumbnail */}
               <img 
-                src={`https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&q=80&auto=format&fit=crop&sig=${index}`} 
+                src={`https:/images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&q=80&auto=format&fit=crop&sig=${index}`} 
                 alt={video.title}
                 className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
               />

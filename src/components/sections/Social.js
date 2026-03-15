@@ -11,7 +11,7 @@ export default function Social() {
           href="tel:+919801455637"
           className="call-island flex items-center gap-2.5   shadow-lg shadow-red-200 hover:scale-105 transition-transform duration-200"
         >
-            <img src="https://www.avonexpresspackersandmovers.co.in/images/mobile-number.gif" />
+            <img src="https://www.avonexpresspackersandmovers.co.in@/assets/images/mobile-number.gif" />
          
         </a>
 

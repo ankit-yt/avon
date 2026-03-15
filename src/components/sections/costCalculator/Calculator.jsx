@@ -1,5 +1,5 @@
 'use client'
-import {React , useState} from 'react'
+import {React , useMemo, useState} from 'react'
 import { HiOutlineCalculator } from 'react-icons/hi'
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HiOutlineExternalLink } from "react-icons/hi";
-import mediaImage from "/images/Home/News.png"
+import mediaImage from "@/assets/images/Home/News.png"
 import Image from 'next/image';
 
 const NEWS_ITEMS = [
@@ -78,7 +78,7 @@ function Media() {
           {/* --- RIGHT: Featured Press Release (Now on the right side) --- */}
           <div className="lg:col-span-7 order-1 lg:order-2">
             <div className="relative group cursor-pointer">
-              <div className="aspect-[16/10] overflow-hidden rounded-3xl bg-slate-100 mb-8 relative border border-slate-50">
+              <div className="aspect-16/10 overflow-hidden rounded-3xl bg-slate-100 mb-8 relative border border-slate-50">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#e2e8f0_1.5px,transparent_1.5px)] [background-size:24px_24px] z-10" />
                 

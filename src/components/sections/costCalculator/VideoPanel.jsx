@@ -28,7 +28,7 @@ export default function VideoPanel() {
           muted
           loop
           playsInline
-          poster="/images/moving-poster.jpg"
+          poster="@/assets/images/moving-poster.jpg"
           className="w-full h-full object-cover"
           aria-label="Professional movers carefully packing and transporting household goods"
         />

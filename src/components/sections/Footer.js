@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "/images/Home/Logo.png"
+import logo from "@/assets/images/Home/Logo.png"
 
 const quickLinks = [
   { label: "Home", href: "/" },

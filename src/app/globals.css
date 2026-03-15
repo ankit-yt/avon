@@ -129,7 +129,7 @@ body {
 
 .footer{
     
-    background-image: url("./../lib/images/footer.jpg");
+    background-image: url("@/lib/images/footer.jpg");
     background-size: cover;
     background-position: center;
 }

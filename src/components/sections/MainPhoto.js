@@ -1,5 +1,5 @@
 import React from 'react';
-import mainPhoto from "/images/Home/Background.png";
+import mainPhoto from "@/assets/images/Home/Background.png";
 import Image from 'next/image';
 import { HiArrowRight } from "react-icons/hi";
 

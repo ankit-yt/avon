@@ -5,7 +5,6 @@
 import Calculator from "./Calculator";
 
 
-
 // ── Structured data (JSON-LD) for rich results ──────────────────────────────
 const jsonLd = {
   "@context": "https://schema.org",
@@ -101,7 +100,7 @@ export default function Enquiry() {
               className="lg:col-span-7 relative p-3 bg-slate-900 rounded-[28px] overflow-hidden min-h-70 lg:min-h-0 shadow-2xl"
             >
             <video
-  src="/Images/Videos/10.mp4"
+  src="/Videos/10.mp4"
   autoPlay
   loop
   controls
