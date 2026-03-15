@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/../public/images/logo.png"
+import logo from "@/../public/images/Home/Logo.png"
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -91,7 +91,7 @@ export default function Footer() {
       <div className="relative z-20 bg-orange-500">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className=" text-white font-medium tracking-wide">
-            Ready to move? Get a free quote in 60 seconds.
+            Ready To Moving? Get A Free Quotation in 60 Seconds.
           </p>
           <a
             href="tel:+919814556375"

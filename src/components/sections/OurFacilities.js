@@ -10,12 +10,12 @@ import {
 } from "react-icons/hi";
 
 // Replace these with your actual image imports
-import imgFleet from "@/../public/images/vs1.jpeg";
-import imgWarehouse from "@/../public/images/vs1.jpeg";
-import imgStation from "@/../public/images/vs1.jpeg";
-import imgTracking from "@/../public/images/vs1.jpeg";
-import imgFleet2 from "@/../public/images/vs1.jpeg";
-import imgWarehouse2 from "@/../public/images/vs1.jpeg";
+import imgFleet from "@/../public/images/Home/VS1.png";
+import imgWarehouse from "@/../public/images/Home/VS1.png";
+import imgStation from "@/../public/images/Home/VS1.png";
+import imgTracking from "@/../public/images/Home/VS1.png";
+import imgFleet2 from "@/../public/images/Home/VS1.png";
+import imgWarehouse2 from "@/../public/images/Home/VS1.png";
 
 const FACILITIES = [
   {

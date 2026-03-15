@@ -4,7 +4,7 @@ const text = "India's Most Awarded Packers and Movers Now in PAN india Present";
 const repeated = Array(3).fill(text);
 function Hero() {
   return (
-    <div className="tp-banner-container h-[80vh] sliderWraper flex flex-col relative overflow-hidden">
+    <div id="hero" className="tp-banner-container h-[80vh] sliderWraper flex flex-col relative overflow-hidden">
 
       {/* ===== MAIN AREA ===== */}
       <div className="main_body h-5/6 relative">

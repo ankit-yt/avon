@@ -53,27 +53,6 @@ body {
 
 
 
-/* //truckkk */
-.truck {
-  background: url("/images/1.png") no-repeat;
-  background-size: contain;
-  width: 524px;
-  height: 170px;
-  position: absolute;
-  top: -135%;
-  z-index: 10;
-  animation: myfirst 20s linear infinite;
-}
-
-@keyframes myfirst {
-  0% { transform: translateX(-600px); }
-  100% { transform: translateX(120vw); }
-}
-
-
-
-
-
  .marquee-wrapper {
           overflow: hidden;
           position: relative;
@@ -159,5 +138,17 @@ body {
 
 
 
+@keyframes glowMove {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
 
+.animate-glow {
+  background-size: 200% 100%;
+  animation: glowMove 3s linear infinite;
+}
 

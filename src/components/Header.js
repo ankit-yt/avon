@@ -4,7 +4,7 @@ import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/data";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Image from "next/image";
-import logo from "@/../public/images/logo.png";
+import logo from "@/../public/images/Home/Logo.png";
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn , FaYoutube , FaTwitter } from "react-icons/fa";
 import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 
@@ -47,13 +47,11 @@ export default function Header() {
           
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
-              <a href="#" className="hover:text-orange-500 transition-colors"><FaFacebookF /></a>
-              <a href="#" className="hover:text-orange-500 transition-colors"><FaTwitter /></a>
-              <a href="#" className="hover:text-orange-500 transition-colors"><FaInstagram /></a>
-              <a href="#" className="hover:text-orange-500 transition-colors"><FaYoutube /></a>
-              <a href="#" className="hover:text-orange-500 transition-colors"><FaLinkedinIn /></a>
+             <span>Udyam registered • UDYAM-CH-01-0044520</span>
             </div>
-            <span className="text-orange-500">24/7 Support Available</span>
+            <span className="text-orange-500 font-medium tracking-wide">
+   Trademark Registered • 4481215
+</span>
           </div>
         </div>
       </div>

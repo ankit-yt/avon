@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { HiOutlineBadgeCheck, HiOutlineBan } from "react-icons/hi";
-import usPhoto from "@/../public/images/vs1.jpeg"; 
-import othersPhoto from "@/../public/images/vs2.jpg";
+import usPhoto from "@/../public/images/Home/VS1.png"; 
+import othersPhoto from "@/../public/images/Home/VS2.png";
 
 
 function Versus() {
   return (
-    <section className="py-10 bg-white">
+    <section className="bg-white p-10 pb-5 px-4 md:px-10 lg:px-20 overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* --- Compact Header --- */}
