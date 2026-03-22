@@ -4,13 +4,13 @@ import Image from "next/image";
 import { HiOutlineArrowRight, HiOutlinePlay } from "react-icons/hi";
 
 // ─── Replace with your actual image imports ───
-import img1 from "@/assets/images/blog/Blog-Images-1.png";
-import img2 from "@/assets/images/blog/Blog-Images-2.png";
-import img3 from "@/assets/images/blog/Blog-Images-3.png";
-import img4 from "@/assets/images/blog/Blog-Images-4.png";
-import img5 from "@/assets/images/blog/Blog-Images-5.png";
-import img6 from "@/assets/images/blog/Blog-Images-6.png";
-import img7 from "@/assets/images/blog/Blog-Images-7.png";
+import img1 from "@/assets/images/Blog/Blog-Images-1.png";
+import img2 from "@/assets/images/Blog/Blog-Images-2.png";
+import img3 from "@/assets/images/Blog/Blog-Images-3.png";
+import img4 from "@/assets/images/Blog/Blog-Images-4.png";
+import img5 from "@/assets/images/Blog/Blog-Images-5.png";
+import img6 from "@/assets/images/Blog/Blog-Images-6.png";
+import img7 from "@/assets/images/Blog/Blog-Images-7.png";
 
 // ─── Replace with your actual video path ───
 const VIDEO_SRC = "/videos/8.mp4";
