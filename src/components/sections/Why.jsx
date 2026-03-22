@@ -3,7 +3,7 @@ import Image from "next/image";
 import IBAlogo from "@/assets/Images/Home/IBA-APPROVED-LOGO.png"
 import logo from "@/assets/Images/Home/Round-Logo.png"
 
-import whyPhoto from "@/assets/images/Home/Why-Avon-Express.png";
+import whyPhoto from "@/assets/Images/Home/Why-Avon-Express.png";
 
 function Why() {
   return (
