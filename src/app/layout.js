@@ -7,6 +7,11 @@ import "@/lib/styles/truck.css"
 
 import { Manrope } from "next/font/google";
 
+export const metadata = {
+  title: "Avon Express Packers and Movers | Official Website",
+  description: "Best services in India",
+};
+
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

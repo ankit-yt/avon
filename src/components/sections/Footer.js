@@ -1,29 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/Home/Logo.png"
-
+import playstore from "@/assets/Images/Home/App.gif"
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "Pay Online", href: "/pay-online" },
-  { label: "News & Events", href: "/news" },
+  { label: "Online Payment", href: "/pay-online" },
+  { label: "Director", href: "/news" },
   { label: "Tracking", href: "/tracking" },
   { label: "Regular Update", href: "/updates" },
   { label: "Bill For Claim", href: "/bill-claim" },
-  { label: "Video Call Survey", href: "/video-survey" },
-  { label: "Booking Process", href: "/booking" },
-  { label: "Get Your City", href: "/cost-calculator" },
+  { label: "Branches", href: "/video-survey" },
+  { label: "Join Avon Express", href: "/booking" },
 ];
 
 const services = [
-  { label: "Household Goods Shifting", href: "/services/household" },
-  { label: "Car Transport Services", href: "/services/car" },
-  { label: "Bike Transport Services", href: "/services/bike" },
-  { label: "Activa Transport Services", href: "/services/activa" },
-  { label: "Office Shifting Services", href: "/services/office" },
-  { label: "Truck & Tempo Hire", href: "/services/truck" },
-  { label: "Gallery & Testimonial", href: "/gallery" },
-  { label: "Our History & Certificate", href: "/about" },
-  { label: "Why Avon Express", href: "/why-us" },
+  { label: "Household Goods Shifting Servies" },
+  { label: "Car Transport Services" },
+  { label: "Bike Transport Services" },
+  { label: "Activa Transport Services" },
+  { label: "Office Shifting Services" },
+  { label: "Truck & Tempo Hire Service" },
 ];
 
 const socials = [
@@ -111,8 +107,8 @@ export default function Footer() {
         {/* Brand column */}
         <div className="flex flex-col z-20 gap-6">
           <Link href="#home" className="shrink-0 group" aria-label="Home">
-            <div className="relative w-40 transition-transform duration-500 group-hover:scale-105">
-              <Image src={logo} alt="Avon Express Logo" priority />
+            <div className="relative bg-white rounded-xl p-3 border-2 border-orange-700 transition-transform duration-500 group-hover:scale-105">
+              <Image src={logo} alt="Avon Express Logo" priority className="w-80" />
             </div>
           </Link>
 
@@ -136,16 +132,11 @@ export default function Footer() {
 
           {/* Google Play */}
           <a
-            href="#"
-            className="inline-flex items-center gap-3 border border-neutral-800 hover:border-neutral-600 rounded-xl px-4 py-3 w-64 transition-colors duration-200 group"
+          target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.company.avonexpresspackersandmovers.app"
+            className="inline-flex items-center gap-3 w-64 transition-colors duration-200 group"
           >
-            <svg className="w-10 h-10 text-neutral-400 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3.18 23.76a2 2 0 001.06-.31l11.84-6.84-2.95-2.95-9.95 10.1zM.1 1.08A2 2 0 000 1.8v20.4a2 2 0 00.1.72L12.6 10.5.1 1.08zM20.44 10.5l-2.6-1.5-3.22 3.22 3.22 3.22 2.63-1.52a2 2 0 000-3.42zM4.24.55L16.08 7.4l-2.95 2.95L3.18.3A2 2 0 004.24.55z" />
-            </svg>
-            <div>
-              <p className="text-[9px] text-netural-200 uppercase tracking-wider">Get it on</p>
-              <p className="text-xs font-semibold text-neutral-300 leading-tight">Google Play</p>
-            </div>
+            <Image src={playstore} width={100} height={100} alt="playstore" className="w-56"/>
           </a>
         </div>
 
@@ -178,23 +169,20 @@ export default function Footer() {
           <div className="h-px w-8 bg-amber-400 mb-6" />
           <ul className="flex flex-col gap-2.5">
             {services.map((s) => (
-              <li key={s.label}>
-                <Link
-                  href={s.href}
-                  className=" text-netural-200 hover:text-white flex items-center gap-2 group transition-colors duration-200"
-                >
-                  <span className="w-1 h-1 rounded-full bg-neutral-700 group-hover:bg-amber-400 transition-colors duration-200 flex-shrink-0" />
-                  {s.label}
-                </Link>
-              </li>
-            ))}
+  <li key={s.label}>
+    <div className="text-neutral-200 hover:text-white flex items-center gap-2 group transition-colors duration-200">
+      <span className="w-1 h-1 rounded-full bg-neutral-700 group-hover:bg-amber-400 transition-colors duration-200 flex-shrink-0" />
+      {s.label}
+    </div>
+  </li>
+))}
           </ul>
         </div>
 
         {/* Contact */}
         <div>
           <p className="text-2xl  font-bold tracking-[0.2em] uppercase text-white mb-5">
-            Contact Info
+            Contact US
           </p>
           <div className="h-px w-8 bg-amber-400 mb-6" />
 
@@ -209,7 +197,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className=" text-netural-200 leading-relaxed">
-                  Avon House, Transport Area, Sector 26 East, Chandigarh (India) — 160019 <a href="#" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
+                  Avon House, Transport Area, Sector 26 East, Chandigarh (India) — 160019 <a href="https://g.page/r/CaHrilU1AntZEBM" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
                   View in Map
                 </a>
                 </p>
@@ -224,9 +212,9 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <a href="mailto:info@avonexpresspackersandmovers.com" className=" text-neutral-400 hover:text-white transition-colors break-all">
-                info@avonexpresspackersandmovers.com
-              </a>
+              <span  className=" text-neutral-400 hover:text-white transition-colors break-all">
+                info@avonexpresspackersandmovers.co.in
+              </span>
             </div>
 
             {/* Phone */}
@@ -236,9 +224,9 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
-              <a href="tel:+919814556375" className=" text-neutral-200 hover:text-white font-medium transition-colors">
+              <span  className=" text-neutral-200 hover:text-white font-medium transition-colors">
                 +91 981-455-6375
-              </a>
+              </span>
             </div>
 
             {/* 24/7 badge */}
@@ -255,10 +243,10 @@ export default function Footer() {
        
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white">
-            © {new Date().getFullYear()} Avon Express Packers & Movers. All rights reserved. DMCA Protected.
+            © {new Date().getFullYear()} Avon Express Packers & Movers. All rights reserved.
           </p>
           <div className="flex items-center gap-5 flex-wrap justify-center">
-            {["Trademark", "Disclaimer", "Privacy Policy", "Terms & Conditions", "Sitemap"].map((item) => (
+            {[ "Disclaimer", "Privacy Policy","Refund Cancellation Policy" ,"Terms & Conditions"].map((item) => (
               <Link
                 key={item}
                 href="#"

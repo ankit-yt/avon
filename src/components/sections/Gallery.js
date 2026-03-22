@@ -2,73 +2,75 @@
 
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import g1 from "@/assets/images/Gallery/Gallery-Images-1.png";
+import g2 from "@/assets/images/Gallery/Gallery-Images-2.png";
+import g3 from "@/assets/images/Gallery/Gallery-Images-3.png";
+import g4 from "@/assets/images/Gallery/Gallery-Images-4.png";
+import g5 from "@/assets/images/Gallery/Gallery-Images-5.png";
+import g6 from "@/assets/images/Gallery/Gallery-Images-6.png";
+import g7 from "@/assets/images/Gallery/Gallery-Images-7.png";
+import g8 from "@/assets/images/Gallery/Gallery-Images-8.png";
+import g9 from "@/assets/images/Gallery/Gallery-Images-9.png";
+import g10 from "@/assets/images/Gallery/Gallery-Images-10.png";
+import g11 from "@/assets/images/Gallery/Gallery-Images-11.png";
+import Image from "next/image";
 
 
 const galleryItems = [
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Household-Goods-Shifting-Services-All-India.jpg",
+    img: g1,
     label: "Household Shifting",
     tag: "Packing",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Car-Transport-Services-All-India.jpg",
+    img: g2,
     label: "Car Transport",
     tag: "Vehicle",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Bike-Transport-Services-All-India.jpg",
+    img: g3,
     label: "Bike Transport",
     tag: "Vehicle",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Activa-Transport-Services-All-India.jpg",
+    img: g4,
     label: "Safe Delivery",
     tag: "Express",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Office-Shifting-Services-All-India.jpg",
-    label: "Office Moving",
+    img: g5,
+    label: "Office Shifting",
     tag: "Corporate",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Truck-and-Tempo-Hire-Services-All-India.png",
-    label: "Truck & Tempo Hire",
+    img: g6,
+    label: "Truck & Tempo",
     tag: "Fleet",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Packers-and-Movers-Bill-For-Claim.jpg",
+    img: g7,
     label: "Bill For Claim",
     tag: "Verified",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/IBA-Approved-Packers-and-Movers-All-India.jpg",
+    img: g8,
     label: "IBA Approved",
     tag: "Certified",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/IBA-Approved-Packers-and-Movers-All-India.jpg",
-    label: "Global Standards",
-    tag: "Certified",
+    img: g9,
+    label: "Professional Packing",
+    tag: "Quality",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Truck-and-Tempo-Hire-Services-All-India.png",
-    label: "Truck & Tempo Hire",
-    tag: "Fleet",
+    img: g10,
+    label: "Loading & Unloading",
+    tag: "Service",
   },
   {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/Packers-and-Movers-Bill-For-Claim.jpg",
-    label: "Bill For Claim",
-    tag: "Verified",
-  },
-  {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/IBA-Approved-Packers-and-Movers-All-India.jpg",
-    label: "IBA Approved",
-    tag: "Certified",
-  },
-  {
-    img: "https://www.avonexpresspackersandmovers.co.in/images/services/IBA-Approved-Packers-and-Movers-All-India.jpg",
-    label: "Global Standards",
-    tag: "Certified",
+    img: g11,
+    label: "Secure Transport",
+    tag: "Safety",
   },
 ];
 
@@ -87,9 +89,7 @@ export default function Gallery() {
               OUR <span className="text-slate-300">GALLERY.</span>
             </h3>
           </div>
-          <p className="text-sm font-medium text-slate-500 max-w-sm leading-relaxed md:text-right pb-2">
-            A transparent look into our operational excellence—from premium packing to safe, nationwide delivery.
-          </p>
+         
         </div>
 
         {/* --- High-End Bento Grid --- */}
@@ -98,15 +98,15 @@ export default function Gallery() {
             <div
               key={i}
               className={`group relative overflow-hidden rounded-[32px] bg-slate-100 cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-orange-900/10 transition-all duration-500
-                ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}
+               
               
               `}
             >
               {/* Image Layer with Slow-Zoom */}
-              <img
+              <Image
                 src={item.img}
                 alt={item.label}
-                className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+                className="absolute inset-0 w-full h-full object-fit scale-105 group-hover:scale-100 transition-transform duration-[1s] ease-[cubic-bezier(0.19,1,0.22,1)]"
               />
 
               {/* Seamless Gradient Overlay for text legibility */}

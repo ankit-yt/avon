@@ -41,7 +41,7 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-2 text-slate-400">
               <HiOutlineMail className="text-orange-500 text-sm" />
-              <span>info@avonexpresspackersandmovers.com</span>
+              <span>info@avonexpresspackersandmovers.co.in</span>
             </div>
           </div>
           
@@ -49,9 +49,13 @@ export default function Header() {
             <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
              <span>Udyam registered • UDYAM-CH-01-0044520</span>
             </div>
-            <span className="text-orange-500 font-medium tracking-wide">
-   Trademark Registered • 4481215
-</span>
+            <a
+  href="/Trademark-Registered-Certificate.pdf"
+  download
+  className="text-orange-500 font-medium tracking-wide cursor-pointer"
+>
+  Trademark Registered • 4481215
+</a>
           </div>
         </div>
       </div>
@@ -109,7 +113,7 @@ export default function Header() {
                  <FaWhatsapp className="relative text-green-600 text-xl" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-[9px] font-black text-green-700 uppercase tracking-tighter">Live Chat</span>
+                <span className="text-[9px] font-black text-green-700 uppercase tracking-tighter">Live{"\u00A0"}{"\u00A0"}{"\u00A0"}{"\u00A0"}Chat</span>
                 <span className="text-xs font-bold text-slate-900">98145-56375</span>
               </div>
             </a>
@@ -121,7 +125,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-orange-600 transition-all duration-500 shadow-lg shadow-slate-200"
             >
-              Get a Quote
+              Get a Quotation
             </a>
 
             {/* Mobile Menu Toggle */}

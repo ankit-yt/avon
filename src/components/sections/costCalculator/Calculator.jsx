@@ -1,25 +1,17 @@
 'use client'
+import { PRICING_DATA } from '@/lib/data';
 import {React , useMemo, useState} from 'react'
 import { HiOutlineCalculator } from 'react-icons/hi'
 
 
-const PRICING_DATA = [
-  { type: "1 BHK Home",          d50: "₹4,000–₹10,500",   d500: "₹10,500–₹15,500",  d1000: "₹15,500–₹24,500",  d1500: "₹24,500–₹29,500",  d2500: "₹29,500–₹35,500",  d3000: "₹35,500–₹45,500"  },
-  { type: "2 BHK Home",          d50: "₹11,500–₹14,500",  d500: "₹14,500–₹24,500",  d1000: "₹24,500–₹30,500",  d1500: "₹30,500–₹40,500",  d2500: "₹40,500–₹46,500",  d3000: "₹46,500–₹65,500"  },
-  { type: "3 BHK Home",          d50: "₹14,500–₹20,500",  d500: "₹20,500–₹29,500",  d1000: "₹29,500–₹38,500",  d1500: "₹38,500–₹51,500",  d2500: "₹51,500–₹65,500",  d3000: "₹65,500–₹85,500"  },
-  { type: "4 BHK / Villa",       d50: "₹20,500–₹29,500",  d500: "₹29,500–₹35,500",  d1000: "₹35,500–₹55,500",  d1500: "₹55,500–₹65,500",  d2500: "₹65,500–₹85,500",  d3000: "₹85,500–₹95,500"  },
-  { type: "5 BHK / Villa",       d50: "₹29,500–₹35,500",  d500: "₹35,500–₹55,500",  d1000: "₹55,500–₹70,500",  d1500: "₹70,500–₹85,500",  d2500: "₹85,500–₹95,500",  d3000: "₹95,500–₹99,500"  },
-  { type: "Car Transportation",  d50: "₹5,000–₹9,000",    d500: "₹9,000–₹12,500",   d1000: "₹12,500–₹18,500",  d1500: "₹18,500–₹24,500",  d2500: "₹24,500–₹30,500",  d3000: "₹30,500–₹35,500"  },
-  { type: "Bike Transportation", d50: "₹2,000–₹3,000",    d500: "₹3,000–₹7,000",    d1000: "₹7,000–₹10,000",   d1500: "₹10,000–₹12,000",  d2500: "₹12,000–₹18,500",  d3000: "₹18,500–₹20,500"  },
-];
 
 const DISTANCE_OPTIONS = [
-  { value: "d50",   label: "Local Move (Up to 50 KM)"       },
-  { value: "d500",  label: "Inter-City (Up to 500 KM)"      },
-  { value: "d1000", label: "Inter-State (Up to 1,000 KM)"   },
-  { value: "d1500", label: "Long Distance (Up to 1,500 KM)" },
-  { value: "d2500", label: "Cross Country (Up to 2,500 KM)" },
-  { value: "d3000", label: "Extreme Range (Up to 3,000 KM)" },
+  { value: "d50",   label: "Up to 50 KM" },
+  { value: "d500",  label: "Up to 500 KM" },
+  { value: "d1000", label: "Up to 1,000 KM" },
+  { value: "d1500", label: "Up to 1,500 KM" },
+  { value: "d2500", label: "Up to 2,500 KM" },
+  { value: "d3000", label: "Up to 3,000 KM" },
 ];
 
 
@@ -43,8 +35,8 @@ function Calculator() {
                   <HiOutlineCalculator />
                 </div>
                 <div>
-                  <h4 className="text-white font-black text-xl tracking-tight">Cost Estimator</h4>
-                  <p className="text-slate-400 text-xs font-medium tracking-wide">Ludhiana Base Tariffs</p>
+                  <h4 className="text-white font-black text-xl tracking-tight">Cost Calculator</h4>
+                  <p className="text-slate-400 text-xs font-medium tracking-wide">Estimated Charges</p>
                 </div>
               </div>
 
@@ -92,8 +84,7 @@ function Calculator() {
                 {estimate}
               </div>
               <p className="text-[10px] text-slate-400 font-medium leading-relaxed">
-                *Baseline estimate only. Final cost varies based on exact inventory, floor
-                level, and equipment required. Submit the form to lock in a quote.
+                *Get an instant preliminary estimate for your relocation. The final quotation may vary based on the type of service, volume of goods, floor level, labor requirements, pickup and delivery locations, necessary packing materials, and transportation charges. Inquire directly to receive a final quotation with no hidden fees..
               </p>
             </div>
           </div>

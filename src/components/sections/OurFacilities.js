@@ -1,166 +1,143 @@
-
-
 import React from 'react';
 import Image from 'next/image';
-import { 
-  HiOutlineShieldCheck, 
-  HiOutlineTruck, 
-  HiOutlineDatabase, 
-  HiOutlineVideoCamera 
+import {
+  HiOutlineShieldCheck,
+  HiOutlineVideoCamera,
+  HiOutlineDatabase,
+  HiOutlineCube
 } from "react-icons/hi";
 
-// Replace these with your actual image imports
-import imgFleet from "@/assets/images/Home/VS1.png";
-import imgWarehouse from "@/assets/images/Home/VS1.png";
-import imgStation from "@/assets/images/Home/VS1.png";
-import imgTracking from "@/assets/images/Home/VS1.png";
-import imgFleet2 from "@/assets/images/Home/VS1.png";
-import imgWarehouse2 from "@/assets/images/Home/VS1.png";
+import imgBillClaim   from "@/assets/images/Facility/Bill-For-Claim.png";
+import imgInsurance   from "@/assets/images/Facility/Insurance.png";
+import imgVideoSurvey from "@/assets/images/Facility/Video-Calling-Surveys.png";
+import imgWarehouse   from "@/assets/images/Facility/Warehouse.png";
+import imgCrates      from "@/assets/images/Facility/Wooden-Crates.png";
 
 const FACILITIES = [
   {
-    title: "Specialized Fleet",
-    desc: "A dedicated nationwide fleet of closed-body vehicle carriers and weather-proof containers.",
-    icon: <HiOutlineTruck />,
-    image: imgFleet
-  },
-  {
-    title: "Secure Warehousing",
-    desc: "Climate-controlled, 24/7 monitored storage solutions for short and long-term needs.",
-    icon: <HiOutlineDatabase />,
-    image: imgWarehouse
-  },
-  {
-    title: "IBA Approved Stations",
-    desc: "Certified packing hubs utilizing premium corrugated sheets and zero-impact protocols.",
+    title: "Bill For Claim",
     icon: <HiOutlineShieldCheck />,
-    image: imgStation
+    image: imgBillClaim,
   },
   {
-    title: "AI Tracking Hub",
-    desc: "Real-time telemetry integration for transparent, live movement monitoring of all domestic assets.",
+    title: "Transit Insurance",
+    icon: <HiOutlineShieldCheck />,
+    image: imgInsurance,
+  },
+  {
+    title: "Video Call Survey",
     icon: <HiOutlineVideoCamera />,
-    image: imgTracking
+    image: imgVideoSurvey,
   },
   {
-    title: "Vehicle Transport Carriers",
-    desc: "Specialized double-decker carriers for damage-free car and bike transport across India.",
-    icon: <HiOutlineTruck />,
-    image: imgFleet2
-  },
-  {
-    title: "Inventory Management",
-    desc: "High-density racking systems and cloud-based inventory tracking for absolute transparency.",
+    title: "CCTV Warehouse",
     icon: <HiOutlineDatabase />,
-    image: imgWarehouse2
-  }
+    image: imgWarehouse,
+  },
+  {
+    title: "Wooden Crate Packing",
+    icon: <HiOutlineCube />,
+    image: imgCrates,
+  },
 ];
 
-function OurFacilities() {
+function PhotoCard({ facility, className = "" }) {
   return (
-    <section className="py-10 bg-white overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-14 w-full">
-        
-        {/* --- Minimalist Header Architecture --- */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
-          <div className="max-w-2xl">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4">
-              Infrastructure
-            </h2>
-            <h3 className="text-5xl md:text-8xl font-black text-slate-900 tracking-tighter leading-[0.95]">
+    <div className={`group relative overflow-hidden rounded-2xl bg-slate-100 ${className}`}>
+      {/* Full image — always fully visible, no overlay in default state */}
+      <Image
+        src={facility.image}
+        alt={facility.title}
+        fill
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
+
+      {/* Hover: subtle dark gradient from bottom only */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+
+      {/* Title — slides up on hover, hidden by default */}
+      <div className="absolute inset-x-0 bottom-0 px-5 py-4 z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out">
+        <p className="text-white text-sm font-bold uppercase tracking-wide leading-none">
+          {facility.title}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function OurFacilities() {
+  return (
+    <section className="py-14 bg-[#FAFAF8] overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 w-full">
+
+        {/* ── Header ── */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div>
+            <div className="inline-flex items-center gap-3 mb-3">
+              <span className="h-px w-8 bg-orange-500" />
+              <span className="text-[10px] font-black uppercase tracking-[0.45em] text-orange-600">
+                Infrastructure
+              </span>
+            </div>
+            <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-[1]">
               OUR <span className="text-slate-300">FACILITIES.</span>
             </h3>
           </div>
-          <p className="text-xl text-slate-500 font-medium max-w-sm leading-relaxed pb-2">
-            Investing in high-end logistics technology to maintain a 99% safety rating across India.
+          <p className="text-sm text-slate-500 max-w-xs leading-relaxed">
+            High-end logistics technology maintaining a 99% safety rating across India.
           </p>
         </div>
 
-        {/* --- 6-Image Technical Bento Grid --- */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-10 gap-6 auto-rows-[300px]">
-          
-          {/* Card 01 - Large Featured */}
-          <div className="md:col-span-4 lg:col-span-6 row-span-2 group relative overflow-hidden rounded-[32px] bg-slate-900 shadow-xl shadow-slate-200">
-             <Image 
-                src={FACILITIES[0].image} 
-                alt={FACILITIES[0].title}
-                className="absolute inset-0 object-cover w-full h-full opacity-60 scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
-                priority
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
-             <div className="absolute inset-0 p-10 flex flex-col justify-end z-10">
-                <div className="w-14 h-14 bg-orange-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg shadow-orange-900/20">
-                    {FACILITIES[0].icon}
-                </div>
-                <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">
-                    {FACILITIES[0].title}
-                </h4>
-                <p className="text-slate-300 font-medium leading-relaxed text-sm max-w-sm">
-                    {FACILITIES[0].desc}
-                </p>
-             </div>
+        {/* ── Photo Grid ── */}
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          {/* Card 0 — tall hero, spans 2 rows on left */}
+          <div className="sm:row-span-2 h-[260px] sm:h-auto">
+            <PhotoCard
+              facility={FACILITIES[0]}
+              className="h-full min-h-[260px] sm:min-h-[420px]"
+            />
           </div>
 
-          {/* Card 02 */}
-          <div className="md:col-span-2 lg:col-span-4 row-span-1 group relative overflow-hidden rounded-[32px] bg-slate-50 border border-slate-100 hover:border-orange-200 transition-all">
-             <Image 
-                src={FACILITIES[1].image} 
-                alt={FACILITIES[1].title}
-                className="absolute inset-0 object-cover w-full h-full opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-             <div className="absolute inset-x-0 bottom-0 p-8 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h4 className="text-xl font-black text-white uppercase tracking-tight mb-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {FACILITIES[1].title}
-                </h4>
-                <p className="text-[11px] text-slate-100 font-medium opacity-0 group-hover:opacity-100 transition-opacity leading-snug">
-                    {FACILITIES[1].desc}
-                </p>
-             </div>
-          </div>
+          {/* Card 1 */}
+          <PhotoCard
+            facility={FACILITIES[1]}
+            className="h-[200px] sm:h-auto sm:min-h-[200px]"
+          />
 
-          {/* Card 03 */}
-          <div className="md:col-span-2 lg:col-span-4 row-span-1 group relative overflow-hidden rounded-[32px] bg-white border border-slate-100 p-8 flex flex-col justify-between hover:border-orange-200 transition-all">
-             <div className="relative z-10 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-slate-50 text-slate-400 text-2xl flex items-center justify-center border border-slate-100 transition-colors group-hover:bg-orange-600 group-hover:text-white">
-                   {FACILITIES[2].icon}
-                </div>
-                <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight">{FACILITIES[2].title}</h4>
-             </div>
-             <p className="relative z-10 text-[11px] text-slate-500 font-medium leading-relaxed mt-4 line-clamp-2">
-                {FACILITIES[2].desc}
-             </p>
-             <Image 
-                src={FACILITIES[2].image} 
-                alt={FACILITIES[2].title}
-                className="absolute inset-0 object-cover w-full h-full opacity-20 scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
-             />
-          </div>
+          {/* Card 2 */}
+          <PhotoCard
+            facility={FACILITIES[2]}
+            className="h-[200px] sm:h-auto sm:min-h-[200px]"
+          />
 
-          {/* Cards 04-06 (Bottom Row) */}
-          {[FACILITIES[3], FACILITIES[4], FACILITIES[5]].map((f, i) => (
-            <div key={i} className={`md:col-span-2 ${i === 2 ? 'lg:col-span-4' : 'lg:col-span-3'} row-span-1 group relative overflow-hidden rounded-[32px] bg-slate-50 border border-slate-100 p-6 transition-all hover:border-orange-200`}>
-              <Image 
-                src={f.image} 
-                alt={f.title}
-                className="absolute inset-0 object-cover w-full h-full opacity-20 group-hover:opacity-100 transition-opacity duration-700 grayscale hover:grayscale-0"
-              />
-              <div className="absolute inset-x-0 bottom-0 p-6 z-10 bg-white shadow-lg rounded-t-3xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="text-slate-300 text-2xl group-hover:text-orange-600 transition-colors">{f.icon}</div>
-                    <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight">{f.title}</h4>
-                </div>
-                <p className="text-[10px] text-slate-500 font-medium leading-snug line-clamp-1 group-hover:line-clamp-none transition-all">
-                    {f.desc}
-                </p>
-              </div>
-            </div>
-          ))}
+          {/* Card 3 */}
+          <PhotoCard
+            facility={FACILITIES[3]}
+            className="h-[200px] sm:h-auto sm:min-h-[200px]"
+          />
+
+          {/* Card 4 */}
+          <PhotoCard
+            facility={FACILITIES[4]}
+            className="h-[200px] sm:h-auto sm:min-h-[200px]"
+          />
 
         </div>
+
+        {/* ── Caption strip ── */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+          {FACILITIES.map((f, i) => (
+            <div key={i} className="flex items-center gap-2 px-3 py-2 bg-white border border-slate-100 rounded-xl">
+              <span className="text-orange-500 text-base flex-shrink-0">{f.icon}</span>
+              <span className="text-[11px] font-semibold text-slate-700 leading-tight">{f.title}</span>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 }
-
-export default OurFacilities;

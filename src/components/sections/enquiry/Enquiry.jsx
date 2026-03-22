@@ -3,7 +3,7 @@
 // Interactive parts are delegated to EnquiryForm (client).
 
 import Image from "next/image";
-import ContactUs from "@/assets/images/Home/Contact US.png";
+import ContactUs from "@/assets/images/Home/Contact-US.png";
 import EnquiryForm from "./EnquiryForm";
 
 // ── Structured data (JSON-LD) for rich results ──────────────────────────────

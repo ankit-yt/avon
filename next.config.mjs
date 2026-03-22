@@ -3,7 +3,7 @@ const nextConfig = {
   reactCompiler: true,
 
   images: {
-   
+    
      qualities: [75,90, 100],
   },
 };

@@ -3,6 +3,10 @@ import Image from 'next/image';
 import awardPhoto from "@/assets/images/Home/Award.png"; // Ensure this path is correct
 import { HiOutlineLightBulb, HiOutlineShieldCheck, HiOutlineGlobe } from "react-icons/hi";
 
+const getPreviousYear = () => {
+  return new Date().getFullYear() - 1;
+};
+
 function Award() {
   return (
     <section className="p-10  bg-white overflow-hidden border-t border-slate-100">
@@ -19,9 +23,6 @@ function Award() {
               <span className="text-slate-300"> AWARDS.</span>
             </h3>
           </div>
-          <p className="text-slate-500 font-medium max-w-xs text-sm leading-relaxed">
-            Since our establishment in the 1990s, we have been committed to redefining the standards of relocation in India.
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -54,41 +55,16 @@ function Award() {
                 <HiOutlineLightBulb className="text-2xl" />
               </div>
               <div className="space-y-2">
-                <span className="text-[10px] font-black text-orange-600 tracking-widest uppercase">1990s • The Beginning</span>
-                <h4 className="text-xl font-black text-slate-900">Foundation of Trust</h4>
+                <span className="text-[10px] font-black text-orange-600 tracking-widest uppercase">Best packers and movers india</span>
+                <h4 className="text-xl font-black text-slate-900">WINNER {getPreviousYear()} TOP 3 PRIZE PACKERS AND MOVERS</h4>
                 <p className="text-sm text-slate-500 leading-relaxed">
-                  Established with a vision to provide IBA-approved, stress-free moving services across the nation.
+                  It was a moment of pride for Avon Express Packers and Movers when they shared the stage as panelists at the 'Bharat Nirman' event held at 'Palace' in Chandigarh. The central theme of this discussion was transportation regulations, emphasizing how these rules can propel our nation to new heights of prosperity while simultaneously ensuring the safety of every citizen. They introduced modern packing techniques and specialized vehicle carriers to ensure 100% damage-free delivery.
                 </p>
               </div>
             </div>
 
-            {/* Milestone 2 */}
-            <div className="flex gap-6 group">
-              <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
-                <HiOutlineShieldCheck className="text-2xl" />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[10px] font-black text-orange-600 tracking-widest uppercase">2010s • Scaling Heights</span>
-                <h4 className="text-xl font-black text-slate-900">Safety First Protocols</h4>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Introduced advanced packing tech and specialized vehicle carriers to ensure 99% damage-free delivery.
-                </p>
-              </div>
-            </div>
-
-            {/* Milestone 3 */}
-            <div className="flex gap-6 group">
-              <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
-                <HiOutlineGlobe className="text-2xl" />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[10px] font-black text-orange-600 tracking-widest uppercase">Present • Digital Era</span>
-                <h4 className="text-xl font-black text-slate-900">Nationwide Network</h4>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Leveraging a vast network of students and professionals to manage over 1,000 successful moves annually.
-                </p>
-              </div>
-            </div>
+          
+          
 
           </div>
         </div>

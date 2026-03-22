@@ -2,11 +2,11 @@
 import { SITE } from "@/lib/data";
 
 const items = [
-  ` Standard Rates Available`,
-  `IBA Approved Packers & Movers`,
-  `Call ${SITE.phoneDisplay}`,
-  `365 × 24 Service Available`,
-  `Nationwide Coverage Across India`,
+  "365 × 24 Services Available.",
+  "Nationwide Coverage Across India.",
+  "IBA & ISO & Government Registered.",
+  "Standard Rates Available.",
+  "Providing World Class Packing & Moving Services",
 ];
 
 export default function AnnouncementBar() {

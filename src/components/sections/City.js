@@ -1,25 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import Andaman from "@/assets/images/State/Andaman and Nicobar Islands.png";
-import AndhraPradesh from "@/assets/images/State/Andhra Pradesh.png";
-import ArunachalPradesh from "@/assets/images/State/Arunachal Pradesh.png";
+import Andaman from "@/assets/images/State/Andaman-and-Nicobar-Islands.png";
+import AndhraPradesh from "@/assets/images/State/Andhra-Pradesh.png";
+import ArunachalPradesh from "@/assets/images/State/Arunachal-Pradesh.png";
 import Assam from "@/assets/images/State/Assam.png";
 import Bihar from "@/assets/images/State/Bihar.png";
 import Chandigarh from "@/assets/images/State/Chandigarh.png";
 import Chhattisgarh from "@/assets/images/State/Chhattisgarh.png";
-import DadraDiu from "@/assets/images/State/Dadra and Nagar Haveli and Daman and Diu.png";
+import DadraDiu from "@/assets/images/State/Dadra-and-Nagar-Haveli-and-Daman-and-Diu.png";
 import Delhi from "@/assets/images/State/Delhi.png";
 import Goa from "@/assets/images/State/Goa.png";
 import Gujarat from "@/assets/images/State/Gujarat.png";
 import Haryana from "@/assets/images/State/Haryana.png";
-import HimachalPradesh from "@/assets/images/State/Himachal Pradesh.png";
-import JammuKashmir from "@/assets/images/State/Jammu and Kashmir.png";
+import HimachalPradesh from "@/assets/images/State/Himachal-Pradesh.png";
+import JammuKashmir from "@/assets/images/State/Jammu-and-Kashmir.png";
 import Jharkhand from "@/assets/images/State/Jharkhand.png";
 import Karnataka from "@/assets/images/State/Karnataka.png";
 import Kerala from "@/assets/images/State/Kerala.png";
 import Ladakh from "@/assets/images/State/Ladakh.png";
 import Lakshadweep from "@/assets/images/State/Lakshadweep.png";
-import MadhyaPradesh from "@/assets/images/State/Madhya Pradesh.png";
+import MadhyaPradesh from "@/assets/images/State/Madhya-Pradesh.png";
 import Maharashtra from "@/assets/images/State/Maharashtra.png";
 import Manipur from "@/assets/images/State/Manipur.png";
 import Meghalaya from "@/assets/images/State/Meghalaya.png";
@@ -30,12 +30,12 @@ import Puducherry from "@/assets/images/State/Puducherry.png";
 import Punjab from "@/assets/images/State/Punjab.png";
 import Rajasthan from "@/assets/images/State/Rajasthan.png";
 import Sikkim from "@/assets/images/State/Sikkim.png";
-import TamilNadu from "@/assets/images/State/Tamil Nadu.png";
+import TamilNadu from "@/assets/images/State/Tamil-Nadu.png";
 import Telangana from "@/assets/images/State/Telangana.png";
 import Tripura from "@/assets/images/State/Tripura.png";
-import UttarPradesh from "@/assets/images/State/Uttar Pradesh.png";
+import UttarPradesh from "@/assets/images/State/Uttar-Pradesh.png";
 import Uttarakhand from "@/assets/images/State/Uttarakhand.png";
-import WestBengal from "@/assets/images/State/West Bengal.png";
+import WestBengal from "@/assets/images/State/West-Bengal.png";
 
 const states = [
   { name: "Andaman and Nicobar Islands", slug: "andaman-and-nicobar-islands", img: Andaman },
@@ -95,7 +95,7 @@ export default function City() {
         {states.map((city, i) => (
           <Link
             key={i}
-            href={""}
+            href={`/${city.name.toLowerCase().replace(/\s+/g, "-")}`}
             className="group relative overflow-hidden rounded-xl  h-60 block"
           >
             {/* Image */}

@@ -1,0 +1,263 @@
+import { FaStar } from "react-icons/fa";
+import { HiCheckBadge } from "react-icons/hi2";
+
+const reviews = [
+  {
+    name: "Deepak Sharma",
+    location: "Power Grid",
+    avatar: "DS",
+    avatarBg: "#4285F4",
+    rating: 5,
+    date: "Recently",
+    review:
+      "Avon Express Packers and Movers Gurgaon provided me with excellent packing services at a very reasonable rate. They arrived on time, packed up all my belongings in such an efficient manner that I didn't even have to worry about it. All of their staff were friendly and helpful too. Highly recommend!",
+  },
+  {
+    name: "Priyanka Saha",
+    location: "Reserve Bank of India",
+    avatar: "PS",
+    avatarBg: "#EA4335",
+    rating: 5,
+    date: "Recently",
+    review:
+      "Recently I used Avon Express Packers and Movers to shift my household goods and car and I received a very good service by them. They had provided me an IBA approved bill for claim.",
+  },
+  {
+    name: "Asif Basra",
+    location: "Actor",
+    avatar: "AB",
+    avatarBg: "#34A853",
+    rating: 5,
+    date: "Recently",
+    review:
+      "I got my household goods shifted from Mumbai to Dharamshala. I found Avon Express Packers and Movers company to work for me. I liked the work of Avon Express Packers.",
+  },
+  {
+    name: "Gaurav Kuthiala",
+    location: "Doctor",
+    avatar: "GK",
+    avatarBg: "#FBBC04",
+    rating: 5,
+    date: "Recently",
+    review:
+      "I shifted my household goods from Jalandhar to Delhi. I had a great experience with Avon Express Packers and Movers Chandigarh. Their team members were highly skilled.",
+  },
+  {
+    name: "Ajay Jain",
+    location: "Army",
+    avatar: "VC",
+    avatarBg: "#FF6D00",
+    rating: 5,
+    date: "Recently",
+    review:
+      "I shifted my household goods from Pune to Hyderabad. I would like to thank Avon Express Packers and Movers Bangalore for their impeccable services. They packed my stuff brilliantly and made the moving experience a smooth one. Their customer service is also on point, which is always reassuring and greatly appreciated.",
+  },
+];
+
+/* ── Google multicolour G icon ── */
+const GoogleColorLogo = ({ size = 18 }) => (
+  <svg height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
+    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+  </svg>
+);
+
+/* ── Google text wordmark ── */
+const GoogleWordmark = () => (
+  <svg viewBox="0 0 74 24" className="h-[12px] w-auto" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24z" fill="#4285F4"/>
+    <path d="M25 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z" fill="#EA4335"/>
+    <path d="M53.58 7.49h-.09c-.57-.68-1.67-1.3-3.06-1.3C47.53 6.19 45 8.72 45 12c0 3.26 2.53 5.81 5.43 5.81 1.39 0 2.49-.62 3.06-1.32h.09v.83c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.52 3.1-3.52 1.74 0 3.1 1.49 3.1 3.54.01 2.03-1.36 3.5-3.1 3.5z" fill="#4285F4"/>
+    <path d="M38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z" fill="#FBBC05"/>
+    <path d="M58.93 1h2.42v16.57h-2.42z" fill="#34A853"/>
+    <path d="M63.89 11.77c.05-2.22 1.81-3.58 3.17-3.58 1.06 0 1.95.53 2.25 1.28l-5.42 2.3zm8.07-1.99C71.29 7.7 69.52 6.19 67.11 6.19c-2.39 0-4.96 1.89-4.96 5.81 0 3.26 1.88 5.81 5.22 5.81 2.41 0 3.8-1.47 4.38-2.33l-1.79-1.19c-.6.88-1.41 1.46-2.59 1.46-1.17 0-2-.54-2.54-1.6l7.03-2.9-.9-2.17z" fill="#EA4335"/>
+  </svg>
+);
+
+/* ── Star row ── */
+function StarRow({ rating }) {
+  return (
+    <div className="flex gap-0.5">
+      {[1, 2, 3, 4, 5].map((s) => (
+        <FaStar
+          key={s}
+          size={14}
+          className={s <= rating ? "text-[#FBBC04]" : "text-slate-200"}
+        />
+      ))}
+    </div>
+  );
+}
+
+/* ── Single Google-style review card ── */
+function GoogleReviewCard({ review }) {
+  return (
+    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-5 flex flex-col gap-3">
+
+      {/* Row 1 — avatar + name + Google G */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div
+            className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0 select-none"
+            style={{ backgroundColor: review.avatarBg }}
+          >
+            {review.avatar}
+          </div>
+          <div>
+            <div className="flex items-center gap-1">
+              <span className="text-[13.5px] font-semibold text-slate-800 leading-none">
+                {review.name}
+              </span>
+              <HiCheckBadge size={14} className="text-[#4285F4] flex-shrink-0" />
+            </div>
+            <span className="text-[11px] text-slate-400 block mt-0.5">
+              {review.location}
+            </span>
+          </div>
+        </div>
+        <GoogleColorLogo size={22} />
+      </div>
+
+      {/* Row 2 — stars + date */}
+      <div className="flex items-center gap-2">
+        <StarRow rating={review.rating} />
+        <span className="text-[11px] text-slate-400">{review.date}</span>
+      </div>
+
+      {/* Row 3 — review body */}
+      <p className="text-[13px] text-slate-600 leading-relaxed flex-1">
+        {review.review}
+      </p>
+
+      {/* Row 4 — "Posted on Google" footer */}
+      <div className="flex items-center gap-1.5 pt-3 border-t border-slate-100">
+        <span className="text-[11px] text-slate-400">Posted on</span>
+        <GoogleWordmark />
+      </div>
+    </div>
+  );
+}
+
+/* ── Main server component ── */
+export default function FeedBack() {
+  const avg = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+
+  return (
+    <section className="relative py-20 bg-[#FAFAF8] overflow-hidden">
+
+      {/* Decorative blobs */}
+      <div className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-orange-100/40 blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[340px] h-[340px] rounded-full bg-blue-100/25 blur-[110px] pointer-events-none" />
+
+      <div className="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+
+        {/* ── Section header ── */}
+        <header className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-3 mb-5">
+            <span className="h-px w-10 bg-orange-500" />
+            <span className="text-[10px] font-black uppercase tracking-[0.45em] text-orange-600">
+              Customer Reviews
+            </span>
+            <span className="h-px w-10 bg-orange-500" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+            What Our Clients{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 text-orange-500">Say</span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-orange-100 rounded -z-0" />
+            </span>
+          </h2>
+          <p className="text-sm text-slate-500">
+            Real experiences from real customers — verified on Google.
+          </p>
+        </header>
+
+        {/* ── Google aggregate badge ── */}
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex flex-wrap justify-center items-center gap-5 bg-white border border-slate-200 rounded-2xl px-7 py-5 shadow-sm">
+
+            <GoogleColorLogo size={34} />
+
+            <div className="w-px h-12 bg-slate-100 hidden sm:block" />
+
+            {/* Overall score */}
+            <div className="text-center">
+              <p className="text-4xl font-black text-slate-900 leading-none">{avg}</p>
+              <div className="flex justify-center mt-1.5">
+                <StarRow rating={5} />
+              </div>
+              <p className="text-[11px] text-slate-400 mt-1.5 uppercase tracking-wider font-medium">
+                {reviews.length} Google Reviews
+              </p>
+            </div>
+
+            <div className="w-px h-12 bg-slate-100 hidden sm:block" />
+
+            {/* Per-star breakdown */}
+            <div className="flex flex-col gap-1.5">
+              {[5, 4, 3, 2, 1].map((star) => {
+                const count = reviews.filter((r) => r.rating === star).length;
+                const pct = Math.round((count / reviews.length) * 100);
+                return (
+                  <div key={star} className="flex items-center gap-2">
+                    <span className="text-[11px] text-slate-500 w-2 font-medium">{star}</span>
+                    <FaStar size={9} className="text-[#FBBC04]" />
+                    <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-[#FBBC04] rounded-full"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <span className="text-[11px] text-slate-400 w-3 text-right">{count}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* ── Cards: top 3 ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {reviews.slice(0, 3).map((r, i) => (
+            <GoogleReviewCard key={i} review={r} />
+          ))}
+        </div>
+
+        {/* ── Cards: bottom 2 centered ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5 lg:w-2/3 lg:mx-auto">
+          {reviews.slice(3).map((r, i) => (
+            <GoogleReviewCard key={i} review={r} />
+          ))}
+        </div>
+
+        {/* ── View on Google CTA ── */}
+       <div className="flex mx-auto gap-5 justify-center ">
+        <div className="flex justify-center mt-10">
+          <a
+          target="_blank"
+            href="https://g.page/r/CaHrilU1AntZEBM/review"
+            className="inline-flex items-center gap-2.5 text-xs text-slate-500 hover:text-slate-800 transition border border-slate-200 bg-white rounded-full px-5 py-2.5 shadow-sm hover:shadow-md"
+          >
+            <GoogleColorLogo size={16} />
+            <span className="font-medium">Write a Review • Share your Experience</span>
+          </a>
+        </div>
+         <div className="flex justify-center mt-10">
+          <a
+          target="_blank"
+            href="https://g.page/r/CaHrilU1AntZEBM"
+            className="inline-flex items-center gap-2.5 text-xs text-slate-500 hover:text-slate-800 transition border border-slate-200 bg-white rounded-full px-5 py-2.5 shadow-sm hover:shadow-md"
+          >
+            <GoogleColorLogo size={16} />
+            <span className="font-medium">View all reviews on Google</span>
+          </a>
+        </div>
+        
+       </div>
+
+      </div>
+    </section>
+  );
+}
