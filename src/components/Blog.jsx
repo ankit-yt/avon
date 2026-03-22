@@ -15,7 +15,6 @@ import img8 from "@/assets/images/Blog/Blog-Images-8.png";
 
 // ─── Replace with your actual video path ───
 const VIDEO_SRC = "/videos/8.mp4";
-const VIDEO_POSTER = "/assets/images/blog/video-poster.jpg";
 
 const getCurrentDate = () => {
   const today = new Date();
