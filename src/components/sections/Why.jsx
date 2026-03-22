@@ -7,8 +7,8 @@ import whyPhoto from "@/assets/Images/Home/Why-Avon-Express.png";
 
 function Why() {
   return (
-    <section className="py-20 bg-white overflow-hidden border-t border-slate-100">
-      
+    <section className="py-20 bg-white overflow-hidden border-t border-slate-400">
+      {/* hrlllo */}
       {/* 🔥 CENTERED CONTAINER */}
       <div className="max-w-[1200px] mx-auto px-4 lg:px-10">
 
