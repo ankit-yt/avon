@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import IBAlogo from "@/assets/Images/Home/IBA-APPROVED-LOGO.png"
-import logo from "@/assets/Images/Home/Round-Logo.png"
+import IBAlogo from "@/assets/images/Home/IBA-APPROVED-LOGO.png"
+import logo from "@/assets/images/Home/Round-Logo.png"
 
 function Why() {
   return (

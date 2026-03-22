@@ -1,5 +1,5 @@
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
-import gif from "@/assets/Images/Home/Mobile.gif";
+import gif from "@/assets/images/Home/Mobile.gif";
 import Image from "next/image";
 
 export default function Social() {

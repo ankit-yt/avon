@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/Home/Logo.png"
-import playstore from "@/assets/Images/Home/App.gif"
+import playstore from "@/assets/images/Home/App.gif"
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Online Payment", href: "/pay-online" },
