@@ -11,12 +11,9 @@ import img4 from "@/assets/images/blog/Blog-Images-4.png";
 import img5 from "@/assets/images/blog/Blog-Images-5.png";
 import img6 from "@/assets/images/blog/Blog-Images-6.png";
 import img7 from "@/assets/images/blog/Blog-Images-7.png";
-import img8 from "@/assets/images/blog/Blog-Images-7.png";
 
 // ─── Replace with your actual video path ───
 const VIDEO_SRC = "/videos/8.mp4";
-const VIDEO_POSTER = "/assets/images/blog/video-poster.jpg";
-
 const getCurrentDate = () => {
   const today = new Date();
   return today.toLocaleDateString("en-IN", {
@@ -91,15 +88,6 @@ const POSTS = [
     title: "What Happens If You Can't Find Electrician, Plumber or Carpenter?",
     excerpt:
       "We Are Not Responsible To Undertake Electrical, Carpentry, or Plumbing Work. If Needed We Will Provide Those Depending Upon Availability of Staff With Extra Charges.",
-  },
-  {
-    image: img8,
-    alt: "Damage Policy",
-    author: "Avon Express",
-    date,
-    title: "What Happens If Goods Are Damaged During Transit?",
-    excerpt:
-      "Avon Express Packers and Movers Adopt All Safety Measures To Avoid Any Kind of Damage To Your Goods. However, in Case of Any Unpredictable Mishap, We Ensure Speedy Settlement of Claims From the Insurance Company.",
   },
 ];
 
