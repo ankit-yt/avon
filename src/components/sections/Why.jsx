@@ -3,6 +3,8 @@ import Image from "next/image";
 import IBAlogo from "@/assets/images/Home/IBA-APPROVED-LOGO.png"
 import logo from "@/assets/images/Home/Round-Logo.png"
 
+import whyPhoto from "@/assets/images/Home/Why.png";
+
 function Why() {
   return (
     <section className="py-20 bg-white overflow-hidden border-t border-slate-400">
@@ -22,12 +24,12 @@ function Why() {
 
             {/* Image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 group aspect-[4/5]">
-              {/* <Image
+              <Image
                 src={whyPhoto}
                 alt="Why choose Avon Express"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-              /> */}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
             </div>
 
