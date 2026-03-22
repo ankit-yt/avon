@@ -11,7 +11,7 @@ import img4 from "@/assets/images/blog/Blog-Images-4.png";
 import img5 from "@/assets/images/blog/Blog-Images-5.png";
 import img6 from "@/assets/images/blog/Blog-Images-6.png";
 import img7 from "@/assets/images/blog/Blog-Images-7.png";
-import img8 from "@/assets/images/blog/Blog-Images-8.png";
+import img8 from "@/assets/images/blog/Blog-Images-7.png";
 
 // ─── Replace with your actual video path ───
 const VIDEO_SRC = "/videos/8.mp4";
