@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/Home/Logo.png"
 import playstore from "@/assets/images/Home/App.gif"
+import ScrollTopButton from "../ScrollTopBtn";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Online Payment", href: "/pay-online" },
-  { label: "Director", href: "/news" },
+  { label: "Insurance", href: "/insurance" },
   { label: "Tracking", href: "/tracking" },
   { label: "Regular Update", href: "/updates" },
   { label: "Bill For Claim", href: "/bill-claim" },
@@ -19,13 +20,12 @@ const services = [
   { label: "Bike Transport Services" },
   { label: "Activa Transport Services" },
   { label: "Office Shifting Services" },
-  { label: "Truck & Tempo Hire Service" },
+  { label: "Truck and Tempo Hire Service" },
 ];
-
 const socials = [
   {
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/avonexpresspackersandmovers",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -34,7 +34,7 @@ const socials = [
   },
   {
     label: "Twitter",
-    href: "#",
+    href: "https://x.com/avon_express",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
@@ -43,7 +43,7 @@ const socials = [
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/avonexpresspackersandmovers",
     icon: (
       <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -54,7 +54,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/in/avon-express-packers-and-movers",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
@@ -64,7 +64,7 @@ const socials = [
   },
   {
     label: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@avonexpresspackersandmovers",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
@@ -105,20 +105,22 @@ export default function Footer() {
 
         {/* Brand column */}
         <div className="flex flex-col z-20 gap-6">
-          <Link href="#home" className="shrink-0 group" aria-label="Home">
-            <div className="relative bg-white rounded-xl p-3 border-2 border-orange-700 transition-transform duration-500 group-hover:scale-105">
+          <ScrollTopButton>
+           <div className="relative bg-white rounded-xl p-3 border-2 border-orange-700 transition-transform duration-500 group-hover:scale-105">
               <Image src={logo} alt="Avon Express Logo" priority className="w-80" />
             </div>
-          </Link>
+          </ScrollTopButton>
+         
 
-          <p className=" text-netural-200 leading-relaxed">
-            Indias most trusted moving company. We handle your belongings with care, delivering them safely — anywhere across the country.
+          <p className=" text-neutral-200 leading-relaxed">
+            Avon Express Packers and Movers Company is The Highest Moving Supply in India - Avon Express Packers and Movers is a Famous Name Moving Company in India.
           </p>
 
           {/* Socials */}
           <div className="flex items-center gap-2">
             {socials.map((s) => (
               <a
+              target="_blank"
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
@@ -150,7 +152,7 @@ export default function Footer() {
               <li key={l.label}>
                 <Link
                   href={l.href}
-                  className=" text-netural-200 hover:text-white flex items-center gap-2 group transition-colors duration-200"
+                  className=" text-neutral-200 hover:text-white flex items-center gap-2 group transition-colors duration-200"
                 >
                   <span className="w-1 h-1 rounded-full bg-neutral-700 group-hover:bg-amber-400 transition-colors duration-200 flex-shrink-0" />
                   {l.label}
@@ -176,6 +178,10 @@ export default function Footer() {
   </li>
 ))}
           </ul>
+           <div className="mt-9 inline-flex items-center gap-2 border border-neutral-800 rounded-full px-4 py-2 w-fit">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span className=" text-white font-medium  tracking-wide">Book a Physical Free Pre-Move Survey</span>
+            </div>
         </div>
 
         {/* Contact */}
@@ -195,7 +201,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className=" text-netural-200 leading-relaxed">
+                <p className=" text-neutral-200 leading-relaxed">
                   Avon House, Transport Area, Sector 26 East, Chandigarh (India) — 160019 <a href="https://g.page/r/CaHrilU1AntZEBM" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
                   View in Map
                 </a>
@@ -211,7 +217,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <span  className=" text-neutral-400 hover:text-white transition-colors break-all">
+              <span  className=" text-neutral-200 hover:text-white transition-colors break-all">
                 info@avonexpresspackersandmovers.co.in
               </span>
             </div>
@@ -242,10 +248,10 @@ export default function Footer() {
        
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white">
-            © {new Date().getFullYear()} Avon Express Packers & Movers. All rights reserved.
+            © {new Date().getFullYear()} Avon Express Packers and Movers. All rights reserved.
           </p>
           <div className="flex items-center gap-5 flex-wrap justify-center">
-            {[ "Disclaimer", "Privacy Policy","Refund Cancellation Policy" ,"Terms & Conditions"].map((item) => (
+            {[ "AVAILABLE AT YOUR LOCATION" ,"Disclaimer", "Privacy Policy","Refund and Cancellation Policy" ,"Terms and Conditions"].map((item) => (
               <Link
                 key={item}
                 href="#"
