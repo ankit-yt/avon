@@ -16,43 +16,43 @@ const services = [
     img: HouseholdGoodsShiftingServices,
     title: "Household Goods Shifting Services",
     slug: "household-goods-shifting-services",
-    desc: "Avon Express Packers and Movers offer Best Household Goods Shifting Services Handling all Process of Relocation From one Place To Another Places. We Relocate all Type of Household Things From one City To Another City.",
+    desc: "Avon Express Packers and Movers provide excellent services for shifting household goods from one location to another, handling the entire relocation process with efficiency. We relocate all types of household items from one city to another.",
   },
   {
     img: CarTransportServices,
     title: "Car Transport Services",
     slug: "car-transport-services",
-    desc: "Avon Express Packers and Movers Best Company Dealing With Car Transportation. Your Priority is To Send Your Car To Your Destination Without Damage, and on Time With a Suitable Carrier.",
+    desc: "Avon Express Packers and Movers is a trusted company in car transportation. Your priority is to ensure that your car reaches its destination safely, on time, and without any damage using a suitable carrier.",
   },
   {
     img: BikeTransportServices,
     title: "Bike Transport Services",
     slug: "bike-transport-services",
-    desc: "Your Priority is To Reach Your Bike at its Destination Without Any Damage. Due To Which Your Time and Many Troubles Are Saved. Bike Transport Service is one of The Major Services.",
+    desc: "Your priority is to transport your bike safely to its destination without any damage. This service helps you save time and avoid unnecessary hassles. Bike transport is one of our key services.",
   },
   {
     img: ActivaTransportServices,
     title: "Activa Transport Services",
     slug: "activa-transport-services",
-    desc: "An Experienced Company Will Treat Your Activa as its own Activa and Will Do Whatever it can To Provide You The Most Optimal Activa Carrier Services. Activa Transport Service is one of Those Major Services.",
+    desc: "An experienced company treats your Activa as its own and makes every effort to provide the best transport services. Activa transport is one of our specialized and reliable services.",
   },
   {
     img: OfficeShiftingServices,
     title: "Office Shifting Services",
     slug: "office-shifting-services",
-    desc: "Avon Express Packers and Movers are Expert in office Relocation Services in India. We offer Cheap and Secure Packing and Moving Services From one Place To Another Place.",
+    desc: "Avon Express Packers and Movers specialize in office relocation services across India. We provide affordable, secure, and efficient packing and moving solutions from one location to another.",
   },
   {
     img: TruckAndTempoHireServices,
     title: "Truck and Tempo Hire Services",
     slug: "truck-and-tempo-hire-services",
-    desc: "Avon Express Packers and Movers Provide Transportation Service is Actually one of The Most Alleged Companies. Facility To Hire Truck and Tempo Every Type, GPS-Enabled Vehicle. We Have a Pickup, Tata 407, 14ft, 17ft, 19ft, 20ft, 22ft, 24ft, 32ft. Both Closed Body & Open Body Are Available.",
+    desc: "Avon Express Packers and Movers offer reliable transportation services with a wide range of GPS-enabled vehicles. Options include Pickup, Tata 407, and trucks of 14ft, 17ft, 19ft, 20ft, 22ft, 24ft, and 32ft sizes. Both closed-body and open-body vehicles are available.",
   },
 ];
 
 export default function Service() {
   return (
-    <section className="bg-white py-5 px-4 md:px-10 lg:px-20">
+    <section id="services" className="bg-white py-5 px-4 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
         {/* --- Minimal Header --- */}
@@ -127,7 +127,7 @@ export default function Service() {
         {/* Bottom strip */}
         <div className="mt-14 pt-10 border-t border-neutral-100 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-neutral-400 tracking-wide">
-            Zero Damage Free Shifting and Real-Time Tracking.
+            Zero Damage Free Shifting and Real-Time Tracking With Lockable Truck.
           </p>
           <ScrollTopButton className="inline-flex items-center gap-2 border border-neutral-200 hover:border-orange-400 hover:text-orange-500 text-neutral-600 text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-all duration-200">
   All Services

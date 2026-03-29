@@ -2,11 +2,17 @@
 import { SITE } from "@/lib/data";
 
 const items = [
-  "365 × 24 Services Available.",
-  "Nationwide Coverage Across India.",
-  "IBA & ISO & Government Registered.",
-  "Standard Rates Available.",
-  "Providing World Class Packing & Moving Services",
+  "365 × 24 Services Available",
+  "Providing World Class Packing and Moving Services",
+  "IBA and ISO and Government Registered",
+  "Experienced Team of Professionals",
+  "Safety and Security",
+  "On Time Delivery",
+  "Trust and Security",
+  "Secure and Damage-Free Shifting",
+  "Trained and Uniformed Employees",
+  "See Packing Process on YouTube",
+  "Top Quality Packaging Material"
 ];
 
 export default function AnnouncementBar() {

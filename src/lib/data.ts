@@ -158,11 +158,11 @@ export const CLIENTS = [
 ];
 
 export const NAV_LINKS = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/" },
   { label: "About us", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Blog", href: "#testimonials" },
-  { label: "FAQ", href: "#cfontact" },
+  { label: "Blog", href: "#blog" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact us", href: "#contact" },
 ];
 

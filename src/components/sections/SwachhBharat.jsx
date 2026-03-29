@@ -31,7 +31,7 @@ const sections = [
   },
   {
     icon: <FaTruck size={18} />, // 🧹 replaced with relevant icon
-    title: "Clean Loading & Transportation",
+    title: "Clean Loading and Transportation",
     accent: "orange",
     type: "bullet",
     items: [
@@ -79,7 +79,7 @@ export default function SwachhBharat() {
             <span className="h-px w-10 bg-orange-500" />
           </div>
 
-          <h2 className="text-4xl md:text-[3.5rem] font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5">
+          <h2 className="text-4xl md:text-[3.5rem] uppercase font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5">
             Clean &amp;{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-orange-500">Hygienic</span>
@@ -168,7 +168,7 @@ export default function SwachhBharat() {
                   </span>
                 </div>
                 <p className="text-sm font-semibold text-white leading-snug">
-                  Choose Avon Express Packers &amp; Movers for a safe, hygienic, and eco-conscious relocation.
+                  Choose Avon Express Packers and Movers for a safe, hygienic, and eco-conscious relocation.
                 </p>
                 <p className="text-xs text-orange-100 mt-2 font-medium">
                   Together, let's move homes and keep India clean.
@@ -185,7 +185,7 @@ export default function SwachhBharat() {
             <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               <span className="text-[10px] font-semibold text-white/80 uppercase tracking-widest">
-                Live Process
+                AVON EXPRESS
               </span>
             </div>
 

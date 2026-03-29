@@ -1,6 +1,17 @@
 
 
 import LazyVideo from "./LazyVideo";
+import p2 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-1.png";
+import p1 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-2.png";
+import p7 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-3.png";
+import p4 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-4.png";
+import p5 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-5.png";
+import p6 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-6.png";
+import p3 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-7.png";
+import p8 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-8.png";
+import p9 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-9.png";
+import p10 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-10.png";
+import p11 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-11.png";
 
 // ─── Data (server-side only, never shipped to client) ────────────────────────
 
@@ -9,25 +20,26 @@ const LANDSCAPE_VIDEOS = [
     id: "l1",
     title: "The Complete Moving Experience",
     src: "/videos/14.mp4",
+    thumb: p1, // ✅ first thumbnail
   },
   {
     id: "l2",
     title: "Behind the Move",
     src: "/videos/7.mp4",
+    thumb: p2, // ✅ second thumbnail
   },
 ];
-
 const PORTRAIT_VIDEOS = [
-  { id: "p1",  title: "Market Trend Analysis",  src: "/videos/6.mp4" },
-  { id: "p2",  title: "Cinematic Reel 01",      src: "/videos/12.mp4" },
-  { id: "p3",  title: "Stop-Loss Strategies",   src: "/videos/13.mp4" },
-  { id: "p4",  title: "Nostalgia Edit",         src: "/videos/11.mp4" },
-  { id: "p5",  title: "Reel 05",                src: "/videos/9.mp4" },
-  { id: "p6",  title: "Reel 06",                src: "/videos/5.mp4" },
-  { id: "p7",  title: "Reel 07",                src: "/videos/0.mp4" },
-  { id: "p8",  title: "Reel 08",                src: "/videos/4.mp4" },
-  { id: "p10", title: "Reel 10",                src: "/videos/3.mp4" },
-  { id: "p11", title: "Reel 11",                src: "/videos/1.mp4" },
+  { id: "p1",  title: "Market Trend Analysis", src: "/videos/6.mp4",  thumb: p3 },
+  { id: "p2",  title: "Cinematic Reel 01",     src: "/videos/12.mp4", thumb: p10 },
+  { id: "p3",  title: "Stop-Loss Strategies",  src: "/videos/13.mp4", thumb: p9 },
+  { id: "p4",  title: "Nostalgia Edit",        src: "/videos/11.mp4", thumb: p8 },
+  { id: "p5",  title: "Reel 05",               src: "/videos/2.mp4",  thumb: p11 },
+  { id: "p6",  title: "Reel 06",               src: "/videos/5.mp4",  thumb: p6 },
+  { id: "p7",  title: "Reel 07",               src: "/videos/4.mp4",  thumb: p5 },
+  { id: "p8",  title: "Reel 08",               src: "/videos/0.mp4",  thumb: p7 },
+  { id: "p10", title: "Reel 10",               src: "/videos/3.mp4",  thumb: p4 },
+  { id: "p11", title: "Reel 11",               src: "/videos/1.mp4",  thumb: p7 }, // reuse if needed
 ];
 
 // ─── Server-rendered card wrappers ────────────────────────────────────────────
@@ -43,6 +55,7 @@ aspect-video">
       <LazyVideo
        id={video.id}
         src={video.src}
+        poster={video.thumb}
         controls
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -62,6 +75,7 @@ aspect-[9/16]">
       <LazyVideo
        id={video.id}
         src={video.src}
+          poster={video.thumb}
         controls
         className="absolute inset-0 w-full h-full object-cover"
       />

@@ -13,6 +13,11 @@ import g8 from "@/assets/images/Gallery/Gallery-Images-8.png";
 import g9 from "@/assets/images/Gallery/Gallery-Images-9.png";
 import g10 from "@/assets/images/Gallery/Gallery-Images-10.png";
 import g11 from "@/assets/images/Gallery/Gallery-Images-11.png";
+import g12 from "@/assets/images/Gallery/Gallery-Images-12.png";
+import g13 from "@/assets/images/Gallery/Gallery-Images-13.png";
+import g14 from "@/assets/images/Gallery/Gallery-Images-14.png";
+import g15 from "@/assets/images/Gallery/Gallery-Images-15.png";
+import g16 from "@/assets/images/Gallery/Gallery-Images-16.png";
 import Image from "next/image";
 
 
@@ -72,6 +77,31 @@ const galleryItems = [
     label: "Secure Transport",
     tag: "Safety",
   },
+  {
+    img: g12,
+    label: "Expert Packing",
+    tag: "Packing",
+  },
+  {
+    img: g13,
+    label: "Fast Moving Service",
+    tag: "Express",
+  },
+  {
+    img: g14,
+    label: "Safe Handling",
+    tag: "Safety",
+  },
+  {
+    img: g15,
+    label: "Trusted Movers",
+    tag: "Verified",
+  },
+  {
+    img: g16,
+    label: "Packing Material",
+    tag: "Packing Material",
+  },
 ];
 
 export default function Gallery() {
@@ -83,7 +113,7 @@ export default function Gallery() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 border-b border-slate-100 pb-12">
           <div className="max-w-2xl">
             <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-6 flex items-center gap-2">
-              <span className="w-8 h-[1px] bg-orange-600" /> Visual Portfolio
+              <span className="w-8 h-[1px] bg-orange-600" /> Visual Photo
             </h2>
             <h3 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.95]">
               OUR <span className="text-slate-300">GALLERY.</span>

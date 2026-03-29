@@ -3,18 +3,29 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 import mediaImage from "@/assets/images/Home/News.png"
 import Image from 'next/image';
 
+const getCurrentMonthYear = () => {
+  const date = new Date();
+
+  const month = date.toLocaleString("default", { month: "long" }); 
+  const year = date.getFullYear();
+
+  return `${month} ${year}`;
+};
+
 const NEWS_ITEMS = [
   {
-    date: "March 2026",
-    category: "Corporate",
-    title: "Avon Express Expands Fleet with Next-Gen Electric Carriers",
-    description: "In a move toward sustainable logistics, we are proud to introduce zero-emission transport vehicles to our Ludhiana hub."
+    date: getCurrentMonthYear(), // ✅ dynamic
+    category: "Press Media Release",
+    title: "🏆 Media Coverage and Brand Presence 📢 Company Highlights",
+    description:
+      "Avon Express Packers and Movers is a rapidly growing logistics brand, renowned across India for its reliable shifting services. Our company has established a strong presence in the market through its high-quality services, secure deliveries, and unwavering dedication to customer satisfaction. Our services are prominently featured on digital platforms and within local business networks, where our professionalism and punctuality have garnered significant appreciation—thereby ensuring complete transparency and peace of mind throughout the entire shifting process."
   },
   {
-    date: "Jan 2026",
-    category: "Award",
-    title: "Recognized as India's Most Reliable Relocation Partner",
-    description: "Avon Express receives the 2026 Excellence in Logistics Award for maintaining a 99% safety rating."
+    date: getCurrentMonthYear(), // or keep static if needed
+    category: "Corporate",
+    title: "⚠️ Beware of Fake Packers and Movers.",
+    description:
+      "We consistently provide timely updates warning that numerous fraudulent packers and movers companies are currently active in the market, engaging in fraud by luring customers with the promise of low prices. These companies possess neither proper offices nor trained staff, as a result of which customers often suffer heavy losses."
   }
 ];
 
@@ -33,13 +44,13 @@ function Media() {
   </div>
 
   {/* Headline moved to the right to anchor the larger image side */}
-  <div className="max-w-xl text-left md:text-right order-1 md:order-2">
+  <div className="max-w-3xl text-left md:text-right order-1 md:order-2">
     <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-6 flex items-center justify-start md:justify-end gap-2">
        Newsroom <span className="w-8 h-[1px] bg-orange-600" />
     </h2>
     <h3 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.95]">
       PRESS 
-      <span className="text-slate-300"> & MEDIA.</span>
+      <span className="text-slate-300"> AND MEDIA.</span>
     </h3>
   </div>
 </div>
@@ -59,20 +70,14 @@ function Media() {
                 <h5 className="text-xl font-black text-slate-900 mb-3 group-hover:text-orange-600 transition-colors">
                   {item.title}
                 </h5>
-                <p className="text-sm text-slate-500 leading-relaxed line-clamp-2 font-medium">
+                <p className="text-sm text-slate-500 leading-relaxed  font-medium">
                   {item.description}
                 </p>
               </div>
             ))}
             
             {/* Newsletter Space Filler */}
-            <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 mt-12">
-              <h6 className="text-[11px] font-black uppercase tracking-widest text-slate-900 mb-2">Media Inquiries</h6>
-              <p className="text-xs text-slate-500 font-medium mb-6">For interviews, high-res assets, or official statements, contact our PR team.</p>
-              <a href="mailto:media@avonexpress.com" className="text-xs font-black text-orange-600 uppercase tracking-widest hover:underline">
-                media@avonexpress.com
-              </a>
-            </div>
+           
           </div>
 
           {/* --- RIGHT: Featured Press Release (Now on the right side) --- */}
@@ -88,20 +93,14 @@ function Media() {
                   alt="Featured News"
                 />
               </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-orange-600">
-                  <span>Press Release</span>
-                  <span className="w-1 h-1 rounded-full bg-slate-300" />
-                  <span className="text-slate-400">March 05, 2026</span>
-                </div>
-                <h4 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight group-hover:text-orange-600 transition-colors tracking-tighter">
-                  Redefining Relocation: Avon Express Integrates AI-Driven Tracking.
-                </h4>
-                <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl">
-                  Our latest technological integration allows customers to monitor their household goods with real-time telemetry, ensuring total transparency and peace of mind during the transition.
-                </p>
-              </div>
+               <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 mt-12">
+              <h6 className="text-[11px] font-black uppercase tracking-widest text-slate-900 mb-2">Media Inquiries</h6>
+              <p className="text-xs text-slate-500 font-medium mb-6">For interview, official statement, contact our team.</p>
+              <a href="mailto:media@avonexpresspackersandmovers.co.in" className="text-xs font-black text-orange-600 uppercase tracking-widest hover:underline">
+                media@avonexpresspackersandmovers.co.in
+              </a>
+            </div>
+             
             </div>
           </div>
 

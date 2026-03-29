@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
-export default function LazyVideo({ src, id, className = "", controls = true }) {
+export default function LazyVideo({ src, id,poster, className = "", controls = true }) {
   const videoRef = useRef(null);
   const [loaded,  setLoaded]  = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -67,14 +67,15 @@ export default function LazyVideo({ src, id, className = "", controls = true }) 
         Video is ALWAYS mounted so videoRef is always valid.
         src starts empty — assigned only on first click.
       */}
-      <video
-        ref={videoRef}
-        preload="none"
-        loop
-        playsInline
-        controls={playing && controls}
-        className={className}
-      />
+     <video
+  ref={videoRef}
+  poster={poster?.src} // ✅ FIXED
+  preload="none"
+  loop
+  playsInline
+  controls={playing && controls}
+  className={className}
+/>
 
       {/* Play overlay — shown whenever not playing */}
       {!playing && (

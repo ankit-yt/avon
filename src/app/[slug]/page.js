@@ -28,7 +28,6 @@ function formatCityName(slug) {
 
 export async function generateMetadata({ params }) {
     const resolvedParams = await params;
-    console.log(params)
   const cityName = formatCityName(resolvedParams.slug);
 
   return {
@@ -40,8 +39,8 @@ export async function generateMetadata({ params }) {
 // 👇 YOUR EXTRA COMPONENT
 import MainContent from "@/components/MainContent";
 
-export default function CityPage({ params }) {
-  const { slug } = params;
+export default async function CityPage({ params }) {
+  const { slug } = await params;
 
   return (
     <>

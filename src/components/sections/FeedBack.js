@@ -10,7 +10,7 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "Avon Express Packers and Movers Gurgaon provided me with excellent packing services at a very reasonable rate. They arrived on time, packed up all my belongings in such an efficient manner that I didn't even have to worry about it. All of their staff were friendly and helpful too. Highly recommend!",
+      "Avon Express Packers and Movers Jammu provided me with excellent packing services at a very reasonable price. They arrived on time and packed all my belongings so efficiently that I didn't have to worry about a thing. Their entire staff was also very friendly and helpful. I highly recommend their services!",
   },
   {
     name: "Priyanka Saha",
@@ -20,7 +20,7 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "Recently I used Avon Express Packers and Movers to shift my household goods and car and I received a very good service by them. They had provided me an IBA approved bill for claim.",
+      "Recently, I availed the services of Avon Express Packers and Movers to shift my household goods and car, and I received excellent service from them. They also provided me with an IBA-approved bill for my claim.",
   },
   {
     name: "Asif Basra",
@@ -30,7 +30,7 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "I got my household goods shifted from Mumbai to Dharamshala. I found Avon Express Packers and Movers company to work for me. I liked the work of Avon Express Packers.",
+      "I had my household belongings shifted from Mumbai to Dharamshala. I hired Avon Express Packers and Movers for this task. I was pleased with the work done by Avon Express Packers.",
   },
   {
     name: "Gaurav Kuthiala",
@@ -40,7 +40,7 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "I shifted my household goods from Jalandhar to Delhi. I had a great experience with Avon Express Packers and Movers Chandigarh. Their team members were highly skilled.",
+      "I shifted my household belongings from Delhi to Bangalore. My experience with 'Avon Express Packers and Movers' from Chandigarh was excellent. Their team members were extremely efficient.",
   },
   {
     name: "Ajay Jain",
@@ -50,7 +50,17 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "I shifted my household goods from Pune to Hyderabad. I would like to thank Avon Express Packers and Movers Bangalore for their impeccable services. They packed my stuff brilliantly and made the moving experience a smooth one. Their customer service is also on point, which is always reassuring and greatly appreciated.",
+      "I shifted my household belongings from Pune to Hyderabad. I would like to thank Avon Express Packers and Movers for their excellent services. They packed my belongings in a superb manner and made the entire shifting experience incredibly smooth. Their customer service is also top-notch—always reassuring—which is something I highly appreciate.",
+  },
+  {
+    name: "Deepak Agarwal",
+    location: "Judge",
+    avatar: "DA",
+    avatarBg: "#7B1FA2",
+    rating: 5,
+    date: "Recently",
+    review:
+      "I recently used Avon Express Packers and Movers to shift my household goods, and I am very satisfied with their service. The team was professional, courteous and handled everything with care. The packing was neat and all my stuff arrived on time without any damage. Highly recommended for anyone looking for reliable and trustworthy packers and movers!",
   },
 ];
 
@@ -162,7 +172,7 @@ export default function FeedBack() {
             </span>
             <span className="h-px w-10 bg-orange-500" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          <h2 className="text-4xl uppercase md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
             What Our Clients{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-orange-500">Say</span>
@@ -220,17 +230,12 @@ export default function FeedBack() {
 
         {/* ── Cards: top 3 ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {reviews.slice(0, 3).map((r, i) => (
+          {reviews.map((r, i) => (
             <GoogleReviewCard key={i} review={r} />
           ))}
         </div>
 
-        {/* ── Cards: bottom 2 centered ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5 lg:w-2/3 lg:mx-auto">
-          {reviews.slice(3).map((r, i) => (
-            <GoogleReviewCard key={i} review={r} />
-          ))}
-        </div>
+       
 
         {/* ── View on Google CTA ── */}
        <div className="flex mx-auto gap-5 justify-center ">

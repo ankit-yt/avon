@@ -20,7 +20,7 @@ const FACILITIES = [
     image: imgBillClaim,
   },
   {
-    title: "Transit Insurance",
+    title: "Insurance",
     icon: <HiOutlineShieldCheck />,
     image: imgInsurance,
   },
@@ -35,7 +35,7 @@ const FACILITIES = [
     image: imgWarehouse,
   },
   {
-    title: "Wooden Crate Packing",
+    title: "Customized Wooden Crates",
     icon: <HiOutlineCube />,
     image: imgCrates,
   },
@@ -84,9 +84,7 @@ export default function OurFacilities() {
               OUR <span className="text-slate-300">FACILITIES.</span>
             </h3>
           </div>
-          <p className="text-sm text-slate-500 max-w-xs leading-relaxed">
-            High-end logistics technology maintaining a 99% safety rating across India.
-          </p>
+          
         </div>
 
         {/* ── Photo Grid ── */}

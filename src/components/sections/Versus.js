@@ -16,7 +16,7 @@ function Versus() {
             The Gold Standard
           </span>
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mt-4">
-            US <span className="text-slate-300">VS</span> THEM.
+            AVON <span className="text-slate-300">VS</span> OTHER.
           </h2>
         </div>
 
@@ -37,12 +37,17 @@ function Versus() {
             </div>
             
             <div className="px-4 pb-4 space-y-3">
-              <h3 className="text-xl font-black text-slate-900 uppercase italic">The Professional Reality</h3>
+              <h3 className="text-xl font-black text-slate-900 uppercase italic">Professional and Registered Brand: Reality</h3>
               <p className="text-sm text-slate-500 font-medium leading-relaxed">
-                Background-verified staff with a "Customer is God" philosophy. No intoxication, no abuse—only IBA-approved precision.
+                Background-verified staff who adhere to the philosophy that "the customer is God." No substance abuse, no misconduct.
               </p>
               <ul className="grid grid-cols-2 gap-2 pt-2">
-                {["Sober Staff", "IBA Approved", "Polite Conduct", "Uniformed Team"].map((item) => (
+                {[
+  "Sober Staff",
+  "Polite Conduct",
+  "Uniformed Team",
+  "Zero Damage"
+].map((item) => (
                   <li key={item} className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
                     <span className="w-1 h-1 bg-orange-600 rounded-full" /> {item}
                   </li>
@@ -65,13 +70,18 @@ function Versus() {
             </div>
             
             <div className="px-4 pb-4 space-y-3">
-              <h3 className="text-xl font-black text-slate-400 uppercase italic">The Unorganized Sector</h3>
+              <h3 className="text-xl font-black text-slate-400 uppercase italic">Local and Unregistered: Reality</h3>
               <p className="text-sm text-slate-400 font-medium leading-relaxed">
-                Untrained daily-wagers known for property damage, abusive language, and workplace intoxication.
+                Untrained daily-wage laborers are known for damaging property, using abusive language, and being intoxicated at the workplace.
               </p>
-              <ul className="grid grid-cols-2 gap-2 pt-2 opacity-50">
-                {["Intoxication", "Hostile Entry", "Goods Damage", "Hidden Costs"].map((item) => (
-                  <li key={item} className="text-[10px] font-bold text-slate-300 uppercase tracking-widest flex items-center gap-2">
+              <ul className="grid grid-cols-2 gap-2 pt-2 ">
+                {[
+                  "Theft of Goods",
+  "Hostile Entry",
+  "Goods Damage",
+  "Hidden Costs",
+].map((item) => (
+                  <li key={item} className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
                     <span className="w-1 h-1 bg-slate-200 rounded-full" /> {item}
                   </li>
                 ))}
@@ -84,7 +94,7 @@ function Versus() {
         {/* --- Professional Footnote (Compact Filler) --- */}
         <div className="mt-12 text-center">
           <p className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] inline-flex items-center gap-3 bg-slate-50 px-6 py-2 rounded-full border border-slate-100">
-            Certified Safety Rate <span className="text-orange-600">99%</span>
+            Certified Safety Rating  <span className="text-orange-600">100%</span>
           </p>
         </div>
       </div>

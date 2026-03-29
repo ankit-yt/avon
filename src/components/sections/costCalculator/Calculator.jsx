@@ -16,14 +16,13 @@ const DISTANCE_OPTIONS = [
 
 
 function Calculator() {
-     const [shiftType, setShiftType] = useState("2 BHK Home");
-  const [distance, setDistance] = useState("d500");
+   const [shiftType, setShiftType] = useState(() => PRICING_DATA[0]?.type || "");
+const [distance, setDistance] = useState("d500");
 
-   // Derive estimate synchronously — no useEffect needed
-  const estimate = useMemo(() => {
-    const row = PRICING_DATA.find((r) => r.type === shiftType);
-    return row ? row[distance] ?? "—" : "—";
-  }, [shiftType, distance]);
+const estimate = useMemo(() => {
+  const row = PRICING_DATA.find((r) => r.type === shiftType);
+  return row ? row[distance] ?? "—" : "—";
+}, [shiftType, distance]);
 
   return (
   <div className="lg:col-span-7 bg-slate-900 rounded-4xl p-8 md:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden group">

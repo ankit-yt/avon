@@ -7,7 +7,7 @@ import whyPhoto from "@/assets/images/Home/Why.png";
 
 function Why() {
   return (
-    <section className="py-20 bg-white overflow-hidden border-t border-slate-400">
+    <section className="py-20 bg-white overflow-hidden ">
       {/* hrlllo */}
       {/* 🔥 CENTERED CONTAINER */}
       <div className="max-w-[1200px] mx-auto px-4 lg:px-10">
@@ -62,7 +62,7 @@ function Why() {
                 The primary reason we have become the top choice for thousands of people is that, 
                 while delivering our moving services, we embrace a spirit of "care" at every moment 
                 and uphold the highest standards of "safety." We clarify every detail before starting 
-                the work; if everything is clear before the work begins, it benefits both the client 
+                the work; if everything is clear before the work begins, it benefits both the customer 
                 and the moving company. We have just one concern—"you," for whom your belongings hold 
                 deep emotional significance. That is why, to further strengthen our bond with you, 
                 we always prefer to go the extra mile.

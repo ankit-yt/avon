@@ -34,10 +34,10 @@ function About() {
                 <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-white text-xl">
                   <HiOutlineBadgeCheck />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 leading-tight">IBA <br/>Approved</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 leading-tight"> Registered </span>
               </div>
               <p className="text-[11px] font-bold text-slate-800 leading-relaxed">
-                Certified reliability for all household & office relocations.
+                Certified Reliability for all Household and office Relocations.
               </p>
             </div>
             
@@ -51,7 +51,7 @@ function About() {
             <div className="flex items-center gap-4 mb-8">
               <span className="h-[1px] w-12 bg-orange-600" />
               <span className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600">
-                Established Since 1990
+                Established Since 2014
               </span>
             </div>
 
@@ -63,43 +63,14 @@ function About() {
             </h1>
 
             {/* Body Text: High Legibility */}
-            <div className="max-w-xl space-y-6 mb-12">
-              <p className="text-lg text-slate-500 font-medium leading-relaxed">
-                As India’s premier logistics partner, we don’t just move boxes; we relocate lives. 
-                Our precision-engineered process ensures your household goods, luxury vehicles, 
-                and corporate assets reach their destination with zero compromise.
+            <div className="max-w-4xl space-y-6 mb-12">
+              <p className="text-md text-slate-500 font-medium leading-relaxed">
+                Avon Express Packers and Movers is one of India's largest transport companies. We began our journey in 2014 as a small firm named 'Home Trans Movers,' specializing primarily in the relocation of household goods. We started in Ludhiana, Punjab (India), and our headquarters are now located in Chandigarh. We are a government-registered firm operating within India. Driven by determination, foresight, and hard work—and born from the vision of Home Trans Movers—this company has achieved continuous growth ever since its inception. Although our beginnings were humble, today we provide top-notch services for the relocation of household goods; with offices established in numerous cities, we extend our services across the entire length and breadth of India. Following this remarkable growth, Avon Express Packers and Movers has emerged as India's leading company in the field of household relocation. Throughout our entire journey of growth, we have consistently strived to stay abreast of technological advancements and have spared no effort in delivering the best possible services to our clients. Avon Express Packers and Movers has always provided its customers with the most modern and superior services. Our enduring objective has always been to provide a systematic relocation service for household goods—one that is both reliable and completely hassle-free for our customers.
               </p>
             </div>
 
-            {/* CTA Interaction Block */}
-            <div className="flex flex-wrap items-center gap-6 mb-16">
-              <a
-                href={SITE.whatsapp.quote}
-                className="px-10 py-5 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-orange-600 hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-slate-200 flex items-center gap-3"
-              >
-                Get Free Quote <HiOutlineArrowRight className="text-lg" />
-              </a>
-              <a
-                href={`tel:${SITE.phone}`}
-                className="px-10 py-5 bg-white text-slate-900 text-[11px] font-black uppercase tracking-[0.2em] rounded-full border border-slate-200 hover:bg-slate-50 transition-all"
-              >
-                Talk to Expert
-              </a>
-            </div>
+          
 
-            {/* Stats Grid: Minimalist & Bold */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-slate-100">
-              {STATS.map(({ num, label }) => (
-                <div key={label} className="group">
-                  <div className="text-4xl font-black text-slate-900 mb-1 group-hover:text-orange-600 transition-colors">
-                    {num}
-                  </div>
-                  <div className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
-                    {label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
         </div>

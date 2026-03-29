@@ -6,8 +6,10 @@ import covidImg1 from "@/assets/images/COVID-19/COVID-19-Images-1.png";
 import covidImg2 from "@/assets/images/COVID-19/COVID-19-Images-2.png";
 import covidImg3 from "@/assets/images/COVID-19/COVID-19-Images-3.png";
 import covidImg4 from "@/assets/images/COVID-19/COVID-19-Images-4.png";
+import covidImg5 from "@/assets/images/COVID-19/COVID-19-Images-5.png";
+import covidImg6 from "@/assets/images/COVID-19/COVID-19-Images-6.png";
 
-const images = [covidImg1, covidImg2, covidImg3, covidImg4];
+const images = [covidImg1, covidImg2, covidImg3, covidImg4, covidImg5, covidImg6];
 
 const points = [
   "Adhering to guidelines issued by central and local government authorities.",
@@ -30,7 +32,7 @@ function Covid19() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-4xl">
             <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600 mb-4">
-              Health &amp; Safety Protocols
+              Health and Safety Protocols
             </h2>
             <h3 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.95]">
               COVID-19 <span className="text-slate-300 "> PRECAUTIONS.</span>

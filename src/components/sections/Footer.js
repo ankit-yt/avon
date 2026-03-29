@@ -90,7 +90,6 @@ export default function Footer() {
             Ready To Moving? Get A Free Quotation in 60 Seconds.
           </p>
           <a
-            href="tel:+919814556375"
             className="inline-flex items-center gap-2.5 bg-white hover:bg-amber-300 text-neutral-950 font-black  tracking-widest uppercase px-6 py-2.5 rounded-full transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">

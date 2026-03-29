@@ -1,106 +1,162 @@
-import { HiOutlineChatAlt2, HiOutlineMail, HiOutlineShieldCheck, HiOutlineTruck } from "react-icons/hi";
+import { HiOutlineChatAlt2, HiOutlineExclamation, HiOutlineMail, HiOutlineShieldCheck, HiOutlineTruck, HiOutlineUserGroup } from "react-icons/hi";
 
 const FAQ_DATA = [
   {
     id: "01",
     category: "About Us",
-    question: "Who is the No. 1 Packers and Movers Transport Company in India?",
+    question: "Which is the number one packers and movers transport company in India?",
     answer:
-      "Avon Express Packers and Movers Company is The Highest Moving Supply in India — Avon Express Packers and Movers is a Famous Name Moving Company in India.",
+      "Avon Express Packers and Movers is the largest provider of moving supplies in India — Avon Express Packers and Movers is a well-known name among moving companies in India.",
   },
   {
     id: "02",
     category: "Transport",
-    question: "How are Goods Transported From one City To Another?",
+    question: "How are goods transported from one city to another?",
     answer:
-      "If You Need To Move Household items, Office Equipment, a Car, a Bike, or an Activa From One Place To Another, Packers and Movers are The Best Option. You Can Utilize This Service To Relocate From One City To Another.",
+      "If you need to move household items, office equipment, a car, a bike, or an Activa from one place to another, packers and movers are the best option. You can utilize this service to relocate from one city to another.",
   },
   {
     id: "03",
     category: "Basics",
-    question: "What is Packers and Movers?",
+    question: "What are Packers and Movers?",
     answer:
-      "When You Shift Household Goods, Office Goods, Car, Bike, Activa From one Place To Another, So You Need Packers and Movers.",
+      "When you shift household items, office equipment, a car, a bike, or an Activa from one place to another, you need packers and movers.",
   },
   {
     id: "04",
     category: "Basics",
-    question: "Why Packers and Movers Are Needed?",
+    question: "Why are packers and movers needed?",
     answer:
-      "You Cannot Shift Your Household Goods, Office Goods, Car, Bike, Activa Yourself Because it Requires a lot of Facilities, Which You Do Not Have. You Have To Take Help of Packers and Movers To Avoid Any Kind of Loss.",
+      "You cannot transport your household items, office equipment, car, bike, or scooter from one place to another on your own, as this requires a wide range of resources and facilities—which you do not possess. To avoid any kind of damage, you will need to enlist the assistance of packers and movers.",
   },
   {
     id: "05",
     category: "Process",
-    question: "How Do Packers and Movers Work?",
+    question: "How do packers and movers work?",
     answer:
-      "You Only Have To Tell The Name of The Service — Rest You Can Call on Our Number and Talk. 1. Discuss and Quotation  2. Premium Packing  3. Safe Loading  4. Secure Transportation  5. Precision Unloading  6. Unpacking and Setup  7. Happy Client.",
+      "You simply need to specify the name of the service you require—for everything else, you can speak with us by calling our number. 1. Discussion and Quotation 2. Premium Packing 3. Secure Loading 4. Safe Transportation 5. Precise Unloading 6. Unpacking and Setup 7. Happy Customers.",
   },
   {
     id: "06",
     category: "Finding Us",
-    question: "How To Find Packers and Movers?",
+    question: "How to find packers and movers?",
     answer:
-      "You Can Get it From Internet, Google, Website, Facebook, Youtube, Instagram, Twitter etc.",
+      "You can obtain this from the internet, Google, websites, Facebook, YouTube, Instagram, Twitter, etc.",
   },
   {
     id: "07",
     category: "Trust",
-    question: "How Do I Find a Reliable Company?",
+    question: "How do I find a trustworthy company?",
     answer:
-      "1. Check The Registration Certificate and Licenses.  2. Online Present Website and Social Media Profile.  3. To Verify The Packers and Movers, it's Crucial To Read Online Reviews Carefully.  4. Nowadays Packers and Movers Services are Available Online. Still, You Should Make a Physical Visit.",
+      "1. Check their registration certificate and license. 2. Visit their website and social media profiles. 3. To verify packers and movers, it is essential to carefully read online reviews. 4. Nowadays, packers and movers' services are available online; nevertheless, you should visit them in person.",
   },
   {
     id: "08",
     category: "Booking",
-    question: "How To Book Packers and Movers?",
+    question: "How to book packers and movers?",
     answer:
-      "You Can Book By Calling The Customer Care Number of Packers and Movers.",
+      "You can make a booking by calling the packers and movers' customer care number.",
   },
   {
     id: "09",
-    category: "Pricing",
-    question: "What is The Cost That Packers and Movers Charges?",
+    category: "Verification",
+    question: "How can I find out if the packers and movers I have chosen are the right ones?",
     answer:
-      "The Cost of Packers and Movers is Calculated By Adding up The Distance The Goods are Transported, The items Being Transported, Packaging Charges, and Labor Costs.",
+      "1. Check their registration certificate and license. 2. Visit their website and social media profiles. 3. To verify packers and movers, it is essential to carefully read online reviews. 4. Nowadays, packers and movers' services are available online; nevertheless, you should visit them in person.",
   },
   {
     id: "10",
-    category: "Packing",
-    question: "Do Packers and Movers Pack Everything?",
+    category: "Pricing",
+    question: "How much do packers and movers charge?",
     answer:
-      "Avon Express Packers and Movers Can Take Care All of Your Hard Earned Goods While Packing and Moving. Avon Express Packers and Movers Packs All of Your Goods With Safety. They Are Experienced and Professionals To Pack Soft and Glass Items Which Can Crack Easily But They can Packed Them With 100% Safety.",
+      "The cost of packers and movers is calculated by adding up the distance of the shipment, the items to be transported, packaging charges, and labor costs.",
   },
   {
     id: "11",
-    category: "Certification",
-    question: "What is IBA Approved Packers and Movers?",
+    category: "Packing",
+    question: "Do packers and movers pack everything?",
     answer:
-      "The Packers and Movers Which Are Approved By The Indian Banks' Association (IBA) Are Known as IBA Approved Packers and Movers.",
+      "Avon Express Packers and Movers can take complete care of all your hard-earned belongings during the packing and moving process. Avon Express Packers and Movers pack all your items with absolute safety. They are experienced and professional in packing fragile and glass items—objects that can break easily—and they ensure they are packed with 100% security.",
   },
   {
     id: "12",
-    category: "Insurance",
-    question: "Should I Insure My Goods?",
-    answer: "Yes, it is Highly Recommended.",
+    category: "Value",
+    question: "Is it Worth Paying For Packers and Movers?",
+    answer:
+      "If you wish to alleviate the stress associated with shifting your belongings, availing the services of professional packers and movers can prove to be beneficial. Packers and movers provide end-to-end services, including packing, loading, transportation, unloading, and unpacking.",
   },
   {
     id: "13",
-    category: "Insurance",
-    question: "Why Do I Need Insurance if Everything is Packed Professionally?",
+    category: "Safety",
+    question: "How do packers and movers ensure the safety of goods?",
     answer:
-      "Depend on Customer — Items Can Get Damaged Due To Unforeseen Circumstances Like Accidents or Any Natural Disaster in The Moving Process.",
+      "To ensure maximum safety during transport, we use high-quality packing materials such as bubble wrap, corrugated sheets, sturdy carton boxes, and protective covers.",
+  },
+  {
+    id: "14",
+    category: "Timing",
+    question: "Do packers and movers arrive on time?",
+    answer:
+      "Yes, we do arrive on time; however, the arrival of our packers and movers may be delayed due to traffic or heavy rainfall. Nevertheless, we make every effort to reach the location at the scheduled time, as we monitor weather forecasts in advance and pay close attention to them.",
+  },
+  {
+    id: "15",
+    category: "Tips",
+    question: "What are some tips for quick packing from a packers and movers company?",
+    answer:
+      "To pack quickly, you need to ensure exactly which items are to be moved and which ones are not.",
+  },
+  {
+    id: "16",
+    category: "Booking",
+    question: "What specific points should be kept in mind when booking packers and movers?",
+    answer:
+      "If you reside in a high-rise building that lacks a service elevator, an additional fee may apply. To obtain an accurate quote, please specify your floor level when making your booking, and indicate whether the truck will have direct access to your residence or if your belongings will need to be hoisted up or lowered down using ropes.",
+  },
+  {
+    id: "17",
+    category: "Survey",
+    question: "Why is a pre-move survey essential for shifting?",
+    answer:
+      "Conducting a survey prior to shifting is absolutely essential to address specific challenges—such as staircases, limited parking space, or the necessity of transporting items exclusively via the balcony. This survey assesses packing requirements, determines the necessary number of laborers and trucks, and verifies whether a truck can access the residence.",
+  },
+  {
+    id: "18",
+    category: "Damage",
+    question: "What happens if the goods are damaged during transport?",
+    answer:
+      "No liability for damaged goods without insurance.",
+  },
+  {
+    id: "19",
+    category: "Certification",
+    question: "What are IBA-approved packers and movers?",
+    answer:
+      "Packers and movers that are approved by the 'Indian Banks Association' (IBA) are known as 'IBA-approved packers and movers'.",
+  },
+  {
+    id: "20",
+    category: "Insurance",
+    question: "Should I insure my belongings?",
+    answer: "Yes, it is highly recommended.",
+  },
+  {
+    id: "21",
+    category: "Insurance",
+    question: "If everything is packed professionally, why do I need insurance?",
+    answer:
+      "Customer-Dependent — During the process of transporting goods from one location to another, the items may sustain damage due to unforeseen circumstances, such as accidents or natural disasters.",
   },
 ];
 
 const trustBadges = [
   {
     icon: <HiOutlineShieldCheck className="w-4 h-4" />,
-    label: "IBA Certified & Approved",
+    label: "Service With Smile and Honestly",
   },
   {
     icon: <HiOutlineTruck className="w-4 h-4" />,
-    label: "Pan-India Network",
+    label: "Enjoy Serenity With Expert",
   },
   {
     icon: (
@@ -108,7 +164,7 @@ const trustBadges = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    label: "Zero Hidden Charges",
+    label: "Trusted Budget-Friendly",
   },
   {
     icon: (
@@ -116,13 +172,20 @@ const trustBadges = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    label: "Background-Verified Staff",
+    label: "Safe and Damage-Free Shifting",
+  },
+  {
+    icon: <HiOutlineUserGroup className="w-4 h-4" />,
+    label: "We Have Better Driver, Staff, Labour",
+  },
+  {
+    icon: <HiOutlineExclamation className="w-4 h-4" />,
+    label: "⚠️ Don't Drink and Drive 👏",
   },
 ];
-
 export default function Faq() {
   return (
-    <section className="bg-white border-t border-slate-100">
+    <section id="faq" className="bg-white border-t border-slate-100">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-14 lg:py-20">
 
         {/* ── Section Header ── */}
@@ -132,7 +195,7 @@ export default function Faq() {
               <span className="w-5 h-px bg-orange-400" />
               Help Center
             </p>
-             <h3 className="text-4xl upp md:text-6xl font-black text-slate-900 tracking-tighter leading-tight ">
+             <h3 className="uppercase text-4xl upp md:text-6xl font-black text-slate-900 tracking-tighter leading-tight ">
             Frequently Asked <span className="text-orange-500">Questions.</span>
           </h3>
           
@@ -198,21 +261,21 @@ export default function Faq() {
                   <HiOutlineChatAlt2 className="w-3.5 h-3.5" />
                 </div>
                 <h3 className="text-[13px] font-black text-slate-800 tracking-tight">
-                  Still have questions?
+                  Still Have Questions?
                 </h3>
               </div>
               <p className="text-[11.5px] text-slate-500 leading-relaxed mb-3.5">
-                Our Ludhiana-based team is available 24/7 for personalized assistance.
+                If you have any questions, you can let us know.
               </p>
               <a
-                href="mailto:support@avonexpress.com"
+
                 className="flex items-center justify-between w-full px-3.5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-200 mb-2"
               >
                 <span className="text-[10px] font-black uppercase tracking-[0.18em]">Email Support</span>
                 <HiOutlineMail className="w-3.5 h-3.5" />
               </a>
               <a
-                href="tel:+911234567890"
+                
                 className="flex items-center justify-between w-full px-3.5 py-2.5 bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 rounded-xl transition-colors duration-200"
               >
                 <span className="text-[10px] font-black uppercase tracking-[0.18em]">Call Now — 24/7</span>
@@ -225,10 +288,10 @@ export default function Faq() {
             {/* Stats 2×2 */}
             <div className="grid grid-cols-2 gap-2">
               {[
-                { value: "15K+", label: "Relocations" },
-                { value: "99%", label: "Safety Rate" },
+                { value: "200+", label: "Daily Happy Customer" },
+                { value: "100%", label: "Safety Rate" },
                 { value: "24/7", label: "Support" },
-                { value: "IBA", label: "Approved" },
+                { value: "5.0⭐", label: "Average Rating" },
               ].map((s) => (
                 <div
                   key={s.label}

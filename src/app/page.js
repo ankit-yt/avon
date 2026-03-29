@@ -59,7 +59,7 @@ export default function Home() {
       <Map/>
       <CompanyClints/>
       <Footer/>
-      <Social/>
+      {/* <Social/> */}
     </>
   );
 }

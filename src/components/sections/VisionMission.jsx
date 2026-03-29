@@ -29,7 +29,7 @@ const VALUES = [
 
 function VisionMission() {
   return (
-    <section className="bg-white border-t border-slate-100">
+    <section className="bg-white ">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid lg:grid-cols-2 min-h-[600px]">
@@ -42,7 +42,7 @@ function VisionMission() {
                 Our Purpose
               </p>
               <h2 className="text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[0.95]">
-                VISION & <span className="text-slate-300">MISSION</span>
+                VISION & <span className="text-slate-300">MISSION.</span>
               </h2>
             </div>
 

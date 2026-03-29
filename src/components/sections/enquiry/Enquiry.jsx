@@ -28,8 +28,8 @@ const jsonLd = {
 
 // ── Trust-badge data (static, rendered server-side) ─────────────────────────
 const BADGES = [
-  { icon: "🛡️", label: "Insured Moves" },
-  { icon: "✅", label: "Verified Packers" },
+  { icon: "🛡️", label: "Customized Packing" },
+  { icon: "✅", label: "Digital Documents" },
   { icon: "💰", label: "Zero Hidden Costs" },
   { icon: "⭐", label: "5 / 5 Rated" },
 ];
@@ -62,8 +62,8 @@ export default function Enquiry() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section
-        id="get-quote"
+      <section 
+        id="contact"
         aria-labelledby="enquiry-heading"
         className="relative py-6 md:py-5 bg-[#FAFAF8] overflow-hidden"
       >

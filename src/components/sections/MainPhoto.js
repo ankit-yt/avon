@@ -33,27 +33,27 @@ function MainPhoto() {
 
           {/* Next-Gen Typography */}
           <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter">
-            MOVE WITHOUT <br />
+            AVON <br />IN INDIA<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-              THE BOUNDARIES.
+             STRESS-FREE <br /> SHIFTING ACROSS INDIA.
             </span>
           </h1>
 
-          <p className="text-lg text-slate-300 font-medium leading-relaxed max-w-lg">
-            Experience seamless logistics and packing solutions tailored for the modern world. 
-            Safe, swift, and strictly professional.
+          <p className="text-lg text-slate-300 font-medium leading-relaxed max-w-2xl">
+            Fast, Reliable, and Hassle-Free Goods Transport Services in India.<br/> 
+            We are Master and Doctor in the field of Packers and Movers.
           </p>
 
           {/* Interactive Button Group */}
           <div className="flex items-center gap-6 pt-4">
             <button className="group relative px-8 py-4 bg-orange-600 text-white font-bold uppercase tracking-widest text-xs rounded-xl overflow-hidden transition-all hover:bg-orange-500 shadow-2xl shadow-orange-900/20">
               <span className="relative z-10 flex items-center gap-2">
-                Start Relocation <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                Customer Satisfaction is our Motto <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
             
             <button className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white font-bold uppercase tracking-widest text-xs rounded-xl border border-white/10 hover:bg-white/10 transition-all">
-              Our Fleet
+              Seamless Relocation 
             </button>
           </div>
         </div>
@@ -65,14 +65,14 @@ function MainPhoto() {
       <div className="absolute bottom-20 right-10 z-10 hidden xl:block">
         <div className="p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl w-64 space-y-4">
           <div className="flex justify-between items-end">
-            <span className="text-4xl font-black text-white">99%</span>
+            <span className="text-4xl font-black text-white">100%</span>
             <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest pb-1">Safety Rate</span>
           </div>
           <div className="h-1 w-full bg-white/10 rounded-full overflow-hidden">
             <div className="h-full w-[99%] bg-orange-500" />
           </div>
           <p className="text-[10px] text-slate-400 leading-normal">
-            Reliable packing & moving across India with certified professionals.
+            Trusted Packing and Moving Services across India With Certified Professionals.
           </p>
         </div>
       </div>

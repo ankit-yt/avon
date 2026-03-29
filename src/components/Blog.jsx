@@ -33,72 +33,72 @@ const POSTS = [
     alt: "Latest Blog",
     author: "Avon Express",
     date,
-    title: "Do Not Hire Packers and Movers For Packing and Moving Services Through a Broker Website.",
+    title: "Do not hire packers and movers through a broker website for packing and moving services.",
     excerpt:
-      "We Do Not Recommend Hiring Packers and Movers Through Broker Websites, as They Often List Fraudulent Vendors Out of Greed For Money, Which Can Subject You To Significant Financial and Mental Distress.",
+      "We do not recommend hiring packers and movers through broker websites, as they often list fraudulent vendors out of greed for money, which can subject you to significant financial and mental distress.",
   },
   {
     image: img3,
     alt: "Fraud Help",
     author: "Avon Express",
     date,
-    title: "What You Should Do If You Become a Victim of Fraud",
+    title: "What should you do if you fall victim to fraud?",
     excerpt:
-      "Keep Original Booking Receipt, Bills, Photos, and Payment Proof. Call Police – Dial 112. File Complaint on National Consumer Helpline – 1915.",
+      "Keep the original booking receipt, bill, photographs, and proof of payment with you. Call the police—dial 112. File a complaint with the National Consumer Helpline at 1915.",
   },
   {
     image: img2,
     alt: "Packing Advice",
     author: "Avon Express",
     date,
-    title: "Do Not Pack The Items Yourself.",
+    title: "Do not pack the items yourself.",
     excerpt:
-      "When You Avail of Packers and Movers Services, We Do Not Recommend That You Pack The Items Yourself.",
+      "When you avail of the services of packers and movers, we do not advise you to pack your belongings yourself.",
   },
   {
     image: img5,
     alt: "Wooden Crate",
     author: "Avon Express",
     date,
-    title: "Wooden Crate Available - Professional Packing",
+    title: "Wooden Crate Available – Professional Packing",
     excerpt:
-      "We Have an Inhouse Wood Workshop To Make Customized Wooden Crates. Wooden Crates Hold Fragile Items That Need Extra Protection. Crates Are Customized By Taking Measurements of The Goods. The Goods Are Packed and Put Into The Crates.",
+      "We have an in-house carpentry workshop for manufacturing customized wooden crates. Wooden crates are used to house fragile items that require additional protection. The crates are customized based on the specific dimensions of the goods; the items are packed and then placed inside the crates.",
   },
   {
     image: img1,
     alt: "Sell Items",
     author: "Avon Express",
     date,
-    title: "We Help You Sell Your Old Items.",
+    title: "We help you sell your old things.",
     excerpt:
-      "We Have Certain Resources That Can Help You With This.",
+      "We have some resources that can help you with this.",
   },
   {
     image: img6,
     alt: "Restricted Items",
     author: "Avon Express",
     date,
-    title: "What Items Are Not Transported During Shifting?",
+    title: "What items are not transported during shifting?",
     excerpt:
-      "Items Such as Inflammable, Pet, Gas, Liquids etc Will Not Be Allowed To Be Loaded on The Transportation Vehicle.",
+      "Items such as flammable substances, pets, gases, liquids, etc., will not be permitted to be loaded onto the transport vehicle.",
   },
   {
     image: img7,
     alt: "Services Availability",
     author: "Avon Express",
     date,
-    title: "What Happens If You Can't Find Electrician, Plumber or Carpenter?",
+    title: "What would happen if you couldn't find an electrician, a plumber, or a carpenter?",
     excerpt:
-      "We Are Not Responsible To Undertake Electrical, Carpentry, or Plumbing Work. If Needed We Will Provide Those Depending Upon Availability of Staff With Extra Charges.",
+      "We are not responsible for electrical, carpentry, or plumbing work. If required, and subject to staff availability, we will provide these services for an additional fee.",
   },
   {
     image: img8,
     alt: "Damage Policy",
     author: "Avon Express",
     date,
-    title: "What Happens If Goods Are Damaged During Transit?",
+    title: "What happens if the goods get damaged during insurance?",
     excerpt:
-      "Avon Express Packers and Movers Adopt All Safety Measures To Avoid Any Kind of Damage To Your Goods. However, in Case of Any Unpredictable Mishap, We Ensure Speedy Settlement of Claims From the Insurance Company.",
+      "Avon Express Packers and Movers adopt all necessary safety measures to protect your belongings from any kind of damage. Nevertheless, in the event of any unforeseen accident, we ensure the prompt settlement of claims with the insurance company.",
   },
 ];
 
@@ -142,14 +142,14 @@ function BlogCard({ post }) {
 // ─── MAIN EXPORT ──────────────────────────────────────────────
 function Blog() {
   return (
-    <section className="p-10 bg-white overflow-hidden border-t border-slate-100">
+    <section id="blog" className="p-10 bg-white overflow-hidden border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-14">
 
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
             <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600 mb-4">
-              Stories from the Road
+              Resources
             </h2>
             <h3 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.95]">
               Latest

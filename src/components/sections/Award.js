@@ -7,6 +7,7 @@ const getPreviousYear = () => {
   return new Date().getFullYear() - 1;
 };
 
+
 function Award() {
   return (
     <section className="p-10  bg-white overflow-hidden border-t border-slate-100">
@@ -14,12 +15,12 @@ function Award() {
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600 mb-4">
-              Our Legacy & Excellence
+              Our Legacy and Excellence
             </h2>
             <h3 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.95]">
-              EVENTS & 
+              EVENTS AND 
               <span className="text-slate-300"> AWARDS.</span>
             </h3>
           </div>
@@ -38,7 +39,7 @@ function Award() {
               {/* Glassmorphism Caption */}
               <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl">
                 <p className="text-white text-xs font-bold tracking-widest uppercase">
-                  Recognized for Excellence in Logistics & Safety
+                  Recognized for Excellence in Logistics and Safety
                 </p>
               </div>
             </div>

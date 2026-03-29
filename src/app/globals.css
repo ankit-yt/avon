@@ -33,7 +33,7 @@
 /* ===== Industrial Marquee Animation ===== */
 
 .marquee-track {
-  animation: marquee 25s linear infinite;
+  animation: marquee 200s linear infinite;
 }
 
 body {
@@ -86,7 +86,7 @@ body {
           align-items: center;
           height: 100%;
           width: max-content;
-          animation: scroll-left 40s linear infinite;
+          animation: scroll-left 60s linear infinite;
           will-change: transform;
         }
 
