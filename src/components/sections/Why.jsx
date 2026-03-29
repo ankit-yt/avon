@@ -83,7 +83,7 @@ function Why() {
               </p>
             </div>
 
-            <div className="flex justify-center lg:justify-start items-center gap-12 pt-8">
+            <div className="flex justify-center items-center gap-15 pt-8">
 
               {/* IBA LOGO */}
               <div className="relative flex items-center justify-center">
@@ -101,7 +101,7 @@ function Why() {
                 <Image
                   src={logo}
                   alt="Company Logo"
-                  className="relative w-32 md:w-40 lg:w-48 h-auto object-contain"
+                  className="relative w-32 md:w-40 lg:w-51 h-auto object-contain"
                 />
               </div>
 
