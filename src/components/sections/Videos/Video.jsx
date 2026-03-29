@@ -1,5 +1,3 @@
-
-
 import LazyVideo from "./LazyVideo";
 import p2 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-1.png";
 import p1 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-2.png";
@@ -13,111 +11,94 @@ import p9 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-9.png";
 import p10 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-10.png";
 import p11 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-11.png";
 
-// ─── Data (server-side only, never shipped to client) ────────────────────────
-
 const LANDSCAPE_VIDEOS = [
-  {
-    id: "l1",
-    title: "The Complete Moving Experience",
-    src: "/videos/14.mp4",
-    thumb: p1, // ✅ first thumbnail
-  },
-  {
-    id: "l2",
-    title: "Behind the Move",
-    src: "/videos/7.mp4",
-    thumb: p2, // ✅ second thumbnail
-  },
-];
-const PORTRAIT_VIDEOS = [
-  { id: "p1",  title: "Market Trend Analysis", src: "/videos/6.mp4",  thumb: p3 },
-  { id: "p2",  title: "Cinematic Reel 01",     src: "/videos/12.mp4", thumb: p10 },
-  { id: "p3",  title: "Stop-Loss Strategies",  src: "/videos/13.mp4", thumb: p9 },
-  { id: "p4",  title: "Nostalgia Edit",        src: "/videos/11.mp4", thumb: p8 },
-  { id: "p5",  title: "Reel 05",               src: "/videos/2.mp4",  thumb: p11 },
-  { id: "p6",  title: "Reel 06",               src: "/videos/5.mp4",  thumb: p6 },
-  { id: "p7",  title: "Reel 07",               src: "/videos/4.mp4",  thumb: p5 },
-  { id: "p8",  title: "Reel 08",               src: "/videos/0.mp4",  thumb: p7 },
-  { id: "p10", title: "Reel 10",               src: "/videos/3.mp4",  thumb: p4 },
-  { id: "p11", title: "Reel 11",               src: "/videos/1.mp4",  thumb: p7 }, // reuse if needed
+  { id: "l1", title: "The Complete Moving Experience", src: "/videos/14.mp4", thumb: p1 },
+  { id: "l2", title: "Behind the Move",               src: "/videos/7.mp4",  thumb: p2 },
 ];
 
-// ─── Server-rendered card wrappers ────────────────────────────────────────────
+const PORTRAIT_VIDEOS = [
+  { id: "p1",  title: "Market Trend Analysis", src: "/videos/6.mp4",  thumb: p3  },
+  { id: "p2",  title: "Cinematic Reel 01",     src: "/videos/12.mp4", thumb: p10 },
+  { id: "p3",  title: "Stop-Loss Strategies",  src: "/videos/13.mp4", thumb: p9  },
+  { id: "p4",  title: "Nostalgia Edit",        src: "/videos/11.mp4", thumb: p8  },
+  { id: "p5",  title: "Reel 05",               src: "/videos/2.mp4",  thumb: p11 },
+  { id: "p6",  title: "Reel 06",               src: "/videos/5.mp4",  thumb: p6  },
+  { id: "p7",  title: "Reel 07",               src: "/videos/4.mp4",  thumb: p5  },
+  { id: "p8",  title: "Reel 08",               src: "/videos/0.mp4",  thumb: p7  },
+  { id: "p10", title: "Reel 10",               src: "/videos/3.mp4",  thumb: p4  },
+  { id: "p11", title: "Reel 11",               src: "/videos/1.mp4",  thumb: p7  },
+];
 
 function LandscapeCard({ video }) {
   return (
-    <div className="col-span-2 relative overflow-hidden rounded-[24px] 
-bg-black/80 backdrop-blur-xl 
-border-2 border-[#0F172B] 
-shadow-[0_10px_40px_rgba(30,58,138,0.35)] 
-aspect-video">
-      
+    <div className="col-span-2 relative overflow-hidden rounded-[20px] bg-slate-900 border border-slate-200 shadow-2xl aspect-video">
       <LazyVideo
-       id={video.id}
+        id={video.id}
         src={video.src}
         poster={video.thumb}
         controls
         className="absolute inset-0 w-full h-full object-cover"
       />
-
     </div>
   );
 }
 
 function PortraitCard({ video }) {
   return (
-    <div className="col-span-1 relative overflow-hidden rounded-[24px] 
-bg-[#0B0F1A]
-border-2 border-[#0F172B] 
-shadow-lg
-aspect-[9/16]">
-      
+    <div className="col-span-1 relative overflow-hidden rounded-[20px] bg-slate-900 border border-slate-200 shadow-sm aspect-[9/16]">
       <LazyVideo
-       id={video.id}
+        id={video.id}
         src={video.src}
-          poster={video.thumb}
+        poster={video.thumb}
         controls
         className="absolute inset-0 w-full h-full object-cover"
       />
-
     </div>
   );
 }
 
-// ─── Main server component ────────────────────────────────────────────────────
-
 export default function Videos() {
-  const totalVideos = LANDSCAPE_VIDEOS.length + PORTRAIT_VIDEOS.length;
-
   return (
-    <section className="py-14 bg-[#FAFAF8] overflow-hidden border-t border-slate-100">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+    <section className="relative py-6 md:py-5 bg-[#FAFAF8] overflow-hidden border-t border-slate-200">
 
-        {/* ── Header — fully static, zero JS ── */}
+      {/* ── Warm blob ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+         <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+
+
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
+
+        {/* ── Header ── */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
-            <div className="inline-flex items-center gap-3 mb-3">
-              <span className="h-px w-8 bg-orange-500" />
-              <span className="text-[10px] font-black uppercase tracking-[0.45em] text-orange-600">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-10 bg-orange-600" />
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600">
                 Digital Content
               </span>
+              <span className="h-px w-10 bg-orange-600" />
             </div>
-            <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-[1]">
-              FEATURED <span className="text-slate-300">MEDIA.</span>
+            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+              FEATURED <span className="text-orange-500">MEDIA.</span>
             </h3>
           </div>
-         
         </div>
 
         {/* ── Landscape videos: 2-col row ── */}
-        <div className="grid grid-cols-4 gap-4 mb-4">
+        <div className="grid grid-cols-4 gap-6 mb-6">
           {LANDSCAPE_VIDEOS.map((v) => (
             <LandscapeCard key={v.id} video={v} />
           ))}
         </div>
 
         {/* ── Portrait videos: responsive multi-col grid ── */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-6">
           {PORTRAIT_VIDEOS.map((v) => (
             <PortraitCard key={v.id} video={v} />
           ))}

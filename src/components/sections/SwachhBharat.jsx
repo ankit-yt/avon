@@ -3,7 +3,7 @@ import { MdSanitizer, MdEco } from "react-icons/md";
 
 const sections = [
   {
-    icon: <MdSanitizer size={20} />, // 🌱 replaced
+    icon: <MdSanitizer size={20} />,
     title: "Our Clean and Hygienic Packing Process",
     accent: "orange",
     type: "check",
@@ -17,7 +17,7 @@ const sections = [
     note: "Your goods are handled with maximum care and cleanliness, ensuring a safe relocation experience.",
   },
   {
-    icon: <MdEco size={20} />, // ♻️ replaced
+    icon: <MdEco size={20} />,
     title: "Eco-Friendly Moving Approach",
     accent: "green",
     type: "check",
@@ -30,7 +30,7 @@ const sections = [
     note: "Our goal is to reduce environmental impact while delivering top-quality service.",
   },
   {
-    icon: <FaTruck size={18} />, // 🧹 replaced with relevant icon
+    icon: <FaTruck size={18} />,
     title: "Clean Loading and Transportation",
     accent: "orange",
     type: "bullet",
@@ -43,7 +43,7 @@ const sections = [
     note: "We ensure your goods remain clean from origin to destination.",
   },
   {
-    icon: <FaHome size={18} />, // 🏠 replaced
+    icon: <FaHome size={18} />,
     title: "Clean Unloading and Setup",
     accent: "green",
     type: "bullet",
@@ -61,25 +61,28 @@ export default function SwachhBharat() {
   return (
     <section
       id="swachh-bharat"
-      className="relative py-20 bg-[#FAFAF8] overflow-hidden"
+      className="relative py-6 md:py-5 bg-[#FAFAF8] overflow-hidden"
     >
       {/* Decorative blobs */}
-      <div className="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-orange-200/25 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 -left-32 w-[360px] h-[360px] rounded-full bg-green-100/30 blur-[120px] pointer-events-none" />
+      <div className="absolute -top-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px] pointer-events-none" />
+       <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
 
         {/* ── HEADER ── */}
-        <header className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-3 mb-5">
-            <span className="h-px w-10 bg-orange-500" />
-            <span className="text-[10px] font-black uppercase tracking-[0.45em] text-orange-600">
+        <header className="text-center max-w-3xl mx-auto mb-10">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <span className="h-px w-10 bg-orange-600" />
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600">
               Swachh Bharat Initiative
             </span>
-            <span className="h-px w-10 bg-orange-500" />
+            <span className="h-px w-10 bg-orange-600" />
           </div>
 
-          <h2 className="text-4xl md:text-[3.5rem] uppercase font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5">
+          <h2 className="text-4xl md:text-6xl uppercase font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
             Clean &amp;{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-orange-500">Hygienic</span>
@@ -88,7 +91,7 @@ export default function SwachhBharat() {
             Moving
           </h2>
 
-          <p className="text-sm text-slate-500 leading-relaxed max-w-xl mx-auto">
+          <p className="text-sm text-slate-500 leading-relaxed max-w-xl mx-auto font-medium">
             We believe relocation should be safe, clean, and eco-friendly — designed in the spirit of{" "}
             <span className="font-semibold text-slate-700">Swachh Bharat</span>, maintaining hygiene at
             every step of the moving process.
@@ -96,7 +99,7 @@ export default function SwachhBharat() {
         </header>
 
         {/* ── MAIN GRID ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-11 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-11 gap-6 items-stretch">
 
           {/* ── LEFT CONTENT ── */}
           <div className="lg:col-span-4 space-y-5 h-120 overflow-y-auto pr-2 custom-scroll">
@@ -104,7 +107,7 @@ export default function SwachhBharat() {
             {sections.map((sec, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 {/* Card header */}
                 <div className="flex items-center gap-3 mb-4">
@@ -149,7 +152,7 @@ export default function SwachhBharat() {
 
                 {/* Note */}
                 {sec.note && (
-                  <p className="mt-3 text-[11px] text-slate-400 leading-relaxed border-t border-slate-50 pt-3">
+                  <p className="mt-3 text-[11px] text-slate-400 leading-relaxed border-t border-slate-100 pt-3">
                     {sec.note}
                   </p>
                 )}
@@ -163,7 +166,7 @@ export default function SwachhBharat() {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-2">
                   <FaLeaf size={14} className="text-white/80" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/70">
+                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/70">
                     Our Commitment
                   </span>
                 </div>
@@ -184,7 +187,7 @@ export default function SwachhBharat() {
             {/* Subtle top label */}
             <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-[10px] font-semibold text-white/80 uppercase tracking-widest">
+              <span className="text-[10px] font-black text-white/80 uppercase tracking-[0.4em]">
                 AVON EXPRESS
               </span>
             </div>
@@ -193,7 +196,7 @@ export default function SwachhBharat() {
             <div className="absolute bottom-4 right-4 z-20">
               <div className="flex items-center gap-2 bg-orange-500/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
                 <FaRecycle size={10} className="text-white" />
-                <span className="text-[10px] font-bold text-white uppercase tracking-widest">
+                <span className="text-[10px] font-black text-white uppercase tracking-[0.4em]">
                   Eco-Friendly
                 </span>
               </div>

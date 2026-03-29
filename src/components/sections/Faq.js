@@ -1,4 +1,5 @@
-import { HiOutlineChatAlt2, HiOutlineExclamation, HiOutlineMail, HiOutlineShieldCheck, HiOutlineTruck, HiOutlineUserGroup } from "react-icons/hi";
+import { FaRegHandshake } from "react-icons/fa";
+import { HiOutlineChatAlt2, HiOutlineExclamation, HiOutlineMail, HiOutlineShieldCheck, HiOutlineSparkles, HiOutlineTruck, HiOutlineUserGroup } from "react-icons/hi";
 
 const FAQ_DATA = [
   {
@@ -124,8 +125,7 @@ const FAQ_DATA = [
     id: "18",
     category: "Damage",
     question: "What happens if the goods are damaged during transport?",
-    answer:
-      "No liability for damaged goods without insurance.",
+    answer: "No liability for damaged goods without insurance.",
   },
   {
     id: "19",
@@ -150,14 +150,8 @@ const FAQ_DATA = [
 ];
 
 const trustBadges = [
-  {
-    icon: <HiOutlineShieldCheck className="w-4 h-4" />,
-    label: "Service With Smile and Honestly",
-  },
-  {
-    icon: <HiOutlineTruck className="w-4 h-4" />,
-    label: "Enjoy Serenity With Expert",
-  },
+  { icon: <HiOutlineShieldCheck className="w-4 h-4" />, label: "Service With Smile and Honestly" },
+  { icon: <HiOutlineTruck className="w-4 h-4" />, label: "Enjoy Serenity With Expert" },
   {
     icon: (
       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
@@ -174,58 +168,65 @@ const trustBadges = [
     ),
     label: "Safe and Damage-Free Shifting",
   },
-  {
-    icon: <HiOutlineUserGroup className="w-4 h-4" />,
-    label: "We Have Better Driver, Staff, Labour",
-  },
-  {
-    icon: <HiOutlineExclamation className="w-4 h-4" />,
-    label: "⚠️ Don't Drink and Drive 👏",
-  },
+  { icon: <HiOutlineUserGroup className="w-4 h-4" />, label: "We Have Better Driver, Staff, Labour" },
+  { icon: <HiOutlineExclamation className="w-4 h-4" />, label: "⚠️ Don't Drink and Drive 👏" },
+
+  // 🔥 Newly Added
+  { icon: <FaRegHandshake className="w-4 h-4" />, label: "We Try To Compromise With The Customer Up To 100%." },
+  { icon: <HiOutlineSparkles className="w-4 h-4" />, label: "We are Promise To Best Services To You" },
 ];
+
 export default function Faq() {
   return (
-    <section id="faq" className="bg-white border-t border-slate-100">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-14 lg:py-20">
+    <section id="faq" className="relative bg-[#FAFAF8] border-t border-slate-200 overflow-hidden">
+
+      {/* ── Warm blob ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+         <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+
+
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14 py-6 lg:py-5">
 
         {/* ── Section Header ── */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-7 pb-8 border-b border-slate-100">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-7 pb-6 border-b border-slate-200">
           <div>
-            <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.45em] text-orange-500 mb-2.5">
-              <span className="w-5 h-px bg-orange-400" />
+            <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4">
+              <span className="w-10 h-px bg-orange-600" />
               Help Center
+              <span className="w-10 h-px bg-orange-600" />
             </p>
-             <h3 className="uppercase text-4xl upp md:text-6xl font-black text-slate-900 tracking-tighter leading-tight ">
-            Frequently Asked <span className="text-orange-500">Questions.</span>
-          </h3>
-          
+            <h3 className="uppercase text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+              Frequently Asked <span className="text-orange-500">Questions.</span>
+            </h3>
           </div>
-         
         </div>
 
         {/* ── Body: Accordion + Sidebar ── */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_272px] gap-10 items-start">
 
           {/* LEFT: Accordion */}
-          <div className="divide-y divide-slate-100">
+          <div className="divide-y divide-slate-200">
             {FAQ_DATA.map((faq) => (
               <details key={faq.id} className="group">
                 <summary className="flex items-start gap-3.5 py-3.5 cursor-pointer outline-none list-none [&::-webkit-details-marker]:hidden select-none">
                   {/* Number */}
-                  <span className="flex-shrink-0 mt-[1px] text-[10px] font-black tabular-nums tracking-widest text-slate-300 group-open:text-orange-500 w-5 transition-colors duration-150">
+                  <span className="flex-shrink-0 mt-[1px] text-[10px] font-black tabular-nums tracking-[0.4em] text-slate-300 group-open:text-orange-500 w-5 transition-colors duration-150">
                     {faq.id}
                   </span>
-
-                  {/* Question text */}
-                  <span className="flex-1 text-[13.5px] font-semibold text-slate-700 group-hover:text-slate-900 group-open:text-slate-900 leading-snug transition-colors duration-150">
+                  {/* Question */}
+                  <span className="flex-1 text-sm font-semibold text-slate-700 group-hover:text-slate-900 group-open:text-slate-900 leading-snug transition-colors duration-150">
                     {faq.question}
                   </span>
-
                   {/* Category pill */}
-                  <span className="hidden lg:block flex-shrink-0 text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 group-open:text-orange-500 transition-colors duration-150 mt-[3px] whitespace-nowrap w-[80px] text-right">
+                  <span className="hidden lg:block flex-shrink-0 text-[9px] font-black uppercase tracking-[0.4em] text-slate-400 group-open:text-orange-500 transition-colors duration-150 mt-[3px] whitespace-nowrap w-[80px] text-right">
                     {faq.category}
                   </span>
-
                   {/* Toggle icon */}
                   <div className="flex-shrink-0 ml-1 w-5 h-5 rounded-full border border-slate-200 group-open:border-orange-400 group-open:bg-orange-500 flex items-center justify-center transition-all duration-200 mt-[1px]">
                     <svg
@@ -240,10 +241,9 @@ export default function Faq() {
                     </svg>
                   </div>
                 </summary>
-
                 {/* Answer */}
                 <div className="pl-9 pr-8 pb-4 pt-0.5">
-                  <p className="text-[12.5px] text-slate-500 leading-relaxed">
+                  <p className="text-xs text-slate-500 leading-relaxed font-medium">
                     {faq.answer}
                   </p>
                 </div>
@@ -251,34 +251,28 @@ export default function Faq() {
             ))}
           </div>
 
-          {/* RIGHT: Sidebar — stacks tightly with no empty space */}
+          {/* RIGHT: Sidebar */}
           <aside className="lg:sticky lg:top-24 space-y-3">
 
             {/* Contact Card */}
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-[20px] border border-slate-200 bg-white shadow-sm p-5">
               <div className="flex items-center gap-2.5 mb-3">
                 <div className="w-7 h-7 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500">
                   <HiOutlineChatAlt2 className="w-3.5 h-3.5" />
                 </div>
-                <h3 className="text-[13px] font-black text-slate-800 tracking-tight">
+                <h3 className="text-sm font-extrabold text-slate-800 tracking-tighter">
                   Still Have Questions?
                 </h3>
               </div>
-              <p className="text-[11.5px] text-slate-500 leading-relaxed mb-3.5">
+              <p className="text-xs text-slate-500 leading-relaxed font-medium mb-3.5">
                 If you have any questions, you can let us know.
               </p>
-              <a
-
-                className="flex items-center justify-between w-full px-3.5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-200 mb-2"
-              >
-                <span className="text-[10px] font-black uppercase tracking-[0.18em]">Email Support</span>
+              <a className="flex items-center justify-between w-full px-3.5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-200 mb-2">
+                <span className="text-[10px] font-black uppercase tracking-[0.4em]">Email Support</span>
                 <HiOutlineMail className="w-3.5 h-3.5" />
               </a>
-              <a
-                
-                className="flex items-center justify-between w-full px-3.5 py-2.5 bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 rounded-xl transition-colors duration-200"
-              >
-                <span className="text-[10px] font-black uppercase tracking-[0.18em]">Call Now — 24/7</span>
+              <a className="flex items-center justify-between w-full px-3.5 py-2.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-xl transition-colors duration-200">
+                <span className="text-[10px] font-black uppercase tracking-[0.4em]">Call Now — 24/7</span>
                 <svg className="w-3.5 h-3.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -295,36 +289,36 @@ export default function Faq() {
               ].map((s) => (
                 <div
                   key={s.label}
-                  className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-center"
+                  className="rounded-[20px] border border-slate-200 bg-white shadow-sm px-3 py-3 text-center"
                 >
-                  <p className="text-[1.1rem] font-black text-slate-900 tracking-tight leading-none">{s.value}</p>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 mt-1">{s.label}</p>
+                  <p className="text-[1.1rem] font-extrabold text-slate-900 tracking-tighter leading-none">{s.value}</p>
+                  <p className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400 mt-1">{s.label}</p>
                 </div>
               ))}
             </div>
 
             {/* Trust Badges */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-4">
-              <p className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400 mb-3">
+            <div className="rounded-[20px] border border-slate-200 bg-white shadow-sm p-4">
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-700 mb-3">
                 Why Trust Us
               </p>
               <div className="space-y-2.5">
                 {trustBadges.map((item) => (
                   <div key={item.label} className="flex items-center gap-2.5">
-                    <span className="w-6 h-6 rounded-lg bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0">
+                    <span className="w-6 h-6 rounded-lg bg-orange-100 border border-orange-200 flex items-center justify-center text-orange-500 flex-shrink-0">
                       {item.icon}
                     </span>
-                    <span className="text-[11.5px] font-semibold text-slate-600">{item.label}</span>
+                    <span className="text-xs font-medium text-slate-600">{item.label}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* FAQ count strip */}
-            <div className="rounded-2xl border border-orange-100 bg-orange-50 px-4 py-3 flex items-center justify-between">
+            <div className="rounded-[20px] border border-orange-200 bg-orange-50 px-4 py-3 flex items-center justify-between">
               <div>
-                <span className="text-xl font-black text-orange-500 leading-none">{FAQ_DATA.length}</span>
-                <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-orange-400 mt-0.5">Questions Answered</p>
+                <span className="text-xl font-extrabold text-orange-500 leading-none">{FAQ_DATA.length}</span>
+                <p className="text-[9px] font-black uppercase tracking-[0.4em] text-orange-400 mt-0.5">Questions Answered</p>
               </div>
               <svg className="w-5 h-5 text-orange-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -334,7 +328,6 @@ export default function Faq() {
           </aside>
         </div>
 
-      
       </div>
     </section>
   );

@@ -17,7 +17,6 @@ import OurFacilities from "@/components/sections/OurFacilities";
 import Service from "@/components/sections/Service";
 import Social from "@/components/sections/Social";
 import Versus from "@/components/sections/Versus";
-import Videos from "@/components/sections/Videos";
 
 function formatCityName(slug) {
   return slug
@@ -38,6 +37,7 @@ export async function generateMetadata({ params }) {
 
 // 👇 YOUR EXTRA COMPONENT
 import MainContent from "@/components/MainContent";
+import Videos from "@/components/sections/Videos/Video";
 
 export default async function CityPage({ params }) {
   const { slug } = await params;
@@ -57,7 +57,7 @@ export default async function CityPage({ params }) {
       <Service />
       <OurFacilities />
       <Gallery />
-      <Videos />
+      <Videos/>
       <Charges />
       <Faq />
       <CostCalculator />

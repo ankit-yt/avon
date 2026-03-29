@@ -104,7 +104,7 @@ function StarRow({ rating }) {
 /* ── Single Google-style review card ── */
 function GoogleReviewCard({ review }) {
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-5 flex flex-col gap-3">
+    <div className="bg-white rounded-[28px] border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-5 flex flex-col gap-3">
 
       {/* Row 1 — avatar + name + Google G */}
       <div className="flex items-center justify-between">
@@ -117,12 +117,12 @@ function GoogleReviewCard({ review }) {
           </div>
           <div>
             <div className="flex items-center gap-1">
-              <span className="text-[13.5px] font-semibold text-slate-800 leading-none">
+              <span className="text-[13.5px] font-black text-slate-900 leading-none">
                 {review.name}
               </span>
               <HiCheckBadge size={14} className="text-[#4285F4] flex-shrink-0" />
             </div>
-            <span className="text-[11px] text-slate-400 block mt-0.5">
+            <span className="text-[11px] text-slate-500 block mt-0.5">
               {review.location}
             </span>
           </div>
@@ -137,7 +137,7 @@ function GoogleReviewCard({ review }) {
       </div>
 
       {/* Row 3 — review body */}
-      <p className="text-[13px] text-slate-600 leading-relaxed flex-1">
+      <p className="text-xs text-slate-600 leading-relaxed flex-1">
         {review.review}
       </p>
 
@@ -152,94 +152,46 @@ function GoogleReviewCard({ review }) {
 
 /* ── Main server component ── */
 export default function FeedBack() {
-  const avg = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+  const avg = (
+    reviews.reduce((a, r) => a + r.rating, 0) / reviews.length
+  ).toFixed(1);
 
   return (
-    <section className="relative py-20 bg-[#FAFAF8] overflow-hidden">
+    <section className="relative py-6 md:py-5 bg-[#FAFAF8] overflow-hidden">
 
-      {/* Decorative blobs */}
-      <div className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-orange-100/40 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[340px] h-[340px] rounded-full bg-blue-100/25 blur-[110px] pointer-events-none" />
+      {/* Background blobs */}
+      <div className="pointer-events-none absolute -top-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 -right-32 w-125 h-125 rounded-full bg-orange-200/20 blur-[120px]" />
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14">
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
 
-        {/* ── Section header ── */}
-        <header className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-3 mb-5">
-            <span className="h-px w-10 bg-orange-500" />
-            <span className="text-[10px] font-black uppercase tracking-[0.45em] text-orange-600">
-              Customer Reviews
-            </span>
-            <span className="h-px w-10 bg-orange-500" />
-          </div>
-          <h2 className="text-4xl uppercase md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            What Our Clients{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-orange-500">Say</span>
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-orange-100 rounded -z-0" />
-            </span>
+        {/* Header */}
+        <header className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+            <span className="w-10 h-px bg-orange-600" />
+            Customer Reviews
+            <span className="w-10 h-px bg-orange-600" />
           </h2>
-          <p className="text-sm text-slate-500">
+
+          <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4 uppercase">
+            What Our Clients <span className="text-orange-500">Say</span>
+          </h3>
+
+          <p className="text-xs text-slate-500">
             Real experiences from real customers — verified on Google.
           </p>
         </header>
 
-        {/* ── Google aggregate badge ── */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex flex-wrap justify-center items-center gap-5 bg-white border border-slate-200 rounded-2xl px-7 py-5 shadow-sm">
-
-            <GoogleColorLogo size={34} />
-
-            <div className="w-px h-12 bg-slate-100 hidden sm:block" />
-
-            {/* Overall score */}
-            <div className="text-center">
-              <p className="text-4xl font-black text-slate-900 leading-none">{avg}</p>
-              <div className="flex justify-center mt-1.5">
-                <StarRow rating={5} />
-              </div>
-              <p className="text-[11px] text-slate-400 mt-1.5 uppercase tracking-wider font-medium">
-                {reviews.length} Google Reviews
-              </p>
-            </div>
-
-            <div className="w-px h-12 bg-slate-100 hidden sm:block" />
-
-            {/* Per-star breakdown */}
-            <div className="flex flex-col gap-1.5">
-              {[5, 4, 3, 2, 1].map((star) => {
-                const count = reviews.filter((r) => r.rating === star).length;
-                const pct = Math.round((count / reviews.length) * 100);
-                return (
-                  <div key={star} className="flex items-center gap-2">
-                    <span className="text-[11px] text-slate-500 w-2 font-medium">{star}</span>
-                    <FaStar size={9} className="text-[#FBBC04]" />
-                    <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-[#FBBC04] rounded-full"
-                        style={{ width: `${pct}%` }}
-                      />
-                    </div>
-                    <span className="text-[11px] text-slate-400 w-3 text-right">{count}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* ── Cards: top 3 ── */}
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reviews.map((r, i) => (
             <GoogleReviewCard key={i} review={r} />
           ))}
         </div>
 
-       
+        {/* CTA Buttons */}
+        <div className="flex  flex-wrap justify-center gap-4 mt-10">
 
-        {/* ── View on Google CTA ── */}
-       <div className="flex mx-auto gap-5 justify-center ">
-        <div className="flex justify-center mt-10">
           <a
           target="_blank"
             href="https://g.page/r/CaHrilU1AntZEBM/review"
@@ -258,11 +210,11 @@ export default function FeedBack() {
             <GoogleColorLogo size={16} />
             <span className="font-medium">View all reviews on Google</span>
           </a>
+
         </div>
-        
-       </div>
 
       </div>
     </section>
   );
 }
+ 

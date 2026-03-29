@@ -1,4 +1,3 @@
-
 import {
   HiOutlineChatAlt2,
   HiOutlineArchive,
@@ -17,7 +16,9 @@ import UnpackingAndSetup from "@/assets/images/Work/Unpacking-and-Setup.png";
 import HappyClient from "@/assets/images/Work/Happy-Client.png";
 
 import StepsTabs from "./StepsTabs";
+
 const DETAIL_TEXT = "avon express packers and movers";
+
 const STEPS = [
   {
     id: "step-01",
@@ -90,6 +91,7 @@ const STEPS = [
     image: HappyClient,
   },
 ];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
@@ -123,23 +125,32 @@ export default function HowItWorks() {
         aria-labelledby="how-it-works-heading"
         itemScope
         itemType="https://schema.org/HowTo"
-        className="bg-white border-t border-slate-100"
+        className="relative bg-[#FAFAF8] border-t border-slate-200 overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 lg:py-5">
+
+        {/* ── Warm blob ── */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+        />
+           <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
 
 
+        <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14 py-6 lg:py-5">
 
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <header className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
-              <span className="w-8  bg-orange-600" />
-              <span className="w-10 h-px bg-orange-600" /> Operational Blueprint <span className="w-10 h-px bg-orange-600" />
-              <span className="w-8  bg-orange-600" />
+              <span className="w-10 h-px bg-orange-600" />
+              Operational Blueprint
+              <span className="w-10 h-px bg-orange-600" />
             </h2>
             <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
-              HOW &nbsp;IT <span className="text-orange-500">&nbsp;WORK.</span>
+              HOW &nbsp;IT <span className="text-orange-500">&nbsp;WORK</span>
             </h3>
-
-          </div>
+          </header>
 
           <StepsTabs steps={STEPS} />
 
@@ -161,8 +172,6 @@ export default function HowItWorks() {
               </li>
             ))}
           </ol>
-
-
 
         </div>
       </section>

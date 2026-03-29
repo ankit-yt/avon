@@ -69,8 +69,13 @@ export default function Enquiry() {
         {/* ── Warm blob ── */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+          className="pointer-events-none absolute -top-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
         />
+           <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+
 
         <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
 

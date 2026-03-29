@@ -52,67 +52,72 @@ const services = [
 
 export default function Service() {
   return (
-    <section id="services" className="bg-white py-5 px-4 md:px-10 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="services"
+      className="relative py-6 md:py-5 bg-[#FAFAF8] overflow-hidden border-t border-slate-200"
+    >
 
-        {/* --- Minimal Header --- */}
-       
+      {/* ── Warm blob ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+         <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
 
-        <div className="text-center   max-w-3xl mx-auto mb-10 border-b border-slate-100 pb-5">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
-              <span className="w-8  bg-orange-600" />
-              <span className="w-10 h-px bg-orange-600" /> Our Expertise <span className="w-10 h-px bg-orange-600" />
-              <span className="w-8  bg-orange-600" />
-            </h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight ">
-              OUR <span className="text-orange-500">&nbsp;SERVICES</span>
-            </h3>
 
-          </div>
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
+
+        {/* --- Header --- */}
+        <header className="text-center max-w-3xl mx-auto mb-10 border-b border-slate-200 pb-6">
+          <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+            <span className="w-10 h-px bg-orange-600" />
+            Our Expertise
+            <span className="w-10 h-px bg-orange-600" />
+          </h2>
+          <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            OUR <span className="text-orange-500">&nbsp;SERVICES</span>
+          </h3>
+        </header>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
+          {services.map((s) => (
             <div
               key={s.slug}
-              className="group flex flex-col rounded-2xl border border-neutral-100 overflow-hidden hover:border-orange-200 hover:shadow-xl hover:shadow-orange-50 transition-all duration-300"
+              className="group flex flex-col rounded-[20px] border border-slate-200 bg-white overflow-hidden hover:border-orange-200 hover:shadow-xl hover:shadow-orange-100 transition-all duration-300 shadow-sm"
             >
               {/* Image */}
               <div className="relative overflow-hidden aspect-video">
-             
                 <Image
-                width={100}
-                height={100}
                   src={s.img}
                   alt={s.title}
+                  fill
                   quality={100}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-               
-
-              
-
-               
               </div>
 
               {/* Content */}
               <div className="flex flex-col flex-1 gap-3 p-6">
                 {/* Accent line */}
-                <div className="w-7 h-0.5 bg-orange-400 rounded-full" />
+                <div className="w-7 h-0.5 bg-orange-500 rounded-full" />
 
-                <h3 className="text-base font-black text-neutral-900 tracking-tight leading-snug">
+                <h3 className="text-sm font-extrabold text-slate-900 tracking-tighter leading-snug">
                   {s.title}
                 </h3>
 
-                <p className="text-sm text-neutral-400 leading-relaxed flex-1">
+                <p className="text-sm text-slate-500 leading-relaxed font-medium flex-1">
                   {s.desc}
                 </p>
 
                 <Link
-                target="_blank"
-                  href={`https://wa.me/919814556375`}
-                  className="mt-2 self-start inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white text-[11px] font-black tracking-widest uppercase px-5 py-2.5 rounded-full transition-colors duration-200"
+                  target="_blank"
+                  href="https://wa.me/919814556375"
+                  className="mt-2 self-start inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white text-[10px] font-black tracking-[0.1em] uppercase px-5 py-2.5 rounded-full transition-colors duration-200"
                 >
                   Get A Free Quotation
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
@@ -125,13 +130,13 @@ export default function Service() {
         </div>
 
         {/* Bottom strip */}
-        <div className="mt-14 pt-10 border-t border-neutral-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-neutral-400 tracking-wide">
+        <div className="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-500 font-medium tracking-widest uppercase">
             Zero Damage Free Shifting and Real-Time Tracking With Lockable Truck.
           </p>
-          <ScrollTopButton className="inline-flex items-center gap-2 border border-neutral-200 hover:border-orange-400 hover:text-orange-500 text-neutral-600 text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-all duration-200">
-  All Services
-</ScrollTopButton>
+          <ScrollTopButton className="inline-flex items-center gap-2 border border-slate-200 bg-white shadow-sm hover:border-orange-400 hover:text-orange-500 text-slate-700 text-[10px] font-black tracking-[0.4em] uppercase px-6 py-2.5 rounded-full transition-all duration-200">
+            All Services
+          </ScrollTopButton>
         </div>
 
       </div>

@@ -25,42 +25,56 @@ const points = [
 
 function Covid19() {
   return (
-    <section className="p-10 bg-white overflow-hidden border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-14">
+    <section className="relative py-6 md:py-5 bg-[#FAFAF8] overflow-hidden border-t border-slate-200">
+
+      {/* ── Warm blob ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+        <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
 
         {/* ── Section Header ── */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div className="max-w-4xl">
-            <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600 mb-4">
+            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
+              <span className="w-10 h-px bg-orange-600" />
               Health and Safety Protocols
+              <span className="w-10 h-px bg-orange-600" />
             </h2>
-            <h3 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.95]">
-              COVID-19 <span className="text-slate-300 "> PRECAUTIONS.</span>
+            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+              COVID-19 <span className="text-orange-500">PRECAUTIONS.</span>
             </h3>
           </div>
-         
         </div>
 
         {/* ── Main Grid ── */}
-        <div className="grid lg:grid-cols-12 gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
-          {/* LEFT: 2×2 Photo Grid — 5 cols */}
+          {/* LEFT: Photo Grid — 5 cols */}
           <div className="lg:col-span-5 relative">
 
             {/* Decorative orbs */}
-            <div className="absolute -z-10 -top-10 -left-10 w-64 h-64 bg-orange-50 rounded-full blur-3xl opacity-80 pointer-events-none" />
+            <div className="absolute -z-10 -top-10 -left-10 w-64 h-64 bg-orange-200/30 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute -z-10 -bottom-10 -right-6 w-48 h-48 bg-slate-100 rounded-full blur-3xl opacity-60 pointer-events-none" />
 
             <div className="grid grid-cols-2 gap-4">
               {images.map((img, i) => (
                 <div
                   key={i}
-                  className="relative aspect-square rounded-2xl overflow-hidden group shadow-md shadow-slate-200"
+                  className="relative aspect-square rounded-[20px] overflow-hidden group shadow-sm border border-slate-200"
                 >
                   <Image
                     src={img}
                     alt={`COVID-19 safety measure ${i + 1}`}
                     fill
+                    quality={100}
+                    sizes="(max-width: 768px) 50vw, 20vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Hover overlay */}
@@ -75,23 +89,23 @@ function Covid19() {
               ))}
             </div>
 
-            {/* Glassmorphism bottom tag */}
-            <div className="mt-4 px-5 py-3 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-3">
+            {/* Bottom tag */}
+            <div className="mt-4 px-5 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse flex-shrink-0" />
-              <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">
-               AVON EXPRESS PACKERS AND MOVERS
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-700">
+                AVON EXPRESS PACKERS AND MOVERS
               </p>
             </div>
           </div>
 
           {/* RIGHT: Content — 7 cols */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6">
 
             {/* Content heading */}
             <div className="space-y-4">
-              <h4 className="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight leading-tight">
+              <h4 className="text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tighter leading-tight">
                 Precautions To Observe When Shifting Household Goods
-                <span className="text-orange-600"> During COVID-19.</span>
+                <span className="text-orange-500"> During COVID-19.</span>
               </h4>
 
               <div className="h-[2px] w-14 bg-orange-500" />
@@ -114,12 +128,12 @@ function Covid19() {
               {points.map((item, i) => (
                 <div
                   key={i}
-                  className="flex gap-3 p-4 rounded-xl bg-slate-50 hover:bg-orange-50 border border-slate-100 hover:border-orange-200 transition-all duration-300 group"
+                  className="flex gap-3 p-4 rounded-[20px] bg-white hover:bg-orange-50 border border-slate-200 hover:border-orange-200 shadow-sm transition-all duration-300 group"
                 >
                   <div className="flex-shrink-0 mt-0.5">
                     <HiCheckCircle className="text-orange-500 text-lg group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <p className="text-slate-600 text-sm leading-relaxed">{item}</p>
+                  <p className="text-slate-600 text-sm leading-relaxed font-medium">{item}</p>
                 </div>
               ))}
             </div>

@@ -78,64 +78,75 @@ const states = [
 
 export default function City() {
   return (
-    <section className="bg-white p-10 pt-5 px-4 md:px-10 lg:px-20 overflow-hidden relative">
+    <section className="relative py-6 md:py-5 bg-[#FAFAF8] overflow-hidden border-t border-slate-200">
+
+      {/* ── Warm blob ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-32 -left-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+         <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -right-32 w-125 h-125 rounded-full bg-orange-200/30 blur-[120px]"
+      />
+
 
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto mb-5">
-        
-            <h1 className="text-7xl mx-auto w-full flex justify-center  font-extrabold tracking-[0.25em] text-slate-900 uppercase mb-3">
-              Pan India <span className="text-orange-500">&nbsp;Network</span>
-            </h1>
-           
-        <div className="mt-10 h-px bg-neutral-100 w-full" />
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14 mb-6">
+
+        <header className="text-center max-w-3xl mx-auto mb-6">
+          <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+            <span className="w-10 h-px tracking-[0.4rem] bg-orange-600" />
+            Pan India Network
+            <span className="w-10 h-px bg-orange-600" />
+          </h2>
+          <h1 className="text-4xl md:text-6xl  font-extrabold tracking-[0.6rem] text-slate-900 uppercase leading-tight">
+            Pan India <span className="text-orange-500">Network</span>
+          </h1>
+        </header>
+
+        <div className="h-px bg-slate-200 w-full" />
       </div>
 
       {/* City Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-5">
-        {states.map((city, i) => (
-          <Link
-            key={i}
-            href={`/${city.name.toLowerCase().replace(/\s+/g, "-")}`}
-            className="group relative overflow-hidden rounded-xl  h-60 block"
-          >
-            {/* Image */}
-            <Image
-            width={100}
-            height={100}
-              src={city.img}
-              quality={100}
-  alt={city.img}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-            />
+      <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-5">
+          {states.map((city, i) => (
+            <Link
+              key={i}
+              href={`/${city.name.toLowerCase().replace(/\s+/g, "-")}`}
+              className="group relative overflow-hidden rounded-[20px] h-60 block shadow-sm border border-slate-200 hover:shadow-xl hover:shadow-orange-100 transition-shadow duration-300"
+            >
+              {/* Image */}
+              <Image
+                src={city.img}
+                alt={city.name}
+                fill
+                quality={100}
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              />
 
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-            {/* Hover tint */}
-            <div className="absolute inset-0 bg-neutral-950/0 group-hover:bg-neutral-950/20 transition-colors duration-500" />
+              {/* Hover tint */}
+              <div className="absolute inset-0 bg-neutral-950/0 group-hover:bg-neutral-950/20 transition-colors duration-500" />
 
-          
+              {/* City Info */}
+              <div className="absolute bg-black/60 bottom-0 left-0 right-0 p-4">
+                <h3 className="text-sm font-black tracking-tighter text-white leading-tight">
+                  {city.name}
+                </h3>
+              </div>
 
-           
-
-            {/* City Info */}
-            <div className="absolute bg-black/60 bottom-0 left-0 right-0 p-4">
-              
-              <h3 className="text-lg  font-black tracking-tight text-white leading-none">
-                {city.name}
-              </h3>
-            </div>
-
-            {/* Bottom border accent on hover */}
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-          </Link>
-        ))}
-
-        {/* CTA Card */}
-       
+              {/* Bottom border accent on hover */}
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            </Link>
+          ))}
+        </div>
       </div>
 
-      
     </section>
   );
 }
