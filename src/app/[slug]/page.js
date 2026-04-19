@@ -128,9 +128,23 @@ const parsed = parseSlug(slug);
         <MainPhoto />
         <StateContent state={parsed.state} />   {/* ← new component, see below */}
         <About />
-        <Enquiry />
-        <Footer />
-        <Social />
+      <Award />
+      <Media />
+      <Versus />
+      <City />
+      <HowItWorks />
+      <Service />
+      <OurFacilities />
+      <Gallery />
+      <Videos />
+      <Charges />
+      <Faq />
+      <CostCalculator />
+      <Enquiry />
+      <Map />
+      <CompanyClints />
+      <Footer />
+      <Social />
       </>
     );
   }
