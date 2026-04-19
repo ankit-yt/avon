@@ -26,8 +26,9 @@ export async function generateStaticParams() {
  
 
   const slugs = [];
+ const topCities = cities.slice(0, 250);
 
-  cities.forEach(city => {
+  topCities.forEach(city => {
     slugs.push({ slug: `packers-and-movers-in-${city}` });
     slugs.push({ slug: `iba-approved-packers-and-movers-in-${city}` });
   });
@@ -38,7 +39,8 @@ export async function generateStaticParams() {
 
   return slugs;
 }
-
+export const dynamicParams = true;
+export const revalidate = false;
 function formatCityName(slug) {
   return slug
     .split("-")
