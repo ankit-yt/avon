@@ -1,0 +1,55 @@
+import About from '@/components/sections/About'
+import Award from '@/components/sections/Award'
+import Charges from '@/components/sections/Charges'
+import City from '@/components/sections/City'
+import CompanyClints from '@/components/sections/CompanyClints'
+import Faq from '@/components/sections/Faq'
+import Footer from '@/components/sections/Footer'
+import Gallery from '@/components/sections/Gallery'
+import Hero from '@/components/sections/Hero'
+import HowItWorks from '@/components/sections/How it work/HowItWorks'
+import MainPhoto from '@/components/sections/MainPhoto'
+import Map from '@/components/sections/Map'
+import Media from '@/components/sections/Media'
+import OurFacilities from '@/components/sections/OurFacilities'
+import Service from '@/components/sections/Service'
+import Social from '@/components/sections/Social'
+import Versus from '@/components/sections/Versus'
+import Videos from '@/components/sections/Videos/Video'
+import Enquiry from '@/components/sections/costCalculator/CostCalculator'
+import CostCalculator from "@/components/sections/costCalculator/CostCalculator";
+import React from 'react'
+
+function notFound() {
+  return (
+    <>
+    <Hero />
+      <MainPhoto />
+       <div>
+        <h1>404 - Page Not Found</h1>
+        <p>Sorry, the page you are looking for does not exist.</p>
+        </div>  
+      <About />
+      <Award />
+     
+      <Media />
+      <Versus />
+      <City />
+      <HowItWorks />
+      <Service />
+      <OurFacilities />
+      <Gallery />
+      <Videos/>
+      <Charges />
+      <Faq />
+      <CostCalculator/>
+      <Enquiry />
+      <Map />
+      <CompanyClints />
+      <Footer />
+      <Social />
+      </>
+  )
+}
+
+export default notFound

@@ -17,6 +17,27 @@ import OurFacilities from "@/components/sections/OurFacilities";
 import Service from "@/components/sections/Service";
 import Social from "@/components/sections/Social";
 import Versus from "@/components/sections/Versus";
+import { cities, states } from "@/lib/cities";
+import MainContent from "@/components/MainContent";
+import Videos from "@/components/sections/Videos/Video";
+import { notFound } from "next/navigation";
+import StateContent from "@/components/slug/StateContent";
+export async function generateStaticParams() {
+ 
+
+  const slugs = [];
+
+  cities.forEach(city => {
+    slugs.push({ slug: `packers-and-movers-in-${city}` });
+    slugs.push({ slug: `iba-approved-packers-and-movers-in-${city}` });
+  });
+
+    states.forEach(state => {
+    slugs.push({ slug: state });
+  });
+
+  return slugs;
+}
 
 function formatCityName(slug) {
   return slug
@@ -25,31 +46,103 @@ function formatCityName(slug) {
     .join(" ");
 }
 
+function parseSlug(slug) {
+  // ✅ IBA
+  if (slug.startsWith("iba-approved-packers-and-movers-in-")) {
+    const city = slug.replace("iba-approved-packers-and-movers-in-", "");
+
+    if (!cities.includes(city)) return null;
+
+    return {
+      type: "iba",
+      service: "IBA Packers and Movers",
+      city
+    };
+  }
+
+  if (slug.startsWith("packers-and-movers-in-")) {
+    const city = slug.replace("packers-and-movers-in-", "");
+
+    if (!cities.includes(city)) return null;
+
+    return {
+      service: "Packers and Movers",
+      city
+    };
+
+    
+  }
+
+  if (states.includes(slug)) {
+    return { type: "state", state: slug };
+  }
+
+  return null;
+}
+
 export async function generateMetadata({ params }) {
     const resolvedParams = await params;
-  const cityName = formatCityName(resolvedParams.slug);
+    const parsed = parseSlug(resolvedParams.slug);
+
+  if (!parsed) {
+    return {
+      title: "Page Not Found"
+    };
+  }
+
+  if (parsed.type === "state") {
+    const stateName = formatCityName(parsed.state);
+    return {
+      title: `Welcome To ${stateName} | Avon Express Packers and Movers | Official Website`,
+      description: `Find the best packers and movers services across ${stateName}.`,
+    };
+  }
+    const cityName = formatCityName(parsed.city);
+    if (parsed.type === "iba") {
+    return {
+      title: `IBA Approved Packers and Movers in ${cityName} | Avon Express Packers and Movers | Official Website`,
+      description: `IBA certified and government approved packers & movers in ${cityName}. Insured, verified and trusted relocation services.`,
+    };
+  }
+
 
   return {
-    title: `Packers and Movers in ${cityName} | Avon Express Packers and Movers`,
+    title: `Packers and Movers in ${cityName} | Avon Express Packers and Movers | Official Website`,
     description: `Best packers and movers services in ${cityName}. Fast, safe and affordable.`,
   };
 }
 
-// 👇 YOUR EXTRA COMPONENT
-import MainContent from "@/components/MainContent";
-import Videos from "@/components/sections/Videos/Video";
 
 export default async function CityPage({ params }) {
   const { slug } = await params;
+const parsed = parseSlug(slug);
 
+  if (!parsed) {
+    notFound();
+  }
+
+    if (parsed.type === "state") {
+    return (
+      <>
+        <Hero />
+        <MainPhoto />
+        <StateContent state={parsed.state} />   {/* ← new component, see below */}
+        <About />
+        <Enquiry />
+        <Footer />
+        <Social />
+      </>
+    );
+  }
+
+  // existing city pages — unchanged
   return (
     <>
       <Hero />
       <MainPhoto />
-       <MainContent slug={slug} />
+      <MainContent slug={slug} city={parsed.city} service={parsed.service} />
       <About />
       <Award />
-
       <Media />
       <Versus />
       <City />
@@ -57,7 +150,7 @@ export default async function CityPage({ params }) {
       <Service />
       <OurFacilities />
       <Gallery />
-      <Videos/>
+      <Videos />
       <Charges />
       <Faq />
       <CostCalculator />
