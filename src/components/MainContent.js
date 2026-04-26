@@ -139,7 +139,7 @@ export default function MainContent({ city, service }) {
               <p className="text-sm text-slate-500 font-medium leading-relaxed">
                 {isIBA
                   ? `IBA-certified movers for bank & government employee relocations across ${formattedCity}.`
-                  : `Select your city to find verified packers & movers near you — transparent pricing, zero hidden costs.`}
+                  : `Select your city to get verified packers & movers near you — transparent pricing, zero hidden costs.`}
               </p>
               {isIBA && (
                 <div className="inline-flex items-center gap-2 mt-5 bg-white border border-slate-200 rounded-full px-5 py-2 shadow-sm">
@@ -166,7 +166,7 @@ export default function MainContent({ city, service }) {
               <header className="text-center max-w-4xl mx-auto mb-10">
                 <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
                   <span className="w-10 h-px bg-orange-600" />
-                  {isIBA ? "Government Certified" : "Explore Nearby Areas"}
+                  {isIBA ? "Government Certified" : "Nearby Areas"}
                   <span className="w-10 h-px bg-orange-600" />
                 </h2>
                 <h3
@@ -175,12 +175,12 @@ export default function MainContent({ city, service }) {
                 >
                   {isIBA ? "IBA APPROVED MOVERS" : "PACKERS & MOVERS"}{" "}
                   <br />
-                  <span className="text-orange-500">ACROSS {formattedCity.toUpperCase()}</span>
+                  <span className="text-orange-500">IN {formattedCity.toUpperCase()}</span>
                 </h3>
                 <p className="text-sm text-slate-500 font-medium leading-relaxed">
                   {isIBA
-                    ? `Find IBA-approved packers & movers serving every neighbourhood in ${formattedCity}.`
-                    : `Find trusted packers & movers serving every neighbourhood and locality in ${formattedCity}.`}
+                    ? `IBA-approved packers & movers serving every neighbourhood in ${formattedCity}.`
+                    : `Trusted packers & movers serving every neighbourhood and locality in ${formattedCity}.`}
                 </p>
                 {isIBA && (
                   <div className="inline-flex items-center gap-2 mt-5 bg-white border border-slate-200 rounded-full px-5 py-2 shadow-sm">

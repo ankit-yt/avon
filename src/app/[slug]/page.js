@@ -22,6 +22,12 @@ import MainContent from "@/components/MainContent";
 import Videos from "@/components/sections/Videos/Video";
 import { notFound } from "next/navigation";
 import StateContent from "@/components/slug/StateContent";
+import VisionMission from "@/components/sections/VisionMission";
+import Why from "@/components/sections/Why";
+import SwachhBharat from "@/components/sections/SwachhBharat";
+import Covid19 from "@/components/sections/Covid19";
+import Blog from "@/components/Blog";
+import FeedBack from "@/components/sections/FeedBack";
 export async function generateStaticParams() {
  
 
@@ -129,24 +135,32 @@ const parsed = parseSlug(slug);
         <Hero />
         <MainPhoto />
         <StateContent state={parsed.state} />   {/* ← new component, see below */}
-        <About />
-      <Award />
-      <Media />
-      <Versus />
-      <City />
-      <HowItWorks />
-      <Service />
-      <OurFacilities />
-      <Gallery />
-      <Videos />
-      <Charges />
-      <Faq />
-      <CostCalculator />
-      <Enquiry />
-      <Map />
-      <CompanyClints />
-      <Footer />
-      <Social />
+        <About/>
+      <VisionMission/>
+      <Why/>
+      <SwachhBharat/>
+      <Award/>
+      
+      <Media/>
+      <Versus/>
+      <City/>
+      <HowItWorks/>
+      <Service/>
+      <OurFacilities/>
+      
+      <Gallery/>
+      <Videos/>
+      <Covid19/>
+      <Blog/>
+      <Faq/>
+      <Charges/>
+      <CostCalculator/>
+      <FeedBack/>
+      <Enquiry/>
+      <Map/>
+      <CompanyClints/>
+      <Footer/>
+      <Social/>
       </>
     );
   }
@@ -157,24 +171,32 @@ const parsed = parseSlug(slug);
       <Hero />
       <MainPhoto />
       <MainContent slug={slug} city={parsed.city} service={parsed.service} />
-      <About />
-      <Award />
-      <Media />
-      <Versus />
-      <City />
-      <HowItWorks />
-      <Service />
-      <OurFacilities />
-      <Gallery />
-      <Videos />
-      <Charges />
-      <Faq />
-      <CostCalculator />
-      <Enquiry />
-      <Map />
-      <CompanyClints />
-      <Footer />
-      <Social />
+      <About/>
+      <VisionMission/>
+      <Why/>
+      <SwachhBharat/>
+      <Award/>
+      
+      <Media/>
+      <Versus/>
+      <City/>
+      <HowItWorks/>
+      <Service/>
+      <OurFacilities/>
+      
+      <Gallery/>
+      <Videos/>
+      <Covid19/>
+      <Blog/>
+      <Faq/>
+      <Charges/>
+      <CostCalculator/>
+      <FeedBack/>
+      <Enquiry/>
+      <Map/>
+      <CompanyClints/>
+      <Footer/>
+      <Social/>
     </>
   );
 }

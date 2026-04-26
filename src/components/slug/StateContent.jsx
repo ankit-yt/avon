@@ -13,7 +13,7 @@ const CARDS = [
     label: (name) => `Packers and Movers in ${name}`,
     eyebrow: "Verified & Trusted",
     desc: (name) =>
-      `Find safe, reliable and affordable packers & movers across all cities in ${name}. Transparent pricing, zero hidden costs.`,
+      `Safe, reliable and affordable packers & movers across all cities in ${name}. Transparent pricing, zero hidden costs.`,
     icon: "🚚",
      badge: (name) => `AVON IN ${name.toUpperCase()}`,
   },
