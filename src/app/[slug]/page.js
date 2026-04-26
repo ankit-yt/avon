@@ -26,8 +26,9 @@ import VisionMission from "@/components/sections/VisionMission";
 import Why from "@/components/sections/Why";
 import SwachhBharat from "@/components/sections/SwachhBharat";
 import Covid19 from "@/components/sections/Covid19";
-import Blog from "@/components/Blog";
+import Blog from "@/components/sections/Blog";
 import FeedBack from "@/components/sections/FeedBack";
+import CityHero from "@/components/CityHero";
 export async function generateStaticParams() {
  
 
@@ -169,8 +170,10 @@ const parsed = parseSlug(slug);
   return (
     <>
       <Hero />
-      <MainPhoto />
+      
+      <CityHero city={parsed.city} service={parsed.service} /> 
       <MainContent slug={slug} city={parsed.city} service={parsed.service} />
+      <MainPhoto />
       <About/>
       <VisionMission/>
       <Why/>

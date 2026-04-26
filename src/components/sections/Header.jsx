@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/data";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from "../LanguageSwitcher";
 import Image from "next/image";
 import logo from "@/assets/images/Home/Logo.png";
 import { FaWhatsapp } from "react-icons/fa";
@@ -326,12 +326,15 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
+              <span className="text-orange-500 ">GST • 03DZWPK8631P1ZF</span>
+            </div>
+            <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
               <span>Udyam registered • UDYAM-CH-01-0044520</span>
             </div>
             <a
               href="/Trademark-Registered-Certificate.pdf"
               download
-              className="text-orange-500 font-medium tracking-wide cursor-pointer"
+              className="text-green-500 cursor-pointer"
             >
               Trademark Registered • 4481215
             </a>

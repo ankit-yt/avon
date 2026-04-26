@@ -1,9 +1,19 @@
+// app/search/[slug]/page.jsx
+
 import Link from "next/link";
 import { cities } from "@/lib/cities";
-import { HiOutlineLocationMarker, HiArrowLeft } from "react-icons/hi";
 import { HiCheckBadge } from "react-icons/hi2";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import Footer from "@/components/sections/Footer";
 
-// Format slug → Display Name
+const NAV_LINKS = [
+  { href: "/disclaimer", label: "Disclaimer" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-and-conditions", label: "Terms & Conditions" },
+  { href: "/refund-and-cancellation", label: "Refund & Cancellation" },
+  { href: "/insurance", label: "Insurance" },
+];
+
 function formatName(slug) {
   return slug
     .split("-")
@@ -22,54 +32,73 @@ export async function generateMetadata({ params }) {
 
 export default async function SearchPage({ params }) {
   const { slug } = await params;
-
-  // Normalize: convert spaces → dashes, lowercase
   const keyword = slug.toLowerCase().replace(/\s+/g, "-");
-
-  // Filter all cities that contain the keyword
   const matches = cities.filter((city) => city.includes(keyword));
 
   return (
-    <main className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-[#FAFAF8] font-sans">
 
-      {/* ── Hero / Header ───────────────────────────────────────────────── */}
-      <div className="bg-slate-900 pt-16 pb-12 px-6">
-        <div className="max-w-4xl mx-auto">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-slate-400 hover:text-white text-sm font-bold uppercase tracking-widest transition-colors mb-8 group"
-          >
-            <HiArrowLeft className="group-hover:-translate-x-1 transition-transform" />
-            Back to Home
-          </Link>
+      {/* ── Top accent bar ── */}
+      <div className="h-1 w-full bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600" />
 
-          <div className="flex items-center gap-3 mb-3">
-            <HiOutlineLocationMarker className="text-orange-500 text-2xl shrink-0" />
-            <span className="text-orange-500 text-xs font-black uppercase tracking-[0.2em]">
-              Search Results
+      {/* ── Hero header ── */}
+      <header className="relative bg-slate-900 overflow-hidden">
+        {/* Warm blobs */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-20 -right-20 w-96 h-96 rounded-full bg-orange-500/20 blur-[100px]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 left-0 w-64 h-64 rounded-full bg-orange-600/10 blur-[80px]"
+        />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 lg:px-14 py-14 md:py-20">
+          {/* Breadcrumb */}
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-2 text-xs text-slate-400 flex-wrap">
+              <li>
+                <Link href="/" className="hover:text-orange-400 transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-slate-600">/</li>
+              <li className="text-orange-400 font-semibold">Search Results</li>
+            </ol>
+          </nav>
+
+          <div className="flex items-start gap-5">
+            <span aria-hidden="true" className="text-4xl md:text-5xl flex-shrink-0 mt-1">
+              📦
             </span>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-500 mb-3 flex items-center gap-2">
+                <span className="w-8 h-px bg-orange-500 inline-block" />
+                Search Results
+                <span className="w-8 h-px bg-orange-500 inline-block" />
+              </p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tighter leading-tight">
+                Packers &amp; Movers in{" "}
+                <span className="text-orange-400">{formatName(keyword)}</span>
+              </h1>
+              <p className="mt-3 text-slate-400 text-sm sm:text-base max-w-2xl leading-relaxed">
+                {matches.length > 0
+                  ? `Found ${matches.length} location${matches.length > 1 ? "s" : ""} matching "${formatName(keyword)}"`
+                  : `No locations found matching "${formatName(keyword)}"`}
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-3xl md:text-5xl font-black text-white leading-tight">
-            Packers &amp; Movers
-            <span className="block text-orange-500">{formatName(keyword)}</span>
-          </h1>
-
-          <p className="mt-4 text-slate-400 text-sm font-medium">
-            {matches.length > 0
-              ? `Found ${matches.length} location${matches.length > 1 ? "s" : ""} matching "${formatName(keyword)}"`
-              : `No locations found matching "${formatName(keyword)}"`}
-          </p>
         </div>
-      </div>
+      </header>
 
-      {/* ── Results ─────────────────────────────────────────────────────── */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
+    
 
+      {/* ── Page content ── */}
+      <main className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-14 py-12 md:py-16">
         {matches.length === 0 ? (
           /* ── Empty State ── */
           <div className="text-center py-20">
-            <div className="text-6xl mb-6">📦</div>
+            <div className="text-6xl mb-6">🔍</div>
             <h2 className="text-2xl font-black text-slate-800 mb-3">
               No results found
             </h2>
@@ -79,7 +108,7 @@ export default async function SearchPage({ params }) {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white text-sm font-black uppercase tracking-widest rounded-full hover:bg-orange-600 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-orange-500 text-white text-sm font-black uppercase tracking-widest rounded-full hover:bg-orange-600 transition-all duration-300 shadow-md shadow-orange-200"
             >
               Go Back Home
             </Link>
@@ -97,16 +126,15 @@ export default async function SearchPage({ params }) {
                   className="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden"
                 >
                   {/* Card Header */}
-                  <div className="flex items-center gap-3 px-6 py-4 border-b border-slate-50 bg-slate-50/50">
+                  <div className="flex items-center gap-3 px-6 py-4 border-b border-slate-100 bg-slate-50/60">
                     <HiOutlineLocationMarker className="text-orange-500 text-lg shrink-0" />
-                    <h2 className="text-base font-black text-slate-800 uppercase tracking-wide">
+                    <h2 className="text-sm font-black text-slate-800 uppercase tracking-wide">
                       {displayName}
                     </h2>
                   </div>
 
                   {/* Two Links */}
                   <div className="divide-y divide-slate-50">
-
                     {/* Standard Packers & Movers */}
                     <Link
                       href={packersLink}
@@ -152,14 +180,15 @@ export default async function SearchPage({ params }) {
                         →
                       </span>
                     </Link>
-
                   </div>
                 </div>
               );
             })}
           </div>
         )}
-      </div>
-    </main>
+      </main>
+
+      <Footer/>
+    </div>
   );
 }

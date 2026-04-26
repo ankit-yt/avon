@@ -251,15 +251,22 @@ export default function Footer() {
             © {new Date().getFullYear()} Avon Express Packers and Movers. All rights reserved.
           </p>
           <div className="flex items-center gap-5 flex-wrap justify-center">
-            {[ "AVAILABLE AT YOUR LOCATION" ,"Disclaimer", "Privacy Policy","Refund and Cancellation Policy" ,"Terms and Conditions"].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="text-[11px] text-white hover:text-neutral-400 transition-colors tracking-wide"
-              >
-                {item}
-              </Link>
-            ))}
+           {[
+  { label: "AVAILABLE AT YOUR LOCATION", href: "/locations" },
+  { label: "GST information", href: "/gst-information" },
+  { label: "Disclaimer", href: "/disclaimer" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Refund & Cancellation Policy", href: "/refund-and-cancellation" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+].map((item) => (
+  <Link
+    key={item.label}
+    href={item.href}
+    className="text-[11px] text-white hover:text-neutral-400 transition-colors tracking-wide"
+  >
+    {item.label}
+  </Link>
+))}
           </div>
         </div>
       </div>

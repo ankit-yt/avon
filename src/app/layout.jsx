@@ -1,7 +1,7 @@
 import Script from "next/script"
 import "./globals.css";
-import AnnouncementBar from "@/components/AnnouncementBar";
-import Header from "@/components/Header";
+import AnnouncementBar from "@/components/sections/AnnouncementBar";
+import Header from "@/components/sections/Header";
 import { Poppins } from "next/font/google";
 import "@/lib/styles/truck.css"
 

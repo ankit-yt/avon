@@ -1,5 +1,5 @@
 
-import Blog from "@/components/Blog";
+import Blog from "@/components/sections/Blog";
 import About from "@/components/sections/About";
 import Award from "@/components/sections/Award";
 import Charges from "@/components/sections/Charges";
