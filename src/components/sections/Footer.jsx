@@ -3,6 +3,17 @@ import Link from "next/link";
 import logo from "@/assets/images/Home/Logo.png"
 import playstore from "@/assets/images/Home/App.gif"
 import ScrollTopButton from "../ScrollTopBtn";
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+const now = new Date();
+
+const nextYear = new Date(now.getFullYear() + 1, 0, 1);
+
+export const revalidate = Math.floor(
+  (nextYear.getTime() - now.getTime()) / 1000
+);
+
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Online Payment", href: "/pay-online" },
@@ -10,8 +21,8 @@ const quickLinks = [
   { label: "Tracking", href: "/tracking" },
   { label: "Regular Update", href: "/updates" },
   { label: "Bill For Claim", href: "/bill-claim" },
-  { label: "Branches", href: "/video-survey" },
-  { label: "Join Avon Express", href: "/booking" },
+  { label: "Branches", href: "/branches" },
+  { label: "Join Avon Express", href: "/join" },
 ];
 
 const services = [
@@ -77,11 +88,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="footer relative z-10  text-neutral-400 border-t border-neutral-800">
- <div className="absolute inset-0 z-1 
-                bg-black/70 
-                backdrop-blur-sm 
-                border border-white/20 
-                shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
+ <div className="absolute inset-0 z-1 bg-black/70 backdrop-blur-sm border border-white/20 shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
 </div>
       {/* Top CTA bar */}
       <div className="relative z-20 bg-orange-500">
@@ -107,7 +114,8 @@ export default function Footer() {
         <div className="flex flex-col z-20 gap-6">
           <ScrollTopButton>
            <div className="relative bg-white rounded-xl p-3 border-2 border-orange-700 transition-transform duration-500 group-hover:scale-105">
-              <Image src={logo} alt="Avon Express Logo" priority className="w-80" />
+              <Image src={logo}  width={100}
+                  height={100}  alt="Avon Express Logo" priority className="w-80" />
             </div>
           </ScrollTopButton>
          
@@ -180,7 +188,12 @@ export default function Footer() {
           </ul>
            <div className="mt-9 inline-flex items-center gap-2 border border-neutral-800 rounded-full px-4 py-2 w-fit">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className=" text-white font-medium  tracking-wide">Book a Physical Free Pre-Move Survey</span>
+              <Link
+  href="/physical-survey"
+  className="text-white font-medium tracking-wide"
+>
+  Book a Physical Survey
+</Link>
             </div>
         </div>
 
@@ -248,11 +261,10 @@ export default function Footer() {
        
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white">
-            © {new Date().getFullYear()} Avon Express Packers and Movers. All rights reserved.
+            © {CURRENT_YEAR} Avon Express Packers and Movers. All rights reserved.
           </p>
           <div className="flex items-center gap-5 flex-wrap justify-center">
            {[
-  { label: "AVAILABLE AT YOUR LOCATION", href: "/locations" },
   { label: "GST information", href: "/gst-information" },
   { label: "Disclaimer", href: "/disclaimer" },
   { label: "Privacy Policy", href: "/privacy-policy" },

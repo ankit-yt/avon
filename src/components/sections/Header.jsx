@@ -355,7 +355,8 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="shrink-0 group" aria-label="Home">
             <div className="relative w-28 sm:w-32 lg:w-40 transition-transform duration-500 group-hover:scale-105">
-              <Image src={logo} alt="Avon Express Logo" priority />
+              <Image src={logo} width={150}
+                  height={100} alt="Avon Express Logo" priority />
             </div>
           </Link>
 
@@ -449,7 +450,8 @@ export default function Header() {
         {/* Menu header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0">
           <Link href="/" onClick={closeMobile} className="w-28">
-            <Image src={logo} alt="Avon Express Logo" priority />
+            <Image src={logo} width={150}
+                  height={100} alt="Avon Express Logo" priority />
           </Link>
           <button
             onClick={closeMobile}

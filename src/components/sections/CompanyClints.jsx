@@ -41,6 +41,7 @@ import TamilnadMercantileBank from "@/assets/images/Clients/Tamilnad-Mercantile-
 import UnionBankOfIndia from "@/assets/images/Clients/Union-Bank-of-India.png";
 import UnitedCommercialBank from "@/assets/images/Clients/United-Commercial-Bank.png";
 import YesBankLimited from "@/assets/images/Clients/YES-Bank-Limited.png";
+
 const clients = [
   { name: "Axis Bank", img: AxisBank },
   { name: "Bandhan Bank", img: BandhanBank },
@@ -90,26 +91,25 @@ export default function CompanyClints() {
   const doubled = [...clients, ...clients];
 
   return (
-    <section className="bg-orange-500 pt-5 border-y  border-neutral-100  overflow-hidden">
+    <section className="bg-orange-500 pt-5 border-y border-neutral-100 overflow-hidden">
 
-      <div className="max-w-7xl  mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
 
-        <div className="flex flex-col  w-full justify-center items-center gap-8  border-b border-slate-100 pb-5">
+        <div className="flex flex-col w-full justify-center items-center gap-8 border-b border-slate-100 pb-5">
 
-          <h3 className="text-5xl md:text-7xl font-black text-white tracking-wide  leading-[0.95]">
+          <h3 className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-wide leading-[0.95] text-center">
             OUR VALUABLE CLIENTS
           </h3>
 
         </div>
 
-
-        <div className="marquee-track bg-white flex-1  flex items-center  py-6">
+        <div className="marquee-track bg-white flex-1 flex items-center py-3">
           {doubled.map((client, i) => (
             <div
               key={i}
-              className=" shrink-0 flex  overflow-hidden items-center justify-center px-2 group"
+              className="shrink-0 flex overflow-hidden items-center justify-center px-2 group"
             >
-              <div className="flex items-center justify-center h-32 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+              <div className="flex items-center justify-center h-20 w-20 md:h-35 md:w-35 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
                 <Image
                   width={100}
                   height={100}
@@ -123,9 +123,8 @@ export default function CompanyClints() {
             </div>
           ))}
         </div>
+
       </div>
-
-
 
     </section>
   );

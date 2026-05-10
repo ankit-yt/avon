@@ -91,6 +91,8 @@ function Why() {
                 <Image
                   src={IBAlogo}
                   alt="IBA Approved"
+                  width={100}
+                  height={100}
                   className="relative w-32 md:w-40 lg:w-48 h-auto object-contain"
                 />
               </div>
@@ -100,6 +102,8 @@ function Why() {
                 <span className="absolute h-28 w-28 rounded-full border-4 border-orange-400/40 animate-ping [animation-delay:7.6s]" />
                 <Image
                   src={logo}
+                  width={100}
+                  height={100}
                   alt="Company Logo"
                   className="relative w-32 md:w-40 lg:w-51 h-auto object-contain"
                 />

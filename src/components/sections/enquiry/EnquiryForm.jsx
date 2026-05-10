@@ -3,7 +3,7 @@
 // ─── EnquiryForm.jsx — CLIENT COMPONENT ──────────────────────────────────────
 // All interactivity lives here. Enquiry.jsx (server) renders the static shell.
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import {
   HiOutlineUser,
   HiOutlinePhone,
@@ -12,12 +12,11 @@ import {
   HiOutlineShieldCheck,
   HiOutlineTruck,
 } from "react-icons/hi";
+import { toast } from "sonner";
 import EmailVerification from "./EmailVerification";
 import MovingFromField from "./MovingFromField";
 
 // ── Constants ────────────────────────────────────────────────────────────────
-
-const WEB3FORMS_KEY = "c545abdc-5cd5-4517-b3b2-3055b7f57559";
 
 const EMPTY_FORM = {
   name:       "",
@@ -27,7 +26,6 @@ const EMPTY_FORM = {
   movingTo:   "",
   message:    "",
 };
-
 
 // ── Helper: field wrapper ────────────────────────────────────────────────────
 
@@ -46,40 +44,55 @@ function Field({ label, icon: Icon, children, className = "" }) {
 // ── Main component ───────────────────────────────────────────────────────────
 
 export default function EnquiryForm() {
-  const [formData,  setFormData]  = useState({ ...EMPTY_FORM });
+  const [formData,      setFormData]      = useState({ ...EMPTY_FORM });
   const [emailVerified, setEmailVerified] = useState(false);
-  const [formStatus, setFormStatus] = useState("idle"); // idle | submitting | success | error
+  const [formStatus,    setFormStatus]    = useState("idle"); // idle | submitting | success | error
+  const [resetKey,      setResetKey]      = useState(0); // increment to force EmailVerification remount
 
-  
+  const patch = (fields) => setFormData((p) => ({ ...p, ...fields }));
 
-  const patch  = (fields) => setFormData((p) => ({ ...p, ...fields }));
-  const reset  = () => { setFormData({ ...EMPTY_FORM }); setEmailVerified(false); setFormStatus("idle"); };
+  const reset = () => {
+    setFormData({ ...EMPTY_FORM });
+    setEmailVerified(false);
+    setFormStatus("idle");
+    setResetKey((k) => k + 1); // remounts EmailVerification, clearing its internal state
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!emailVerified) return;
     setFormStatus("submitting");
+
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/enquiry", {
         method:  "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key:          WEB3FORMS_KEY,
-          subject:             `New Enquiry`,
-          from_name:           formData.name,
-          email_verified:      "Yes ✓",
-          ...formData,
-        }),
+        body:    JSON.stringify(formData),
       });
       const result = await res.json();
+
       if (result.success) {
+        toast.success("Enquiry submitted!", {
+          description: "Our relocation expert will contact you shortly.",
+        });
         setFormStatus("success");
-        reset();
-        setTimeout(() => setFormStatus("idle"), 6000);
+        setFormData({ ...EMPTY_FORM });
+        // After 4s, reset everything including the email OTP UI
+        setTimeout(() => {
+          setFormStatus("idle");
+          setEmailVerified(false);
+          setResetKey((k) => k + 1);
+        }, 4000);
       } else {
+        toast.error("Submission failed", {
+          description: "Please try again.",
+        });
         setFormStatus("error");
       }
     } catch {
+      toast.error("Something went wrong", {
+        description: "Please check your connection and try again.",
+      });
       setFormStatus("error");
     }
   };
@@ -103,8 +116,6 @@ export default function EnquiryForm() {
           </p>
         </div>
       </div>
-
-    
 
       {/* ── Contact form ── */}
       <form onSubmit={handleSubmit} noValidate className="flex flex-col flex-1 gap-0">
@@ -145,9 +156,10 @@ export default function EnquiryForm() {
             </div>
           </Field>
 
-          {/* Email OTP — full width */}
+          {/* Email OTP — full width, key forces remount on reset */}
           <div className="sm:col-span-2">
             <EmailVerification
+              key={resetKey}
               email={formData.email}
               onEmailChange={(v) => patch({ email: v })}
               onVerified={setEmailVerified}
@@ -156,15 +168,14 @@ export default function EnquiryForm() {
           </div>
 
           {/* Moving From */}
-          
           <MovingFromField
-  value={formData.movingFrom}
-  onChange={(v) => patch({ movingFrom: v })}
-  disabled={isSubmitting}
-/>
+            value={formData.movingFrom}
+            onChange={(v) => patch({ movingFrom: v })}
+            disabled={isSubmitting}
+          />
 
           {/* Moving To */}
-          <Field label="Moving To *" icon={HiOutlineLocationMarker} >
+          <Field label="Moving To *" icon={HiOutlineLocationMarker}>
             <input
               required
               type="text"
@@ -228,7 +239,7 @@ export default function EnquiryForm() {
             className="mt-4 flex items-center gap-3 p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-700 text-xs font-bold"
           >
             <HiOutlineCheckCircle className="text-lg shrink-0" />
-            Request received! Our team will call you within 30 minutes.
+            Request received! Our team will call you within 60 seconds.
           </div>
         )}
         {formStatus === "error" && (
@@ -237,8 +248,8 @@ export default function EnquiryForm() {
             className="mt-4 p-3.5 bg-red-50 border border-red-200 rounded-xl text-red-600 text-xs font-bold"
           >
             Something went wrong. Please try again or call{" "}
-            <a href="tel:9737977001" className="underline underline-offset-2">
-              9737977001
+            <a href="tel:9814556375" className="underline underline-offset-2">
+              98145-56375
             </a>
             .
           </div>

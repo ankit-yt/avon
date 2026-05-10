@@ -84,7 +84,7 @@ function parseSlug(slug) {
 
   if (states.includes(slug)) {
     return { type: "state", state: slug };
-  }
+  } 
 
   return null;
 }
@@ -170,10 +170,10 @@ const parsed = parseSlug(slug);
   return (
     <>
       <Hero />
-      
+        <MainPhoto />
       <CityHero city={parsed.city} service={parsed.service} /> 
       <MainContent slug={slug} city={parsed.city} service={parsed.service} />
-      <MainPhoto />
+    
       <About/>
       <VisionMission/>
       <Why/>

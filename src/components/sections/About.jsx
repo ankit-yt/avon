@@ -22,15 +22,16 @@ function About() {
           {/* LEFT SIDE: Visual Powerhouse (5 Columns) */}
           <div className="lg:col-span-5 relative group">
             {/* Artistic Frame */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[28px] shadow-2xl">
+            <div className="relative aspect-4/5 w-full overflow-hidden rounded-[28px] shadow-2xl">
               <Image
+              fill
                 src={camel}
                 alt="Professional Moving Service"
                 className="object-cover w-full h-full scale-105 group-hover:scale-100 transition-transform duration-700"
                 priority
               />
               {/* Overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900/40 via-transparent to-transparent opacity-60" />
             </div>
 
             {/* Floating Badge */}

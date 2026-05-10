@@ -4,9 +4,8 @@ import AnnouncementBar from "@/components/sections/AnnouncementBar";
 import Header from "@/components/sections/Header";
 import { Poppins } from "next/font/google";
 import "@/lib/styles/truck.css"
-
 import { Manrope } from "next/font/google";
-
+import { Toaster } from "sonner";
 export const metadata = {
   title: "Avon Express Packers and Movers | Official Website",
   description: "Best services in India",
@@ -17,13 +16,6 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700"],
 });
 
-// const poppins = Poppins({
-//   weight: ["400", "500", "600", "700"],
-//   subsets: ["latin"],
-//   variable: "--font-poppins",
-//   display: "swap",
-// });
-
 
 export default function RootLayout({ children }) {
 
@@ -32,6 +24,20 @@ export default function RootLayout({ children }) {
 
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.className} font-body bg-stone-50 text-stone-900 antialiased`}>
+        <Toaster
+  position="top-right"
+  richColors
+  expand={false}
+  visibleToasts={3}
+  toastOptions={{
+    style: {
+      borderRadius: "18px",
+      border: "1px solid #e2e8f0",
+      padding: "16px",
+      fontSize: "14px",
+    },
+  }}
+/>
         <Script
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
           strategy="afterInteractive"
