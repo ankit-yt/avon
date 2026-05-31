@@ -6,7 +6,7 @@ import LanguageSwitcher from "../LanguageSwitcher";
 import Image from "next/image";
 import logo from "@/assets/images/Home/Logo.png";
 import { FaWhatsapp } from "react-icons/fa";
-import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
+import { HiOutlineMail, HiOutlineLocationMarker, HiOutlineBadgeCheck } from "react-icons/hi";
 import { HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
 import { useRouter, usePathname } from "next/navigation";
 import { cities } from "@/lib/cities";
@@ -25,7 +25,7 @@ export default function Header() {
   const [query, setQuery]             = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+const [showInfoBar, setShowInfoBar] = useState(false);
   const searchWrapperRef = useRef(null);
   const inputRef         = useRef(null);
 
@@ -320,13 +320,13 @@ export default function Header() {
               <span>Any where, any time</span>
             </div>
             <div className="flex items-center gap-2 text-slate-400">
-              <HiOutlineMail className="text-orange-500 text-sm" />
-              <span>info@avonexpresspackersandmovers.co.in</span>
+              <HiOutlineBadgeCheck className="text-orange-500 text-sm" />
+              <span>ISO registered •  281021019111</span>
             </div>
           </div>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
-              <span className="text-orange-500 ">GST • 03DZWPK8631P1ZF</span>
+              <span className="text-orange-500 ">GST registered • 03DZWPK8631P1ZF</span>
             </div>
             <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
               <span>Udyam registered • UDYAM-CH-01-0044520</span>
@@ -342,6 +342,128 @@ export default function Header() {
         </div>
       </div>
 
+<div className="lg:hidden">
+  <button
+    onClick={() => setShowInfoBar(!showInfoBar)}
+    className="w-full flex items-center justify-between px-5 py-3.5 bg-slate-900 border-b border-slate-700/60 group"
+  >
+    <div className="flex items-center gap-2.5">
+      <div className="w-5 h-5 rounded-full bg-orange-500/15 flex items-center justify-center shrink-0">
+        <span className="text-orange-400 text-[10px]">✦</span>
+      </div>
+      <span className="text-[11px] font-black uppercase tracking-[0.12em] text-orange-400">
+        Certifications &amp; Registrations
+      </span>
+    </div>
+    <div
+      className={`w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center transition-all duration-300 ${
+        showInfoBar ? "bg-orange-500 border-orange-500 rotate-180" : "group-hover:border-slate-400"
+      }`}
+    >
+      <svg
+        width="8"
+        height="5"
+        viewBox="0 0 8 5"
+        fill="none"
+        className="text-white"
+      >
+        <path
+          d="M1 1L4 4L7 1"
+          stroke={showInfoBar ? "white" : "#94a3b8"}
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
+  </button>
+
+  <div
+    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+      showInfoBar ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+    }`}
+    style={{ willChange: "max-height" }}
+  >
+    <div className="bg-slate-900 border-b border-slate-700/60 px-5 py-4 grid grid-cols-1 gap-3">
+      {[
+        {
+          icon: <HiOutlineLocationMarker className="text-orange-400 text-sm shrink-0 mt-0.5" />,
+          label: "Service Area",
+          value: "ANY WHERE, ANY TIME",
+        },
+        {
+          icon: <HiOutlineBadgeCheck className="text-orange-400 text-sm shrink-0 mt-0.5" />,
+          label: "ISO Registered",
+          value: "281021019111",
+        },
+        {
+          icon: (
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5">
+              <rect x="1" y="1" width="12" height="12" rx="2" stroke="#f97316" strokeWidth="1.2" />
+              <path d="M4 7h6M4 4.5h6M4 9.5h4" stroke="#f97316" strokeWidth="1.2" strokeLinecap="round" />
+            </svg>
+          ),
+          label: "GST Registered",
+          value: "03DZWPK8631P1ZF",
+          highlight: true,
+        },
+        {
+          icon: (
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5">
+              <circle cx="7" cy="7" r="6" stroke="#f97316" strokeWidth="1.2" />
+              <path d="M4.5 7l2 2 3-3" stroke="#f97316" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          ),
+          label: "Udyam Registered",
+          value: "UDYAM-CH-01-0044520",
+        },
+      ].map(({ icon, label, value, highlight }, i) => (
+        <div
+          key={i}
+          className="flex items-start gap-3 bg-slate-800/50 rounded-xl px-3.5 py-3 border border-slate-700/40"
+        >
+          {icon}
+          <div className="min-w-0">
+            <p className="text-[9px] font-black uppercase tracking-[0.12em] text-slate-500 mb-0.5">
+              {label}
+            </p>
+            <p
+              className={`text-[11px] font-bold break-all leading-snug ${
+                highlight ? "text-orange-400" : "text-slate-200"
+              }`}
+            >
+              {value}
+            </p>
+          </div>
+        </div>
+      ))}
+
+      {/* Trademark — separate as it's a link */}
+      <a
+        href="/Trademark-Registered-Certificate.pdf"
+        download
+        className="flex items-start gap-3 bg-green-500/5 rounded-xl px-3.5 py-3 border border-green-500/20 hover:bg-green-500/10 transition-colors"
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5">
+          <path d="M2 2h10v10H2z" stroke="#22c55e" strokeWidth="1.2" rx="1" />
+          <path d="M5 5h4M5 7h2" stroke="#22c55e" strokeWidth="1.2" strokeLinecap="round" />
+          <path d="M8 9.5L10 11.5M10 9.5L8 11.5" stroke="#22c55e" strokeWidth="1.2" strokeLinecap="round" />
+        </svg>
+        <div className="min-w-0 flex-1">
+          <p className="text-[9px] font-black uppercase tracking-[0.12em] text-slate-500 mb-0.5">
+            Trademark Registered
+          </p>
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-[11px] font-bold text-green-400">4481215</p>
+            <span className="text-[9px] font-bold text-green-500/70 uppercase tracking-wider shrink-0">
+              Download ↓
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
       {/* ===== MAIN HEADER ================================================= */}
       <header
         role="banner"
@@ -361,34 +483,42 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center justify-center gap-1">
-            {NAV_LINKS.map(({ label, href }) => {
-              const id = href.startsWith("#") ? href.replace("#", "") : "";
-              const isActive =
-                (href === "/" && pathname === "/" && !active) ||
-                (id && active === id);
-              return (
-                <button
-                  key={href}
-                  onClick={() => handleNavClick(href)}
-                  className="relative px-4 py-3 group flex items-center"
-                >
-                  <span
-                    className={`text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
-                      isActive ? "text-slate-900" : "text-slate-500 group-hover:text-slate-900"
-                    }`}
-                  >
-                    {label}
-                  </span>
-                  <span
-                    className={`absolute bottom-1.5 left-4 right-4 h-[2px] bg-orange-500 origin-left transition-transform duration-500 ${
-                      isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                    }`}
-                  />
-                </button>
-              );
-            })}
-          </nav>
+        <nav className="hidden xl:flex items-center justify-center gap-0">
+  {NAV_LINKS.map(({ label, href }) => {
+    const id = href.startsWith("#") ? href.replace("#", "") : "";
+    const isActive =
+      (href === "/" && pathname === "/" && !active) ||
+      (id && active === id);
+
+    return (
+      <button
+        key={href}
+        onClick={() => handleNavClick(href)}
+        className="relative px-2 xl:px-3 2xl:px-4 py-3 group flex items-center"
+      >
+        <span
+          className={`whitespace-nowrap text-xs xl:text-sm font-bold uppercase tracking-wide transition-all duration-300 ${
+            isActive
+              ? "text-slate-900"
+              : "text-slate-500 group-hover:text-slate-900"
+          }`}
+        >
+          {label}
+        </span>
+
+        <span
+          className={`absolute bottom-1.5 left-2 xl:left-3 2xl:left-4 right-2 xl:right-3 2xl:right-4 h-[2px] bg-orange-500 origin-left transition-transform duration-500 ${
+            isActive
+              ? "scale-x-100"
+              : "scale-x-0 group-hover:scale-x-100"
+          }`}
+        />
+      </button>
+    );
+  })}
+</nav>
+
+
 
           {/* ── Inline Search — desktop: fixed width, mobile: grows between logo & hamburger ── */}
           <div className="flex-1 lg:flex-none lg:w-56 xl:w-72 min-w-0">

@@ -21,6 +21,7 @@ const points = [
   "Thoroughly sanitizing your home after the shifting process is complete.",
   "Avoiding contact with any items that have not been sanitized.",
   "Strictly wearing masks and gloves throughout the entire shifting process.",
+  "Stay home, stay safe, and wear a mask—spread kindness, not the virus."
 ];
 
 function Covid19() {

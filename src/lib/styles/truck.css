@@ -1,5 +1,3 @@
-
-
 .main_body {
     background: #d1e4ea;
     background: -moz-radial-gradient(center, ellipse cover, rgba(209, 228, 234, 1) 0%, rgba(186, 228, 244, 1) 100%);
@@ -70,17 +68,15 @@
 }
 
 .street-stripe {
-  height: 8px;
-  width: 100%;
-  border-radius: 2px;
+    height: 8px;
+    width: 100%;
+    border-radius: 2px;
 
-  background: repeating-linear-gradient(
-    to right,
-    #d4d4d4 0px,
-    #d4d4d4 100px,
-    transparent 100px,
-    transparent 200px
-  );
+    background: repeating-linear-gradient(to right,
+            #d4d4d4 0px,
+            #d4d4d4 100px,
+            transparent 100px,
+            transparent 200px);
 }
 
 .grass {
@@ -285,22 +281,27 @@
 
 
 @keyframes myfirst {
-  0% { transform: translateX(-600px); }
-  100% { transform: translateX(120vw); }
-} 
+    0% {
+        transform: translateX(-600px);
+    }
+
+    100% {
+        transform: translateX(120vw);
+    }
+}
 
 
 
- 
+
 
 .truck {
     background: url("@/assets/images/Home/Truck.png") no-repeat;
-     background-size: contain;
+    background-size: contain;
     top: -135%;
-     position: absolute;
+    position: absolute;
     z-index: 10;
     width: 524px;
-     height: 170px;
+    height: 170px;
     background-repeat: no-repeat;
     -moz-animation: myfirst 20s linear infinite;
     -webkit-animation: myfirst 20s linear infinite;
@@ -331,4 +332,3 @@
     top: 132px;
     left: 455px
 }
-

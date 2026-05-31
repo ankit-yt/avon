@@ -19,22 +19,24 @@ import g16 from "@/assets/images/Gallery/Gallery-Images-16.png";
 import Image from "next/image";
 
 const galleryItems = [
-  { img: g1,  label: "Household Shifting",    tag: "Packing"          },
-  { img: g2,  label: "Car Transport",         tag: "Vehicle"          },
+   { img: g10, label: "Loading & Unloading",   tag: "Service"          },
+  // { img: g2,  label: "Car Transport",         tag: "Vehicle"          },
   { img: g3,  label: "Bike Transport",        tag: "Vehicle"          },
   { img: g4,  label: "Safe Delivery",         tag: "Express"          },
-  { img: g5,  label: "Office Shifting",       tag: "Corporate"        },
+ 
   { img: g6,  label: "Truck & Tempo",         tag: "Fleet"            },
+   { img: g5,  label: "Office Shifting",       tag: "Corporate"        },
   { img: g7,  label: "Bill For Claim",        tag: "Verified"         },
   { img: g8,  label: "IBA Approved",          tag: "Certified"        },
-  { img: g9,  label: "Professional Packing",  tag: "Quality"          },
-  { img: g10, label: "Loading & Unloading",   tag: "Service"          },
-  { img: g11, label: "Secure Transport",      tag: "Safety"           },
+  // { img: g9,  label: "Professional Packing",  tag: "Quality"          },
+ 
+  { img: g1,  label: "Household Shifting",    tag: "Packing"          },
+  // { img: g11, label: "Secure Transport",      tag: "Safety"           },
   { img: g12, label: "Expert Packing",        tag: "Packing"          },
   { img: g13, label: "Fast Moving Service",   tag: "Express"          },
   { img: g14, label: "Safe Handling",         tag: "Safety"           },
   { img: g15, label: "Trusted Movers",        tag: "Verified"         },
-  { img: g16, label: "Packing Material",      tag: "Packing Material" },
+  // { img: g16, label: "Packing Material",      tag: "Packing Material" },
 ];
 
 export default function Gallery() {

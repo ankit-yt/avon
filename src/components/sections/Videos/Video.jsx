@@ -37,7 +37,7 @@ function LandscapeCard({ video }) {
         src={video.src}
         poster={video.thumb}
         controls
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
       />
     </div>
   );
@@ -51,7 +51,7 @@ function PortraitCard({ video }) {
         src={video.src}
         poster={video.thumb}
         controls
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
       />
     </div>
   );
