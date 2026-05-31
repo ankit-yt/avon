@@ -1,18 +1,11 @@
-// middleware.ts
-
 import { NextResponse } from "next/server";
 
-export function middleware(request) {
+export function proxy(request) {
   const adminCookie = request.cookies.get("admin")?.value;
-
-  // Allow access to static files
-  const pathname = request.nextUrl.pathname;
-
+  console.log(adminCookie)
   if (
-    pathname.startsWith("/coming-soon") ||
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/images") ||
-    pathname.includes(".")
+    request.nextUrl.pathname === "/coming-soon" ||
+    request.nextUrl.pathname.startsWith("/_next")
   ) {
     return NextResponse.next();
   }
