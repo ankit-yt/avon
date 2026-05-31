@@ -400,7 +400,7 @@ function SchemaMarkup({ parsed, slug }) {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.avonexpresspackersandmovers.co.in" },
 
-        { "@type": "ListItem", position: 2, name: `Packers and Movers in dfgfd`, item: url },
+        { "@type": "ListItem", position: 2, name: `Packers and Movers in ${cityName} | Avon Express Packers and Movers | Official Website`, item: url },
       ],
     },
     {

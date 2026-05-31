@@ -38,7 +38,7 @@ function parseTransportSlug(slug) {
 // STATIC PARAMS
 // ─────────────────────────────────────────────
 export async function generateStaticParams() {
-  return transport.map((slug) => ({ slug }));
+  return transport.slice(0, 20).map((slug) => ({ slug }));
 }
 
 export const dynamicParams = true;
