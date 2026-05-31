@@ -158,7 +158,6 @@ function SchemaMarkup({ parsed }) {
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://www.avonexpresspackersandmovers.co.in" },
           { "@type": "ListItem", position: 2, name: `Transport Services from ${cityName} | Avon Express Packers and Movers | Official Website`, item: url },
-          { "@type": "ListItem", position: 3, name: `Transport from ${cityName}`, item: url },
         ],
       },
       {
@@ -231,7 +230,7 @@ function SchemaMarkup({ parsed }) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.avonexpresspackersandmovers.co.in" },
-       { "@type": "ListItem", position: 2, name: `Transport Services from ${cityName} | Avon Express Packers and Movers | Official Website`, item: url },
+       { "@type": "ListItem", position: 2, name: `Transport from ${fromName} to ${toName} | Avon Express Packers and Movers | Official Website`, item: url },
         { "@type": "ListItem", position: 3, name: `Transport from ${fromName}`, item: `https://www.avonexpresspackersandmovers.co.in/transport/${parsed.from}` },
         { "@type": "ListItem", position: 4, name: `Transport from ${fromName} to ${toName} | Avon Express Packers and Movers | Official Website`, item: url },
       ],
