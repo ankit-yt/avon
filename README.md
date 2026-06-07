@@ -34,3 +34,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+import { NextResponse } from "next/server";
+
+export function proxy(request) {
+  const adminCookie = request.cookies.get("admin")?.value;
+  console.log(adminCookie)
+  if (
+    request.nextUrl.pathname === "/coming-soon" ||
+    request.nextUrl.pathname.startsWith("/_next")
+  ) {
+    return NextResponse.next();
+  }
+
+  if (adminCookie !== "true") {
+    return NextResponse.redirect(
+      new URL("/coming-soon", request.url)
+    );
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: "/:path*",
+};
