@@ -69,7 +69,6 @@ function parseSlug(slug) {
 // ─────────────────────────────────────────────
 export async function generateStaticParams() {
   const slugs = [];
-  const topCities = cities.slice(0, 250);
 
   topCities.forEach((city) => {
     slugs.push({ slug: `packers-and-movers-in-${city}` });
@@ -119,7 +118,7 @@ export async function generateMetadata({ params }) {
         locale: "en_IN",
         images: [
           {
-            url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
+            url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
             width: 253,
             height: 257,
             alt: `Packers and Movers in ${stateName}`,
@@ -132,7 +131,7 @@ export async function generateMetadata({ params }) {
         creator: "@avon_express",
         title: `Packers and Movers in ${stateName} | Avon Express`,
         description: `Best packing and moving services across ${stateName}.`,
-        images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.png"],
+        images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.webp"],
       },
       robots: { index: true, follow: true },
     };
@@ -162,7 +161,7 @@ export async function generateMetadata({ params }) {
         locale: "en_IN",
         images: [
           {
-            url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
+            url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
             width: 253,
             height: 257,
             alt: `IBA Approved Packers and Movers in ${cityName}`,
@@ -175,7 +174,7 @@ export async function generateMetadata({ params }) {
         creator: "@avon_express",
         title: `IBA Approved Packers and Movers in ${cityName} | Avon Express`,
         description: `IBA certified packers and movers in ${cityName}.`,
-        images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.png"],
+        images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.webp"],
       },
       robots: { index: true, follow: true },
     };
@@ -205,7 +204,7 @@ export async function generateMetadata({ params }) {
       locale: "en_IN",
       images: [
         {
-          url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
+          url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
           width: 253,
           height: 257,
           alt: `Packers and Movers in ${cityName}`,
@@ -218,7 +217,7 @@ export async function generateMetadata({ params }) {
       creator: "@avon_express",
       title: `Packers and Movers in ${cityName} | Avon Express`,
       description: `Best packers and movers in ${cityName}. Fast, safe and affordable.`,
-      images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.png"],
+      images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.webp"],
     },
     robots: { index: true, follow: true },
   };
@@ -252,8 +251,8 @@ function SchemaMarkup({ parsed, slug }) {
         description: `Avon Express Packers and Movers provides best packing and moving services across ${stateName}.`,
         telephone: "+9198145-56375",
         email: "avonexpresspackersandmovers@gmail.com",
-        image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
-        logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.png",
+        image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
+        logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.webp",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Avon House, Transport Area, Sector 26 East",
@@ -326,8 +325,8 @@ function SchemaMarkup({ parsed, slug }) {
         description: `IBA certified and government approved packers and movers in ${cityName}. Insured, verified and trusted relocation services.`,
         telephone: "+9198145-56375",
         email: "avonexpresspackersandmovers@gmail.com",
-        image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
-        logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.png",
+        image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
+        logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.webp",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Avon House, Transport Area, Sector 26 East",
@@ -412,8 +411,8 @@ function SchemaMarkup({ parsed, slug }) {
       description: `Avon Express Packers and Movers in ${cityName} provides best packing and moving services. Household shifting, car transport, bike transport and office shifting.`,
       telephone: "+9198145-56375",
       email: "avonexpresspackersandmovers@gmail.com",
-      image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
-      logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.png",
+      image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
+      logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.webp",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Avon House, Transport Area, Sector 26 East",

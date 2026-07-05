@@ -7,13 +7,13 @@ import {
   HiOutlineInboxIn,
 } from "react-icons/hi";
 
-import DiscussAndQuotation from "@/assets/images/Work/Discuss-and-Quotation.png";
-import PremiumPacking from "@/assets/images/Work/Premium-Packing.png";
-import SafeLoading from "@/assets/images/Work/Safe-Loading.png";
-import SecureTransportation from "@/assets/images/Work/Secure-Transportation.png";
-import PrecisionUnloading from "@/assets/images/Work/Precision-Unloading.png";
-import UnpackingAndSetup from "@/assets/images/Work/Unpacking-and-Setup.png";
-import HappyClient from "@/assets/images/Work/Happy-Client.png";
+import DiscussAndQuotation from "@/assets/images/Work/Discuss-and-Quotation.webp";
+import PremiumPacking from "@/assets/images/Work/Premium-Packing.webp";
+import SafeLoading from "@/assets/images/Work/Safe-Loading.webp";
+import SecureTransportation from "@/assets/images/Work/Secure-Transportation.webp";
+import PrecisionUnloading from "@/assets/images/Work/Precision-Unloading.webp";
+import UnpackingAndSetup from "@/assets/images/Work/Unpacking-and-Setup.webp";
+import HappyClient from "@/assets/images/Work/Happy-Client.webp";
 
 import StepsTabs from "./StepsTabs";
 

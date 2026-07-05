@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import Footer from "@/components/sections/Footer";
-import surveryImage from "@/assets/images/Home/survey.png"
+import surveryImage from "@/assets/images/Home/survey.webp"
 import Image from "next/image";
 // ── Constants ─────────────────────────────────────────────────────────────────
 

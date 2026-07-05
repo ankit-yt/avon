@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import IBAlogo from "@/assets/images/Home/IBA-APPROVED-LOGO.png";
-import logo from "@/assets/images/Home/Round-Logo.png";
-import whyPhoto from "@/assets/images/Home/Why.png";
+import IBAlogo from "@/assets/images/Home/IBA-APPROVED-LOGO.webp";
+import logo from "@/assets/images/Home/Round-Logo.webp";
+import whyPhoto from "@/assets/images/Home/Why.webp";
 
 function Why() {
   return (
@@ -37,7 +37,7 @@ function Why() {
                 src={whyPhoto}
                 alt="Why choose Avon Express"
                 fill
-                quality={100}
+               
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

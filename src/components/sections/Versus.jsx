@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { HiOutlineBadgeCheck, HiOutlineBan } from "react-icons/hi";
-import usPhoto from "@/assets/images/Home/VS1.png";
-import othersPhoto from "@/assets/images/Home/VS2.png";
+import usPhoto from "@/assets/images/Home/VS1.webp";
+import othersPhoto from "@/assets/images/Home/VS2.webp";
 
 function Versus() {
   return (
@@ -43,7 +43,7 @@ function Versus() {
                 src={usPhoto}
                 alt="Professional Team"
                 fill
-                quality={100}
+               
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -76,7 +76,7 @@ function Versus() {
                 src={othersPhoto}
                 alt="Competitor Conduct"
                 fill
-                quality={100}
+               
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

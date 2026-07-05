@@ -4,7 +4,7 @@ import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/data";
 import LanguageSwitcher from "../LanguageSwitcher";
 import Image from "next/image";
-import logo from "@/assets/images/Home/Logo.png";
+import logo from "@/assets/images/Home/Logo.webp";
 import { FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMail, HiOutlineLocationMarker, HiOutlineBadgeCheck } from "react-icons/hi";
 import { HiMagnifyingGlass, HiXMark } from "react-icons/hi2";

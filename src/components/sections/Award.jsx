@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import awardPhoto from "@/assets/images/Home/Award.png";
+import awardPhoto from "@/assets/images/Home/Award.webp";
 import { HiOutlineLightBulb, HiOutlineShieldCheck, HiOutlineGlobe } from "react-icons/hi";
 
 const getPreviousYear = () => {
@@ -47,7 +47,7 @@ function Award() {
                 src={awardPhoto}
                 alt="Avon Express Award Winning Team"
                 fill
-                quality={100}
+               
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

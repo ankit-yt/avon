@@ -7,7 +7,7 @@ import {
   HiOutlineHeart,
 } from "react-icons/hi";
 
-import visionPhoto from "@/assets/images/Home/Our-Purpose-Vision-and-Mission.png";
+import visionPhoto from "@/assets/images/Home/Our-Purpose-Vision-and-Mission.webp";
 
 const VALUES = [
   {

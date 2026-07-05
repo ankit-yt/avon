@@ -15,7 +15,7 @@ import {
   ArrowRight,
   RotateCcw,
 } from "lucide-react";
-import joinImage from '@/assets/images/Home/Join-Avon.png'
+import joinImage from '@/assets/images/Home/Join-Avon.webp'
 import { toast } from "sonner";
 import Footer from "@/components/sections/Footer";
 // ── Constants ─────────────────────────────────────────────────────────────────

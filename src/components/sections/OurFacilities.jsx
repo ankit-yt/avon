@@ -7,11 +7,11 @@ import {
   HiOutlineCube
 } from "react-icons/hi";
 
-import imgBillClaim   from "@/assets/images/Facility/Bill-For-Claim.png";
-import imgInsurance   from "@/assets/images/Facility/Insurance.png";
-import imgVideoSurvey from "@/assets/images/Facility/Video-Calling-Surveys.png";
-import imgWarehouse   from "@/assets/images/Facility/Warehouse.png";
-import imgCrates      from "@/assets/images/Facility/Wooden-Crates.png";
+import imgBillClaim   from "@/assets/images/Facility/Bill-For-Claim.webp";
+import imgInsurance   from "@/assets/images/Facility/Insurance.webp";
+import imgVideoSurvey from "@/assets/images/Facility/Video-Calling-Surveys.webp";
+import imgWarehouse   from "@/assets/images/Facility/Warehouse.webp";
+import imgCrates      from "@/assets/images/Facility/Wooden-Crates.webp";
 
 const FACILITIES = [
   {
@@ -50,7 +50,7 @@ function PhotoCard({ facility, className = "" }) {
   src={facility.image}
   alt={facility.title}
   fill
-  quality={100}
+ 
   className={`
     ${facility.fit ? "object-contain" : "object-cover"}
     transition-transform duration-700 ease-out group-hover:scale-105

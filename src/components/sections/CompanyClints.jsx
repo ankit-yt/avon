@@ -1,46 +1,46 @@
 import Image from "next/image";
-import AxisBank from "@/assets/images/Clients/Axis-Bank.png";
-import BandhanBank from "@/assets/images/Clients/Bandhan-Bank.png";
-import BankOfBaroda from "@/assets/images/Clients/Bank-of-Baroda.png";
-import BankOfIndia from "@/assets/images/Clients/Bank-of-India.png";
-import BankOfMaharashtra from "@/assets/images/Clients/Bank-of-Maharashtra.png";
-import Bank from "@/assets/images/Clients/Bank.png";
-import CanaraBank from "@/assets/images/Clients/Canara-Bank.png";
-import CatholicSyrianBank from "@/assets/images/Clients/Catholic-Syrian-Bank.png";
-import CentralBankOfIndia from "@/assets/images/Clients/Central-Bank-of-India.png";
-import CityUnionBank from "@/assets/images/Clients/City-Union-Bank.png";
-import DevelopmentBankOfSingapore from "@/assets/images/Clients/Development-Bank-of-Singapore.png";
-import DevelopmentCreditBank from "@/assets/images/Clients/Development-Credit-Bank.png";
-import DhanlaxmiBank from "@/assets/images/Clients/Dhanlaxmi-Bank.png";
-import Doctor from "@/assets/images/Clients/Doctor.png";
-import FederalBank from "@/assets/images/Clients/Federal-Bank.png";
-import GoodsAndServicesTax from "@/assets/images/Clients/Goods-and-Services-Tax.png";
-import HousingDevelopmentFinanceCorporationBank from "@/assets/images/Clients/Housing-Development-Finance-Corporation-Bank.png";
-import IncomeTax from "@/assets/images/Clients/Income-Tax.png";
-import IndianAirForce from "@/assets/images/Clients/Indian-Air-Force.png";
-import IndianArmy from "@/assets/images/Clients/Indian-Army.png";
-import IndianBank from "@/assets/images/Clients/Indian-Bank.png";
-import IndianOverseasBank from "@/assets/images/Clients/Indian-Overseas-Bank.png";
-import IndusIndBank from "@/assets/images/Clients/IndusInd-Bank.png";
-import IndustrialCreditAndInvestmentCorporationOfIndia from "@/assets/images/Clients/Industrial-Credit-and-Investment-Corporation-of-India.png";
-import IndustrialDevelopmentBankOfIndia from "@/assets/images/Clients/Industrial-Development-Bank-of-India.png";
-import InfrastructureDevelopmentFinanceCompanyFirstBank from "@/assets/images/Clients/Infrastructure-Development-Finance-Company-First-Bank.png";
-import JammuAndKashmirBank from "@/assets/images/Clients/Jammu-and-Kashmir-Bank.png";
-import KarnatakaBank from "@/assets/images/Clients/Karnataka-Bank.png";
-import KarurVysyaBank from "@/assets/images/Clients/Karur-Vysya-Bank.png";
-import KotakMahindraBank from "@/assets/images/Clients/Kotak-Mahindra-Bank.png";
-import NainitalBank from "@/assets/images/Clients/Nainital-Bank.png";
-import PowerGridCorporationOfIndia from "@/assets/images/Clients/Power-Grid-Corporation-of-India.png";
-import PunjabAndSindBank from "@/assets/images/Clients/Punjab-and-Sind-Bank.png";
-import PunjabNationalBank from "@/assets/images/Clients/Punjab-National-Bank.png";
-import RatnakarBankLimited from "@/assets/images/Clients/Ratnakar-Bank-Limited.png";
-import ReserveBankOfIndia from "@/assets/images/Clients/Reserve-Bank-of-India.png";
-import SouthIndianBank from "@/assets/images/Clients/South-Indian-Bank.png";
-import StateBankOfIndia from "@/assets/images/Clients/State-Bank-of-India.png";
-import TamilnadMercantileBank from "@/assets/images/Clients/Tamilnad-Mercantile-Bank.png";
-import UnionBankOfIndia from "@/assets/images/Clients/Union-Bank-of-India.png";
-import UnitedCommercialBank from "@/assets/images/Clients/United-Commercial-Bank.png";
-import YesBankLimited from "@/assets/images/Clients/YES-Bank-Limited.png";
+import AxisBank from "@/assets/images/Clients/Axis-Bank.webp";
+import BandhanBank from "@/assets/images/Clients/Bandhan-Bank.webp";
+import BankOfBaroda from "@/assets/images/Clients/Bank-of-Baroda.webp";
+import BankOfIndia from "@/assets/images/Clients/Bank-of-India.webp";
+import BankOfMaharashtra from "@/assets/images/Clients/Bank-of-Maharashtra.webp";
+import Bank from "@/assets/images/Clients/Bank.webp";
+import CanaraBank from "@/assets/images/Clients/Canara-Bank.webp";
+import CatholicSyrianBank from "@/assets/images/Clients/Catholic-Syrian-Bank.webp";
+import CentralBankOfIndia from "@/assets/images/Clients/Central-Bank-of-India.webp";
+import CityUnionBank from "@/assets/images/Clients/City-Union-Bank.webp";
+import DevelopmentBankOfSingapore from "@/assets/images/Clients/Development-Bank-of-Singapore.webp";
+import DevelopmentCreditBank from "@/assets/images/Clients/Development-Credit-Bank.webp";
+import DhanlaxmiBank from "@/assets/images/Clients/Dhanlaxmi-Bank.webp";
+import Doctor from "@/assets/images/Clients/Doctor.webp";
+import FederalBank from "@/assets/images/Clients/Federal-Bank.webp";
+import GoodsAndServicesTax from "@/assets/images/Clients/Goods-and-Services-Tax.webp";
+import HousingDevelopmentFinanceCorporationBank from "@/assets/images/Clients/Housing-Development-Finance-Corporation-Bank.webp";
+import IncomeTax from "@/assets/images/Clients/Income-Tax.webp";
+import IndianAirForce from "@/assets/images/Clients/Indian-Air-Force.webp";
+import IndianArmy from "@/assets/images/Clients/Indian-Army.webp";
+import IndianBank from "@/assets/images/Clients/Indian-Bank.webp";
+import IndianOverseasBank from "@/assets/images/Clients/Indian-Overseas-Bank.webp";
+import IndusIndBank from "@/assets/images/Clients/IndusInd-Bank.webp";
+import IndustrialCreditAndInvestmentCorporationOfIndia from "@/assets/images/Clients/Industrial-Credit-and-Investment-Corporation-of-India.webp";
+import IndustrialDevelopmentBankOfIndia from "@/assets/images/Clients/Industrial-Development-Bank-of-India.webp";
+import InfrastructureDevelopmentFinanceCompanyFirstBank from "@/assets/images/Clients/Infrastructure-Development-Finance-Company-First-Bank.webp";
+import JammuAndKashmirBank from "@/assets/images/Clients/Jammu-and-Kashmir-Bank.webp";
+import KarnatakaBank from "@/assets/images/Clients/Karnataka-Bank.webp";
+import KarurVysyaBank from "@/assets/images/Clients/Karur-Vysya-Bank.webp";
+import KotakMahindraBank from "@/assets/images/Clients/Kotak-Mahindra-Bank.webp";
+import NainitalBank from "@/assets/images/Clients/Nainital-Bank.webp";
+import PowerGridCorporationOfIndia from "@/assets/images/Clients/Power-Grid-Corporation-of-India.webp";
+import PunjabAndSindBank from "@/assets/images/Clients/Punjab-and-Sind-Bank.webp";
+import PunjabNationalBank from "@/assets/images/Clients/Punjab-National-Bank.webp";
+import RatnakarBankLimited from "@/assets/images/Clients/Ratnakar-Bank-Limited.webp";
+import ReserveBankOfIndia from "@/assets/images/Clients/Reserve-Bank-of-India.webp";
+import SouthIndianBank from "@/assets/images/Clients/South-Indian-Bank.webp";
+import StateBankOfIndia from "@/assets/images/Clients/State-Bank-of-India.webp";
+import TamilnadMercantileBank from "@/assets/images/Clients/Tamilnad-Mercantile-Bank.webp";
+import UnionBankOfIndia from "@/assets/images/Clients/Union-Bank-of-India.webp";
+import UnitedCommercialBank from "@/assets/images/Clients/United-Commercial-Bank.webp";
+import YesBankLimited from "@/assets/images/Clients/YES-Bank-Limited.webp";
 
 const clients = [
   { name: "Axis Bank", img: AxisBank },
@@ -115,7 +115,7 @@ export default function CompanyClints() {
                   height={100}
                   src={client.img}
                   alt={client.name}
-                  quality={100}
+                 
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="h-full w-full object-contain"
                 />

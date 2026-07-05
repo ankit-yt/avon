@@ -1,7 +1,7 @@
 import { SITE, STATS } from '@/lib/data'
 import Image from 'next/image'
 import React from 'react'
-import camel from "@/assets/images/Home/History.png"
+import camel from "@/assets/images/Home/History.webp"
 import { HiOutlineBadgeCheck, HiOutlineArrowRight } from "react-icons/hi";
 
 function About() {

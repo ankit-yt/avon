@@ -78,7 +78,7 @@ export async function generateMetadata({ params }) {
         locale: "en_IN",
         images: [
           {
-            url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
+            url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
             width: 253,
             height: 257,
             alt: `Transport from ${cityName}`,
@@ -91,7 +91,7 @@ export async function generateMetadata({ params }) {
         creator: "@avon_express",
         title: `Transport Services from ${cityName} | Avon Express`,
         description: `Safe and affordable transport from ${cityName} across India.`,
-        images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.png"],
+        images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.webp"],
       },
       robots: { index: true, follow: true },
     };
@@ -122,7 +122,7 @@ export async function generateMetadata({ params }) {
       locale: "en_IN",
       images: [
         {
-          url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
+          url: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
           width: 253,
           height: 257,
           alt: `Transport from ${fromName} to ${toName}`,
@@ -135,7 +135,7 @@ export async function generateMetadata({ params }) {
       creator: "@avon_express",
       title: `Transport from ${fromName} to ${toName} | Avon Express`,
       description: `Best transport from ${fromName} to ${toName}. Safe and affordable.`,
-      images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.png"],
+      images: ["https://www.avonexpresspackersandmovers.co.in/images/og-image.webp"],
     },
     robots: { index: true, follow: true },
   };
@@ -169,8 +169,8 @@ function SchemaMarkup({ parsed }) {
         description: `Safe, reliable and affordable transport from ${cityName} across India by Avon Express Packers and Movers.`,
         telephone: "+9198145-56375",
         email: "avonexpresspackersandmovers@gmail.com",
-        image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
-        logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.png",
+        image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
+        logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.webp",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Avon House, Transport Area, Sector 26 East",
@@ -244,8 +244,8 @@ function SchemaMarkup({ parsed }) {
       description: `Book reliable transport from ${fromName} to ${toName}. Household shifting, car transport, bike transport and office shifting by Avon Express Packers and Movers.`,
       telephone: "+9198145-56375",
       email: "avonexpresspackersandmovers@gmail.com",
-      image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.png",
-      logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.png",
+      image: "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp",
+      logo: "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.webp",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Avon House, Transport Area, Sector 26 East",

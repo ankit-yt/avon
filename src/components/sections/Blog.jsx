@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { HiOutlineArrowRight, HiOutlinePlay } from "react-icons/hi";
 
-import img1 from "@/assets/images/Blog/Blog-Images-1.png";
-import img2 from "@/assets/images/Blog/Blog-Images-2.png";
-import img3 from "@/assets/images/Blog/Blog-Images-3.png";
-import img4 from "@/assets/images/Blog/Blog-Images-4.png";
-import img5 from "@/assets/images/Blog/Blog-Images-5.png";
-import img6 from "@/assets/images/Blog/Blog-Images-6.png";
-import img7 from "@/assets/images/Blog/Blog-Images-7.png";
-import img8 from "@/assets/images/Blog/Blog-Images-8.png";
+import img1 from "@/assets/images/Blog/Blog-Images-1.webp";
+import img2 from "@/assets/images/Blog/Blog-Images-2.webp";
+import img3 from "@/assets/images/Blog/Blog-Images-3.webp";
+import img4 from "@/assets/images/Blog/Blog-Images-4.webp";
+import img5 from "@/assets/images/Blog/Blog-Images-5.webp";
+import img6 from "@/assets/images/Blog/Blog-Images-6.webp";
+import img7 from "@/assets/images/Blog/Blog-Images-7.webp";
+import img8 from "@/assets/images/Blog/Blog-Images-8.webp";
 
 const VIDEO_SRC = "/videos/8.mp4";
 
@@ -110,7 +110,7 @@ function BlogCard({ post }) {
           src={post.image}
           alt={post.alt}
           fill
-          quality={100}
+         
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />

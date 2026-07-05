@@ -36,7 +36,7 @@
 }
 
 .street {
-    background: #7a7a7a url("@/assets/images/Home/Road.png");
+    background: #7a7a7a url("@/assets/images/Home/Road.webp");
     height: 80px;
     width: 102%;
     position: absolute;
@@ -295,7 +295,7 @@
 
 
 .truck {
-    background: url("@/assets/images/Home/Truck.png") no-repeat;
+    background: url("@/assets/images/Home/Truck.webp") no-repeat;
     background-size: contain;
     top: -135%;
     position: absolute;

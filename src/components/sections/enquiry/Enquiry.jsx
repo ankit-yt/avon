@@ -3,7 +3,7 @@
 // Interactive parts are delegated to EnquiryForm (client).
 
 import Image from "next/image";
-import ContactUs from "@/assets/images/Home/Contact-US.png";
+import ContactUs from "@/assets/images/Home/Contact-US.webp";
 import EnquiryForm from "./EnquiryForm";
 
 // ── Structured data (JSON-LD) for rich results ──────────────────────────────
@@ -123,7 +123,7 @@ export default function Enquiry() {
       src={ContactUs}
       alt="Friendly moving crew ready to help with your relocation"
       fill
-      quality={100}
+     
       sizes="(max-width: 1024px) 100vw, 35vw"
       className="object-cover"
       priority

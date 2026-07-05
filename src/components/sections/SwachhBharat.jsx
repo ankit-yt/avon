@@ -203,7 +203,7 @@ export default function SwachhBharat() {
             </div>
 
             <video
-              src="/videos/15.mp4"
+              src="/videos/15_compressed.mp4"
               autoPlay
               loop
               muted

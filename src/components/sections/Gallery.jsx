@@ -1,21 +1,21 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import g1 from "@/assets/images/Gallery/Gallery-Images-1.png";
-import g2 from "@/assets/images/Gallery/Gallery-Images-2.png";
-import g3 from "@/assets/images/Gallery/Gallery-Images-3.png";
-import g4 from "@/assets/images/Gallery/Gallery-Images-4.png";
-import g5 from "@/assets/images/Gallery/Gallery-Images-5.png";
-import g6 from "@/assets/images/Gallery/Gallery-Images-6.png";
-import g7 from "@/assets/images/Gallery/Gallery-Images-7.png";
-import g8 from "@/assets/images/Gallery/Gallery-Images-8.png";
-import g9 from "@/assets/images/Gallery/Gallery-Images-9.png";
-import g10 from "@/assets/images/Gallery/Gallery-Images-10.png";
-import g11 from "@/assets/images/Gallery/Gallery-Images-11.png";
-import g12 from "@/assets/images/Gallery/Gallery-Images-12.png";
-import g13 from "@/assets/images/Gallery/Gallery-Images-13.png";
-import g14 from "@/assets/images/Gallery/Gallery-Images-14.png";
-import g15 from "@/assets/images/Gallery/Gallery-Images-15.png";
-import g16 from "@/assets/images/Gallery/Gallery-Images-16.png";
+import g1 from "@/assets/images/Gallery/Gallery-Images-1.webp";
+import g2 from "@/assets/images/Gallery/Gallery-Images-2.webp";
+import g3 from "@/assets/images/Gallery/Gallery-Images-3.webp";
+import g4 from "@/assets/images/Gallery/Gallery-Images-4.webp";
+import g5 from "@/assets/images/Gallery/Gallery-Images-5.webp";
+import g6 from "@/assets/images/Gallery/Gallery-Images-6.webp";
+import g7 from "@/assets/images/Gallery/Gallery-Images-7.webp";
+import g8 from "@/assets/images/Gallery/Gallery-Images-8.webp";
+import g9 from "@/assets/images/Gallery/Gallery-Images-9.webp";
+import g10 from "@/assets/images/Gallery/Gallery-Images-10.webp";
+import g11 from "@/assets/images/Gallery/Gallery-Images-11.webp";
+import g12 from "@/assets/images/Gallery/Gallery-Images-12.webp";
+import g13 from "@/assets/images/Gallery/Gallery-Images-13.webp";
+import g14 from "@/assets/images/Gallery/Gallery-Images-14.webp";
+import g15 from "@/assets/images/Gallery/Gallery-Images-15.webp";
+import g16 from "@/assets/images/Gallery/Gallery-Images-16.webp";
 import Image from "next/image";
 
 const galleryItems = [
@@ -82,7 +82,7 @@ export default function Gallery() {
                 src={item.img}
                 alt={item.label}
                 fill
-                quality={100}
+               
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[1s] ease-[cubic-bezier(0.19,1,0.22,1)]"
               />

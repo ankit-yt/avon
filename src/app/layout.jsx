@@ -54,7 +54,7 @@ export const metadata = {
     alternateLocale: ['en_IN'],
     images: [
       {
-        url: 'https://www.avonexpresspackersandmovers.co.in/images/og-image.png',
+        url: 'https://www.avonexpresspackersandmovers.co.in/images/og-image.webp',
         width: 253,
         height: 257,
         alt: 'Avon Express Packers and Movers | Official Website',
@@ -84,7 +84,7 @@ export const metadata = {
     title: 'Avon Express Packers and Movers | Official Website',
     description: 'Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.',
     images: {
-      url: 'https://www.avonexpresspackersandmovers.co.in/images/og-image.png',
+      url: 'https://www.avonexpresspackersandmovers.co.in/images/og-image.webp',
       alt: 'Avon Express Packers and Movers | Official Website',
       width: 253,
       height: 257,
@@ -113,9 +113,9 @@ export const metadata = {
     },
   },
   icons: {
-    icon: [{ url: '/images/favicon.png', sizes: '32x32', type: 'image/png' }],
-    shortcut: '/images/favicon.png',
-    apple: '/apple-icon.png',
+    icon: [{ url: '/images/favicon.webp', sizes: '32x32', type: 'image/png' }],
+    shortcut: '/images/favicon.webp',
+    apple: '/apple-icon.webp',
   },
   appleWebApp: {
     capable: true,
@@ -160,7 +160,7 @@ export default function RootLayout({ children }) {
         <meta name="pragma" content="no-cache" />
         <meta name="copyright" content="Avon Express Packers and Movers" />
         <meta name="rights" content="Avon Express Packers and Movers" />
-        <meta name="thumbnail" content="https://www.avonexpresspackersandmovers.co.in/images/og-image.png" />
+        <meta name="thumbnail" content="https://www.avonexpresspackersandmovers.co.in/images/og-image.webp" />
         <meta name="doc-type" content="public" />
         <meta name="rating" content="32205" />
         <meta name="rating" content="safe for kids" />
@@ -199,7 +199,7 @@ export default function RootLayout({ children }) {
 
         {/* ── Open Graph Extra Tags ── */}
         <meta property="og:keywords" content="Avon Express Packers and Movers, IBA Approved Packers and Movers" />
-        <meta property="og:image:url" content="https://www.avonexpresspackersandmovers.co.in/images/og-image.png" />
+        <meta property="og:image:url" content="https://www.avonexpresspackersandmovers.co.in/images/og-image.webp" />
         <meta property="og:image:type" content="PNG" />
         <meta property="og:image:width" content="253" />
         <meta property="og:image:height" content="257" />
@@ -298,8 +298,8 @@ export default function RootLayout({ children }) {
               "name": "Avon Express Packers and Movers | Official Website",
               "about": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.",
               "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.",
-              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.png", "width": "253", "height": "257" },
-              "publisher": { "@type": "Organization", "name": "Avon Express Packers and Movers | Official Website", "url": "https://www.avonexpresspackersandmovers.co.in", "sameAs": "https://www.youtube.com/channel/UC6Gns5u4bvtOosZHMzoep9g", "logo": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.png", "width": "253", "height": "257" } }
+              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp", "width": "253", "height": "257" },
+              "publisher": { "@type": "Organization", "name": "Avon Express Packers and Movers | Official Website", "url": "https://www.avonexpresspackersandmovers.co.in", "sameAs": "https://www.youtube.com/channel/UC6Gns5u4bvtOosZHMzoep9g", "logo": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp", "width": "253", "height": "257" } }
             },
             {
               "@type": "Book",
@@ -307,7 +307,7 @@ export default function RootLayout({ children }) {
               "url": "https://www.avonexpresspackersandmovers.co.in",
               "sameAs": "https://www.youtube.com/channel/UC6Gns5u4bvtOosZHMzoep9g",
               "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.",
-              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.png", "width": "253", "height": "257" },
+              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp", "width": "253", "height": "257" },
               "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "32205", "bestRating": "5" }
             },
             {
@@ -319,8 +319,8 @@ export default function RootLayout({ children }) {
               "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.",
               "telephone": "+9198145-56375",
               "contactPoint": { "@type": "ContactPoint", "telephone": "+9198145-56375", "email": "avonexpresspackersandmovers@gmail.com", "url": "https://www.avonexpresspackersandmovers.co.in" },
-              "logo": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.png", "width": "253", "height": "257" },
-              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/office-image.png", "width": "608", "height": "608" },
+              "logo": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/New_Logo.webp", "width": "253", "height": "257" },
+              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/office-image.webp", "width": "608", "height": "608" },
               "geo": { "@type": "GeoCoordinates", "latitude": "30.7164365", "longitude": "76.8160495" },
               "address": { "@type": "PostalAddress", "streetAddress": "Avon House, Transport Area, Sector 26 East", "addressLocality": "Chandigarh", "addressRegion": "Chandigarh", "postalCode": "160019", "addressCountry": "India" },
               "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "32205", "bestRating": "5" }
@@ -333,7 +333,7 @@ export default function RootLayout({ children }) {
               "geo": { "@type": "GeoCoordinates", "latitude": "30.7164365", "longitude": "76.8160495" },
               "address": { "@type": "PostalAddress", "streetAddress": "Avon House, Transport Area, Sector 26 East", "addressLocality": "Chandigarh", "addressRegion": "Chandigarh", "postalCode": "160019", "addressCountry": "India" },
               "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.",
-              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/office-image.png", "width": "608", "height": "608" }
+              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/office-image.webp", "width": "608", "height": "608" }
             },
             {
               "@type": "Product",
@@ -341,7 +341,7 @@ export default function RootLayout({ children }) {
               "url": "https://www.avonexpresspackersandmovers.co.in",
               "category": "Avon Express Packers and Movers | Official Website",
               "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.",
-              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.png", "width": "253", "height": "257" },
+              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp", "width": "253", "height": "257" },
               "brand": { "@type": "Brand", "name": "Avon Express Packers and Movers | Official Website", "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.", "url": "https://www.avonexpresspackersandmovers.co.in" },
               "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "32205", "bestRating": "5" }
             },
@@ -349,7 +349,7 @@ export default function RootLayout({ children }) {
               "@type": "Service",
               "name": "Avon Express Packers and Movers | Official Website",
               "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.",
-              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.png", "width": "253", "height": "257" },
+              "image": { "@type": "ImageObject", "representativeOfPage": "True", "url": "https://www.avonexpresspackersandmovers.co.in/images/og-image.webp", "width": "253", "height": "257" },
               "brand": { "@type": "Brand", "name": "Avon Express Packers and Movers | Official Website", "description": "Avon Express Packers and Movers Providing Best and World Class Packing and Moving Services.", "url": "https://www.avonexpresspackersandmovers.co.in" }
             },
             {

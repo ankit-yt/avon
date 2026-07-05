@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineShieldCheck, HiOutlineTruck } from "react-icons/hi";
 
-import HouseholdGoodsShiftingServices from "@/assets/images/Services/Household-Goods-Shifting-Services.png";
-import OfficeShiftingServices from "@/assets/images/Services/Office-Shifting-Services.png";
-import CarTransportServices from "@/assets/images/Services/Car-Transport-Services.png";
-import BikeTransportServices from "@/assets/images/Services/Bike-Transport-Services.png";
-import ActivaTransportServices from "@/assets/images/Services/Activa-Transport-Services.png";
-import TruckAndTempoHireServices from "@/assets/images/Services/Truck-and-Tempo-Hire-Services.png";
+import HouseholdGoodsShiftingServices from "@/assets/images/Services/Household-Goods-Shifting-Services.webp";
+import OfficeShiftingServices from "@/assets/images/Services/Office-Shifting-Services.webp";
+import CarTransportServices from "@/assets/images/Services/Car-Transport-Services.webp";
+import BikeTransportServices from "@/assets/images/Services/Bike-Transport-Services.webp";
+import ActivaTransportServices from "@/assets/images/Services/Activa-Transport-Services.webp";
+import TruckAndTempoHireServices from "@/assets/images/Services/Truck-and-Tempo-Hire-Services.webp";
 
 import ScrollTopButton from "../ScrollTopBtn";
 
@@ -95,7 +95,7 @@ export default function Service() {
                   src={s.img}
                   alt={s.title}
                   fill
-                  quality={100}
+                 
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />

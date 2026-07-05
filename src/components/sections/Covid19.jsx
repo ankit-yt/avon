@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { HiCheckCircle } from "react-icons/hi";
 
-import covidImg1 from "@/assets/images/COVID-19/COVID-19-Images-1.png";
-import covidImg2 from "@/assets/images/COVID-19/COVID-19-Images-2.png";
-import covidImg3 from "@/assets/images/COVID-19/COVID-19-Images-3.png";
-import covidImg4 from "@/assets/images/COVID-19/COVID-19-Images-4.png";
-import covidImg5 from "@/assets/images/COVID-19/COVID-19-Images-5.png";
-import covidImg6 from "@/assets/images/COVID-19/COVID-19-Images-6.png";
+import covidImg1 from "@/assets/images/COVID-19/COVID-19-Images-1.webp";
+import covidImg2 from "@/assets/images/COVID-19/COVID-19-Images-2.webp";
+import covidImg3 from "@/assets/images/COVID-19/COVID-19-Images-3.webp";
+import covidImg4 from "@/assets/images/COVID-19/COVID-19-Images-4.webp";
+import covidImg5 from "@/assets/images/COVID-19/COVID-19-Images-5.webp";
+import covidImg6 from "@/assets/images/COVID-19/COVID-19-Images-6.webp";
 
 const images = [covidImg1, covidImg2, covidImg3, covidImg4, covidImg5, covidImg6];
 
@@ -74,7 +74,7 @@ function Covid19() {
                     src={img}
                     alt={`COVID-19 safety measure ${i + 1}`}
                     fill
-                    quality={100}
+                   
                     sizes="(max-width: 768px) 50vw, 20vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />

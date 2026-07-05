@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/images/Home/Logo.png"
+import logo from "@/assets/images/Home/Logo.webp"
 import playstore from "@/assets/images/Home/App.gif"
 import ScrollTopButton from "../ScrollTopBtn";
 

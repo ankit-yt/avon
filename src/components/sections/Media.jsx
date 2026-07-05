@@ -1,6 +1,6 @@
 import React from 'react';
 import { HiOutlineExternalLink } from "react-icons/hi";
-import mediaImage from "@/assets/images/Home/News.png";
+import mediaImage from "@/assets/images/Home/News.webp";
 import Image from 'next/image';
 
 const getCurrentMonthYear = () => {
@@ -100,7 +100,7 @@ function Media() {
                   src={mediaImage}
                   alt="Featured News"
                   fill
-                  quality={100}
+                 
                   sizes="(max-width: 1024px) 100vw, 58vw"
                 />
               </div>

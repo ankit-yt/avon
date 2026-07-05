@@ -1,15 +1,15 @@
 import LazyVideo from "./LazyVideo";
-import p2 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-1.png";
-import p1 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-2.png";
-import p7 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-3.png";
-import p4 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-4.png";
-import p5 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-5.png";
-import p6 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-6.png";
-import p3 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-7.png";
-import p8 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-8.png";
-import p9 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-9.png";
-import p10 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-10.png";
-import p11 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-11.png";
+import p2 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-1.webp";
+import p1 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-2.webp";
+import p7 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-3.webp";
+import p4 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-4.webp";
+import p5 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-5.webp";
+import p6 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-6.webp";
+import p3 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-7.webp";
+import p8 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-8.webp";
+import p9 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-9.webp";
+import p10 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-10.webp";
+import p11 from "@/assets/images/Video-Thumbnail/Video-Thumbnail-Images-11.webp";
 
 const LANDSCAPE_VIDEOS = [
   { id: "l1", title: "The Complete Moving Experience", src: "/videos/14.mp4", thumb: p1 },

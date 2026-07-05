@@ -14,9 +14,9 @@ import Image from "next/image";
 import qr from '@/assets/images/Home/qr.jpeg'
 import Footer from "@/components/sections/Footer";
 
-import gpayLogo from "@/assets/images/Home/googlepay.png";
-import phonepeLogo from "@/assets/images/Home/phonepe.png";
-import paytmLogo from "@/assets/images/Home/paytm.png";
+import gpayLogo from "@/assets/images/Home/googlepay.webp";
+import phonepeLogo from "@/assets/images/Home/phonepe.webp";
+import paytmLogo from "@/assets/images/Home/paytm.webp";
 
 // ── Copy-to-clipboard button ──────────────────────────────────────────────────
 function CopyButton({ text }) {

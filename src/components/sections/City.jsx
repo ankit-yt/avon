@@ -1,41 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
-import Andaman from "@/assets/images/State/Andaman-and-Nicobar-Islands.png";
-import AndhraPradesh from "@/assets/images/State/Andhra-Pradesh.png";
-import ArunachalPradesh from "@/assets/images/State/Arunachal-Pradesh.png";
-import Assam from "@/assets/images/State/Assam.png";
-import Bihar from "@/assets/images/State/Bihar.png";
-import Chandigarh from "@/assets/images/State/Chandigarh.png";
-import Chhattisgarh from "@/assets/images/State/Chhattisgarh.png";
-import DadraDiu from "@/assets/images/State/Dadra-and-Nagar-Haveli-and-Daman-and-Diu.png";
-import Delhi from "@/assets/images/State/Delhi.png";
-import Goa from "@/assets/images/State/Goa.png";
-import Gujarat from "@/assets/images/State/Gujarat.png";
-import Haryana from "@/assets/images/State/Haryana.png";
-import HimachalPradesh from "@/assets/images/State/Himachal-Pradesh.png";
-import JammuKashmir from "@/assets/images/State/Jammu-and-Kashmir.png";
-import Jharkhand from "@/assets/images/State/Jharkhand.png";
-import Karnataka from "@/assets/images/State/Karnataka.png";
-import Kerala from "@/assets/images/State/Kerala.png";
-import Ladakh from "@/assets/images/State/Ladakh.png";
-import Lakshadweep from "@/assets/images/State/Lakshadweep.png";
-import MadhyaPradesh from "@/assets/images/State/Madhya-Pradesh.png";
-import Maharashtra from "@/assets/images/State/Maharashtra.png";
-import Manipur from "@/assets/images/State/Manipur.png";
-import Meghalaya from "@/assets/images/State/Meghalaya.png";
-import Mizoram from "@/assets/images/State/Mizoram.png";
-import Nagaland from "@/assets/images/State/Nagaland.png";
-import Odisha from "@/assets/images/State/Odisha.png";
-import Puducherry from "@/assets/images/State/Puducherry.png";
-import Punjab from "@/assets/images/State/Punjab.png";
-import Rajasthan from "@/assets/images/State/Rajasthan.png";
-import Sikkim from "@/assets/images/State/Sikkim.png";
-import TamilNadu from "@/assets/images/State/Tamil-Nadu.png";
-import Telangana from "@/assets/images/State/Telangana.png";
-import Tripura from "@/assets/images/State/Tripura.png";
-import UttarPradesh from "@/assets/images/State/Uttar-Pradesh.png";
-import Uttarakhand from "@/assets/images/State/Uttarakhand.png";
-import WestBengal from "@/assets/images/State/West-Bengal.png";
+import Andaman from "@/assets/images/State/Andaman-and-Nicobar-Islands.webp";
+import AndhraPradesh from "@/assets/images/State/Andhra-Pradesh.webp";
+import ArunachalPradesh from "@/assets/images/State/Arunachal-Pradesh.webp";
+import Assam from "@/assets/images/State/Assam.webp";
+import Bihar from "@/assets/images/State/Bihar.webp";
+import Chandigarh from "@/assets/images/State/Chandigarh.webp";
+import Chhattisgarh from "@/assets/images/State/Chhattisgarh.webp";
+import DadraDiu from "@/assets/images/State/Dadra-and-Nagar-Haveli-and-Daman-and-Diu.webp";
+import Delhi from "@/assets/images/State/Delhi.webp";
+import Goa from "@/assets/images/State/Goa.webp";
+import Gujarat from "@/assets/images/State/Gujarat.webp";
+import Haryana from "@/assets/images/State/Haryana.webp";
+import HimachalPradesh from "@/assets/images/State/Himachal-Pradesh.webp";
+import JammuKashmir from "@/assets/images/State/Jammu-and-Kashmir.webp";
+import Jharkhand from "@/assets/images/State/Jharkhand.webp";
+import Karnataka from "@/assets/images/State/Karnataka.webp";
+import Kerala from "@/assets/images/State/Kerala.webp";
+import Ladakh from "@/assets/images/State/Ladakh.webp";
+import Lakshadweep from "@/assets/images/State/Lakshadweep.webp";
+import MadhyaPradesh from "@/assets/images/State/Madhya-Pradesh.webp";
+import Maharashtra from "@/assets/images/State/Maharashtra.webp";
+import Manipur from "@/assets/images/State/Manipur.webp";
+import Meghalaya from "@/assets/images/State/Meghalaya.webp";
+import Mizoram from "@/assets/images/State/Mizoram.webp";
+import Nagaland from "@/assets/images/State/Nagaland.webp";
+import Odisha from "@/assets/images/State/Odisha.webp";
+import Puducherry from "@/assets/images/State/Puducherry.webp";
+import Punjab from "@/assets/images/State/Punjab.webp";
+import Rajasthan from "@/assets/images/State/Rajasthan.webp";
+import Sikkim from "@/assets/images/State/Sikkim.webp";
+import TamilNadu from "@/assets/images/State/Tamil-Nadu.webp";
+import Telangana from "@/assets/images/State/Telangana.webp";
+import Tripura from "@/assets/images/State/Tripura.webp";
+import UttarPradesh from "@/assets/images/State/Uttar-Pradesh.webp";
+import Uttarakhand from "@/assets/images/State/Uttarakhand.webp";
+import WestBengal from "@/assets/images/State/West-Bengal.webp";
 
 const states = [
   { name: "Andaman and Nicobar Islands", slug: "andaman-and-nicobar-islands", img: Andaman },
@@ -122,7 +122,7 @@ export default function City() {
                 src={city.img}
                 alt={city.name}
                 fill
-                quality={100}
+               
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
