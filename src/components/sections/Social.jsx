@@ -19,7 +19,7 @@ export default function Social() {
               href="https://wa.me/919814556375"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden xl:flex items-center gap-3 bg-green-500 px-2 py-2 rounded-full border border-green-100 hover:bg-green-100 transition-all group"
+              className=" xl:flex items-center gap-3 bg-green-500 px-2 py-2 rounded-full border border-green-100 hover:bg-green-100 transition-all group"
             >
               <div className="relative flex">
                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 "></span>
