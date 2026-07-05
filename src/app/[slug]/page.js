@@ -67,20 +67,20 @@ function parseSlug(slug) {
 // ─────────────────────────────────────────────
 // STATIC PARAMS
 // ─────────────────────────────────────────────
-export async function generateStaticParams() {
-  const slugs = [];
+// export async function generateStaticParams() {
+//   const slugs = [];
 
-  topCities.forEach((city) => {
-    slugs.push({ slug: `packers-and-movers-in-${city}` });
-    slugs.push({ slug: `iba-approved-packers-and-movers-in-${city}` });
-  });
+// topCities.forEach((city) => {
+//   slugs.push({ slug: `packers-and-movers-in-${city}` });
+//   slugs.push({ slug: `iba-approved-packers-and-movers-in-${city}` });
+// });
 
-  states.forEach((state) => {
-    slugs.push({ slug: state });
-  });
+//   states.forEach((state) => {
+//     slugs.push({ slug: state });
+//   });
 
-  return slugs;
-}
+//   return slugs;
+// }
 
 export const dynamicParams = true;
 export const revalidate = false;

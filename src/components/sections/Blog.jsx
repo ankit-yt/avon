@@ -12,7 +12,7 @@ import img6 from "@/assets/images/Blog/Blog-Images-6.webp";
 import img7 from "@/assets/images/Blog/Blog-Images-7.webp";
 import img8 from "@/assets/images/Blog/Blog-Images-8.webp";
 
-const VIDEO_SRC = "/videos/8.mp4";
+const VIDEO_SRC = "/videos/8-compressed.mp4";
 
 const getCurrentDate = () => {
   const today = new Date();
