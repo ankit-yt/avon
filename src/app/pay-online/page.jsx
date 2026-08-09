@@ -53,7 +53,6 @@ function CopyButton({ text }) {
   );
 }
 
-// ── Bank detail row ───────────────────────────────────────────────────────────
 function BankRow({ label, value }) {
   return (
     <div className="flex items-center justify-between gap-4 py-4 border-b border-slate-100 last:border-0">
