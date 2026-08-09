@@ -18,7 +18,6 @@ import gpayLogo from "@/assets/images/Home/googlepay.webp";
 import phonepeLogo from "@/assets/images/Home/phonepe.webp";
 import paytmLogo from "@/assets/images/Home/paytm.webp";
 
-// ── Copy-to-clipboard button ──────────────────────────────────────────────────
 function CopyButton({ text }) {
   const [copied, setCopied] = useState(false);
 
