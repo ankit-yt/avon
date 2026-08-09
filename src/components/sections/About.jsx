@@ -63,15 +63,15 @@ function About() {
 
             {/* Main Heading — matches reference h3 style */}
             <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-10">
-              OUR JOURNEY <br />
-              <span className="text-orange-500">AND&nbsp;</span>
+              JOURNEY 
+              <span className="text-orange-500"> &&nbsp;</span>
               HISTORY.
             </h3>
 
             {/* Body Text */}
             <div className="max-w-4xl space-y-6 mb-12">
               <p className="text-sm text-slate-500 font-medium leading-relaxed">
-                Avon Express Packers and Movers is one of India's largest transport companies. We began our journey in 2014 as a small firm named 'Home Trans Packers & Movers,' specializing primarily in the relocation of household goods. We started in Transport Nagar Ludhiana, Punjab (India), and our headquarters are now located in Chandigarh. We are a government-registered firm operating within India. Driven by determination, foresight, and hard work—and born from the vision of Home Trans Packers & Movers—this company has achieved continuous growth ever since its inception. Although our beginnings were humble, today we provide top-notch services for the relocation of household goods; with offices established in numerous cities, we extend our services across the entire length and breadth of India. Following this remarkable growth, Avon Express Packers and Movers has emerged as India's leading company in the field of household relocation. Throughout our entire journey of growth, we have consistently strived to stay abreast of technological advancements and have spared no effort in delivering the best possible services to our clients. Avon Express Packers and Movers has always provided its customers with the most modern and superior services. Our enduring objective has always been to provide a systematic relocation service for household goods—one that is both reliable and completely hassle-free for our customers.
+                Avon Express Packers and Movers is one of India's largest transport companies. We began our journey in 2014 as a small firm named 'Home Trans Packers and Movers,' specializing primarily in the relocation of household goods. We started in ABC House, Plot No. 30, Workshop Road, Transport Nagar, Industrial Area - A, Ludhiana, Punjab, India – 141003, and our headquarters are now located in Avon House, Plot No. 31, Workshop Road, Transport Nagar, Industrial Area - A, Ludhiana, Punjab, India – 141003. We are a government-registered firm operating within India. Driven by determination, foresight, and hard work—and born from the vision of Home Trans Packers and Movers—this company has achieved continuous growth ever since its inception. Although our beginnings were humble, today we provide top-notch services for the relocation of household goods; with offices established in numerous cities, we extend our services across the entire length and breadth of India. Following this remarkable growth, Avon Express Packers and Movers has emerged as India's leading company in the field of household relocation. Throughout our entire journey of growth, we have consistently strived to stay abreast of technological advancements and have spared no effort in delivering the best possible services to our clients. Avon Express Packers and Movers has always provided its customers with the most modern and superior services. Our enduring objective has always been to provide a systematic relocation service for household goods—one that is both reliable and completely hassle-free for our customers.
               </p>
             </div>
 

@@ -78,7 +78,7 @@ function Award() {
                   WINNER {getPreviousYear()} TOP 3 PRIZE PACKERS AND MOVERS
                 </h4>
                 <p className="text-sm text-slate-500 leading-relaxed font-medium">
-                  It was a moment of pride for Avon Express Packers and Movers when they shared the stage as panelists at the 'Bharat Nirman' event held at 'Palace' in Chandigarh. The central theme of this discussion was transportation regulations, emphasizing how these rules can propel our nation to new heights of prosperity while simultaneously ensuring the safety of every citizen. They introduced modern packing techniques and specialized vehicle carriers to ensure 100% damage-free delivery.
+                  It was a moment of pride for Avon Express Packers and Movers when they shared the stage as panelists at the 'Bharat Nirman' event held at 'Palace' in Ludhiana. The central theme of this discussion was transportation regulations, emphasizing how these rules can propel our nation to new heights of prosperity while simultaneously ensuring the safety of every citizen. They introduced modern packing techniques and specialized vehicle carriers to ensure 100% damage-free delivery.
                 </p>
               </div>
             </div>

@@ -215,7 +215,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className=" text-neutral-200 leading-relaxed">
-                  Avon House, Transport Area, Sector 26 East, Chandigarh (India) — 160019 <a href="https://g.page/r/CaHrilU1AntZEBM" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
+                Avon House, Plot No. 31, Workshop Road, Transport Nagar, Industrial Area - A, Ludhiana, Punjab, India – 141003 <a href="https://g.page/r/CaHrilU1AntZEBM" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
                   View in Map
                 </a>
                 </p>

@@ -11,6 +11,9 @@ import img5 from "@/assets/images/Blog/Blog-Images-5.webp";
 import img6 from "@/assets/images/Blog/Blog-Images-6.webp";
 import img7 from "@/assets/images/Blog/Blog-Images-7.webp";
 import img8 from "@/assets/images/Blog/Blog-Images-8.webp";
+import img9 from "@/assets/images/Blog/Blog-Images-9.webp";
+import img10 from "@/assets/images/Blog/Blog-Images-10.webp";
+import img11 from "@/assets/images/Blog/Blog-Images-11.webp";
 
 const VIDEO_SRC = "/videos/8-compressed.mp4";
 
@@ -97,6 +100,33 @@ const POSTS = [
     excerpt:
       "Avon Express Packers and Movers adopt all necessary safety measures to protect your belongings from any kind of damage. Nevertheless, in the event of any unforeseen accident, we ensure the prompt settlement of claims with the insurance company.",
   },
+  {
+  image: img10,
+  alt: "Cranes and Chain Hoists",
+  author: "Avon Express",
+  date,
+  title: "Do you provide cranes and chain hoists for heavy lifting?",
+  excerpt:
+    "Yes. In some cases, cranes and chain hoists are used instead of manpower to safely handle and move heavy or difficult-to-lift items.",
+},
+{
+  image: img9,
+  alt: "Moving in Rain",
+  author: "Avon Express",
+  date,
+  title: "How does Avon Express handle moving services during rain?",
+  excerpt:
+    "To protect your belongings from rain, we keep a close watch on the weather and have closed-body container vehicles available to help keep your goods safe and secure.",
+},
+{
+  image: img11,
+  alt: "Animal Welfare",
+  author: "Avon Express",
+  date,
+  title: "How does Avon Express contribute to animal welfare?",
+  excerpt:
+    "Love everyone—Love World. We believe in giving back to the community and donate a portion of our earnings to support animal welfare.",
+},
 ];
 
 // ─── BLOG CARD ────────────────────────────────────────────────
@@ -112,7 +142,7 @@ function BlogCard({ post }) {
           fill
          
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="object-fit transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
       </div>

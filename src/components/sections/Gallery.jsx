@@ -84,7 +84,7 @@ export default function Gallery() {
                 fill
                
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[1s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+                className="object-fit scale-105 group-hover:scale-100 transition-transform duration-[1s] ease-[cubic-bezier(0.19,1,0.22,1)]"
               />
 
               {/* Gradient Overlay */}

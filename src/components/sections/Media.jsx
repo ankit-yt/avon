@@ -115,7 +115,6 @@ function Media() {
                 </p>
 
                 <a
-                  href="mailto:media@avonexpresspackersandmovers.co.in"
                   className="text-xs font-black text-orange-600 uppercase tracking-[0.2em] hover:underline"
                 >
                   media@avonexpresspackersandmovers.co.in

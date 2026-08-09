@@ -10,6 +10,7 @@ import { HiOutlineMail, HiOutlineLocationMarker, HiOutlineBadgeCheck } from "rea
 import { HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
 import { useRouter, usePathname } from "next/navigation";
 import { cities } from "@/lib/cities";
+import { Mail } from "lucide-react";
 
 function formatName(slug) {
   return slug
@@ -313,33 +314,40 @@ const [showInfoBar, setShowInfoBar] = useState(false);
     <>
       {/* ===== TOP UTILITY BAR — desktop only ============================= */}
       <div className="hidden lg:block bg-slate-900 text-white py-2 border-b border-slate-800">
-        <div className="px-10 mx-auto flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.15em]">
-          <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2 text-slate-400">
-              <HiOutlineLocationMarker className="text-orange-500 text-sm" />
-              <span>Any where, any time</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-400">
-              <HiOutlineBadgeCheck className="text-orange-500 text-sm" />
-              <span>ISO registered •  281021019111</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
-              <span className="text-orange-500 ">GST registered • 03DZWPK8631P1ZF</span>
-            </div>
-            <div className="flex items-center gap-4 border-r border-slate-700 pr-6">
-              <span>Udyam registered • UDYAM-CH-01-0044520</span>
-            </div>
-            <a
-              href="/Trademark-Registered-Certificate.pdf"
-              download
-              className="text-green-500 cursor-pointer"
-            >
-              Trademark Registered • 4481215
-            </a>
-          </div>
-        </div>
+ <div className="mx-auto flex pointer-events-none items-center justify-center gap-8 px-10 text-[10px] font-bold uppercase tracking-[0.15em]">
+
+  {/* Location */}
+  <div className="flex items-center gap-2 whitespace-nowrap  text-slate-400">
+    <HiOutlineLocationMarker className="text-sm text-orange-500" />
+    <span>Anywhere, anytime</span>
+  </div>
+
+  {/* ISO */}
+  <div className="flex items-center gap-2 whitespace-nowrap border-l border-slate-700 pl-8 text-slate-400">
+    <HiOutlineBadgeCheck className="text-sm text-orange-500" />
+    <span>ISO Registered • 281021019111</span>
+  </div>
+
+  {/* Email */}
+  <div className="flex items-center gap-2 whitespace-nowrap border-l border-slate-700 pl-8 text-orange-500">
+    <Mail className="h-3 w-3 lowercase" />
+    <span>info@avonexpresspackersandmovers.co.in</span>
+  </div>
+
+  {/* Udyam */}
+  <div className="flex items-center gap-2 whitespace-nowrap border-l border-slate-700 pl-8 text-slate-400">
+    <span>Udyam Registered • UDYAM-PB-12-0308290</span>
+  </div>
+
+  {/* Trademark */}
+  <div 
+    
+    className="whitespace-nowrap border-l border-slate-700 pl-8 text-green-500"
+  >
+    Trademark Registered • 4481215
+  </div>
+
+</div>
       </div>
 
 <div className="lg:hidden">

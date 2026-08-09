@@ -79,7 +79,7 @@ function VisionMission() {
                 <h4 className="text-xl font-extrabold text-slate-900 tracking-tight">Our Mission</h4>
               </div>
               <p className="text-sm text-slate-500 font-medium leading-relaxed">
-                Avon Express Packers and Movers is one of the finest packers and movers service providers across India. Our mission is to provide our customers with quality, safety, prompt service, insurance coverage, and excellent relocation services. Avon Express Packers and Movers is one of the finest packers and movers service providers across India. Our goal is to provide the highest level of service and complete customer satisfaction.
+                Avon Express Packers and Movers is one of the finest packers and movers service providers across India. Our mission is to provide our customers with quality, safety, prompt service and excellent relocation services. Avon Express Packers and Movers is one of the finest packers and movers service providers across India. Our goal is to provide the highest level of service and complete customer satisfaction.
               </p>
             </div>
 

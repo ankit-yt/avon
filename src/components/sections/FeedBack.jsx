@@ -10,7 +10,7 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "Avon Express Packers and Movers Jammu provided me with excellent packing services at a very reasonable price. They arrived on time and packed all my belongings so efficiently that I didn't have to worry about a thing. Their entire staff was also very friendly and helpful. I highly recommend their services!",
+      "Avon Express Packers and Movers provided me with excellent packing services for my move from Jammu to Ahmedabad at a very reasonable price. They arrived on time and packed all my belongings so well that I didn't have to worry about a thing. Their entire staff was also very friendly and helpful. I highly recommend their services!",
   },
   {
     name: "Priyanka Saha",
@@ -20,27 +20,27 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "Recently, I availed the services of Avon Express Packers and Movers to shift my household goods and car, and I received excellent service from them. They also provided me with an IBA-approved bill for my claim.",
+      "Recently, I availed the services of Avon Express Packers and Movers to shift my household goods and car from Kolkata to Chennai, and I received excellent service from them. They also provided me with an IBA-approved bill for my claim.",
   },
   {
-    name: "Asif Basra",
+    name: "Asif Choudhary",
     location: "Actor",
     avatar: "AB",
     avatarBg: "#34A853",
     rating: 5,
     date: "Recently",
     review:
-      "I had my household belongings shifted from Mumbai to Dharamshala. I hired Avon Express Packers and Movers for this task. I was pleased with the work done by Avon Express Packers.",
+      "I had my household goods shifted from Mumbai to Dehradun. I hired Avon Express Packers and Movers for this task. I was happy with the work done by Avon Express Packers.",
   },
   {
-    name: "Gaurav Kuthiala",
+    name: "Gaurav Ravidasia",
     location: "Doctor",
     avatar: "GK",
     avatarBg: "#FBBC04",
     rating: 5,
     date: "Recently",
     review:
-      "I shifted my household belongings from Delhi to Bangalore. My experience with 'Avon Express Packers and Movers' from Chandigarh was excellent. Their team members were extremely efficient.",
+      "I moved my household goods from Delhi to Bangalore. My experience with 'Avon Express Packers and Movers' from Gurgaon was excellent. Their team members were very efficient.",
   },
   {
     name: "Ajay Jain",
@@ -60,7 +60,7 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "I recently used Avon Express Packers and Movers to shift my household goods, and I am very satisfied with their service. The team was professional, courteous and handled everything with care. The packing was neat and all my stuff arrived on time without any damage. Highly recommended for anyone looking for reliable and trustworthy packers and movers!",
+      "I recently used the services of 'Avon Express Packers and Movers' to shift my household goods from Lucknow to Patna, and I am very happy with their service. Their team was professional and courteous, and they handled everything with great care. The packing was excellent, and all my belongings arrived on time and without any damage. I would definitely recommend them to anyone looking for reliable packers and movers!",
   },
 ];
 
