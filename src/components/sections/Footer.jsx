@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/Home/Logo.webp"
-import playstore from "@/assets/images/Home/App.gif"
+import playstore from "@/assets/images/Home/App.webp"
 import ScrollTopButton from "../ScrollTopBtn";
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -18,9 +18,10 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Online Payment", href: "/pay-online" },
   { label: "Insurance", href: "/insurance" },
+  { label: "Courier Service", href: "/courier-service" },
   { label: "Tracking", href: "/tracking" },
   { label: "Regular Update", href: "/updates" },
-  { label: "Bill For Claim", href: "/bill-claim" },
+  { label: "Booking Process ", href: "/booking-process " },
   { label: "Branches", href: "/branches" },
   { label: "Join Avon Express", href: "/join" },
 ];
@@ -112,40 +113,30 @@ export default function Footer() {
 
         {/* Brand column */}
         <div className="flex flex-col z-20 gap-6">
-          <ScrollTopButton>
-           <div className="relative bg-white rounded-xl p-3 border-2 border-orange-700 transition-transform duration-500 group-hover:scale-105">
-              <Image src={logo}  width={100}
-                  height={100}  alt="Avon Express Logo" priority className="w-80" />
-            </div>
-          </ScrollTopButton>
+         <Link href="/">
+    <div className="relative bg-white rounded-xl p-3 border-2 border-orange-700 transition-transform duration-500 group-hover:scale-105">
+      <Image
+        src={logo}
+        alt="Avon Express Logo"
+        priority
+        className="w-80"
+      />
+    </div>
+</Link>
          
 
-          <p className=" text-neutral-200 leading-relaxed">
+          <p1 className=" text-neutral-200 leading-relaxed">
             Avon Express Packers and Movers Company is The Highest Moving Supply in India - Avon Express Packers and Movers is a Famous Name Moving Company in India.
-          </p>
+          </p1>
 
-          {/* Socials */}
-          <div className="flex items-center gap-2">
-            {socials.map((s) => (
-              <a
-              target="_blank"
-                key={s.label}
-                href={s.href}
-                aria-label={s.label}
-                className="w-8 h-8 rounded-full border border-neutral-800 hover:border-neutral-500 hover:text-white flex items-center justify-center transition-all duration-200"
-              >
-                {s.icon}
-              </a>
-            ))}
-          </div>
-
+        
           {/* Google Play */}
           <a
           target="_blank"
             href="https://play.google.com/store/apps/details?id=com.company.avonexpresspackersandmovers.app"
             className="inline-flex items-center gap-3 w-64 transition-colors duration-200 group"
           >
-            <Image src={playstore} width={100} height={100} alt="playstore" className="w-56"/>
+            <Image src={playstore}  alt="playstore" className="w-66"/>
           </a>
         </div>
 
@@ -194,7 +185,23 @@ export default function Footer() {
 >
   Book a Physical Survey
 </Link>
+
             </div>
+              {/* Socials */}
+          <div className="flex items-center gap-2 ml-3">
+            {socials.map((s) => (
+              <a
+              target="_blank"
+                key={s.label}
+                href={s.href}
+                aria-label={s.label}
+                className="w-8 h-8 rounded-full border border-neutral-800 hover:border-neutral-500 hover:text-white flex items-center justify-center transition-all duration-200"
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
+
         </div>
 
         {/* Contact */}
@@ -214,11 +221,11 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className=" text-neutral-200 leading-relaxed">
-                Avon House, Plot No. 31, Workshop Road, Transport Nagar, Industrial Area - A, Ludhiana, Punjab, India – 141003 <a href="https://g.page/r/CaHrilU1AntZEBM" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
+                <p1 className=" text-neutral-200 leading-relaxed">
+                Avon House, 1st Floor, Plot No. 31,  Workshop Road, Transport Nagar, Industrial Area - A, Ludhiana, Punjab, India – 141003 <a href="https://g.page/r/CaHrilU1AntZEBM" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
                   View in Map
                 </a>
-                </p>
+                </p1>
                 
               </div>
             </div>
@@ -261,11 +268,10 @@ export default function Footer() {
        
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white">
-            © {CURRENT_YEAR} Avon Express Packers and Movers. All rights reserved.
+            © {CURRENT_YEAR} Avon Express Packers and Movers. All Rights Reserved.
           </p>
           <div className="flex items-center gap-5 flex-wrap justify-center">
            {[
-  { label: "GST information", href: "/gst-information" },
   { label: "Disclaimer", href: "/disclaimer" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Refund & Cancellation Policy", href: "/refund-and-cancellation" },

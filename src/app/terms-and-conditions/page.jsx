@@ -7,6 +7,10 @@ import {
   Clock,
   AlertOctagon,
   CreditCard,
+  Construction,
+  UserX,
+  Video,
+  Ban,
 } from "lucide-react";
 
 export const metadata = {
@@ -29,7 +33,7 @@ export default function TermsAndConditionsPage() {
         <div className="flex items-start gap-3">
           <Scale size={20} className="text-slate-600 mt-1 shrink-0" />
           <p>
-            Any legal dispute shall be subject exclusively to the jurisdiction of Chandigarh.
+            Any legal dispute shall be subject exclusively to the jurisdiction of Ludhiana.
           </p>
         </div>
 
@@ -77,7 +81,7 @@ export default function TermsAndConditionsPage() {
         <div className="flex items-start gap-3">
           <Clock size={20} className="text-slate-600 mt-1 shrink-0" />
           <p>
-            We do not accept responsibility for any breakage occurring 24 hours after delivery.
+            We do not accept responsibility for any breakage occurring 2 hours after delivery.
           </p>
         </div>
 
@@ -93,7 +97,7 @@ export default function TermsAndConditionsPage() {
         <div className="flex items-start gap-3">
           <ShieldAlert size={20} className="text-slate-600 mt-1 shrink-0" />
           <p>
-            We will not assume any responsibility for any of the customer's belongings that go missing 24 hours after the shifting.
+            We will not assume any responsibility for any of the customer's belongings that go missing 2 hours after the shifting.
           </p>
         </div>
 
@@ -102,6 +106,46 @@ export default function TermsAndConditionsPage() {
           <CreditCard size={20} className="text-slate-600 mt-1 shrink-0" />
           <p>
             Full Payment 100% — Loading Point
+          </p>
+        </div>
+
+        {/* Point 11 */}
+        <div className="flex items-start gap-3">
+          <Construction size={20} className="text-slate-600 mt-1 shrink-0" />
+          <p>
+            If the vehicle cannot be taken to the customer's home, or if the goods cannot be moved up or down manually and the company uses a crane or ropes for the task, the customer will have to pay an additional charge.
+          </p>
+        </div>
+
+        {/* Point 12 */}
+        <div className="flex items-start gap-3">
+          <UserX size={20} className="text-slate-600 mt-1 shrink-0" />
+          <p>
+            We do not send the customer along with the vehicle.
+          </p>
+        </div>
+
+        {/* Point 13 */}
+        <div className="flex items-start gap-3">
+          <Video size={20} className="text-slate-600 mt-1 shrink-0" />
+          <p>
+            If the goods are damaged, the customer should record a video while unpacking them.
+          </p>
+        </div>
+
+        {/* Point 14 */}
+        <div className="flex items-start gap-3">
+          <Construction size={20} className="text-slate-600 mt-1 shrink-0" />
+          <p>
+            If the goods cannot be lifted or lowered manually, and the company uses cranes or ropes for the task but is still unable to lift or lower them, the company will not be held responsible.
+          </p>
+        </div>
+
+        {/* Point 15 */}
+        <div className="flex items-start gap-3">
+          <Ban size={20} className="text-slate-600 mt-1 shrink-0" />
+          <p>
+            Loading flammable items, pets, weapons, toxic substances, narcotics, gases, liquids, etc., onto the transport vehicle will not be permitted.
           </p>
         </div>
 

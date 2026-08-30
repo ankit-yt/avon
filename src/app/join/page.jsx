@@ -314,7 +314,7 @@ export default function JoinOurTeamPage() {
               </h1>
 
               <p className="mt-3 text-slate-400 text-sm sm:text-base max-w-2xl leading-relaxed">
-                Are you a packers &amp; movers company? Partner with us to expand
+                Are you a Packers &amp; Movers company? Partner with us to expand
                 your reach across India. Fill in the form and our team will
                 connect with you shortly.
               </p>

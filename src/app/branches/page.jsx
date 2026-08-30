@@ -16,6 +16,7 @@ import {
   Navigation,
 } from "lucide-react";
 import Footer from "@/components/sections/Footer";
+import office from "@/assets/images/Home/Office.webp"
 
 // ── Dummy Data ────────────────────────────────────────────────────────────────
 
@@ -28,81 +29,12 @@ const BRANCHES = [
     manager: "Parmod Kumar",
     phone: "9814556375",
     whatsapp: "9814556375",
-    address: "123, Near Bus Stand, Model Town, Ludhiana, Punjab – 141002",
+    address: "Avon House, 1st Floor, Plot No. 31, Workshop Road, Transport Nagar, Industrial Area - A, Ludhiana, Punjab, India – 141003",
     mapUrl: "https://maps.google.com/?q=Ludhiana+Punjab",
 
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop",
+    image:office,
 
     tag: "Head Office",
-  },
-
-  {
-    id: 2,
-    city: "Amritsar",
-    state: "Punjab",
-    label: "Avon in Amritsar",
-    manager: "Rajesh Sharma",
-    phone: "9876543210",
-    whatsapp: "9876543210",
-    address: "45, Lawrence Road, Near Golden Temple, Amritsar, Punjab – 143001",
-    mapUrl: "https://maps.google.com/?q=Amritsar+Punjab",
-
-    image:
-      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1200&auto=format&fit=crop",
-
-    tag: null,
-  },
-
-  {
-    id: 3,
-    city: "Chandigarh",
-    state: "Chandigarh",
-    label: "Avon in Chandigarh",
-    manager: "Gurpreet Singh",
-    phone: "9856789012",
-    whatsapp: "9856789012",
-    address: "Plot 14, Sector 22-B, Near ISBT, Chandigarh – 160022",
-    mapUrl: "https://maps.google.com/?q=Chandigarh",
-
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
-
-    tag: null,
-  },
-
-  {
-    id: 4,
-    city: "Delhi",
-    state: "Delhi",
-    label: "Avon in Delhi",
-    manager: "Sunil Verma",
-    phone: "9812345678",
-    whatsapp: "9812345678",
-    address: "78, Rohini Sector 9, Near Metro Station, New Delhi – 110085",
-    mapUrl: "https://maps.google.com/?q=Rohini+New+Delhi",
-
-    image:
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop",
-
-    tag: null,
-  },
-
-  {
-    id: 5,
-    city: "Jaipur",
-    state: "Rajasthan",
-    label: "Avon in Jaipur",
-    manager: "Deepak Agarwal",
-    phone: "9867890123",
-    whatsapp: "9867890123",
-    address: "88, Malviya Nagar, Near C-Scheme, Jaipur, Rajasthan – 302017",
-    mapUrl: "https://maps.google.com/?q=Malviya+Nagar+Jaipur",
-
-    image:
-      "https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1200&auto=format&fit=crop",
-
-    tag: null,
   },
 ];
 

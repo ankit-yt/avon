@@ -313,42 +313,34 @@ const [showInfoBar, setShowInfoBar] = useState(false);
   return (
     <>
       {/* ===== TOP UTILITY BAR — desktop only ============================= */}
-      <div className="hidden lg:block bg-slate-900 text-white py-2 border-b border-slate-800">
- <div className="mx-auto flex pointer-events-none items-center justify-center gap-8 px-10 text-[10px] font-bold uppercase tracking-[0.15em]">
+  <div className="hidden lg:block bg-slate-900 text-white py-2 border-b border-slate-800">
+  <div className="mx-auto flex flex-wrap pointer-events-none items-center justify-center gap-x-4 gap-y-2 xl:gap-x-8 px-4 xl:px-10 text-[10px] font-bold uppercase tracking-[0.15em]">
 
-  {/* Location */}
-  <div className="flex items-center gap-2 whitespace-nowrap  text-slate-400">
-    <HiOutlineLocationMarker className="text-sm text-orange-500" />
-    <span>Anywhere, anytime</span>
+    {/* Location */}
+    <div className="flex items-center gap-2 whitespace-nowrap text-cyan-400">
+      <HiOutlineLocationMarker className="text-sm text-sky-400" />
+      <span>Anywhere, anytime</span>
+    </div>
+
+    {/* ISO */}
+    <div className="flex items-center gap-2 whitespace-nowrap border-slate-700 md:border-l pl-4 xl:pl-8 text-blue-400">
+      <HiOutlineBadgeCheck className="text-sm text-blue-400" />
+      <span>ISO Registered • 281021019111</span>
+    </div>
+
+    {/* Udyam */}
+    <div className="flex items-center gap-2 whitespace-nowrap border-slate-700 md:border-l pl-4 xl:pl-8 text-amber-400">
+      <HiOutlineBadgeCheck className="text-sm text-amber-400" />
+      <span>Udyam Registered • UDYAM-PB-12-0308290</span>
+    </div>
+
+    {/* Trademark */}
+    <div className="flex items-center gap-2 whitespace-nowrap border-slate-700 md:border-l pl-4 xl:pl-8 text-emerald-400">
+      <span>Trademark Registered • 4481215</span>
+    </div>
+
   </div>
-
-  {/* ISO */}
-  <div className="flex items-center gap-2 whitespace-nowrap border-l border-slate-700 pl-8 text-slate-400">
-    <HiOutlineBadgeCheck className="text-sm text-orange-500" />
-    <span>ISO Registered • 281021019111</span>
-  </div>
-
-  {/* Email */}
-  <div className="flex items-center gap-2 whitespace-nowrap border-l border-slate-700 pl-8 text-orange-500">
-    <Mail className="h-3 w-3 lowercase" />
-    <span>info@avonexpresspackersandmovers.co.in</span>
-  </div>
-
-  {/* Udyam */}
-  <div className="flex items-center gap-2 whitespace-nowrap border-l border-slate-700 pl-8 text-slate-400">
-    <span>Udyam Registered • UDYAM-PB-12-0308290</span>
-  </div>
-
-  {/* Trademark */}
-  <div 
-    
-    className="whitespace-nowrap border-l border-slate-700 pl-8 text-green-500"
-  >
-    Trademark Registered • 4481215
-  </div>
-
 </div>
-      </div>
 
 <div className="lg:hidden">
   <button
@@ -407,23 +399,12 @@ const [showInfoBar, setShowInfoBar] = useState(false);
         {
           icon: (
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5">
-              <rect x="1" y="1" width="12" height="12" rx="2" stroke="#f97316" strokeWidth="1.2" />
-              <path d="M4 7h6M4 4.5h6M4 9.5h4" stroke="#f97316" strokeWidth="1.2" strokeLinecap="round" />
-            </svg>
-          ),
-          label: "GST Registered",
-          value: "03DZWPK8631P1ZF",
-          highlight: true,
-        },
-        {
-          icon: (
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5">
               <circle cx="7" cy="7" r="6" stroke="#f97316" strokeWidth="1.2" />
               <path d="M4.5 7l2 2 3-3" stroke="#f97316" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           ),
           label: "Udyam Registered",
-          value: "UDYAM-CH-01-0044520",
+          value: "UDYAM-PB-12-0308290",
         },
       ].map(({ icon, label, value, highlight }, i) => (
         <div
@@ -448,8 +429,6 @@ const [showInfoBar, setShowInfoBar] = useState(false);
 
       {/* Trademark — separate as it's a link */}
       <a
-        href="/Trademark-Registered-Certificate.pdf"
-        download
         className="flex items-start gap-3 bg-green-500/5 rounded-xl px-3.5 py-3 border border-green-500/20 hover:bg-green-500/10 transition-colors"
       >
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5">
@@ -463,9 +442,6 @@ const [showInfoBar, setShowInfoBar] = useState(false);
           </p>
           <div className="flex items-center justify-between gap-2">
             <p className="text-[11px] font-bold text-green-400">4481215</p>
-            <span className="text-[9px] font-bold text-green-500/70 uppercase tracking-wider shrink-0">
-              Download ↓
-            </span>
           </div>
         </div>
       </a>

@@ -152,3 +152,6 @@ body {
   animation: glowMove 3s linear infinite;
 }
 
+p , .text-xs{
+  font-weight: 900;
+}

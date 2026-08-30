@@ -7,6 +7,7 @@ import {
   Clock,
   FileWarning,
   Shield,
+  HelpCircle,
 } from "lucide-react";
 
 export const metadata = {
@@ -43,7 +44,7 @@ export default function InsurancePage() {
 
         <div className="pl-8">
           <p>
-            Without transit insurance, we assume no responsibility for any loss or damage caused by accidents, theft, fire, rain, collision, or any other hazards associated with road or river transport. Transit Insurance (covering only accidents, theft, fire, rain, collision, or any other hazards associated with road or river transport) — The final value will be determined by the insurance company's representatives, based on the bills for your goods.
+            Without transit insurance, we assume no responsibility for any loss or damage caused by accidents, vehicle theft, fire, rain, collision, or any other hazards associated with road or river transport. Transit Insurance (covering only accidents, vehicle theft, fire, rain, collision, or any other hazards associated with road or river transport) — The final value will be determined by the insurance company's representatives, based on the bills for your goods.
           </p>
         </div>
 
@@ -61,20 +62,12 @@ export default function InsurancePage() {
           </p>
         </div>
 
-        {/* 3 */}
-        <div className="flex items-start gap-3">
-          <PackageCheck size={20} className="text-purple-500 mt-1 shrink-0" />
-          <p>
-            3. Our Own Insurance Policy (Avon Premium Protection)
-          </p>
-        </div>
-
         <div className="pl-8 space-y-4">
 
           <div className="flex items-start gap-3">
             <Clock size={20} className="text-slate-600 mt-1 shrink-0" />
             <p>
-              In the event of any damage occurring during transportation, customers must notify us within 24 hours of delivery.
+              In the event of any damage occurring during transportation, customers must notify us within 2 hours of delivery.
             </p>
           </div>
 
@@ -93,6 +86,37 @@ export default function InsurancePage() {
           <p>
             Note: If an incident occurs, the person in whose name the insurance policy is held will contact the insurance company to file a claim.
           </p>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="pt-4 border-t border-slate-200 space-y-6">
+
+          <div className="flex items-start gap-3">
+            <HelpCircle size={20} className="text-orange-500 mt-1 shrink-0" />
+            <p className="font-bold text-slate-900">
+              What kind of breakage is not covered under the insurance policy?
+            </p>
+          </div>
+
+          <div className="pl-8">
+            <p>
+              The insurance cover does not provide coverage for the breakage of items such as glass or stones.
+            </p>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <HelpCircle size={20} className="text-orange-500 mt-1 shrink-0" />
+            <p className="font-bold text-slate-900">
+              What happens if the goods get damaged during insurance?
+            </p>
+          </div>
+
+          <div className="pl-8">
+            <p>
+              Avon Express Packers and Movers adopt all necessary safety measures to protect your belongings from any kind of damage. Nevertheless, in the event of any unforeseen accident, we ensure the prompt settlement of claims with the insurance company.
+            </p>
+          </div>
+
         </div>
 
       </div>

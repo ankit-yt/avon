@@ -72,7 +72,7 @@ function Why() {
 
               <div className="h-[2px] w-14 bg-orange-500 mx-auto lg:mx-0" />
 
-              <p className="text-sm text-slate-500 leading-relaxed font-medium max-w-lg mx-auto lg:mx-0">
+              <p className="text-sm text-slate-500  leading-relaxed font-medium max-w-lg mx-auto lg:mx-0">
                 The primary reason we have become the top choice for thousands of people is that,
                 while delivering our moving services, we embrace a spirit of "care" at every moment
                 and uphold the highest standards of "safety." We clarify every detail before starting
@@ -91,8 +91,6 @@ function Why() {
                 <Image
                   src={IBAlogo}
                   alt="IBA Approved"
-                  width={100}
-                  height={100}
                   className="relative w-32 md:w-40 lg:w-48 h-auto object-contain"
                 />
               </div>
@@ -102,8 +100,6 @@ function Why() {
                 <span className="absolute h-28 w-28 rounded-full border-4 border-orange-400/40 animate-ping [animation-delay:7.6s]" />
                 <Image
                   src={logo}
-                  width={100}
-                  height={100}
                   alt="Company Logo"
                   className="relative w-32 md:w-40 lg:w-51 h-auto object-contain"
                 />

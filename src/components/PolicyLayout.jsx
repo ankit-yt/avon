@@ -11,7 +11,6 @@ const NAV_LINKS = [
   { href: "/terms-and-conditions", label: "Terms & Conditions" },
   { href: "/refund-and-cancellation", label: "Refund & Cancellation" },
   { href: "/insurance", label: "Insurance" },
-  { href: "/gst-information", label: "GST Infomation" },
 ];
 
 export default function PolicyLayout({ children, title, subtitle, icon, activeHref }) {

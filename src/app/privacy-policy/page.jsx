@@ -48,7 +48,13 @@ export default function PrivacyPolicyPage() {
             Our computer-generated documents do not require a signature.
           </p>
         </div>
-
+{/* Point 5 */}
+<div className="flex items-start gap-3">
+  <FileText size={20} className="text-orange-500 mt-1 shrink-0" />
+  <p>
+    We do not have IBA approval; we provide third-party billing facilities.
+  </p>
+</div>
       </div>
     </PolicyLayout>
   );

@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { HiCheckBadge } from "react-icons/hi2";
-
 const reviews = [
   {
     name: "Deepak Sharma",
@@ -60,10 +60,24 @@ const reviews = [
     rating: 5,
     date: "Recently",
     review:
-      "I recently used the services of 'Avon Express Packers and Movers' to shift my household goods from Lucknow to Patna, and I am very happy with their service. Their team was professional and courteous, and they handled everything with great care. The packing was excellent, and all my belongings arrived on time and without any damage. I would definitely recommend them to anyone looking for reliable packers and movers!",
+      "I recently used the services of 'Avon Express Packers and Movers' to shift my household goods from Lucknow to Jaipur, and I am very happy with their service. Their team was professional and courteous, and they handled everything with great care. The packing was excellent, and all my belongings arrived on time and without any damage. I would definitely recommend them to anyone looking for reliable packers and movers!",
   },
 ];
 
+const voiceFeedbacks = [
+  {
+    id: "voice-01",
+    name: "Customer Feedback",
+    location: "Verified Customer",
+    src: "/audio/audio1.mp3",
+  },
+  {
+    id: "voice-02",
+    name: "Customer Feedback",
+    location: "Verified Customer",
+    src: "/audio/audio2.mp3"
+  },
+];
 /* ── Google multicolour G icon ── */
 const GoogleColorLogo = ({ size = 18 }) => (
   <svg height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -188,6 +202,64 @@ export default function FeedBack() {
             <GoogleReviewCard key={i} review={r} />
           ))}
         </div>
+        {/* Voice Feedback */}
+<div className="mt-10">
+  <div className="text-center mb-6">
+    <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
+      Voice <span className="text-orange-500">Feedback</span>
+    </h3>
+
+    <p className="text-xs text-slate-500 mt-1">
+      Listen to what our customers have to say about their experience.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+    {voiceFeedbacks.map((feedback) => (
+      <div
+        key={feedback.id}
+        className="bg-white rounded-[28px] border border-slate-200 shadow-sm p-5 hover:shadow-md transition-shadow duration-300"
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-500">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 1v22M17 5v14M7 5v14M3 9v6M21 9v6"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-extrabold text-slate-900">
+              {feedback.name}
+            </h4>
+
+            <p className="text-[10px] uppercase tracking-[0.25em] text-slate-400 font-bold">
+              {feedback.location}
+            </p>
+          </div>
+        </div>
+
+        <audio
+          controls
+          preload="metadata"
+          className="w-full h-10"
+        >
+          <source src={feedback.src} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* CTA Buttons */}
         <div className="flex  flex-wrap justify-center gap-4 mt-10">

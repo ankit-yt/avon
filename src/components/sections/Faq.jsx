@@ -147,6 +147,20 @@ const FAQ_DATA = [
     answer:
       "Customer-Dependent — During the process of transporting goods from one location to another, the items may sustain damage due to unforeseen circumstances, such as accidents or natural disasters.",
   },
+  {
+  id: "22",
+  category: "Insurance",
+  question: "What happens if the goods get damaged during insurance?",
+  answer:
+    "Avon Express Packers and Movers adopt all necessary safety measures to protect your belongings from any kind of damage. Nevertheless, in the event of any unforeseen accident, we ensure the prompt settlement of claims with the insurance company.",
+},
+{
+  id: "23",
+  category: "Restrictions",
+  question: "What items are not transported during shifting?",
+  answer:
+    "Loading flammable items, pets, weapons, toxic substances, narcotics, gases, liquids, etc., onto the transport vehicle will not be permitted.",
+},
 ];
 
 const trustBadges = [
@@ -169,7 +183,7 @@ const trustBadges = [
     label: "Safe and Damage-Free Shifting",
   },
   { icon: <HiOutlineUserGroup className="w-4 h-4" />, label: "We Have Better Driver, Staff, Labour" },
-  { icon: <HiOutlineExclamation className="w-4 h-4" />, label: "⚠️ Don't Drink and Drive 👏" },
+  { icon: <HiOutlineExclamation className="w-4 h-4" />, label: "⚠️ Don't Drink & Drive 👏" },
 
   // 🔥 Newly Added
   { icon: <FaRegHandshake className="w-4 h-4" />, label: "We Try To Compromise With The Customer Up To 100%." },
@@ -254,6 +268,52 @@ export default function Faq() {
           {/* RIGHT: Sidebar */}
           <aside className="lg:sticky lg:top-24 space-y-3">
 
+{/* Need Help CTA */}
+<div className="relative overflow-hidden rounded-[20px] bg-slate-900 p-5 shadow-sm">
+  {/* Decorative Circle */}
+  <div className="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-orange-500/10" />
+  <div className="absolute -left-10 -bottom-10 w-28 h-28 rounded-full bg-orange-500/5" />
+
+  <div className="relative">
+    <div className="w-9 h-9 rounded-xl bg-orange-500 flex items-center justify-center mb-3">
+      <svg
+        className="w-4 h-4 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3 5a2 2 0 012-2h3.28a2 2 0 011.9 1.368l1.04 3.12a2 2 0 01-.45 2.11l-1.5 1.5a11.05 11.05 0 005.63 5.63l1.5-1.5a2 2 0 012.11-.45l3.12 1.04A2 2 0 0121 17.72V21a2 2 0 01-2 2h-1C9.716 23 1 14.284 1 4V3a2 2 0 012-2z"
+        />
+      </svg>
+    </div>
+
+    <p className="text-[9px] font-black uppercase tracking-[0.4em] text-orange-400 mb-1.5">
+      Moving Made Easy
+    </p>
+
+    <h3 className="text-base font-extrabold text-white tracking-tight leading-snug">
+      Planning a Move?
+    </h3>
+
+    <p className="text-[11px] text-slate-400 leading-relaxed mt-2 mb-4">
+      Get professional packing and moving assistance for a safe and hassle-free relocation.
+    </p>
+
+    <a
+    target="_blank"
+      href="https://wa.me/919814556375"
+      className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-[10px] font-black uppercase tracking-[0.25em] transition-colors duration-200"
+    >
+      Get a Free Quotation
+      <span>→</span>
+    </a>
+  </div>
+</div>
+
             {/* Contact Card */}
             <div className="rounded-[20px] border border-slate-200 bg-white shadow-sm p-5">
               <div className="flex items-center gap-2.5 mb-3">
@@ -282,7 +342,7 @@ export default function Faq() {
             {/* Stats 2×2 */}
             <div className="grid grid-cols-2 gap-2">
               {[
-                { value: "200+", label: "Daily Happy Customer" },
+                { value: "700+", label: "Daily Happy Customer" },
                 { value: "100%", label: "Safety Rate" },
                 { value: "24/7", label: "Support" },
                 { value: "5.0⭐", label: "Average Rating" },
@@ -324,6 +384,7 @@ export default function Faq() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
+
 
           </aside>
         </div>

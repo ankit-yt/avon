@@ -1,20 +1,16 @@
 'use client'
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { HiOutlineArrowRight, HiOutlinePlay } from "react-icons/hi";
+import { HiOutlineArrowRight} from "react-icons/hi";
 
 import img1 from "@/assets/images/Blog/Blog-Images-1.webp";
 import img2 from "@/assets/images/Blog/Blog-Images-2.webp";
 import img3 from "@/assets/images/Blog/Blog-Images-3.webp";
 import img4 from "@/assets/images/Blog/Blog-Images-4.webp";
 import img5 from "@/assets/images/Blog/Blog-Images-5.webp";
-import img6 from "@/assets/images/Blog/Blog-Images-6.webp";
 import img7 from "@/assets/images/Blog/Blog-Images-7.webp";
-import img8 from "@/assets/images/Blog/Blog-Images-8.webp";
 import img9 from "@/assets/images/Blog/Blog-Images-9.webp";
 import img10 from "@/assets/images/Blog/Blog-Images-10.webp";
-import img11 from "@/assets/images/Blog/Blog-Images-11.webp";
-
 const VIDEO_SRC = "/videos/8-compressed.mp4";
 
 const getCurrentDate = () => {
@@ -74,15 +70,6 @@ const POSTS = [
     excerpt: "We have some resources that can help you with this.",
   },
   {
-    image: img6,
-    alt: "Restricted Items",
-    author: "Avon Express",
-    date,
-    title: "What items are not transported during shifting?",
-    excerpt:
-      "Items such as flammable substances, pets, gases, liquids, etc., will not be permitted to be loaded onto the transport vehicle.",
-  },
-  {
     image: img7,
     alt: "Services Availability",
     author: "Avon Express",
@@ -90,15 +77,6 @@ const POSTS = [
     title: "What would happen if you couldn't find an electrician, a plumber, or a carpenter?",
     excerpt:
       "We are not responsible for electrical, carpentry, or plumbing work. If required, and subject to staff availability, we will provide these services for an additional fee.",
-  },
-  {
-    image: img8,
-    alt: "Damage Policy",
-    author: "Avon Express",
-    date,
-    title: "What happens if the goods get damaged during insurance?",
-    excerpt:
-      "Avon Express Packers and Movers adopt all necessary safety measures to protect your belongings from any kind of damage. Nevertheless, in the event of any unforeseen accident, we ensure the prompt settlement of claims with the insurance company.",
   },
   {
   image: img10,
@@ -117,15 +95,6 @@ const POSTS = [
   title: "How does Avon Express handle moving services during rain?",
   excerpt:
     "To protect your belongings from rain, we keep a close watch on the weather and have closed-body container vehicles available to help keep your goods safe and secure.",
-},
-{
-  image: img11,
-  alt: "Animal Welfare",
-  author: "Avon Express",
-  date,
-  title: "How does Avon Express contribute to animal welfare?",
-  excerpt:
-    "Love everyone—Love World. We believe in giving back to the community and donate a portion of our earnings to support animal welfare.",
 },
 ];
 

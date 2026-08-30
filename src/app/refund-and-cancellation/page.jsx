@@ -56,14 +56,14 @@ export default function RefundAndCancellationPage() {
           <div className="flex items-start gap-3">
             <Clock size={20} className="text-yellow-500 mt-1 shrink-0" />
             <p>
-              2 Days Prior to Shifting: 30% Refund of the Booking Token/Advance Amount.
+              2 Days Prior to Shifting: 50% Refund of the Booking Token/Advance Amount.
             </p>
           </div>
 
           <div className="flex items-start gap-3">
             <Clock size={20} className="text-red-500 mt-1 shrink-0" />
             <p>
-              24 hours or less: No refund will be issued for the booking token (as we will have already booked the labor and vehicles specifically for you).
+              12 hours or less: No refund will be issued for the booking token (as we will have already booked the labor and vehicles specifically for you).
             </p>
           </div>
 

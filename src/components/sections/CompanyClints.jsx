@@ -41,6 +41,7 @@ import TamilnadMercantileBank from "@/assets/images/Clients/Tamilnad-Mercantile-
 import UnionBankOfIndia from "@/assets/images/Clients/Union-Bank-of-India.webp";
 import UnitedCommercialBank from "@/assets/images/Clients/United-Commercial-Bank.webp";
 import YesBankLimited from "@/assets/images/Clients/YES-Bank-Limited.webp";
+import Omaxe from "@/assets/images/Clients/Omaxe.webp";
 
 const clients = [
   { name: "Axis Bank", img: AxisBank },
@@ -85,6 +86,7 @@ const clients = [
   { name: "Union Bank of India", img: UnionBankOfIndia },
   { name: "United Commercial Bank", img: UnitedCommercialBank },
   { name: "YES Bank Limited", img: YesBankLimited },
+  { name: "Omaxe", img: Omaxe },
 ];
 
 export default function CompanyClints() {

@@ -31,46 +31,6 @@ function EmptyState() {
         We&apos;re building real-time GPS tracking for every shipment. It&apos;ll be ready soon.
       </p>
 
-      {/* Divider */}
-      <div className="flex items-center gap-3 my-8 w-full max-w-xs">
-        <div className="flex-1 h-px bg-slate-100" />
-        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300">
-          meanwhile
-        </span>
-        <div className="flex-1 h-px bg-slate-100" />
-      </div>
-
-      {/* Contact card */}
-      <div className="w-full max-w-sm bg-white border border-slate-200 rounded-2xl p-5 shadow-[0_2px_20px_rgba(15,23,42,0.06)] text-left">
-        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">
-          Get a live update
-        </p>
-        <a
-          href="tel:+919814556375"
-          className="flex items-center justify-between group"
-        >
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0">
-              <Phone size={15} className="text-orange-500" />
-            </div>
-            <div>
-              <p className="text-xs text-slate-400 font-medium">Call us directly</p>
-              <p className="text-sm font-black text-slate-900 tracking-tight">
-                +91 98145-56375
-              </p>
-            </div>
-          </div>
-          <ArrowRight
-            size={16}
-            className="text-slate-300 group-hover:text-orange-500 group-hover:translate-x-1 transition-all"
-          />
-        </a>
-      </div>
-
-      {/* Subtle note */}
-      <p className="text-[11px] text-slate-400 mt-6 max-w-xs leading-relaxed">
-        Our team can confirm pickup status, current location, and estimated delivery time.
-      </p>
     </div>
   );
 }

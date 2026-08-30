@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import awardPhoto from "@/assets/images/Home/Award.webp";
-import { HiOutlineLightBulb, HiOutlineShieldCheck, HiOutlineGlobe } from "react-icons/hi";
+import { HiOutlineLightBulb, HiOutlineShieldCheck, HiOutlineGlobe, HiOutlineOfficeBuilding, HiOutlinePhone, HiOutlineBadgeCheck, HiOutlineClock } from "react-icons/hi";
+import { HiOutlineBuildingOffice } from 'react-icons/hi2';
 
 const getPreviousYear = () => {
   return new Date().getFullYear() - 1;
@@ -63,27 +64,71 @@ function Award() {
           </div>
 
           {/* RIGHT: History Timeline (5 Columns) */}
-          <div className="lg:col-span-5 space-y-8">
+     <div className="lg:col-span-5 space-y-8">
 
-            {/* Milestone 1 */}
-            <div className="flex gap-5 group">
-              <div className="flex-shrink-0 w-11 h-11 bg-white border border-slate-200 shadow-sm rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-600 transition-all duration-300">
-                <HiOutlineLightBulb className="text-xl" />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[10px] font-black text-orange-600 tracking-[0.4em] uppercase">
-                  Best packers and movers india
-                </span>
-                <h4 className="text-lg font-extrabold text-slate-900 tracking-tighter leading-tight">
-                  WINNER {getPreviousYear()} TOP 3 PRIZE PACKERS AND MOVERS
-                </h4>
-                <p className="text-sm text-slate-500 leading-relaxed font-medium">
-                  It was a moment of pride for Avon Express Packers and Movers when they shared the stage as panelists at the 'Bharat Nirman' event held at 'Palace' in Ludhiana. The central theme of this discussion was transportation regulations, emphasizing how these rules can propel our nation to new heights of prosperity while simultaneously ensuring the safety of every citizen. They introduced modern packing techniques and specialized vehicle carriers to ensure 100% damage-free delivery.
-                </p>
-              </div>
-            </div>
+  {/* Milestone 1 */}
+  <div className="flex gap-5 group">
+    <div className="flex-shrink-0 w-11 h-11 bg-white border border-slate-200 shadow-sm rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-600 transition-all duration-300">
+      <HiOutlineLightBulb className="text-xl" />
+    </div>
+    <div className="space-y-2">
+      <span className="text-[10px] font-black text-orange-600 tracking-[0.4em] uppercase">
+        Best packers and movers india
+      </span>
+      <h4 className="text-lg font-extrabold text-slate-900 tracking-tighter leading-tight">
+        WINNER {getPreviousYear()} TOP 3 PRIZE PACKERS AND MOVERS
+      </h4>
+      <p className="text-sm text-slate-500 leading-relaxed font-medium">
+        It was a moment of pride for Avon Express Packers and Movers when they shared the stage as panelists at the 'Bharat Nirman' event held at 'Palace' in Ludhiana. The central theme of this discussion was transportation regulations, emphasizing how these rules can propel our nation to new heights of prosperity while simultaneously ensuring the safety of every citizen. They introduced modern packing techniques and specialized vehicle carriers to ensure 100% damage-free delivery.
+      </p>
+    </div>
+  </div>
 
-          </div>
+  {/* Trust Badges Grid (2x2 - No Box layout with individual colors & icons) */}
+  <div className="grid grid-cols-2 gap-4 pt-2">
+
+    {/* 1. IBA Registered - Royal Blue Theme */}
+    <div className="flex items-center gap-3 p-2 rounded-xl group/item cursor-pointer transition-all duration-300 hover:bg-blue-50/60">
+      <div className="p-2.5 rounded-xl bg-blue-100/70 text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all duration-300">
+        <HiOutlineBuildingOffice className="text-xl" />
+      </div>
+      <span className="text-xs font-black uppercase tracking-wider text-slate-700 group-hover/item:text-blue-600 transition-colors duration-300">
+        IBA Registered
+      </span>
+    </div>
+
+    {/* 2. 100% Trusted - Emerald Green Theme */}
+    <div className="flex items-center gap-3 p-2 rounded-xl group/item cursor-pointer transition-all duration-300 hover:bg-emerald-50/60">
+      <div className="p-2.5 rounded-xl bg-emerald-100/70 text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all duration-300">
+        <HiOutlineShieldCheck className="text-xl" />
+      </div>
+      <span className="text-xs font-black uppercase tracking-wider text-slate-700 group-hover/item:text-emerald-600 transition-colors duration-300">
+        100% Trusted
+      </span>
+    </div>
+
+    {/* 3. 24/7 Support - Amber/Orange Theme */}
+    <div className="flex items-center gap-3 p-2 rounded-xl group/item cursor-pointer transition-all duration-300 hover:bg-amber-50/60">
+      <div className="p-2.5 rounded-xl bg-amber-100/70 text-amber-600 group-hover/item:bg-amber-600 group-hover/item:text-white transition-all duration-300">
+        <HiOutlineClock className="text-xl" />
+      </div>
+      <span className="text-xs font-black uppercase tracking-wider text-slate-700 group-hover/item:text-amber-600 transition-colors duration-300">
+        24/7 Support
+      </span>
+    </div>
+
+    {/* 4. ISO Certified - Indigo/Purple Theme */}
+    <div className="flex items-center gap-3 p-2 rounded-xl group/item cursor-pointer transition-all duration-300 hover:bg-indigo-50/60">
+      <div className="p-2.5 rounded-xl bg-indigo-100/70 text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all duration-300">
+        <HiOutlineBadgeCheck className="text-xl" />
+      </div>
+      <span className="text-xs font-black uppercase tracking-wider text-slate-700 group-hover/item:text-indigo-600 transition-colors duration-300">
+        ISO Certified
+      </span>
+    </div>
+
+  </div>
+</div>
         </div>
       </div>
     </section>

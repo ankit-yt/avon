@@ -2,7 +2,7 @@ import React from "react";
 
 // 1. Define both lines of text
 const baseTexts = [
-  "India's Most Awarded Packers and Movers Now in PAN india Present",
+  "India's Most Awarded Avon Express Packers and Movers Now in PAN india Present",
   "Urgent Shifting, Immediate Shifting, Same-Day Shifting"
 ];
 

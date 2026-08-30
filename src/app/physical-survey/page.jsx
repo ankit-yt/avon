@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import Footer from "@/components/sections/Footer";
-import surveryImage from "@/assets/images/Home/survey.webp"
+import surveryImage from "@/assets/images/Home/Survey.webp"
 import Image from "next/image";
 // ── Constants ─────────────────────────────────────────────────────────────────
 
@@ -380,7 +380,7 @@ export default function PhysicalSurveyPage() {
             <div>
               <p className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-500 mb-3 flex items-center gap-2">
                 <span className="w-8 h-px bg-orange-500 inline-block" />
-                Free Survey
+                Physical Survey
                 <span className="w-8 h-px bg-orange-500 inline-block" />
               </p>
 
@@ -390,9 +390,7 @@ export default function PhysicalSurveyPage() {
               </h1>
 
               <p className="mt-3 text-slate-400 text-sm sm:text-base max-w-2xl leading-relaxed">
-                Get a free on-site survey by our expert team. We assess your
-                requirements and provide an accurate, no-obligation estimate for
-                your move.
+               Get a Physical Survey by our expert team. We assess your requirements and provide an accurate, no-obligation estimate for your move.
               </p>
             </div>
           </div>
@@ -400,37 +398,32 @@ export default function PhysicalSurveyPage() {
       </header>
 
       {/* Main */}
-      <main className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-14 py-12 md:py-16">
+     {/* Main */}
+ <main className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 py-12 md:py-16">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+   {/* Changed from lg:grid-cols-2 to lg:grid-cols-[3fr_2fr] */}
+   <div className="grid grid-cols-1 lg:grid-cols-[6fr_3fr] gap-6 items-start">
 
-          {/* LEFT — Benefits */}
-          <div className="flex flex-col gap-6">
+     {/* LEFT — Benefits */}
+     <div className="flex flex-col gap-6 w-full">
+       <div className="relative w-full rounded-3xl overflow-hidden border border-slate-200 shadow-[0_10px_40px_rgba(15,23,42,0.06)] h-[400px] md:h-[550px] lg:h-full min-h-[700px]">
+         <Image
+           src={surveryImage} 
+           alt="Packers and movers team loading a truck"
+           fill
+           className="object-cover"
+           priority
+         />
+       </div>
+     </div>
 
- <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-[0_10px_40px_rgba(15,23,42,0.06)] h-[400px] md:h-[550px] lg:h-full min-h-[700px]">
-              <Image
-                src={surveryImage} 
-                alt="Packers and movers team loading a truck"
-                fill
-                className="object-cover"
-                priority
-              />
-              {/* Overlay badge */}
-              <div className="absolute bottom-5 left-5 right-5">
-                <div className="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl px-4 py-2.5">
-                  <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse shrink-0" />
-                  <span className="text-xs font-bold text-white">
-                    Now accepting new partners across India
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT — Form */}
-          <SurveyForm />
-        </div>
-      </main>
+     {/* RIGHT — Form */}
+     <div className="w-full">
+       <SurveyForm />
+     </div>
+     
+   </div>
+ </main>
 
       <Footer />
     </div>

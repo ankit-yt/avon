@@ -117,7 +117,7 @@ function Media() {
                 <a
                   className="text-xs font-black text-orange-600 uppercase tracking-[0.2em] hover:underline"
                 >
-                  media@avonexpresspackersandmovers.co.in
+                  info@avonexpresspackersandmovers.co.in
                 </a>
               </div>
 
