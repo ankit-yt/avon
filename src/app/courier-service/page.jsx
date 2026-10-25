@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import Footer from "@/components/sections/Footer";
 
-// ── Data ──────────────────────────────────────────────────────────────────────
 
 const HIGHLIGHTS = [
   { icon: Clock, label: "Fast Delivery" },
