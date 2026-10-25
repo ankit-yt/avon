@@ -17,7 +17,7 @@ const items = [
 
 export default function AnnouncementBar() {
   return (
-    <div
+    <aside
       aria-label="Site announcements"
       className="bg-white text-black h-10 w-full overflow-hidden flex items-center border-b-[1px] border-[#1f293327]"
     >
@@ -39,6 +39,6 @@ export default function AnnouncementBar() {
         ))}
 
       </div>
-    </div>
+    </aside>
   );
 }

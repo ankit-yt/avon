@@ -77,9 +77,9 @@ function Media() {
                   </span>
                   <HiOutlineArrowRight className="text-slate-300 group-hover:text-orange-600 group-hover:translate-x-2 transition-all" />
                 </div>
-                <h5 className="text-lg font-extrabold text-slate-900 tracking-tighter mb-3 group-hover:text-orange-600 transition-colors">
+                <h4 className="text-lg font-extrabold text-slate-900 tracking-tighter mb-3 group-hover:text-orange-600 transition-colors">
                   {item.title}
-                </h5>
+                </h4>
                 <p className="text-sm text-slate-500 leading-relaxed font-medium">
                   {item.description}
                 </p>
@@ -106,9 +106,9 @@ function Media() {
               </div>
 
               <div className="p-6 bg-white border border-slate-200 rounded-[28px] shadow-sm mt-6">
-                <h6 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-900 mb-2">
+                <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-900 mb-2">
                   Media Inquiries
-                </h6>
+                </p>
 
                 <p className="text-xs text-slate-500 font-medium mb-4">
                   For interview, official statement, contact our team.

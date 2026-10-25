@@ -74,13 +74,6 @@ export default function StepsTabs({ steps }) {
           </button>
         ))}
       </div>
-      <style>{`
-        @keyframes tabProgress {
-          from { width: 100%; }
-          to   { width: 0%; }
-        }
-      `}</style>
-
       <div
         role="tabpanel"
         id={`panel-${current.id}`}
@@ -166,16 +159,13 @@ export default function StepsTabs({ steps }) {
       </div>
 
       
-      <div
-        role="tablist"
+      <nav
         aria-label="Step icons"
         className="grid grid-cols-7 gap-2 mb-4"
       >
         {steps.map((step, i) => (
           <button
             key={step.id}
-            role="tab"
-            aria-selected={i === active}
             onClick={() => goTo(i)}
             className={`flex min-h-14 flex-col items-center justify-center rounded-xl border px-1 py-2 text-center cursor-pointer transition-colors duration-150 outline-none
               focus-visible:ring-2 focus-visible:ring-orange-400
@@ -184,7 +174,7 @@ export default function StepsTabs({ steps }) {
                 : "border-slate-100 bg-slate-50 hover:border-slate-200 hover:bg-white"
               }`}
           >
-            <div
+            <span
               className={`flex shrink-0 items-center justify-center leading-none [&>svg]:block mb-0 sm:mb-1.5 mx-auto w-7 h-7 rounded-lg border transition-colors duration-150 ${
                 i === active
                   ? "bg-orange-500 border-orange-500 text-white"
@@ -192,17 +182,17 @@ export default function StepsTabs({ steps }) {
               }`}
             >
               {step.icon}
-            </div>
-            <p
+            </span>
+            <span
               className={`text-[9px] font-black uppercase tracking-[0.18em] leading-tight hidden sm:block transition-colors duration-150 ${
                 i === active ? "text-orange-500" : "text-slate-400"
               }`}
             >
               {step.shortTitle}
-            </p>
+            </span>
           </button>
         ))}
-      </div>
+      </nav>
     </>
   );
 }

@@ -125,9 +125,9 @@ export default function Footer() {
 </Link>
          
 
-          <p1 className=" text-neutral-200 leading-relaxed">
+          <p className="text-neutral-200 leading-relaxed">
             Avon Express Packers and Movers Company is The Highest Moving Supply in India - Avon Express Packers and Movers is a Famous Name Moving Company in India.
-          </p1>
+          </p>
 
         
           {/* Google Play */}
@@ -221,11 +221,11 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p1 className=" text-neutral-200 leading-relaxed">
+                <p className="text-neutral-200 leading-relaxed">
                 Avon House, 1st Floor, Plot No. 31,  Workshop Road, Transport Nagar, Industrial Area - A, Ludhiana, Punjab, India – 141003 <a href="https://g.page/r/CaHrilU1AntZEBM" className="text-xs ml-2 text-amber-400 hover:text-amber-300 mt-1 inline-block transition-colors">
                   View in Map
                 </a>
-                </p1>
+                </p>
                 
               </div>
             </div>

@@ -171,3 +171,47 @@ body {
 p , .text-xs{
   font-weight: 900;
 }
+
+@keyframes seamless-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-seamless-scroll {
+  width: max-content;
+  animation: seamless-scroll 80s linear infinite;
+}
+
+.animate-seamless-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes zen-sweep {
+  0% { transform: translateX(-100%); opacity: 0; }
+  10%, 85% { opacity: 1; }
+  100% { transform: translateX(200%); opacity: 0; }
+}
+
+@keyframes zen-pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.45; }
+}
+
+.zen-beam,
+.zen-dot {
+  animation: zen-sweep var(--zen-speed, 2.8s) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.zen-beam2,
+.zen-dot2 {
+  animation: zen-sweep var(--zen-speed, 2.8s) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.zen-beam2 { opacity: 0.6; }
+.zen-dot2 { animation-delay: 0.4s; }
+.zen-base { animation: zen-pulse 3s ease-in-out infinite; }
+
+@keyframes tabProgress {
+  from { width: 100%; }
+  to { width: 0%; }
+}

@@ -249,14 +249,14 @@ const [showInfoBar, setShowInfoBar] = useState(false);
                         className="w-full flex items-center gap-3 px-4 py-3 hover:bg-orange-50 transition-colors group text-left"
                       >
                         <HiOutlineLocationMarker className="text-orange-400 text-sm shrink-0 group-hover:text-orange-500" />
-                        <div className="flex flex-col min-w-0">
+                        <span className="flex flex-col min-w-0">
                           <span className="text-sm font-bold text-slate-800 group-hover:text-orange-600 transition-colors truncate">
                             {formatName(citySlug)}
                           </span>
                           <span className="text-[10px] text-slate-400 font-medium">
                             Packers &amp; Movers
                           </span>
-                        </div>
+                        </span>
                         <span className="ml-auto text-orange-400 font-black opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200">
                           →
                         </span>
@@ -348,15 +348,15 @@ const [showInfoBar, setShowInfoBar] = useState(false);
     onClick={() => setShowInfoBar(!showInfoBar)}
     className="w-full flex items-center justify-between px-5 py-3.5 bg-slate-900 border-b border-slate-700/60 group"
   >
-    <div className="flex items-center gap-2.5">
-      <div className="w-5 h-5 rounded-full bg-orange-500/15 flex items-center justify-center shrink-0">
+    <span className="flex items-center gap-2.5">
+      <span className="w-5 h-5 rounded-full bg-orange-500/15 flex items-center justify-center shrink-0">
         <span className="text-orange-400 text-[10px]">✦</span>
-      </div>
+      </span>
       <span className="text-[11px] font-black uppercase tracking-[0.12em] text-orange-400">
         Certifications &amp; Registrations
       </span>
-    </div>
-    <div
+    </span>
+    <span
       className={`w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center transition-all duration-300 ${
         showInfoBar ? "bg-orange-500 border-orange-500 rotate-180" : "group-hover:border-slate-400"
       }`}
@@ -376,7 +376,7 @@ const [showInfoBar, setShowInfoBar] = useState(false);
           strokeLinejoin="round"
         />
       </svg>
-    </div>
+    </span>
   </button>
 
   <div
@@ -433,7 +433,7 @@ const [showInfoBar, setShowInfoBar] = useState(false);
         className="flex items-start gap-3 bg-green-500/5 rounded-xl px-3.5 py-3 border border-green-500/20 hover:bg-green-500/10 transition-colors"
       >
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5">
-          <path d="M2 2h10v10H2z" stroke="#22c55e" strokeWidth="1.2" rx="1" />
+          <rect x="2" y="2" width="10" height="10" rx="1" stroke="#22c55e" strokeWidth="1.2" />
           <path d="M5 5h4M5 7h2" stroke="#22c55e" strokeWidth="1.2" strokeLinecap="round" />
           <path d="M8 9.5L10 11.5M10 9.5L8 11.5" stroke="#22c55e" strokeWidth="1.2" strokeLinecap="round" />
         </svg>
@@ -543,11 +543,11 @@ const [showInfoBar, setShowInfoBar] = useState(false);
               className="lg:hidden p-2.5 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors"
               aria-label="Toggle menu"
             >
-              <div className="flex flex-col gap-1.5 w-5">
-                <div className={`h-0.5 bg-slate-900 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-                <div className={`h-0.5 bg-slate-900 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-                <div className={`h-0.5 bg-slate-900 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-              </div>
+              <span className="flex flex-col gap-1.5 w-5">
+                <span className={`h-0.5 bg-slate-900 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                <span className={`h-0.5 bg-slate-900 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+                <span className={`h-0.5 bg-slate-900 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              </span>
             </button>
           </div>
         </div>

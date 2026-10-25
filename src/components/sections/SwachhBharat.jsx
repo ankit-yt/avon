@@ -120,9 +120,9 @@ export default function SwachhBharat() {
                   >
                     {sec.icon}
                   </div>
-                  <h4 className="text-sm font-bold text-slate-800 leading-tight">
+                  <h3 className="text-sm font-bold text-slate-800 leading-tight">
                     {sec.title}
-                  </h4>
+                  </h3>
                 </div>
 
                 {/* Items */}

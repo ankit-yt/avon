@@ -249,7 +249,7 @@ export default function Faq() {
                     {faq.category}
                   </span>
                   {/* Toggle icon */}
-                  <div className="flex-shrink-0 ml-1 w-5 h-5 rounded-full border border-slate-200 group-open:border-orange-400 group-open:bg-orange-500 flex items-center justify-center transition-all duration-200 mt-[1px]">
+                  <span className="flex-shrink-0 ml-1 w-5 h-5 rounded-full border border-slate-200 group-open:border-orange-400 group-open:bg-orange-500 flex items-center justify-center transition-all duration-200 mt-[1px]">
                     <svg
                       className="w-2 h-2 text-slate-400 group-open:text-white group-open:rotate-45 transition-transform duration-200"
                       fill="none"
@@ -260,7 +260,7 @@ export default function Faq() {
                       <line x1="5" y1="1" x2="5" y2="9" />
                       <line x1="1" y1="5" x2="9" y2="5" />
                     </svg>
-                  </div>
+                  </span>
                 </summary>
                 {/* Answer */}
                 <div className="pl-9 pr-8 pb-4 pt-0.5">

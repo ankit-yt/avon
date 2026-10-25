@@ -16,24 +16,6 @@ function Hero() {
   return (
     <div id="hero" className="tp-banner-container h-[80vh] sliderWraper flex flex-col relative overflow-hidden">
       
-      {/* Seamless Marquee CSS injected directly for ease of use */}
-      <style>
-        {`
-          @keyframes seamless-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-seamless-scroll {
-            animation: seamless-scroll 80s linear infinite;
-            width: max-content;
-          }
-          /* Optional: Pause the marquee when the user hovers over it */
-          .animate-seamless-scroll:hover {
-            animation-play-state: paused;
-          }
-        `}
-      </style>
-
       {/* ===== MAIN AREA ===== */}
       <div className="main_body h-5/6 relative">
         <div className="country-wrap h-full relative">

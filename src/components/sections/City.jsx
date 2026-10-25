@@ -136,9 +136,9 @@ export default function City() {
 
               {/* City Info */}
               <div className="absolute bg-black/60 bottom-0 left-0 right-0 p-4">
-                <h3 className="text-sm font-black tracking-tighter text-white leading-tight">
+                <p className="text-sm font-black tracking-tighter text-white leading-tight">
                   {city.name}
-                </h3>
+                </p>
               </div>
 
               {/* Bottom border accent on hover */}
