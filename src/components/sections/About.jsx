@@ -55,14 +55,14 @@ function About() {
           <div className="lg:col-span-7 flex flex-col justify-center lg:pl-10">
 
             {/* Eyebrow — matches reference label style exactly */}
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-8 flex items-center gap-2">
+            <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-8 flex items-center gap-2">
               <span className="w-10 h-px bg-orange-600" />
               Established Since 2014
               <span className="w-10 h-px bg-orange-600" />
             </h2>
 
             {/* Main Heading — matches reference h3 style */}
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-10">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-10">
               OUR JOURNEY 
               <span className="text-orange-500"> &&nbsp; HISTORY</span>
             </h3>

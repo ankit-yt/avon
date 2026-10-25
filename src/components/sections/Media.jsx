@@ -48,17 +48,17 @@ function Media() {
 
           {/* Button */}
           <div className="order-2 md:order-1">
-            <button className="group flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.4em] text-slate-900 border-b-2 border-slate-900 pb-2 transition-all hover:text-orange-600 hover:border-orange-600">
+            <button className="group flex items-center gap-3 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-900 border-b-2 border-slate-900 pb-2 transition-all hover:text-orange-600 hover:border-orange-600">
               View All Updates <HiOutlineExternalLink className="text-base" />
             </button>
           </div>
 
           {/* Headline */}
           <div className="max-w-3xl text-left md:text-right order-1 md:order-2">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-start md:justify-end gap-2">
+            <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-start md:justify-end gap-2">
               Newsroom <span className="w-10 h-px bg-orange-600" />
             </h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
               PRESS
               <span className="text-orange-500"> AND MEDIA.</span>
             </h3>
@@ -72,7 +72,7 @@ function Media() {
             {NEWS_ITEMS.map((item, index) => (
               <div key={index} className="group cursor-pointer border-b border-slate-200 pb-6 last:border-0">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">
+                  <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-400">
                     {item.date} — {item.category}
                   </span>
                   <HiOutlineArrowRight className="text-slate-300 group-hover:text-orange-600 group-hover:translate-x-2 transition-all" />
@@ -106,7 +106,7 @@ function Media() {
               </div>
 
               <div className="p-6 bg-white border border-slate-200 rounded-[28px] shadow-sm mt-6">
-                <h6 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-900 mb-2">
+                <h6 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-900 mb-2">
                   Media Inquiries
                 </h6>
 
@@ -115,7 +115,8 @@ function Media() {
                 </p>
 
                 <a
-                  className="text-xs font-black text-orange-600 uppercase tracking-[0.2em] hover:underline"
+                  href="mailto:info@avonexpresspackersandmovers.co.in"
+                  className="block break-all text-[11px] font-black text-orange-600 hover:underline"
                 >
                   info@avonexpresspackersandmovers.co.in
                 </a>

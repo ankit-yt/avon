@@ -14,9 +14,7 @@ import DevelopmentCreditBank from "@/assets/images/Clients/Development-Credit-Ba
 import DhanlaxmiBank from "@/assets/images/Clients/Dhanlaxmi-Bank.webp";
 import Doctor from "@/assets/images/Clients/Doctor.webp";
 import FederalBank from "@/assets/images/Clients/Federal-Bank.webp";
-import GoodsAndServicesTax from "@/assets/images/Clients/Goods-and-Services-Tax.webp";
 import HousingDevelopmentFinanceCorporationBank from "@/assets/images/Clients/Housing-Development-Finance-Corporation-Bank.webp";
-import IncomeTax from "@/assets/images/Clients/Income-Tax.webp";
 import IndianAirForce from "@/assets/images/Clients/Indian-Air-Force.webp";
 import IndianArmy from "@/assets/images/Clients/Indian-Army.webp";
 import IndianBank from "@/assets/images/Clients/Indian-Bank.webp";
@@ -41,7 +39,6 @@ import TamilnadMercantileBank from "@/assets/images/Clients/Tamilnad-Mercantile-
 import UnionBankOfIndia from "@/assets/images/Clients/Union-Bank-of-India.webp";
 import UnitedCommercialBank from "@/assets/images/Clients/United-Commercial-Bank.webp";
 import YesBankLimited from "@/assets/images/Clients/YES-Bank-Limited.webp";
-import Omaxe from "@/assets/images/Clients/Omaxe.webp";
 
 const clients = [
   { name: "Axis Bank", img: AxisBank },
@@ -59,9 +56,9 @@ const clients = [
   { name: "Dhanlaxmi Bank", img: DhanlaxmiBank },
   { name: "Doctor", img: Doctor },
   { name: "Federal Bank", img: FederalBank },
-  { name: "Goods and Services Tax", img: GoodsAndServicesTax },
+  // { name: "Goods and Services Tax", img: GoodsAndServicesTax },
   { name: "Housing Development Finance Corporation Bank", img: HousingDevelopmentFinanceCorporationBank },
-  { name: "Income Tax", img: IncomeTax },
+  // { name: "Income Tax", img: IncomeTax },
   { name: "Indian Air Force", img: IndianAirForce },
   { name: "Indian Army", img: IndianArmy },
   { name: "Indian Bank", img: IndianBank },
@@ -86,7 +83,7 @@ const clients = [
   { name: "Union Bank of India", img: UnionBankOfIndia },
   { name: "United Commercial Bank", img: UnitedCommercialBank },
   { name: "YES Bank Limited", img: YesBankLimited },
-  { name: "Omaxe", img: Omaxe },
+  // { name: "Omaxe", img: Omaxe },
 ];
 
 export default function CompanyClints() {
@@ -105,10 +102,20 @@ export default function CompanyClints() {
 
         </div>
 
-        <div className="marquee-track bg-white flex-1 flex items-center py-3">
+      </div>
+
+      <div className="w-full overflow-hidden bg-white">
+        <div
+          className="clients-marquee-track flex items-center py-3"
+          style={{
+            width: "max-content",
+            willChange: "transform",
+            animation: "clients-marquee-scroll 60s linear infinite",
+          }}
+        >
           {doubled.map((client, i) => (
             <div
-              key={i}
+              key={`${client.name}-${i}`}
               className="shrink-0 flex overflow-hidden items-center justify-center px-2 group"
             >
               <div className="flex items-center justify-center h-20 w-20 md:h-35 md:w-35 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
@@ -117,7 +124,6 @@ export default function CompanyClints() {
                   height={100}
                   src={client.img}
                   alt={client.name}
-                 
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="h-full w-full object-contain"
                 />
@@ -125,7 +131,6 @@ export default function CompanyClints() {
             </div>
           ))}
         </div>
-
       </div>
 
     </section>

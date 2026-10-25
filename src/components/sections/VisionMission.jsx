@@ -46,16 +46,16 @@ function VisionMission() {
         <div className="grid lg:grid-cols-2 min-h-[600px] gap-6 items-stretch">
 
           {/* LEFT — Content */}
-          <div className="flex flex-col justify-center py-16 space-y-10">
+          <div className="order-2 lg:order-1 flex flex-col justify-center py-16 space-y-10">
 
             {/* HEADER */}
             <div>
-              <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
+              <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
                 <span className="w-10 h-px bg-orange-600" />
                 Our Purpose
                 <span className="w-10 h-px bg-orange-600" />
               </h2>
-              <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
                 VISION &amp; <span className="text-orange-500">MISSION.</span>
               </h3>
             </div>
@@ -99,7 +99,7 @@ function VisionMission() {
           </div>
 
           {/* RIGHT — Image panel */}
-          <div className="relative rounded-[28px] overflow-hidden h-full min-h-[400px] shadow-2xl">
+          <div className="order-1 lg:order-2 relative rounded-[28px] overflow-hidden h-full min-h-[400px] shadow-2xl">
             <Image
               src={visionPhoto}
               alt="Vision and Mission"

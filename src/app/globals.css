@@ -99,6 +99,22 @@ body {
           100% { transform: translateX(-50%); }
         }
 
+/* Client logos are rendered twice, so moving exactly one set creates a seamless loop. */
+.clients-marquee-track {
+  width: max-content;
+  will-change: transform;
+  animation: clients-marquee-scroll 60s linear infinite;
+}
+
+.clients-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes clients-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
         .marquee-item {
           font-family: 'Bebas Neue', sans-serif;
           letter-spacing: 0.07em;

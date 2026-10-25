@@ -172,7 +172,7 @@ export default async function SearchPage({ params }) {
                             IBA Approved Packers and Movers in {displayName}
                           </p>
                           <p className="text-[11px] text-slate-400 font-medium mt-0.5">
-                            Avon Express • Government Certified &amp; Insured
+                            Avon Express • Government Certified &amp; IBA Certified
                           </p>
                         </div>
                       </div>

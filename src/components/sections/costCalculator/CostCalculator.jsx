@@ -79,13 +79,30 @@ export default function Enquiry() {
 
         <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
 
+          {/* Video first on mobile so it introduces the enquiry section. */}
+          <aside
+            aria-hidden="true"
+            className="lg:hidden relative aspect-video p-3 bg-slate-900 rounded-[28px] overflow-hidden shadow-2xl mb-8"
+          >
+            <video
+              src="/videos/10-compressed.mp4"
+              autoPlay
+              loop
+              controls
+              muted
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-contain"
+            />
+          </aside>
+
           <header className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+            <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
               <span className="w-8  bg-orange-600" />
               <span className="w-10 h-px bg-orange-600" /> Get instant Enquiry <span className="w-10 h-px bg-orange-600" />
               <span className="w-8  bg-orange-600" />
             </h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
               ESTIMATED <span className="text-orange-500">&nbsp;COST</span>
             </h3>
 
@@ -102,7 +119,7 @@ export default function Enquiry() {
             {/* video panel */}
             <aside
               aria-hidden="true"
-              className="lg:col-span-7 relative p-3 bg-slate-900 rounded-[28px] overflow-hidden min-h-70 lg:min-h-0 shadow-2xl"
+              className="hidden lg:block lg:col-span-7 relative p-3 bg-slate-900 rounded-[28px] overflow-hidden min-h-70 lg:min-h-0 shadow-2xl"
             >
             <video
   src="/videos/10-compressed.mp4"

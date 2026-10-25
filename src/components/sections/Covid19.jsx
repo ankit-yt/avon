@@ -43,12 +43,12 @@ function Covid19() {
         {/* ── Section Header ── */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div className="max-w-4xl">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
+            <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
               <span className="w-10 h-px bg-orange-600" />
               Health and Safety Protocols
               <span className="w-10 h-px bg-orange-600" />
             </h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
               COVID-19 <span className="text-orange-500">PRECAUTIONS.</span>
             </h3>
           </div>
@@ -93,7 +93,7 @@ function Covid19() {
             {/* Bottom tag */}
             <div className="mt-4 px-5 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse flex-shrink-0" />
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-700">
+              <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-700">
                 AVON EXPRESS PACKERS AND MOVERS
               </p>
             </div>

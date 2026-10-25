@@ -7,6 +7,30 @@ import RouteDetailContent from "@/components/transport/RouteDetailContent";
 import CityHubContent from "@/components/transport/CityHubContent";
 import { transport } from "@/lib/transportData";
 import CityHero from "@/components/CityHero";
+import MainPhoto from "@/components/sections/MainPhoto";
+import About from "@/components/sections/About";
+import VisionMission from "@/components/sections/VisionMission";
+import Why from "@/components/sections/Why";
+import SwachhBharat from "@/components/sections/SwachhBharat";
+import Award from "@/components/sections/Award";
+import Media from "@/components/sections/Media";
+import Versus from "@/components/sections/Versus";
+import City from "@/components/sections/City";
+import HowItWorks from "@/components/sections/How it work/HowItWorks";
+import Service from "@/components/sections/Service";
+import OurFacilities from "@/components/sections/OurFacilities";
+import Gallery from "@/components/sections/Gallery";
+import Videos from "@/components/sections/Videos/Video";
+import Covid19 from "@/components/sections/Covid19";
+import Blog from "@/components/sections/Blog";
+import Faq from "@/components/sections/Faq";
+import Charges from "@/components/sections/Charges";
+import CostCalculator from "@/components/sections/costCalculator/CostCalculator";
+import FeedBack from "@/components/sections/FeedBack";
+import Enquiry from "@/components/sections/enquiry/Enquiry";
+import Map from "@/components/sections/Map";
+import CompanyClints from "@/components/sections/CompanyClints";
+import Social from "@/components/sections/Social";
 
 // ─────────────────────────────────────────────
 // HELPERS
@@ -34,6 +58,36 @@ function parseTransportSlug(slug) {
   return null;
 }
 
+function SharedHomeSections() {
+  return (
+    <>
+      <About />
+      <VisionMission />
+      <Why />
+      <SwachhBharat />
+      <Award />
+      <Media />
+      <Versus />
+      <City />
+      <HowItWorks />
+      <Service />
+      <OurFacilities />
+      <Gallery />
+      <Videos />
+      <Covid19 />
+      <Blog />
+      <Faq />
+      <Charges />
+      <CostCalculator />
+      <FeedBack />
+      <Enquiry />
+      <Map />
+      <CompanyClints />
+      <Social />
+    </>
+  );
+}
+
 // ─────────────────────────────────────────────
 // STATIC PARAMS
 // ─────────────────────────────────────────────
@@ -59,7 +113,7 @@ export async function generateMetadata({ params }) {
     const url = `https://www.avonexpresspackersandmovers.co.in/transport/${parsed.city}`;
 
     return {
-      title: `Transport Services from ${cityName} | Avon Express Packers and Movers | Official Website`,
+      title: `Transport Services in ${cityName} | Transport Company in ${cityName}`,
       description: `Explore all transport routes from ${cityName}. Safe, reliable and affordable goods transport, car transport, bike transport and household shifting across India by Avon Express.`,
       keywords: [
         `Transport from ${cityName}`,
@@ -103,7 +157,7 @@ export async function generateMetadata({ params }) {
   const url = `https://www.avonexpresspackersandmovers.co.in/transport/${parsed.slug}`;
 
   return {
-    title: `Transport from ${fromName} to ${toName} | Avon Express Packers and Movers | Official Website`,
+    title: `Transport Services From ${fromName} To ${toName}`,
     description: `Book reliable transport services from ${fromName} to ${toName}. Best rates, safe delivery, door-to-door household shifting, car and bike transport by Avon Express Packers and Movers.`,
     keywords: [
       `Transport from ${fromName} to ${toName}`,
@@ -338,8 +392,10 @@ export default async function TransportPage({ params }) {
       <>
         <SchemaMarkup parsed={parsed} />
         <Hero />
-        <CityHero city={parsed.city} service="Packers and Movers" />
+        <MainPhoto />
+        <CityHero city={parsed.city} service="Transport" autoScroll />
         <CityHubContent city={parsed.city} />
+        <SharedHomeSections />
         <Footer />
       </>
     );
@@ -349,8 +405,10 @@ export default async function TransportPage({ params }) {
     <>
       <SchemaMarkup parsed={parsed} />
       <Hero />
-      <CityHero city={parsed.from} to={parsed.to} service="Transport" />
+      <MainPhoto />
+      <CityHero city={parsed.from} to={parsed.to} service="Transport" autoScroll />
       <RouteDetailContent from={parsed.from} to={parsed.to} />
+      <SharedHomeSections />
       <Footer />
     </>
   );

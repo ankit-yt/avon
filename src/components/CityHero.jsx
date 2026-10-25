@@ -2,8 +2,9 @@
 
 import { CheckCircle, Package, Truck } from "lucide-react";
 import Link from "next/link";
+import ScrollToStoredSection from "@/components/ScrollToStoredSection";
 
-export default function CityHero({ city, service, to }) {
+export default function CityHero({ city, service, to, autoScroll = false }) {
   if (!city) return null;
 
   const formattedCity = city.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
@@ -13,7 +14,8 @@ export default function CityHero({ city, service, to }) {
   const isTransport = service === "Transport";
 
   return (
-    <div className="font-sans">
+    <div id="service-hero" className="font-sans scroll-mt-20">
+      <ScrollToStoredSection targetId="service-hero" alwaysScroll={autoScroll} />
       <div className="h-1 w-full bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600" />
 
       <header className="relative bg-slate-900 overflow-hidden">
@@ -34,7 +36,7 @@ export default function CityHero({ city, service, to }) {
                 <>
                   <li>
                     <Link href={`/transport/${city}`} className="hover:text-orange-400 transition-colors">
-                      Transport from {formattedCity}
+                      {to ? formattedCity : `Transport Company in ${formattedCity}`}
                     </Link>
                   </li>
                   {to && (
@@ -78,7 +80,7 @@ export default function CityHero({ city, service, to }) {
             <div>
               <p className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-500 mb-3 flex items-center gap-2">
                 <span className="w-8 h-px bg-orange-500 inline-block" />
-                {isIBA ? "Government Certified" : isTransport ? "Transport Route" : "Relocation Services"}
+                {isIBA ? "Government Certified" : isTransport ? "Transport Service" : "Relocation Services"}
                 <span className="w-8 h-px bg-orange-500 inline-block" />
               </p>
 
@@ -89,7 +91,7 @@ export default function CityHero({ city, service, to }) {
                   </>
                 ) : isTransport ? (
                   <>
-                    Transport from <span className="text-orange-400">{formattedCity}</span>
+                    Transport Service in <span className="text-orange-400">{formattedCity}</span>
                   </>
                 ) : (
                   <>
@@ -104,7 +106,7 @@ export default function CityHero({ city, service, to }) {
                 {isTransport && to
                   ? `Safe, affordable and reliable goods transport from ${formattedCity} to ${formattedTo}. GPS-tracked vehicles, zero hidden charges.`
                   : isTransport
-                    ? `Explore all transport routes from ${formattedCity}. Safe, reliable and affordable goods transport across India.`
+                    ? `Safe & Fast Transport Services in ${formattedCity}. Transparent pricing with zero hidden costs.`
                     : isIBA
                       ? `IBA-certified and government-approved relocation services in ${formattedCity}. Trusted by bank & government employees.`
                       : `Fast, safe & affordable packers and movers in ${formattedCity}. Transparent pricing with zero hidden costs.`}

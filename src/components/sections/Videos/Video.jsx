@@ -29,7 +29,7 @@ function LandscapeCard({ video }) {
         relative overflow-hidden rounded-[20px]
         bg-slate-900 border border-slate-200
         ${isPortrait
-          ? "col-span-1 h-full"
+          ? "col-span-1 aspect-[9/16] sm:h-full sm:aspect-auto"
           : "col-span-2 aspect-video"
         }
         shadow-2xl
@@ -81,19 +81,19 @@ export default function Videos() {
           <div>
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="h-px w-10 bg-orange-600" />
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600">
+              <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600">
                 Digital Content
               </span>
               <span className="h-px w-10 bg-orange-600" />
             </div>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
               FEATURED <span className="text-orange-500">MEDIA.</span>
             </h3>
           </div>
         </div>
 
         {/* ── Landscape videos: 2-col row ── */}
-        <div className="grid grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-6">
           {LANDSCAPE_VIDEOS.map((v) => (
             <LandscapeCard key={v.id} video={v} />
           ))}

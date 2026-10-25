@@ -336,6 +336,7 @@ const [showInfoBar, setShowInfoBar] = useState(false);
 
     {/* Trademark */}
     <div className="flex items-center gap-2 whitespace-nowrap border-slate-700 md:border-l pl-4 xl:pl-8 text-emerald-400">
+      <HiOutlineBadgeCheck className="text-sm text-emerald-400" />
       <span>Trademark Registered • 4481215</span>
     </div>
 
@@ -640,7 +641,7 @@ const [showInfoBar, setShowInfoBar] = useState(false);
             <span className="text-slate-500 uppercase text-[10px] font-bold tracking-widest block mb-1">
               Office
             </span>
-            <p className="text-white text-sm font-medium">Chandigarh , India</p>
+            <p className="text-white text-sm font-medium">Ludhiana, India</p>
           </div>
           <div className="text-right">
             <span className="text-slate-500 uppercase text-[10px] font-bold tracking-widest block mb-1">

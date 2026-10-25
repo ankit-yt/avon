@@ -59,12 +59,12 @@ export default function Gallery() {
         {/* --- Header --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 border-b border-slate-200 pb-6">
           <div className="max-w-2xl">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
+            <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
               <span className="w-10 h-px bg-orange-600" />
               Visual Photo
               <span className="w-10 h-px bg-orange-600" />
             </h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
               OUR <span className="text-orange-500">GALLERY.</span>
             </h3>
           </div>

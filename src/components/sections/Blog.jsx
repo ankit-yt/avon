@@ -127,7 +127,7 @@ function BlogCard({ post }) {
         <p className="text-xs text-slate-500 leading-relaxed font-medium flex-1">
           {post.excerpt}
         </p>
-        <button className="group/btn self-start flex items-center gap-2 text-orange-600 text-[10px] font-black uppercase tracking-[0.4em] pt-1 hover:gap-3 transition-all duration-300">
+        <button className="group/btn self-start flex items-center gap-2 text-orange-600 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] pt-1 hover:gap-3 transition-all duration-300">
           Read More
           <HiOutlineArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-1" />
         </button>
@@ -159,12 +159,12 @@ function Blog() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div className="max-w-2xl">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
+            <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center gap-2">
               <span className="w-10 h-px bg-orange-600" />
               Resources
               <span className="w-10 h-px bg-orange-600" />
             </h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
               Latest
               <span className="text-orange-500"> Blog</span>
             </h3>

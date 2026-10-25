@@ -58,20 +58,19 @@ import { from_to } from "@/lib/transportData";
         <section>
           <div className="bg-white border border-slate-200 rounded-[28px] p-8 shadow-sm space-y-4">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-3 flex items-center gap-2">
-              <span className="w-6 h-px bg-orange-600" /> Transport Services from {formattedCity}
+              <span className="w-6 h-px bg-orange-600" /> Transport Services in {formattedCity} | Transport Company in {formattedCity}
             </h4>
             <p className="text-xl font-extrabold text-slate-900 tracking-tight mb-4">
-              Reliable Goods Transport from{" "}
+              Reliable Goods Transport Services in{" "}
               <span className="text-orange-500">{formattedCity}</span>
             </p>
-            <p className="text-sm text-slate-500 font-medium leading-relaxed">
-              Avon Express Packers and Movers offers comprehensive transport services from {formattedCity} to all major cities across India.
-              Whether you need to move household goods, office equipment, or commercial cargo — our fleet of GPS-tracked vehicles ensures
-              safe and timely delivery. We own our vehicles and employ our own trained drivers, maintaining complete transparency and
-              accountability throughout the journey. Our team handles everything from pickup at your door to final delivery at the destination,
-              making your transport experience completely hassle-free. With same-day booking available and 24/7 customer support, we are
-              your most trusted transport partner from {formattedCity}.
-            </p>
+            <div className="text-sm text-slate-500 font-medium leading-relaxed space-y-5">
+              <p>Avon Express Transport Company provides 24/7 full-load and part-load transport services from {formattedCity} to destinations across India. Whether you need to transport household goods, vehicles (cars, bikes, scooters), office equipment, or commercial cargo, our fleet of GPS-enabled closed and open vehicles ensures safe and timely delivery. We operate our own vehicles and employ trained drivers, maintaining complete transparency and accountability throughout the journey. Our team manages the entire process—from pickup to final delivery—to ensure a hassle-free experience for you. With same-day booking options and 24/7 customer support, we are your most trusted transport partner in {formattedCity}.</p>
+              <p>Avon Express Transport Company provides transport services across India and is known for its reliable planning, precise timelines, and complete accountability. The company was founded with a clear promise: to deliver every shipment safely and on time. We understand that our clients&apos; reputations and responsibilities are tied to every shipment; therefore, we handle your goods with the utmost care and respect. Our central hub monitors shipments 24/7, allowing us to prevent delays or other issues before they even occur.</p>
+              <div><h5 className="font-extrabold text-slate-900">Full-Truck Load Services in {formattedCity}</h5><p>Book an entire truck for large shipments. This option ensures faster delivery, as the truck does not make stops between your warehouse and the final destination. Your goods remain secure throughout the journey.</p></div>
+              <div><h5 className="font-extrabold text-slate-900">Part/Sharing Load Services in {formattedCity}</h5><p>You only pay for the space you use. We combine smaller shipments with others headed to the same destination, reducing costs while fully maintaining strict safety standards.</p></div>
+              <div><h5 className="font-extrabold text-slate-900">India&apos;s 1st Online Trucks Booking Platform in {formattedCity}</h5><p>Looking for reliable online truck booking in {formattedCity}? Avon Express offers truck rental services for different sizes, weights, and types of goods. Our GPS-equipped fleet includes mini-trucks, Tata Ace, Mahindra Bolero Pickups, Bada Dost, Tata 407 containers from 14ft to 32ft, and 40ft and 50ft trailers in closed-body and open-body options.</p></div>
+            </div>
           </div>
         </section>
 
@@ -86,17 +85,13 @@ import { from_to } from "@/lib/transportData";
               a: `Transport costs from ${formattedCity} depend on the destination, volume of goods, and type of service. Contact our team for a free quote.`,
             },
             {
-              q: `How long does delivery from ${formattedCity} take?`,
-              a: `Delivery timelines vary by destination. Local routes are typically 1-2 days while long-distance routes take 3-7 days. We provide tracking so you always know where your goods are.`,
-            },
-            {
               q: `Is door-to-door transport available from ${formattedCity}?`,
               a: `Yes, we offer complete door-to-door transport services from ${formattedCity}. Our team picks up from your location and delivers directly to your destination address.`,
             },
           ].map(({ q, a }, i) => (
             <div key={i} className="bg-white border border-slate-200 rounded-[20px] p-6 shadow-sm">
-              <p className="text-sm font-extrabold text-slate-900 tracking-tight mb-2">Q: {q}</p>
-              <p className="text-sm font-medium text-slate-500 leading-relaxed">A: {a}</p>
+              <p className="text-sm font-extrabold text-slate-900 tracking-tight mb-2">Question: {q}</p>
+              <p className="text-sm font-medium text-slate-500 leading-relaxed">Answer: {a}</p>
             </div>
           ))}
         </section>

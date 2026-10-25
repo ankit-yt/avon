@@ -1,4 +1,5 @@
-import Link from "next/link";
+import SectionLink from "@/components/SectionLink";
+import ScrollToStoredSection from "@/components/ScrollToStoredSection";
 
 function formatStateName(state) {
   return state
@@ -32,7 +33,8 @@ export default function StateContent({ state }) {
   const stateName = formatStateName(state);
 
   return (
-    <section className="relative bg-[#FAFAF8] overflow-hidden py-6 md:py-10">
+    <section id="state-services" className="relative scroll-mt-20 bg-[#FAFAF8] overflow-hidden py-6 md:py-10">
+      <ScrollToStoredSection targetId="state-services" />
 
       {/* Warm blob */}
       <div
@@ -58,9 +60,10 @@ export default function StateContent({ state }) {
         {/* Two cards */}
         <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {CARDS.map(({ prefix, label, eyebrow, desc, icon, badge }) => (
-            <Link
+            <SectionLink
               key={prefix}
               href={`/${prefix}-${state}`}
+              targetId="service-hero"
               className="group relative bg-white border border-slate-200 rounded-[28px] p-8 shadow-sm hover:shadow-xl hover:border-orange-300 transition-all duration-300 overflow-hidden flex flex-col gap-5"
             >
               {/* Hover blob */}
@@ -95,7 +98,7 @@ export default function StateContent({ state }) {
                   →
                 </span>
               </div>
-            </Link>
+            </SectionLink>
           ))}
         </div>
 

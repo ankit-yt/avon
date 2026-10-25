@@ -181,13 +181,13 @@ export default function FeedBack() {
 
         {/* Header */}
         <header className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+          <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
             <span className="w-10 h-px bg-orange-600" />
             Customer Reviews
             <span className="w-10 h-px bg-orange-600" />
           </h2>
 
-          <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4 uppercase">
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4 uppercase">
             What Our Clients <span className="text-orange-500">Say</span>
           </h3>
 

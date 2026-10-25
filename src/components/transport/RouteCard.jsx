@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SectionLink from "@/components/SectionLink";
 
 function RouteCard({ from, to }) {
   const fromSlug = from.toLowerCase().replace(/\s+/g, "-");
@@ -6,8 +6,9 @@ function RouteCard({ from, to }) {
   const href = `/transport/${fromSlug}-to-${toSlug}`;
 
   return (
-    <Link
+    <SectionLink
       href={href}
+      targetId="service-hero"
       className="group relative flex items-center justify-between bg-white border border-slate-200 rounded-[18px] px-5 py-4 shadow-sm hover:shadow-md hover:border-orange-300 hover:bg-orange-50 transition-all duration-200"
     >
       <div className="flex items-center gap-3 min-w-0">
@@ -48,7 +49,7 @@ function RouteCard({ from, to }) {
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>
       </span>
-    </Link>
+    </SectionLink>
   );
 }
 

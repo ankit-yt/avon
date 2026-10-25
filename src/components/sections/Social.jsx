@@ -11,7 +11,7 @@ export default function Social() {
           href="tel:+919814556375"
           className="call-island flex items-center gap-2.5   shadow-lg shadow-red-200 hover:scale-105 transition-transform duration-200"
         >
-            <Image src={gif} width={100} height={100} alt="packer and mover contact number" className="w-52" />
+            <Image src={gif} width={100} height={100} alt="packer and mover contact number" className="w-40 sm:w-52" />
          
         </a>
       {/* ── WhatsApp ── */}

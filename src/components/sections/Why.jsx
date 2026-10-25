@@ -47,8 +47,8 @@ function Why() {
             {/* Badge */}
             <div className="mt-4 flex items-center gap-3 px-5 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm">
               <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse flex-shrink-0" />
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-700">
-                Trusted by Thousand families across India
+              <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-700">
+                Trusted by Million families across India
               </p>
             </div>
           </div>
@@ -59,13 +59,13 @@ function Why() {
             {/* Heading */}
             <div className="space-y-5">
 
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 flex items-center justify-center lg:justify-start gap-2">
+              <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 flex items-center justify-center lg:justify-start gap-2">
                 <span className="w-10 h-px bg-orange-600" />
                 Our Strengths
                 <span className="w-10 h-px bg-orange-600" />
               </p>
 
-              <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
                 WHY CHOOSE
                 <span className="text-orange-500"> AVON EXPRESS.</span>
               </h2>
@@ -73,7 +73,7 @@ function Why() {
               <div className="h-[2px] w-14 bg-orange-500 mx-auto lg:mx-0" />
 
               <p className="text-sm text-slate-500  leading-relaxed font-medium max-w-lg mx-auto lg:mx-0">
-                The primary reason we have become the top choice for thousands of people is that,
+                The primary reason we have become the top choice for millions of people is that,
                 while delivering our moving services, we embrace a spirit of "care" at every moment
                 and uphold the highest standards of "safety." We clarify every detail before starting
                 the work; if everything is clear before the work begins, it benefits both the customer

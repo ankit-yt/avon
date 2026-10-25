@@ -25,11 +25,11 @@ const estimate = useMemo(() => {
 }, [shiftType, distance]);
 
   return (
-  <div className="lg:col-span-7 bg-slate-900 rounded-4xl p-8 md:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+  <div className="lg:col-span-7 bg-slate-900 rounded-4xl p-5 sm:p-8 md:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-orange-600/20 transition-colors duration-700" />
 
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-6 sm:mb-8">
                 <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-orange-500 text-2xl backdrop-blur-md border border-white/10">
                   <HiOutlineCalculator />
                 </div>
@@ -39,7 +39,7 @@ const estimate = useMemo(() => {
                 </div>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-5 sm:space-y-6">
                 {/* Shifting type */}
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">
@@ -75,11 +75,11 @@ const estimate = useMemo(() => {
             </div>
 
             {/* Estimate display */}
-            <div className="relative z-10 mt-10 pt-8 border-t border-slate-800">
+            <div className="relative z-10 mt-7 sm:mt-10 pt-6 sm:pt-8 border-t border-slate-800">
               <p className="text-[10px] font-bold text-orange-500 uppercase tracking-widest mb-1">
                 Estimated Range
               </p>
-              <div className="text-4xl font-black text-white tracking-tighter mb-4">
+              <div className="text-3xl sm:text-4xl font-black text-white tracking-tighter leading-tight mb-4">
                 {estimate}
               </div>
               <p className="text-[10px] text-slate-400 font-medium leading-relaxed">

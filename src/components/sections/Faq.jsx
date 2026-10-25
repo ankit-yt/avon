@@ -161,6 +161,13 @@ const FAQ_DATA = [
   answer:
     "Loading flammable items, pets, weapons, toxic substances, narcotics, gases, liquids, etc., onto the transport vehicle will not be permitted.",
 },
+{
+  id: "24",
+  category: "Innovation",
+  question: "What new feature is coming to Avon Express?",
+  answer:
+    "We will soon be using a luggage scanning machine in the warehouse for both heavy and small items.",
+},
 ];
 
 const trustBadges = [
@@ -210,12 +217,12 @@ export default function Faq() {
         {/* ── Section Header ── */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-7 pb-6 border-b border-slate-200">
           <div>
-            <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4">
+            <p className="inline-flex items-center gap-2 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4">
               <span className="w-10 h-px bg-orange-600" />
               Help Center
               <span className="w-10 h-px bg-orange-600" />
             </p>
-            <h3 className="uppercase text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            <h3 className="uppercase text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
               Frequently Asked <span className="text-orange-500">Questions.</span>
             </h3>
           </div>
@@ -328,11 +335,11 @@ export default function Faq() {
                 If you have any questions, you can let us know.
               </p>
               <a className="flex items-center justify-between w-full px-3.5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-200 mb-2">
-                <span className="text-[10px] font-black uppercase tracking-[0.4em]">Email Support</span>
+                <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em]">Email Support</span>
                 <HiOutlineMail className="w-3.5 h-3.5" />
               </a>
               <a className="flex items-center justify-between w-full px-3.5 py-2.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-xl transition-colors duration-200">
-                <span className="text-[10px] font-black uppercase tracking-[0.4em]">Call Now — 24/7</span>
+                <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em]">Call Now — 24/7</span>
                 <svg className="w-3.5 h-3.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -342,7 +349,7 @@ export default function Faq() {
             {/* Stats 2×2 */}
             <div className="grid grid-cols-2 gap-2">
               {[
-                { value: "700+", label: "Daily Happy Customer" },
+                { value: "200+", label: "Daily Happy Customer" },
                 { value: "100%", label: "Safety Rate" },
                 { value: "24/7", label: "Support" },
                 { value: "5.0⭐", label: "Average Rating" },
@@ -359,7 +366,7 @@ export default function Faq() {
 
             {/* Trust Badges */}
             <div className="rounded-[20px] border border-slate-200 bg-white shadow-sm p-4">
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-700 mb-3">
+              <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-slate-700 mb-3">
                 Why Trust Us
               </p>
               <div className="space-y-2.5">

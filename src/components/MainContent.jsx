@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SectionLink from "@/components/SectionLink";
 import IBAContent from "./slug/IbaContent";
 import PackersContent from "./slug/PackersContent";
 import { CITIES_BY_STATE, LOCAL_AREAS } from "@/lib/cities";
@@ -30,15 +30,16 @@ function CityGrid({ cities, urlPrefix }) {
     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {cities.map((city) => (
         <li key={city}>
-          <Link
+          <SectionLink
             href={`/${urlPrefix}-${toSlug(city)}`}
+            targetId="service-hero"
             className="group flex items-center gap-2 bg-white border border-slate-200 rounded-[14px] px-4 py-3 shadow-sm hover:shadow-md hover:border-orange-300 hover:bg-orange-50 transition-all duration-200"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 group-hover:scale-125 transition-transform duration-200 shrink-0" />
             <span className="text-xs font-bold text-slate-700 group-hover:text-orange-600 transition-colors duration-200 leading-snug">
               {city}
             </span>
-          </Link>
+          </SectionLink>
         </li>
       ))}
     </ul>
@@ -50,15 +51,16 @@ function LocalAreaGrid({ areas, urlPrefix ,citySlug}) {
     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {areas.map((area) => (
         <li key={area}>
-          <Link
+          <SectionLink
             href={`/${urlPrefix}-${area}-${citySlug}`}
+            targetId="service-hero"
             className="group flex items-center gap-2 bg-white border border-slate-200 rounded-[14px] px-4 py-3 shadow-sm hover:shadow-md hover:border-orange-300 hover:bg-orange-50 transition-all duration-200"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-orange-400 group-hover:scale-125 transition-transform duration-200 shrink-0" />
             <span className="text-xs font-bold text-slate-700 group-hover:text-orange-600 transition-colors duration-200 leading-snug">
               {formatLocalArea(area)}
             </span>
-          </Link>
+          </SectionLink>
         </li>
       ))}
     </ul>

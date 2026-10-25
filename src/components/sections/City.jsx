@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import SectionLink from "@/components/SectionLink";
 import Andaman from "@/assets/images/State/Andaman-and-Nicobar-Islands.webp";
 import AndhraPradesh from "@/assets/images/State/Andhra-Pradesh.webp";
 import ArunachalPradesh from "@/assets/images/State/Arunachal-Pradesh.webp";
@@ -95,12 +95,12 @@ export default function City() {
       <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14 mb-6">
 
         <header className="text-center max-w-3xl mx-auto mb-6">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+          <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
             <span className="w-10 h-px tracking-[0.4rem] bg-orange-600" />
             Pan India Network
             <span className="w-10 h-px bg-orange-600" />
           </h2>
-          <h1 className="text-4xl md:text-6xl  font-extrabold tracking-[0.6rem] text-slate-900 uppercase leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-[0.22em] sm:tracking-[0.4em] md:tracking-[0.6rem] text-slate-900 uppercase leading-tight">
             Pan India <span className="text-orange-500">Network</span>
           </h1>
         </header>
@@ -112,9 +112,10 @@ export default function City() {
       <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-5">
           {states.map((city, i) => (
-            <Link
+            <SectionLink
               key={i}
-              href={`/${city.name.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/${city.slug}`}
+              targetId="state-services"
               className="group relative overflow-hidden rounded-[20px] h-60 block shadow-sm border border-slate-200 hover:shadow-xl hover:shadow-orange-100 transition-shadow duration-300"
             >
               {/* Image */}
@@ -142,7 +143,7 @@ export default function City() {
 
               {/* Bottom border accent on hover */}
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-            </Link>
+            </SectionLink>
           ))}
         </div>
       </div>

@@ -101,7 +101,7 @@ export default function StepsTabs({ steps }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
   
           <div className="absolute bottom-0 left-0 p-7">
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-400 mb-2">
+            <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-400 mb-2">
               Phase {current.phase} / {steps.length}
             </p>
             <h3 className="text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.1] whitespace-pre-line">
@@ -177,7 +177,7 @@ export default function StepsTabs({ steps }) {
             role="tab"
             aria-selected={i === active}
             onClick={() => goTo(i)}
-            className={`rounded-xl border px-2 py-3 text-center cursor-pointer transition-colors duration-150 outline-none
+            className={`flex min-h-14 flex-col items-center justify-center rounded-xl border px-1 py-2 text-center cursor-pointer transition-colors duration-150 outline-none
               focus-visible:ring-2 focus-visible:ring-orange-400
               ${i === active
                 ? "border-orange-200 bg-orange-50"
@@ -185,7 +185,7 @@ export default function StepsTabs({ steps }) {
               }`}
           >
             <div
-              className={`flex items-center justify-center mb-1.5 mx-auto w-7 h-7 rounded-lg border transition-colors duration-150 ${
+              className={`flex shrink-0 items-center justify-center leading-none [&>svg]:block mb-0 sm:mb-1.5 mx-auto w-7 h-7 rounded-lg border transition-colors duration-150 ${
                 i === active
                   ? "bg-orange-500 border-orange-500 text-white"
                   : "bg-white border-slate-200 text-slate-400"

@@ -177,8 +177,7 @@ export default function CourierServicePage() {
             another city in India, our team ensures a smooth and hassle-free
             process. Our Ludhiana courier service is ideal for businesses and
             individuals who need to quickly send documents, parcels, samples,
-            and packages from Ludhiana to other cities. We offer pickup
-            services across various areas of Ludhiana, available 24/7, seven
+            and packages from Ludhiana to other cities. We provide courier services in Ludhiana, available 24/7, seven
             days a week.
           </p>
         </section>

@@ -76,13 +76,13 @@ export default function SwachhBharat() {
         <header className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 mb-4">
             <span className="h-px w-10 bg-orange-600" />
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600">
+            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600">
               Swachh Bharat Initiative
             </span>
             <span className="h-px w-10 bg-orange-600" />
           </div>
 
-          <h2 className="text-4xl md:text-6xl uppercase font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl uppercase font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
             Clean &amp;{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-orange-500">Hygienic</span>
@@ -166,7 +166,7 @@ export default function SwachhBharat() {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-2">
                   <FaLeaf size={14} className="text-white/80" />
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/70">
+                  <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-white/70">
                     Our Commitment
                   </span>
                 </div>

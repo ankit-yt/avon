@@ -21,7 +21,7 @@ export default function DisclaimerPage() {
         <div className="flex items-start gap-3">
           <AlertTriangle size={20} className="text-yellow-500 mt-1 shrink-0" />
           <p>
-            If a customer uses our services without reviewing our Terms and Conditions and Privacy Policy, we shall not be held responsible for any issues that may arise subsequently.
+            If a customer uses our services without reviewing our Terms and Conditions , Privacy Policy and Insurance Policy. we shall not be held responsible for any issues that may arise subsequently.
           </p>
         </div>
 

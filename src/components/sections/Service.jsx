@@ -46,7 +46,7 @@ const services = [
     img: TruckAndTempoHireServices,
     title: "Truck and Tempo Hire Services",
     slug: "truck-and-tempo-hire-services",
-    desc: "Avon Express Packers and Movers offer reliable transportation services with a wide range of GPS-enabled vehicles. Options include Pickup, Tata 407, and trucks of 14ft, 17ft, 19ft, 20ft, 22ft, 24ft, and 32ft sizes. Both closed-body and open-body vehicles are available.",
+    desc: "Avon Express Packers and Movers provide reliable transport services using a variety of GPS-equipped vehicles. These include mini-trucks, Tata Ace, Mahindra Bolero Pickups, Bada Dost, and Tata 407 (available with container sizes of 14ft, 17ft, 19ft, 20ft, 22ft, 24ft, and 32ft), as well as 40ft and 50ft trailers. Both closed-body and open-body vehicles are available here.",
   },
 ];
 
@@ -72,12 +72,12 @@ export default function Service() {
 
         {/* --- Header --- */}
         <header className="text-center max-w-3xl mx-auto mb-10 border-b border-slate-200 pb-6">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+          <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
             <span className="w-10 h-px bg-orange-600" />
             Our Expertise
             <span className="w-10 h-px bg-orange-600" />
           </h2>
-          <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
             OUR <span className="text-orange-500">&nbsp;SERVICES</span>
           </h3>
         </header>

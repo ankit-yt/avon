@@ -142,12 +142,12 @@ export default function HowItWorks() {
         <div className="relative z-10 max-w-330 mx-auto px-5 sm:px-8 lg:px-14 py-6 lg:py-5">
 
           <header className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
+            <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600 mb-4 flex items-center justify-center gap-2">
               <span className="w-10 h-px bg-orange-600" />
               Operational Blueprint
               <span className="w-10 h-px bg-orange-600" />
             </h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-4">
               HOW &nbsp;IT <span className="text-orange-500">&nbsp;WORK</span>
             </h3>
           </header>

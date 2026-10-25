@@ -79,7 +79,7 @@ export default function RefundAndCancellationPage() {
 
         <div className="pl-8">
           <p>
-            In very rare instances, if we are unable to fulfill your booking due to operational difficulties or safety reasons (such as adverse weather), we will provide a 100% refund of the full amount you paid, regardless of the timing.
+            In very rare cases, if we cancel your booking due to operational difficulties or safety reasons (such as adverse weather), we will provide a 100% refund of the full amount you have paid.
           </p>
         </div>
 

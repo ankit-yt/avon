@@ -46,10 +46,6 @@ function RouteDetailContent({ from, to }) {
                             Safe, affordable, and reliable goods transport from {formattedFrom} to {formattedTo}.
                             GPS-tracked vehicles, trained staff, and zero hidden charges.
                         </p>
-                        <div className="inline-flex items-center gap-2 mt-5 bg-white border border-slate-200 rounded-full px-5 py-2 shadow-sm">
-                            <span className="text-orange-500 text-base">📞</span>
-                            <span className="text-xs font-bold text-slate-700">Call us: +91 98145-56375</span>
-                        </div>
                     </header>
 
                     {/* Highlights */}
@@ -78,31 +74,52 @@ function RouteDetailContent({ from, to }) {
                 {/* Main content */}
                 <section>
                     <div className="bg-white border border-slate-200 rounded-[28px] p-8 shadow-sm space-y-6">
+                        <div>
+                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-3 flex items-center gap-2">
+                                <span className="w-6 h-px bg-orange-600" /> Transport Services from {formattedFrom} to {formattedTo}
+                            </h4>
+                            <p className="text-xl font-extrabold text-slate-900 tracking-tight">
+                                Reliable Goods Transport Services from{" "}
+                                <span className="text-orange-500">{formattedFrom} to {formattedTo}</span>
+                            </p>
+                        </div>
 
-                        <p className="text-sm text-slate-700 leading-relaxed">
-                            {formattedFrom} To {formattedTo} Transport Services - Avon Express provides full-load and part-load transport services from {formattedFrom} to {formattedTo}, available 24 hours a day. We offer fixed rates with absolutely no hidden costs. Call us to receive a free quotation. We provide daily transport services from {formattedFrom} to {formattedTo}, available 24 hours a day, seven days a week. Transporter from {formattedFrom} to {formattedTo}: Are you looking for transport services from {formattedFrom} to {formattedTo}? Avon Express offers on-demand transport solutions to fulfill all your freight requirements—whether for full-loads or part-loads. Are you in search of a reliable transport service from {formattedFrom} to {formattedTo}? We provide professional logistics and freight solutions for businesses and individuals across India. As {formattedFrom}'s leading logistics company, we guarantee safe, hassle-free, and on-time delivery for our clients. This is precisely why we have established a strong foothold within {formattedFrom}'s transport industry.
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed">
+                            Transport Services from {formattedFrom} to {formattedTo} – Avon Express offers full-load and part-load transport services from {formattedFrom} to {formattedTo}, available 24/7. We provide our services at fixed rates with no hidden costs. Call us to get a free quotation. We offer daily transport services from {formattedFrom} to {formattedTo}, available 24 hours a day, seven days a week. Transporter from {formattedFrom} to {formattedTo}: Are you looking for transport services from {formattedFrom} to {formattedTo}? Avon Express provides on-demand transport solutions to meet all your freight requirements—whether for full-load or part-load shipments. Avon Express Transport Company offers full-load and part-load transport services from {formattedFrom} to anywhere in India, 24/7. Whether you need to transport household goods, vehicles (cars, bikes, scooters), office equipment, or commercial cargo, we have GPS-enabled closed and open vehicles to ensure safe and timely delivery. We utilize our own fleet and trained drivers, ensuring complete transparency and accountability throughout the entire journey. Our team manages the entire process—from pickup to final delivery—so that you experience no hassle whatsoever. With same-day booking options and 24/7 customer support, we are your most trusted transport partner in {formattedFrom}. Avon Express Transport Company provides transport services across India and is recognized for its reliable planning, precise timelines, and total accountability. The company began with a clear promise: to deliver every shipment safely and on time. We understand that our clients' reputations and responsibilities are tied to every shipment; therefore, we handle your goods with the utmost care and respect. Our central hub monitors shipments 24/7, allowing us to prevent delays or other issues before they even occur. As a leading logistics company based in {formattedFrom}, we guarantee our clients safe, hassle-free, and timely deliveries. This is why we have established a strong foothold in {formattedFrom}’s transport industry.                        </p>
+
+                        <div className="space-y-0"><h5 className="text-sm font-extrabold text-slate-900 leading-relaxed">India&apos;s 1st Online Trucks Booking Platform {formattedFrom} To {formattedTo}</h5>
+
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed !mt-0">
+                            Are you looking for reliable Online Truck Booking {formattedFrom} To {formattedTo}? Avon Express Packers and Movers offers truck rental services tailored to various transportation needs. Businesses can choose from a wide range of trucks based on the size, weight, and type of their goods, as well as the distance to be covered. These trucks can be used to transport goods from one location to another. Avon Express Packers and Movers provide reliable transport services using a variety of GPS-equipped vehicles. These include mini-trucks, Tata Ace, Mahindra Bolero Pickups, Bada Dost, and Tata 407 (available with container sizes of 14ft, 17ft, 19ft, 20ft, 22ft, 24ft, and 32ft), as well as 40ft and 50ft trailers. Both closed-body and open-body vehicles are available here.
+                        </p></div>
+
+
+                        <div className="space-y-0"><h5 className="text-sm font-extrabold text-slate-900 leading-relaxed">{formattedFrom} To {formattedTo} Packers and Movers Services</h5>
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed !mt-0">
+                            If you are planning to shift your household belongings from {formattedFrom} to {formattedTo}, availing the services of professional packers and movers can make your relocation experience easy, secure, and hassle-free. Our moving company is highly popular among those seeking reliable packing and moving services for the {formattedFrom}-to-{formattedTo} route. We understand the value of your hard-earned money invested in your belongings. We would never want you to receive your items in a damaged condition; therefore, we take extra precautions to ensure their safety by employing the most modern security measures. When you utilize our services, you need not worry about the security of your essential belongings, as we handle your items with the same care and attention as if they were our own. Our team has established a secure environment for the transportation of your goods; to guarantee their safety, we have adopted innovative methods and equipment. With years of experience in this industry, we are dedicated to providing exceptional transport services from {formattedFrom} to {formattedTo}, catering to all your shipping-related requirements. Behind every shipment lies our unwavering commitment to utilizing the latest technology and delivering outstanding customer service.
+                        </p></div>
+
+
+                        <div className="space-y-0"><h5 className="text-sm font-extrabold text-slate-900 leading-relaxed">{formattedFrom} To {formattedTo} Car/Bike/Activa Transport Services</h5>
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed !mt-0">
+                            Avon Express Packers and Movers is a trusted company in the field of car, bike, and Activa transportation. Our priority is to ensure that your car, bike, and Activa reach their destination safely, on time, and without any damage, via a suitable carrier.
+                        </p></div>
+
+                        <div className="space-y-0"><h5 className="text-sm font-extrabold text-slate-900 leading-relaxed">Full-Truck Load Services {formattedFrom} To {formattedTo}</h5>
+
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed !mt-0">
+                            Book an entire truck for your large shipments. This option ensures faster delivery, as the truck does not make any stops between your warehouse and the final destination. Your goods remain secure throughout the entire journey.
+                        </p></div>
+
+                        <div className="space-y-0"><h5 className="text-sm font-extrabold text-slate-900 leading-relaxed">Part/Sharing Load Services {formattedFrom} To {formattedTo}</h5>
+
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed !mt-0">
+                            You only pay for the space you use. We combine your smaller shipments with those of others to transport them to your destination. This helps reduce costs while ensuring that strict safety standards are fully upheld.
+                        </p></div>
+
+                        <p className="text-sm text-slate-500 font-medium leading-relaxed">
+                            When you partner with our company, Avon Express Packers &amp; Movers, you will find all these services in one place. This will save you both time and money.
                         </p>
-
-                        <p className="text-sm text-slate-700 leading-relaxed">
-                            {formattedFrom} to {formattedTo} 24x7 Available Tempo/Truck Rental Services – Are you looking to rent a tempo in your vicinity? Avon Express Packers and Movers offers reliable transportation services featuring a wide range of GPS-enabled and lockable vehicles. Available options include pickup trucks, Tata 407s, and trucks in sizes ranging from 14ft, 17ft, 19ft, 20ft, 22ft, 24ft, to 32ft. Both closed-body and open-body vehicle types are available.
-                        </p>
-
-                        <p className="text-sm text-slate-700 leading-relaxed">
-                            {formattedFrom} To {formattedTo} Packers and Movers Services - If you are planning to shift your household belongings from {formattedFrom} to {formattedTo}, availing the services of professional packers and movers can make your relocation experience easy, secure, and hassle-free. Our moving company is highly popular among those seeking reliable packing and moving services for the {formattedFrom}-to-{formattedTo} route. We understand the value of your hard-earned money invested in your belongings. We would never want you to receive your items in a damaged condition; therefore, we take extra precautions to ensure their safety by employing the most modern security measures. When you utilize our services, you need not worry about the security of your essential belongings, as we handle your items with the same care and attention as if they were our own. Our team has established a secure environment for the transportation of your goods; to guarantee their safety, we have adopted innovative methods and equipment. With years of experience in this industry, we are dedicated to providing exceptional transport services from {formattedFrom} to {formattedTo}, catering to all your shipping-related requirements. Behind every shipment lies our unwavering commitment to utilizing the latest technology and delivering outstanding customer service.
-                        </p>
-
-                        <p className="text-sm text-slate-700 leading-relaxed">
-                            {formattedFrom} To {formattedTo} Car/Bike/Activa Transport Services - Avon Express Packers and Movers is a trusted company in the field of car, bike, and Activa transportation. Our priority is to ensure that your car, bike, and Activa reach their destination safely, on time, and without any damage, via a suitable carrier.
-                        </p>
-
-                        <p className="text-sm text-slate-700 leading-relaxed">
-                            {formattedFrom} To {formattedTo} Courier Services - Are you looking for courier services for deliveries? We provide fast, secure, and reliable courier solutions for documents, parcels, and large shipments.
-                        </p>
-
-                        <p className="text-sm text-slate-700 leading-relaxed">
-                            When you partner with our company, Avon Express Packers & Movers, you will find all these services in one place. This will save you both time and money.
-                        </p>
-
                     </div>
                 </section>
 

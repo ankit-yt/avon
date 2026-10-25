@@ -63,7 +63,7 @@ function PhotoCard({ facility, className = "" }) {
 
       {/* Title — slides up on hover */}
       <div className="absolute inset-x-0 bottom-0 px-5 py-4 z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out">
-        <p className="text-white text-[10px] font-black uppercase tracking-[0.4em] leading-none">
+        <p className="text-white text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] leading-none">
           {facility.title}
         </p>
       </div>
@@ -93,12 +93,12 @@ export default function OurFacilities() {
           <div>
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="h-px w-10 bg-orange-600" />
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600">
+              <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.28em] sm:tracking-[0.4em] text-orange-600">
                 Infrastructure
               </span>
               <span className="h-px w-10 bg-orange-600" />
             </div>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter leading-tight">
               OUR <span className="text-orange-500">FACILITIES.</span>
             </h3>
           </div>

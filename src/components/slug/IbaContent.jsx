@@ -1,3 +1,5 @@
+import { FaWhatsapp } from "react-icons/fa";
+
 export default function IBAContent({ formattedCity }) {
   return (
     <div className="max-w-7xl mx-auto mb-16 space-y-12">
@@ -18,6 +20,13 @@ export default function IBAContent({ formattedCity }) {
 
       {/* ── Main description ── */}
       <div className="bg-white border border-slate-200 rounded-[28px] p-8 shadow-sm space-y-4">
+        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-3 flex items-center gap-2">
+          <span className="w-6 h-px bg-orange-600" /> IBA-Approved Packers and Movers Transport Bill For Claim in {formattedCity}
+        </h4>
+        <p className="text-xl font-extrabold text-slate-900 tracking-tight mb-4">
+          IBA-Approved Packers and Movers Transport Bill For Claim in{" "}
+          <span className="text-orange-500">{formattedCity}</span>
+        </p>
         <p className="text-sm text-slate-500 font-medium leading-relaxed">
           IBA-Approved Packers and Movers Transport Bills for Claims in {formattedCity} — A service providing bills for claims across India. Obtain IBA-approved bills for claims in {formattedCity}. An IBA-approved Packers and Movers bill serves as documentary proof of the services rendered by a moving company. We provide IBA-approved bills to bank employees, enabling them to receive reimbursement for their claims without any hassle. Banks accept these bills for official relocation claims. We assist bank employees across India in obtaining invoices for shifting services—including the transportation of Activas, bikes, cars, office equipment, and household goods. While safely transporting your belongings from one location to another is essential, obtaining a bill from an IBA-approved Packers and Movers firm is equally crucial if you wish to claim reimbursement from your bank. Often—inadvertently—we utilize the services of companies that are not IBA-approved. Furthermore, situations may arise where the services of an IBA-approved company are unavailable to a customer, making it necessary to engage a non-IBA-approved firm—or there may be other reasons for doing so. Additionally, the invoice (bill) itself sometimes gets misplaced. In {formattedCity}, we provide IBA-approved invoices featuring a unique code, thereby ensuring that relocation bills are readily accepted. Thanks to our commitment to accurate billing, we have emerged as the most trusted relocation service provider in {formattedCity}. IBA-approved bills are accepted across India. If you possess a valid invoice from an IBA-approved packers and movers service, you can easily claim reimbursement from your employer. In {formattedCity}, our IBA-approved packers and movers service assists bank employees with their relocation needs and provides the necessary banking documentation (IBA-approved bills). In addition to our packing and moving services, we also provide IBA-approved invoices in {formattedCity}. If you are looking for an IBA-approved transport bill, our documentation process is designed to ensure that your reimbursement is simple, swift, and stress-free. This bill serves as a transfer bill for reimbursement purposes and acts as proof of actual relocation expenses. Based on your shifting records, our team will assist you in generating an IBA-approved packers and movers bill. Last year, we secured the top spot on the list of IBA-approved transporters in {formattedCity}. We are the finest IBA-approved packers and movers in {formattedCity}; we have proven ourselves to be the best by providing state-of-the-art services to our clients in the city. We have bills available in {formattedCity} in both paper and digital formats.
         </p>
@@ -35,8 +44,11 @@ export default function IBAContent({ formattedCity }) {
           </p>
         </div>
 
-        <p className="text-sm text-slate-500 font-medium leading-relaxed">
+        <p className="text-sm text-slate-500 font-medium leading-relaxed flex items-center gap-2">
           Plz Give Us These Details on Whatsapp —
+          <a href="https://wa.me/919814556375" target="_blank" rel="noopener noreferrer" aria-label="Chat with Avon Express on WhatsApp" className="text-green-500 hover:text-green-600 transition-colors">
+            <FaWhatsapp className="w-4 h-4" />
+          </a>
         </p>
 
         <ul className="space-y-2">
@@ -99,8 +111,8 @@ export default function IBAContent({ formattedCity }) {
           },
         ].map(({ q, a }, i) => (
           <div key={i} className="bg-white border border-slate-200 rounded-[20px] p-6 shadow-sm">
-            <p className="text-sm font-extrabold text-slate-900 tracking-tight mb-2">Q: {q}</p>
-            <p className="text-sm font-medium text-slate-500 leading-relaxed">A: {a}</p>
+            <p className="text-sm font-extrabold text-slate-900 tracking-tight mb-2">Question: {q}</p>
+            <p className="text-sm font-medium text-slate-500 leading-relaxed">Answer: {a}</p>
           </div>
         ))}
       </div>
